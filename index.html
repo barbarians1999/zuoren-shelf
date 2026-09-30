@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f0e7">
+  <meta name="description" content="个人在线阅读书架">
+  <title>左人书架</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="shelf-tools">
+      <label for="book-search">找一本书</label>
+      <input id="book-search" type="search" placeholder="书名或作者" autocomplete="off" enterkeyhint="search">
+      <span id="shelf-count" class="shelf-count" role="status" aria-live="polite"></span>
+    </div>
+    <nav id="category-filters" class="category-filters" aria-label="按分类筛选书籍"></nav>
+  </header>
+  <main class="shell">
+    <section id="shelf" class="shelf" aria-label="书架">
+      <div id="book-list" class="book-grid">
+        <div class="loading-card">正在打开书架……</div>
+      </div>
+    </section>
+    <section id="reader" class="reader is-hidden" aria-label="阅读器">
+      <div id="desktop-reader" class="desktop-reader">
+        <div class="reader-head">
+          <button id="back-button" class="text-button" type="button">← 返回书架</button>
+          <div class="reader-head-actions"><span id="section-count" class="muted"></span></div>
+        </div>
+        <div class="reader-grid">
+          <aside id="desktop-toc-panel" class="toc-panel">
+            <div class="toc-head"><p class="contents-label eyebrow">目录</p></div>
+            <nav id="desktop-toc" aria-label="章节目录"></nav>
+            <p id="desktop-scan-summary" class="scan-summary is-hidden"></p>
+          </aside>
+          <article id="desktop-reading-panel" class="reading-panel">
+            <div class="reading-meta"><span id="book-title"></span><span id="book-author"></span><div class="reading-actions"><span id="reading-position"></span><details class="settings"><summary>阅读设置</summary><div class="settings-menu"><span>字号</span><button type="button" data-size="small">小</button><button type="button" data-size="medium">中</button><button type="button" data-size="large">大</button><span>行距</span><button type="button" data-spacing="wide">宽</button></div></details></div></div>
+            <h2 id="section-title"></h2>
+            <div id="desktop-content" class="content" tabindex="-1"></div>
+            <div class="reader-nav">
+              <button id="prev-button" class="nav-button" type="button">上一节</button>
+              <button id="next-button" class="nav-button primary" type="button">下一节</button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <section id="mobile-reader" class="mobile-reader" hidden aria-label="手机阅读器">
+        <header class="mobile-reader-head">
+          <button id="mobile-back-button" class="text-button" type="button">← 返回书架</button>
+          <div class="mobile-reader-title"><strong id="mobile-book-title"></strong><span id="mobile-reading-position" class="muted"></span></div>
+          <div class="reader-head-actions"><button id="mobile-toc-toggle-button" class="text-button" type="button" aria-expanded="false" aria-controls="mobile-toc-panel">目录</button></div>
+        </header>
+        <div id="mobile-reading-viewport" class="mobile-reading-viewport" tabindex="-1">
+          <article class="mobile-reading-panel">
+            <h2 id="mobile-section-title"></h2>
+            <div id="mobile-content" class="content" tabindex="-1"></div>
+          </article>
+        </div>
+        <div id="mobile-toc-backdrop" class="toc-backdrop" aria-hidden="true"></div>
+        <aside id="mobile-toc-panel" class="mobile-toc-panel" role="dialog" aria-label="手机目录" aria-hidden="true" inert>
+          <div class="toc-head"><p class="contents-label eyebrow">目录</p><button id="mobile-toc-close-button" class="text-button" type="button">完成</button></div>
+          <nav id="mobile-toc" aria-label="章节目录"></nav>
+          <p id="mobile-scan-summary" class="scan-summary is-hidden"></p>
+        </aside>
+      </section>
+    </section>
+  </main>
+  <p id="progress-notice" class="progress-notice" role="status" hidden>浏览器未允许保存阅读进度；仍可正常阅读。</p>
+  <footer>友情链接：<a href="https://shekeshujia.netlify.app/" target="_blank" rel="noopener noreferrer">社科书架</a><span aria-hidden="true"> · </span><a href="https://github.com/barbarians1999/sheke-shelf" target="_blank" rel="noopener noreferrer">社科书架 GitHub</a><span aria-hidden="true"> · </span><a href="https://github.com/barbarians1999/zuoren-shelf" target="_blank" rel="noopener noreferrer">左人书架 GitHub</a></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
