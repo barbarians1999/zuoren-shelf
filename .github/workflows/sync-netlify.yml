@@ -1,0 +1,73 @@
+name: Sync Netlify site
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Download all static site files
+        env:
+          SITE_URL: https://zuorenshujia.netlify.app
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          import urllib.parse
+          import urllib.request
+          from concurrent.futures import ThreadPoolExecutor, as_completed
+          from pathlib import Path
+          base = __import__("os").environ["SITE_URL"].rstrip("/")
+          root = Path(".")
+          paths = {"index.html", "styles.css", "app.js", "favicon.svg", "book-index.json"}
+          data_url = base + "/book-index.json"
+          request = urllib.request.Request(data_url, headers={"User-Agent": "zuoren-shelf-sync"})
+          with urllib.request.urlopen(request, timeout=60) as response:
+              data = json.loads(response.read().decode("utf-8"))
+          for book in data.get("books", []):
+              section_path = book.get("sectionPath")
+              if section_path:
+                  for section in book.get("sections", []):
+                      paths.add(section_path.rstrip("/") + "/" + str(section["id"]) + ".json")
+          def download(path):
+              target = root / path
+              target.parent.mkdir(parents=True, exist_ok=True)
+              encoded = urllib.parse.quote(path, safe="/")
+              request = urllib.request.Request(base + "/" + encoded, headers={"User-Agent": "zuoren-shelf-sync"})
+              with urllib.request.urlopen(request, timeout=120) as response:
+                  target.write_bytes(response.read())
+              return path
+          errors = []
+          with ThreadPoolExecutor(max_workers=16) as pool:
+              futures = {pool.submit(download, path): path for path in sorted(paths)}
+              for future in as_completed(futures):
+                  path = futures[future]
+                  try:
+                      future.result()
+                  except Exception as error:
+                      errors.append(f"{path}: {error}")
+          if errors:
+              raise SystemExit("\n".join(errors))
+          html_path = root / "index.html"
+          html = html_path.read_text(encoding="utf-8")
+          footer = '<footer>友情链接：<a href="https://shekeshujia.netlify.app/" target="_blank" rel="noopener noreferrer">社科书架</a><span aria-hidden="true"> · </span><a href="https://github.com/barbarians1999/sheke-shelf" target="_blank" rel="noopener noreferrer">社科书架 GitHub</a><span aria-hidden="true"> · </span><a href="https://github.com/barbarians1999/zuoren-shelf" target="_blank" rel="noopener noreferrer">左人书架 GitHub</a></footer>'
+          html, count = re.subn(r"<footer(?:\s[^>]*)?>.*?</footer>", footer, html, count=1, flags=re.S | re.I)
+          if count != 1:
+              raise SystemExit("footer not found in downloaded index.html")
+          html_path.write_text(html, encoding="utf-8")
+          print(f"Downloaded {len(paths)} site files")
+          PY
+      - name: Commit synchronized site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Sync leftist bookshelf from Netlify"
+            git push
+          fi
