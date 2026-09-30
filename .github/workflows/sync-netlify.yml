@@ -69,7 +69,7 @@ jobs:
 
           html_path = root / "index.html"
           html = html_path.read_text(encoding="utf-8")
-          footer = '<footer>友情链接：<a href="https://shekeshujia.netlify.app/" target="_blank" rel="noopener noreferrer">社科书架</a><span aria-hidden="true"> · </span><a href="https://barbarians1999.github.io/sheke-shelf/" target="_blank" rel="noopener noreferrer">社科书架 GitHub Pages</a><span aria-hidden="true"> · </span><a href="https://github.com/barbarians1999/zuoren-shelf" target="_blank" rel="noopener noreferrer">左人书架 GitHub</a></footer>'
+          footer = '<footer>友情链接：<a href="https://shekeshujia.netlify.app/" target="_blank" rel="noopener noreferrer">社科书架</a><span aria-hidden="true"> · </span><a href="https://barbarians1999.github.io/sheke-shelf/" target="_blank" rel="noopener noreferrer">社科书架 GitHub Pages</a><span aria-hidden="true"> · </span><a href="https://zuorenshujia.netlify.app/" target="_blank" rel="noopener noreferrer">左人书架 Netlify</a></footer>'
           html, count = re.subn(r"<footer(?:\s[^>]*)?>.*?</footer>", footer, html, count=1, flags=re.S | re.I)
           if count != 1:
               raise SystemExit("footer not found in downloaded index.html")
