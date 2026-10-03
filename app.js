@@ -7,7 +7,7 @@
   const reader = document.querySelector('#reader');
   const desktopReader = document.querySelector('#desktop-reader');
   const mobileReader = document.querySelector('#mobile-reader');
-  const desktopToc = document.querySelector('#desktop-toc');
+  const desktopToc = document.querySelector('#desktop-toc'); const desktopTocPanel = document.querySelector('#desktop-toc-panel'); const desktopTocToggle = document.querySelector('#desktop-toc-toggle-button');
   const mobileToc = document.querySelector('#mobile-toc');
   const desktopContent = document.querySelector('#desktop-content');
   const mobileContent = document.querySelector('#mobile-content');
