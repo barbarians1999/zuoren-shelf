@@ -66,7 +66,7 @@ body.book-open .topbar { min-height: 4.5rem; grid-template-rows: auto; padding-b
 .mobile-only { display: none; }
 .text-button { border: 0; background: transparent; color: var(--accent-dark); cursor: pointer; padding: .55rem 0; }
 .muted, .reading-meta { color: var(--muted); font: .82rem ui-sans-serif, system-ui, sans-serif; }
-.reader-grid { display: grid; grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr); gap: clamp(1.2rem, 4vw, 4rem); padding-top: 2rem; }
+.reader-grid { display: grid; grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr); gap: clamp(1.2rem, 4vw, 4rem); padding-top: 2rem; } .desktop-reader.toc-collapsed .reader-grid { grid-template-columns: minmax(0, 1fr); } .desktop-reader.toc-collapsed .toc-panel { display: none; }
 .toc-panel { position: sticky; top: 6rem; align-self: start; max-height: calc(100vh - 8rem); overflow: auto; padding-right: .5rem; }
 .toc-head { display: flex; align-items: center; justify-content: space-between; }
 .toc-head .eyebrow { margin-bottom: .7rem; }
