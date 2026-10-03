@@ -164,7 +164,7 @@
 
   function closeToc(returnFocus = true) { setTocOpen(false, returnFocus); }
 
-  function setMobileChrome(visible, autoHide = false) {
+  function setDesktopTocCollapsed(collapsed) { desktopReader.classList.toggle('toc-collapsed', collapsed); desktopTocPanel.setAttribute('aria-hidden', String(collapsed)); desktopTocPanel.inert = collapsed; desktopTocToggle.setAttribute('aria-expanded', String(!collapsed)); desktopTocToggle.textContent = collapsed ? '展开目录' : '收起目录'; writeStored('reading-desk:desktop-toc-collapsed:v1', collapsed); } function setMobileChrome(visible, autoHide = false) {
     mobileReader.classList.toggle('chrome-visible', visible);
     mobileReader.setAttribute('aria-label', visible ? '阅读控件已显示' : '阅读控件已隐藏');
     if (hideChromeTimer) window.clearTimeout(hideChromeTimer);
@@ -453,7 +453,7 @@
     document.documentElement.style.setProperty('--reading-leading', '2.25');
   }));
 
-  mobileTocToggle.addEventListener('click', (event) => { event.stopPropagation(); setTocOpen(!mobileTocPanel.classList.contains('is-open')); });
+  mobileTocToggle.addEventListener('click', (event) => { event.stopPropagation(); setTocOpen(!mobileTocPanel.classList.contains('is-open')); }); setDesktopTocCollapsed(readStored('reading-desk:desktop-toc-collapsed:v1') === true); desktopTocToggle.addEventListener('click', () => { setDesktopTocCollapsed(!desktopReader.classList.contains('toc-collapsed')); });
   mobileTocClose.addEventListener('click', (event) => { event.stopPropagation(); closeToc(); });
   mobileTocBackdrop.addEventListener('click', () => closeToc());
   desktopPrevChapter.addEventListener('click', () => openSection(current - 1));
