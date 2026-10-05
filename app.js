@@ -7,7 +7,9 @@
   const reader = document.querySelector('#reader');
   const desktopReader = document.querySelector('#desktop-reader');
   const mobileReader = document.querySelector('#mobile-reader');
-  const desktopToc = document.querySelector('#desktop-toc'); const desktopTocPanel = document.querySelector('#desktop-toc-panel'); const desktopTocToggle = document.querySelector('#desktop-toc-toggle-button');
+  const desktopToc = document.querySelector('#desktop-toc');
+  const desktopTocPanel = document.querySelector('#desktop-toc-panel');
+  const desktopTocToggle = document.querySelector('#desktop-toc-toggle-button');
   const mobileToc = document.querySelector('#mobile-toc');
   const desktopContent = document.querySelector('#desktop-content');
   const mobileContent = document.querySelector('#mobile-content');
@@ -65,7 +67,7 @@
     'luxun-text': 'literature', 'red-star-over-china': 'literature', 'fanshen': 'literature',
     'shenfan': 'literature', 'great-reversal': 'literature', 'shanghai-morning': 'literature', 'redrock': 'literature',
     'global-monopoly-text': 'economics', 'keynes-china-crisis': 'economics',
-    'political-economy-introduction': 'economics'
+    'political-economy-introduction': 'economics', 'new-workers-class-struggle': 'economics'
   });
 
   const escapeText = (value) => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -100,6 +102,7 @@
     }));
   }
 
+
   function renderShelf() {
     const terms = bookSearch.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
     const visible = books.map((book, index) => ({ book, index, saved: readProgress(book) }))
@@ -111,7 +114,8 @@
       const isScan = book.type === 'scan';
       const units = isScan ? `${book.pageCount} 页` : `${book.sections.length} 个阅读单元`;
       const status = isScan ? '逐页加载' : '分段加载';
-      return `<article class="book-card ${saved ? 'ready' : ''}"><div><p class="eyebrow">${saved ? '继续阅读' : '书籍'}</p><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)} · ${escapeText(units)}</p><p class="book-note">${escapeText(book.note || '')}</p></div><div class="book-foot"><span class="book-status">${escapeText(status)}</span><button class="open-button" type="button" data-book="${index}" aria-label="${saved ? '继续阅读' : '打开'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '打开阅读'}</button></div></article>`;
+      const category = categories.find((item) => item.id === window.bookCategoryById[book.id]);
+      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><p class="book-category">${escapeText(category?.label || '书籍')}</p><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p><p class="book-note">${escapeText(book.note || '')}</p></div><div class="book-foot"><span class="book-status" title="${escapeText(status)}">${escapeText(units)}</span><button class="open-button" type="button" data-book="${index}" aria-label="${saved ? '继续阅读' : '打开'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '打开阅读'}</button></div></article>`;
     }).join('') : '<p class="shelf-empty">没有找到这本书，试试书名中的其他字或作者名。</p>';
     bookList.querySelectorAll('[data-book]').forEach((button) => button.addEventListener('click', () => openReader(Number(button.dataset.book))));
   }
@@ -164,7 +168,16 @@
 
   function closeToc(returnFocus = true) { setTocOpen(false, returnFocus); }
 
-  function setDesktopTocCollapsed(collapsed) { desktopReader.classList.toggle('toc-collapsed', collapsed); desktopTocPanel.setAttribute('aria-hidden', String(collapsed)); desktopTocPanel.inert = collapsed; desktopTocToggle.setAttribute('aria-expanded', String(!collapsed)); desktopTocToggle.textContent = collapsed ? '展开目录' : '收起目录'; writeStored('reading-desk:desktop-toc-collapsed:v1', collapsed); } function setMobileChrome(visible, autoHide = false) {
+  function setDesktopTocCollapsed(collapsed) {
+    desktopReader.classList.toggle('toc-collapsed', collapsed);
+    desktopTocPanel.setAttribute('aria-hidden', String(collapsed));
+    desktopTocPanel.inert = collapsed;
+    desktopTocToggle.setAttribute('aria-expanded', String(!collapsed));
+    desktopTocToggle.textContent = collapsed ? '展开目录' : '收起目录';
+    writeStored('reading-desk:desktop-toc-collapsed:v1', collapsed);
+  }
+
+  function setMobileChrome(visible, autoHide = false) {
     mobileReader.classList.toggle('chrome-visible', visible);
     mobileReader.setAttribute('aria-label', visible ? '阅读控件已显示' : '阅读控件已隐藏');
     if (hideChromeTimer) window.clearTimeout(hideChromeTimer);
@@ -360,6 +373,16 @@
       if (token !== renderToken) return;
       target.innerHTML = html;
       wrapTables(target);
+      // Some editions already begin with the same chapter heading. Keep the
+      // source HTML intact; hide only our generated duplicate in the UI.
+      const firstBlock = Array.from(target.querySelectorAll('h1,h2,h3,h4,p,li,blockquote'))
+        .find((el) => !el.classList.contains('page-marker') && el.textContent.trim());
+      const normalizeHeading = (value) => String(value).normalize('NFKC').replace(/\s+/g, '');
+      if (firstBlock && /^H[1-4]$/.test(firstBlock.tagName)
+          && normalizeHeading(firstBlock.textContent) === normalizeHeading(currentBook.sections?.[current]?.title || '')) {
+        document.querySelector(mode === 'mobile' ? '#mobile-section-title' : '#section-title').classList.add('is-hidden');
+        firstBlock.classList.add('chapter-heading');
+      }
       const notes = target.querySelectorAll('details');
       if (Array.isArray(saved?.openNotes)) saved.openNotes.forEach((i) => {
         if (Number.isInteger(i) && notes[i]) notes[i].open = true;
@@ -453,7 +476,11 @@
     document.documentElement.style.setProperty('--reading-leading', '2.25');
   }));
 
-  mobileTocToggle.addEventListener('click', (event) => { event.stopPropagation(); setTocOpen(!mobileTocPanel.classList.contains('is-open')); }); setDesktopTocCollapsed(readStored('reading-desk:desktop-toc-collapsed:v1') === true); desktopTocToggle.addEventListener('click', () => { setDesktopTocCollapsed(!desktopReader.classList.contains('toc-collapsed')); });
+  mobileTocToggle.addEventListener('click', (event) => { event.stopPropagation(); setTocOpen(!mobileTocPanel.classList.contains('is-open')); });
+  setDesktopTocCollapsed(readStored('reading-desk:desktop-toc-collapsed:v1') === true);
+  desktopTocToggle.addEventListener('click', () => {
+    setDesktopTocCollapsed(!desktopReader.classList.contains('toc-collapsed'));
+  });
   mobileTocClose.addEventListener('click', (event) => { event.stopPropagation(); closeToc(); });
   mobileTocBackdrop.addEventListener('click', () => closeToc());
   desktopPrevChapter.addEventListener('click', () => openSection(current - 1));
