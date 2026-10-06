@@ -42,11 +42,11 @@
 
   const categories = [
     { id: 'all', label: '全部' },
-    { id: 'classics', label: '马列经典' },
+    { id: 'classics', label: '马克思主义理论与经典' },
     { id: 'china', label: '中国史与革命' },
     { id: 'international', label: '国际共运史' },
-    { id: 'literature', label: '文学与回忆录' },
-    { id: 'economics', label: '政治经济' }
+    { id: 'literature', label: '文学、回忆录与亲历记录' },
+    { id: 'economics', label: '政治经济与阶级关系' }
   ];
   window.bookCategoryById = Object.freeze({
     'howto': 'classics', 'jintui-text': 'classics', 'zuopai-text': 'classics', 'lenin-selected': 'classics',
@@ -64,10 +64,11 @@
     'international-movement-course-vol2': 'international', 'international-movement-course-vol3': 'international',
     'international-movement-course-vol4': 'international',
     'huangjin-text': 'literature', 'qibenyu-text': 'literature', 'zhangchunqiao-letters': 'literature',
-    'luxun-text': 'literature', 'red-star-over-china': 'literature', 'fanshen': 'literature',
+    'luxun-text': 'china', 'red-star-over-china': 'literature', 'fanshen': 'literature',
     'shenfan': 'literature', 'great-reversal': 'literature', 'shanghai-morning': 'literature', 'redrock': 'literature',
     'global-monopoly-text': 'economics', 'keynes-china-crisis': 'economics',
-    'political-economy-introduction': 'economics', 'new-workers-class-struggle': 'economics'
+    'political-economy-introduction': 'economics', 'new-workers-class-struggle': 'economics',
+    'workers-revolutionary-philosophy-history': 'classics', 'class-struggle-in-contemporary-china': 'economics'
   });
 
   const escapeText = (value) => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
