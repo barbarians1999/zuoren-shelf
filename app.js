@@ -117,7 +117,7 @@
       const units = isScan ? `${book.pageCount} 页` : `${book.sections.length} 个阅读单元`;
       const status = isScan ? '逐页加载' : '分段加载';
       const category = categories.find((item) => item.id === window.bookCategoryById[book.id]);
-      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><p class="book-category">${escapeText(category?.label || '书籍')}</p><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p><p class="book-note">${escapeText(book.note || '')}</p></div><div class="book-foot"><span class="book-status" title="${escapeText(status)}">${escapeText(units)}</span><button class="open-button" type="button" data-book="${index}" aria-label="${saved ? '继续阅读' : '打开'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '打开阅读'}</button></div></article>`;
+      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><p class="book-category">${escapeText(category?.label || '书籍')}</p><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p></div><div class="book-foot"><span class="book-status" title="${escapeText(status)}">${escapeText(units)}</span><button class="open-button" type="button" data-book="${index}" aria-label="${saved ? '继续阅读' : '打开'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '打开阅读'}</button></div></article>`;
     }).join('') : '<p class="shelf-empty">没有找到这本书，试试书名中的其他字或作者名。</p>';
     bookList.querySelectorAll('[data-book]').forEach((button) => button.addEventListener('click', () => openReader(Number(button.dataset.book))));
   }
