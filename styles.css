@@ -19,6 +19,23 @@
   font-family: var(--ui-font);
 }
 
+:root[data-reading-font="song"] {
+  --reading-font: "Songti SC", "STSong", "Noto Serif CJK SC", "Noto Serif SC", serif;
+}
+:root[data-reading-font="source-han"] {
+  --reading-font: "Source Han Serif SC", "Source Han Serif", "思源宋体", "Noto Serif CJK SC", "Noto Serif SC", serif;
+}
+@font-face {
+  font-family: "Zhaoye FangSong";
+  src: url("./fonts/ZhaoyeFangSong.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+:root[data-reading-font="fangsong"] {
+  --reading-font: "Zhaoye FangSong", "字体管家仿宋体", "FangSong", "FangSong_GB2312", "STFangsong", "仿宋", "Noto Serif CJK SC", "Songti SC", serif;
+}
+
 @media (prefers-color-scheme: dark) {
   :root { color-scheme: dark; --paper: #20201e; --paper-deep: #353530; --ink: #f0ece3; --muted: #bbb7ac; --line: #626057; --accent: #f0826d; --accent-dark: #f0826d; --panel: #292927; --topbar-bg: #191917; --reading-panel-bg: #292927; --quote-color: #d3cec3; --brand-ink: #20201e; --contrast: #191917; --contrast-ink: #f0ece3; }
 }
@@ -345,4 +362,15 @@ footer a { color: var(--accent-dark); text-underline-offset: .25em; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Reading typeface controls */
+.font-options { display: inline-flex; align-items: center; gap: .35rem; flex-wrap: wrap; min-width: 0; }
+.settings-menu .font-options { flex-basis: 100%; }
+@media (min-width: 701px) { .settings-menu { width: 26rem; } }
+.settings-menu button[data-reading-font][aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: var(--brand-ink); }
+.settings-menu button:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent); outline-offset: 2px; }
+@media (max-width: 700px) {
+  .mobile-reader-head .mobile-font-settings > summary { color: var(--contrast-ink); font: 700 .82rem/1.5 var(--ui-font); min-height: 2.75rem; padding: .45rem .2rem; display: flex; align-items: center; }
+  .mobile-font-settings .settings-menu { top: max(4.5rem, calc(env(safe-area-inset-top) + 3.8rem)); }
 }

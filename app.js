@@ -37,6 +37,8 @@
   let progressTimer = null;
   const progressPrefix = 'reading-desk:progress:v1:';
   const activeBookKey = 'reading-desk:active-book:v1';
+  const fontPreferenceKey = 'reading-desk:font-family:v1';
+  let fontChoiceToken = 0;
   const blockSelector = 'h1,h2,h3,h4,h5,h6,p,li,blockquote,summary,img';
   const sectionCache = new Map();
 
@@ -184,7 +186,7 @@
     mobileReader.setAttribute('aria-label', visible ? '阅读控件已显示' : '阅读控件已隐藏');
     if (hideChromeTimer) window.clearTimeout(hideChromeTimer);
     if (visible && autoHide && isMobileReader()) hideChromeTimer = window.setTimeout(() => {
-      if (!mobileTocPanel.classList.contains('is-open') && !mobileReader.querySelector('.mobile-reader-head :focus-visible')) setMobileChrome(false);
+      if (!mobileTocPanel.classList.contains('is-open') && !mobileReader.querySelector('.settings[open]') && !mobileReader.querySelector('.mobile-reader-head :focus-visible')) setMobileChrome(false);
     }, 5000);
   }
 
@@ -223,6 +225,26 @@
       document.querySelector('#progress-notice').hidden = false;
     }
   }
+
+  function applyReadingFont(font, persist = false) {
+    const allowed = ['system', 'song', 'source-han', 'fangsong'];
+    const selected = allowed.includes(font) ? font : 'system';
+    document.documentElement.dataset.readingFont = selected;
+    document.querySelectorAll('button[data-reading-font]').forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.readingFont === selected));
+    });
+    if (persist) {
+      try { localStorage.setItem(fontPreferenceKey, JSON.stringify(selected)); } catch { /* The current choice still applies for this visit. */ }
+    }
+  }
+
+  function readingFontReady(font = document.documentElement.dataset.readingFont) {
+    return font === 'fangsong'
+      ? document.fonts.load('16px "Zhaoye FangSong"').catch(() => [])
+      : Promise.resolve();
+  }
+
+  applyReadingFont(readStored(fontPreferenceKey));
 
   function sectionIdentity(book, index) {
     return book.type === 'scan' ? String(index) : book.sections[index].id;
@@ -389,7 +411,10 @@
       if (Array.isArray(saved?.openNotes)) saved.openNotes.forEach((i) => {
         if (Number.isInteger(i) && notes[i]) notes[i].open = true;
       });
-      await Promise.all(Array.from(target.querySelectorAll('img')).map((img) => img.decode().catch(() => {})));
+      await Promise.all([
+        readingFontReady(),
+        ...Array.from(target.querySelectorAll('img')).map((img) => img.decode().catch(() => {}))
+      ]);
       requestAnimationFrame(() => {
         if (token !== renderToken || reader.classList.contains('is-hidden')) return;
         restorePosition(mode, saved);
@@ -474,6 +499,35 @@
     const sizes = { small: '1rem', medium: 'clamp(1.08rem, 1.8vw, 1.24rem)', large: 'clamp(1.28rem, 2.2vw, 1.5rem)' };
     document.documentElement.style.setProperty('--reading-size', sizes[button.dataset.size]);
   }));
+  document.querySelectorAll('button[data-reading-font]').forEach((button) => button.addEventListener('click', async () => {
+    const choice = ++fontChoiceToken;
+    const label = button.textContent;
+    const font = button.dataset.readingFont;
+    button.setAttribute('aria-busy', 'true');
+    button.disabled = true;
+    if (font === 'fangsong') button.textContent = '加载字体…';
+    await readingFontReady(font);
+    button.textContent = label;
+    button.removeAttribute('aria-busy');
+    button.disabled = false;
+    if (choice !== fontChoiceToken) return;
+    rememberPosition();
+    const position = lastPosition;
+    applyReadingFont(font, true);
+    if (currentBook && !rendering && !reader.classList.contains('is-hidden')) {
+      restorePosition(readerMode, position);
+      rememberPosition();
+      persistProgress();
+    }
+    const details = button.closest('details');
+    if (details) {
+      details.open = false;
+      details.querySelector('summary')?.focus({ preventScroll: true });
+    }
+  }));
+  mobileReader.querySelector('.mobile-font-settings').addEventListener('toggle', (event) => {
+    if (readerMode === 'mobile') setMobileChrome(true, !event.target.open);
+  });
   document.querySelectorAll('[data-spacing="wide"]').forEach((button) => button.addEventListener('click', () => {
     document.documentElement.style.setProperty('--reading-leading', '2.25');
   }));
@@ -517,7 +571,14 @@
     const tocOpen = mobileTocPanel.classList.contains('is-open');
     if (event.key === 'Escape') {
       event.preventDefault();
-      if (tocOpen) closeToc(); else setMobileChrome(false);
+      if (tocOpen) closeToc();
+      else {
+        const settings = reader.querySelector('.settings[open]');
+        if (settings) {
+          settings.open = false;
+          settings.querySelector('summary')?.focus({ preventScroll: true });
+        } else setMobileChrome(false);
+      }
     }
     if (event.key === 'Tab' && tocOpen) {
       const focusable = Array.from(mobileTocPanel.querySelectorAll('button:not([disabled])'));
