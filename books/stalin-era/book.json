@@ -1,0 +1,96 @@
+{
+  "id": "stalin-era",
+  "title": "斯大林时代",
+  "author": "安娜·路易斯·斯特朗（石人译）",
+  "format": "文字版 · 按原书目录分节",
+  "note": "依据原 PDF 文字层与书签目录整理，保留出版说明、作者前言及十章结构；未使用 OCR。",
+  "type": "text",
+  "sectionPath": "books/stalin-era/sections",
+  "sections": [
+    {
+      "id": "section-001",
+      "title": "封面",
+      "level": 0
+    },
+    {
+      "id": "section-002",
+      "title": "丛书出版前言",
+      "level": 0
+    },
+    {
+      "id": "section-003",
+      "title": "原书图片",
+      "level": 0
+    },
+    {
+      "id": "section-004",
+      "title": "读者须知",
+      "level": 0
+    },
+    {
+      "id": "section-005",
+      "title": "目录",
+      "level": 0
+    },
+    {
+      "id": "section-006",
+      "title": "出版说明",
+      "level": 0
+    },
+    {
+      "id": "section-007",
+      "title": "作者前言",
+      "level": 0
+    },
+    {
+      "id": "section-008",
+      "title": "第一章 “一国建成社会主义”",
+      "level": 0
+    },
+    {
+      "id": "section-009",
+      "title": "第二章　五年计划",
+      "level": 0
+    },
+    {
+      "id": "section-010",
+      "title": "第三章　农业革命",
+      "level": 0
+    },
+    {
+      "id": "section-011",
+      "title": "第四章　新人",
+      "level": 0
+    },
+    {
+      "id": "section-012",
+      "title": "第五章　大疯狂",
+      "level": 0
+    },
+    {
+      "id": "section-013",
+      "title": "第六章　争取和平的斗争失败了",
+      "level": 0
+    },
+    {
+      "id": "section-014",
+      "title": "第七章　使希特勒止步的条约",
+      "level": 0
+    },
+    {
+      "id": "section-015",
+      "title": "第八章　全民战争",
+      "level": 0
+    },
+    {
+      "id": "section-016",
+      "title": "第九章　第二次建设",
+      "level": 0
+    },
+    {
+      "id": "section-017",
+      "title": "第十章　斯大林和斯大林死后",
+      "level": 0
+    }
+  ]
+}

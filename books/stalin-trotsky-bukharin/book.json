@@ -1,0 +1,71 @@
+{
+  "id": "stalin-trotsky-bukharin",
+  "title": "斯大林反对托洛茨基主义和布哈林主义的斗争",
+  "author": "郑言实",
+  "format": "文字版 · 按原书目录分节",
+  "note": "依据原 PDF 文字层与书签目录整理，保留前言及十章结构；仅做分节和手机阅读排版，未使用 OCR。",
+  "type": "text",
+  "sectionPath": "books/stalin-trotsky-bukharin/sections",
+  "sections": [
+    {
+      "id": "section-001",
+      "title": "目录",
+      "level": 0
+    },
+    {
+      "id": "section-002",
+      "title": "前言",
+      "level": 0
+    },
+    {
+      "id": "section-003",
+      "title": "一　捍卫列宁主义关于无产阶级革命和无产阶级专政的理论",
+      "level": 0
+    },
+    {
+      "id": "section-004",
+      "title": "二　捍卫社会主义可能首先在一国胜利的理论",
+      "level": 0
+    },
+    {
+      "id": "section-005",
+      "title": "三　坚持独立自主的建设方针，实行社会主义工业化",
+      "level": 0
+    },
+    {
+      "id": "section-006",
+      "title": "四　为粉碎托洛茨基——季诺维也夫联盟而斗争",
+      "level": 0
+    },
+    {
+      "id": "section-007",
+      "title": "五　反对维护富农阶级的右倾机会主义",
+      "level": 0
+    },
+    {
+      "id": "section-008",
+      "title": "六　为实现农业集体化而斗争",
+      "level": 0
+    },
+    {
+      "id": "section-009",
+      "title": "七　批判布哈林主义的“阶级斗争熄灭论”",
+      "level": 0
+    },
+    {
+      "id": "section-010",
+      "title": "八　反对资本主义国家工人运动中的机会主义",
+      "level": 0
+    },
+    {
+      "id": "section-011",
+      "title": "九　在民族殖民地问题上反对“左”右倾机会主义",
+      "level": 0
+    },
+    {
+      "id": "section-012",
+      "title": "十　结束语",
+      "level": 0
+    }
+  ]
+}

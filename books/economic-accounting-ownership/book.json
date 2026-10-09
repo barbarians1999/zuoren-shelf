@@ -1,0 +1,71 @@
+{
+  "id": "economic-accounting-ownership",
+  "title": "经济核算与所有制形式",
+  "author": "夏尔·贝特兰等",
+  "format": "文字版 · 按原书目录分节",
+  "note": "依据原 PDF 文字层整理，按目录中的编者文章、序言、正文各章、参考书目与后记分节；未使用 OCR。",
+  "type": "text",
+  "sectionPath": "books/economic-accounting-ownership/sections",
+  "sections": [
+    {
+      "id": "section-001",
+      "title": "书名页与目录",
+      "level": 0
+    },
+    {
+      "id": "section-002",
+      "title": "夏尔·贝特兰与价值形式：社会主义过渡中生产力真正社会化的问题",
+      "level": 0
+    },
+    {
+      "id": "section-003",
+      "title": "论过渡时期的政治经济学",
+      "level": 0
+    },
+    {
+      "id": "section-004",
+      "title": "前言",
+      "level": 0
+    },
+    {
+      "id": "section-005",
+      "title": "第一部分 经济核算与货币核算｜第一章 问题的定位",
+      "level": 0
+    },
+    {
+      "id": "section-006",
+      "title": "第一部分 经济核算与货币核算｜第二章 商品范畴的“存在”",
+      "level": 0
+    },
+    {
+      "id": "section-007",
+      "title": "第二部分 国家财产、企业与计划｜第一章 资本主义向社会主义过渡时期社会形态中的国家财产",
+      "level": 0
+    },
+    {
+      "id": "section-008",
+      "title": "第二部分 国家财产、企业与计划｜第二章 生产单位与“企业”",
+      "level": 0
+    },
+    {
+      "id": "section-009",
+      "title": "第二部分 国家财产、企业与计划｜第三章 计划与国家财产的主导地位",
+      "level": 0
+    },
+    {
+      "id": "section-010",
+      "title": "第二部分 国家财产、企业与计划｜第四章 生产过程、货币与计划的结构",
+      "level": 0
+    },
+    {
+      "id": "section-011",
+      "title": "总参考文献与补充书目",
+      "level": 0
+    },
+    {
+      "id": "section-012",
+      "title": "后记",
+      "level": 0
+    }
+  ]
+}
