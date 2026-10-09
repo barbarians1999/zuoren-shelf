@@ -388,6 +388,7 @@
 
   async function renderSection(mode, saved = null) {
     const token = ++renderToken;
+    ReaderNotes.clear();
     rendering = true;
     const target = contentFor(mode);
     syncSectionMeta();
@@ -397,8 +398,10 @@
     try {
       const html = currentBook.type === 'scan' ? scanHtml(currentBook, current) : await getSectionHtml(currentBook.sections[current]);
       if (token !== renderToken) return;
-      target.innerHTML = html;
+      target.innerHTML = ReaderNotes.restoreMarkup(html);
       wrapTables(target);
+      if (currentBook.type !== 'scan') await ReaderNotes.prepare(target, currentBook);
+      if (token !== renderToken) return;
       // Some editions already begin with the same chapter heading. Keep the
       // source HTML intact; hide only our generated duplicate in the UI.
       const firstBlock = Array.from(target.querySelectorAll('h1,h2,h3,h4,p,li,blockquote'))
@@ -480,6 +483,7 @@
   }
 
   function closeReader() {
+    ReaderNotes.clear();
     rememberPosition();
     persistProgress();
     ++renderToken;
