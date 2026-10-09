@@ -18124,6 +18124,82 @@
           "level": 0
         }
       ]
+    },
+    {
+      "id": "transition-to-socialism",
+      "title": "论向社会主义过渡",
+      "author": "保罗·斯威齐、夏尔·贝特兰",
+      "format": "文字版 · 依原书目录分节",
+      "note": "依据用户提供的 PaddleOCR Markdown 导出稿整理；按原书两部分、十篇文章分节，清理 OCR 标记并保留注号上标。OCR 识别可能存在误差，原稿未提供对应脚注正文。",
+      "type": "text",
+      "sectionPath": "books/transition-to-socialism/sections",
+      "sections": [
+        {
+          "id": "front",
+          "title": "出版说明与目录",
+          "level": 0
+        },
+        {
+          "id": "section-001",
+          "title": "捷克斯洛伐克、资本主义和社会主义",
+          "level": 0,
+          "chapter": "第一部分"
+        },
+        {
+          "id": "section-002",
+          "title": "论资本主义和社会主义之间的过渡",
+          "level": 0,
+          "chapter": "第一部分"
+        },
+        {
+          "id": "section-003",
+          "title": "答贝特兰",
+          "level": 0,
+          "chapter": "第一部分"
+        },
+        {
+          "id": "section-004",
+          "title": "再谈过渡社会",
+          "level": 0,
+          "chapter": "第一部分"
+        },
+        {
+          "id": "section-005",
+          "title": "再答贝特兰",
+          "level": 0,
+          "chapter": "第一部分"
+        },
+        {
+          "id": "section-006",
+          "title": "无产阶级专政、社会阶级和无产阶级思想体系",
+          "level": 0,
+          "chapter": "第一部分"
+        },
+        {
+          "id": "section-007",
+          "title": "从苏联的经验吸取教训",
+          "level": 0,
+          "chapter": "第二部分"
+        },
+        {
+          "id": "section-008",
+          "title": "波兰的教训",
+          "level": 0,
+          "chapter": "第二部分"
+        },
+        {
+          "id": "section-009",
+          "title": "向社会主义过渡问题",
+          "level": 0,
+          "chapter": "第二部分"
+        },
+        {
+          "id": "section-010",
+          "title": "探讨向社会主义过渡问题的研究提纲",
+          "level": 0,
+          "chapter": "第二部分"
+        }
+      ]
     }
   ]
 }
