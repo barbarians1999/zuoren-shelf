@@ -8,7 +8,7 @@
   <meta name="description" content="个人在线阅读书架">
   <title>左人书架</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=notes-20261009">
+  <link rel="stylesheet" href="styles.css?v=settings-merged-20261010">
 </head>
 <body>
   <header class="topbar">
@@ -38,7 +38,12 @@
             <p id="desktop-scan-summary" class="scan-summary is-hidden"></p>
           </aside>
           <article id="desktop-reading-panel" class="reading-panel">
-            <div class="reading-meta"><span id="book-title"></span><span id="book-author"></span><div class="reading-actions"><span id="reading-position"></span><details class="settings"><summary>阅读设置</summary><div class="settings-menu"><span>字号</span><button type="button" data-size="small">小</button><button type="button" data-size="medium">中</button><button type="button" data-size="large">大</button><span>行距</span><button type="button" data-spacing="wide">宽</button><span>字体</span><div class="font-options" role="group" aria-label="正文字体"><button type="button" data-reading-font="system" aria-pressed="true">系统</button><button type="button" data-reading-font="song" aria-pressed="false">宋体</button><button type="button" data-reading-font="source-han" aria-pressed="false">思源宋体</button><button type="button" data-reading-font="fangsong" aria-pressed="false">字体管家仿宋</button></div></div></details></div></div>
+            <div class="reading-meta"><span id="book-title"></span><span id="book-author"></span><div class="reading-actions"><span id="reading-position"></span><details class="settings"><summary>阅读设置</summary><div class="settings-menu" role="group" aria-label="阅读排版设置">
+              <fieldset class="setting-group"><legend>字号</legend><div class="setting-options" role="group" aria-label="正文字号"><button type="button" data-size="small" aria-pressed="false">小</button><button type="button" data-size="medium" aria-pressed="true">中</button><button type="button" data-size="large" aria-pressed="false">大</button></div></fieldset>
+              <fieldset class="setting-group"><legend>行距</legend><div class="setting-options" role="group" aria-label="正文行距"><button type="button" data-spacing="tight" aria-pressed="false">紧凑</button><button type="button" data-spacing="normal" aria-pressed="true">默认</button><button type="button" data-spacing="wide" aria-pressed="false">宽松</button></div></fieldset>
+              <fieldset class="setting-group"><legend>字体</legend><div class="setting-options font-options" role="group" aria-label="正文字体"><button type="button" data-reading-font="system" aria-pressed="true">系统</button><button type="button" data-reading-font="source-han" aria-pressed="false">思源宋体</button><button type="button" data-reading-font="fangsong" aria-pressed="false">字体管家仿宋</button><button type="button" data-reading-font="hanyi-shufang" aria-pressed="false">汉仪书仿55W</button></div></fieldset>
+              <p class="font-load-status" role="status" aria-live="polite"></p>
+            </div></details></div></div>
             <h2 id="section-title"></h2>
             <div id="desktop-content" class="content" tabindex="-1"></div>
             <div class="reader-nav">
@@ -53,7 +58,12 @@
         <header class="mobile-reader-head">
           <button id="mobile-back-button" class="text-button" type="button">← 返回书架</button>
           <div class="mobile-reader-title"><strong id="mobile-book-title"></strong><span id="mobile-reading-position" class="muted"></span></div>
-          <div class="reader-head-actions"><details class="settings mobile-font-settings"><summary class="text-button">字体</summary><div class="settings-menu font-options" role="group" aria-label="正文字体"><button type="button" data-reading-font="system" aria-pressed="true">系统</button><button type="button" data-reading-font="song" aria-pressed="false">宋体</button><button type="button" data-reading-font="source-han" aria-pressed="false">思源宋体</button><button type="button" data-reading-font="fangsong" aria-pressed="false">字体管家仿宋</button></div></details><button id="mobile-toc-toggle-button" class="text-button" type="button" aria-expanded="false" aria-controls="mobile-toc-panel">目录</button></div>
+          <div class="reader-head-actions"><details class="settings mobile-font-settings"><summary class="text-button">设置</summary><div class="settings-menu" role="group" aria-label="阅读排版设置">
+            <fieldset class="setting-group"><legend>字号</legend><div class="setting-options" role="group" aria-label="正文字号"><button type="button" data-size="small" aria-pressed="false">小</button><button type="button" data-size="medium" aria-pressed="true">中</button><button type="button" data-size="large" aria-pressed="false">大</button></div></fieldset>
+            <fieldset class="setting-group"><legend>行距</legend><div class="setting-options" role="group" aria-label="正文行距"><button type="button" data-spacing="tight" aria-pressed="false">紧凑</button><button type="button" data-spacing="normal" aria-pressed="true">默认</button><button type="button" data-spacing="wide" aria-pressed="false">宽松</button></div></fieldset>
+            <fieldset class="setting-group"><legend>字体</legend><div class="setting-options font-options" role="group" aria-label="正文字体"><button type="button" data-reading-font="system" aria-pressed="true">系统</button><button type="button" data-reading-font="source-han" aria-pressed="false">思源宋体</button><button type="button" data-reading-font="fangsong" aria-pressed="false">字体管家仿宋</button><button type="button" data-reading-font="hanyi-shufang" aria-pressed="false">汉仪书仿55W</button></div></fieldset>
+            <p class="font-load-status" role="status" aria-live="polite"></p>
+          </div></details><button id="mobile-toc-toggle-button" class="text-button" type="button" aria-expanded="false" aria-controls="mobile-toc-panel">目录</button></div>
         </header>
         <div id="mobile-reading-viewport" class="mobile-reading-viewport" tabindex="-1">
           <article class="mobile-reading-panel">
@@ -72,7 +82,7 @@
   </main>
   <p id="progress-notice" class="progress-notice" role="status" hidden>浏览器未允许保存阅读进度；仍可正常阅读。</p>
   <footer>友情链接：<a href="https://barbarians1999.github.io/sheke-shelf/" target="_blank" rel="noopener noreferrer">社科书架 GitHub Pages</a></footer>
-  <script src="reader-notes.js?v=notes-20261009" defer></script>
-  <script src="app.js?v=notes-20261009" defer></script>
+  <script src="reader-notes.js?v=settings-merged-20261010" defer></script>
+  <script src="app.js?v=settings-merged-20261010" defer></script>
 </body>
 </html>

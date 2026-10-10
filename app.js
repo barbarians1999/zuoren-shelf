@@ -38,6 +38,8 @@
   const progressPrefix = 'reading-desk:progress:v1:';
   const activeBookKey = 'reading-desk:active-book:v1';
   const fontPreferenceKey = 'reading-desk:font-family:v1';
+  const sizePreferenceKey = 'reading-desk:font-size:v1';
+  const spacingPreferenceKey = 'reading-desk:line-spacing:v1';
   let fontChoiceToken = 0;
   const blockSelector = 'h1,h2,h3,h4,h5,h6,p,li,blockquote,summary,img';
   const sectionCache = new Map();
@@ -229,8 +231,9 @@
   }
 
   function applyReadingFont(font, persist = false) {
-    const allowed = ['system', 'song', 'source-han', 'fangsong'];
-    const selected = allowed.includes(font) ? font : 'system';
+    const legacyFont = font === 'song' ? 'source-han' : font;
+    const allowed = ['system', 'source-han', 'fangsong', 'hanyi-shufang'];
+    const selected = allowed.includes(legacyFont) ? legacyFont : 'system';
     document.documentElement.dataset.readingFont = selected;
     document.querySelectorAll('button[data-reading-font]').forEach((button) => {
       button.setAttribute('aria-pressed', String(button.dataset.readingFont === selected));
@@ -241,12 +244,43 @@
   }
 
   function readingFontReady(font = document.documentElement.dataset.readingFont) {
-    return font === 'fangsong'
-      ? document.fonts.load('16px "Zhaoye FangSong"').catch(() => [])
-      : Promise.resolve();
+    const families = { 'source-han': 'Source Han Serif SC Web', fangsong: 'Zhaoye FangSong', 'hanyi-shufang': 'Hanyi Shufang Local First' };
+    const family = families[font];
+    if (!family || !document.fonts?.load) return Promise.resolve(true);
+    return document.fonts.load(`16px "${family}"`, '阅读字体测试')
+      .then((faces) => faces.some((face) => face.status === 'loaded'))
+      .catch(() => false);
+  }
+
+  function setPressed(selector, value, attribute) {
+    document.querySelectorAll(selector).forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset[attribute] === value));
+    });
+  }
+
+  function applyReadingSize(size, persist = false) {
+    const sizes = { small: '1rem', medium: 'clamp(1.08rem, 1.8vw, 1.24rem)', large: 'clamp(1.28rem, 2.2vw, 1.5rem)' };
+    const selected = Object.prototype.hasOwnProperty.call(sizes, size) ? size : 'medium';
+    document.documentElement.style.setProperty('--reading-size', sizes[selected]);
+    setPressed('button[data-size]', selected, 'size');
+    if (persist) {
+      try { localStorage.setItem(sizePreferenceKey, JSON.stringify(selected)); } catch { /* The current choice still applies for this visit. */ }
+    }
+  }
+
+  function applyLineSpacing(spacing, persist = false) {
+    const values = { tight: '1.75', normal: '2', wide: '2.25' };
+    const selected = Object.prototype.hasOwnProperty.call(values, spacing) ? spacing : 'normal';
+    document.documentElement.style.setProperty('--reading-leading', values[selected]);
+    setPressed('button[data-spacing]', selected, 'spacing');
+    if (persist) {
+      try { localStorage.setItem(spacingPreferenceKey, JSON.stringify(selected)); } catch { /* The current choice still applies for this visit. */ }
+    }
   }
 
   applyReadingFont(readStored(fontPreferenceKey));
+  applyReadingSize(readStored(sizePreferenceKey));
+  applyLineSpacing(readStored(spacingPreferenceKey));
 
   function sectionIdentity(book, index) {
     return book.type === 'scan' ? String(index) : book.sections[index].id;
@@ -379,6 +413,7 @@
     });
   }
 
+
   function updateScanSummary() {
     if (!currentBook || currentBook.type !== 'scan') return;
     const text = `当前第 ${current + 1} 页，共 ${currentBook.pageCount} 页`;
@@ -388,11 +423,11 @@
 
   async function renderSection(mode, saved = null) {
     const token = ++renderToken;
-    ReaderNotes.clear();
     rendering = true;
     const target = contentFor(mode);
     syncSectionMeta();
     updateScanSummary();
+    ReaderNotes.clear();
     target.setAttribute('aria-busy', 'true');
     target.innerHTML = '<p class="loading-copy" role="status">正在打开这一节……</p>';
     try {
@@ -416,10 +451,7 @@
       if (Array.isArray(saved?.openNotes)) saved.openNotes.forEach((i) => {
         if (Number.isInteger(i) && notes[i]) notes[i].open = true;
       });
-      await Promise.all([
-        readingFontReady(),
-        ...Array.from(target.querySelectorAll('img')).map((img) => img.decode().catch(() => {}))
-      ]);
+      await Promise.all(Array.from(target.querySelectorAll('img')).map((img) => img.decode().catch(() => {})));
       requestAnimationFrame(() => {
         if (token !== renderToken || reader.classList.contains('is-hidden')) return;
         restorePosition(mode, saved);
@@ -502,31 +534,54 @@
   }
 
   document.querySelectorAll('[data-size]').forEach((button) => button.addEventListener('click', () => {
-    const sizes = { small: '1rem', medium: 'clamp(1.08rem, 1.8vw, 1.24rem)', large: 'clamp(1.28rem, 2.2vw, 1.5rem)' };
-    document.documentElement.style.setProperty('--reading-size', sizes[button.dataset.size]);
+    rememberPosition();
+    applyReadingSize(button.dataset.size, true);
+    if (currentBook && !rendering && !reader.classList.contains('is-hidden')) {
+      restorePosition(readerMode, lastPosition);
+      rememberPosition();
+      persistProgress();
+    }
   }));
-  document.querySelectorAll('button[data-reading-font]').forEach((button) => button.addEventListener('click', async () => {
+  document.querySelectorAll('[data-spacing]').forEach((button) => button.addEventListener('click', () => {
+    rememberPosition();
+    applyLineSpacing(button.dataset.spacing, true);
+    if (currentBook && !rendering && !reader.classList.contains('is-hidden')) {
+      restorePosition(readerMode, lastPosition);
+      rememberPosition();
+      persistProgress();
+    }
+  }));
+  document.querySelectorAll('button[data-reading-font]').forEach((button) => button.addEventListener('click', () => {
     const choice = ++fontChoiceToken;
-    const label = button.textContent;
+    const bookAtChoice = currentBook;
+    const sectionAtChoice = current;
     const font = button.dataset.readingFont;
-    button.setAttribute('aria-busy', 'true');
-    button.disabled = true;
-    if (font === 'fangsong') button.textContent = '加载字体…';
-    await readingFontReady(font);
-    button.textContent = label;
-    button.removeAttribute('aria-busy');
-    button.disabled = false;
-    if (choice !== fontChoiceToken) return;
     rememberPosition();
     const position = lastPosition;
     applyReadingFont(font, true);
+    document.querySelectorAll('.font-load-status').forEach((status) => {
+      status.textContent = font === 'system' ? '' : '正在加载字体，正文仍可继续阅读。';
+    });
     if (currentBook && !rendering && !reader.classList.contains('is-hidden')) {
       restorePosition(readerMode, position);
       rememberPosition();
       persistProgress();
     }
+    const positionAfterChoice = lastPosition;
+    if (font !== 'system') readingFontReady(font).then((loaded) => {
+      if (choice !== fontChoiceToken || document.documentElement.dataset.readingFont !== font) return;
+      document.querySelectorAll('.font-load-status').forEach((status) => {
+        status.textContent = loaded ? '' : '字体未能载入，正文继续使用后备字体。';
+      });
+      if (loaded && currentBook === bookAtChoice && current === sectionAtChoice
+          && lastPosition === positionAfterChoice && !rendering && !reader.classList.contains('is-hidden')) {
+        restorePosition(readerMode, position);
+        rememberPosition();
+        persistProgress();
+      }
+    });
     const details = button.closest('details');
-    if (details) {
+    if (details && font === 'system') {
       details.open = false;
       details.querySelector('summary')?.focus({ preventScroll: true });
     }
@@ -534,9 +589,6 @@
   mobileReader.querySelector('.mobile-font-settings').addEventListener('toggle', (event) => {
     if (readerMode === 'mobile') setMobileChrome(true, !event.target.open);
   });
-  document.querySelectorAll('[data-spacing="wide"]').forEach((button) => button.addEventListener('click', () => {
-    document.documentElement.style.setProperty('--reading-leading', '2.25');
-  }));
 
   mobileTocToggle.addEventListener('click', (event) => { event.stopPropagation(); setTocOpen(!mobileTocPanel.classList.contains('is-open')); });
   setDesktopTocCollapsed(readStored('reading-desk:desktop-toc-collapsed:v1') === true);

@@ -15,15 +15,31 @@
   --contrast: #21211e;
   --contrast-ink: #f9f7f1;
   --ui-font: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
-  --reading-font: Georgia, "Noto Serif SC", "Songti SC", serif;
+  --reading-font: var(--ui-font);
+  --reading-leading: 2;
+  --reading-size: clamp(1.08rem, 1.8vw, 1.24rem);
   font-family: var(--ui-font);
 }
 
-:root[data-reading-font="song"] {
-  --reading-font: "Songti SC", "STSong", "Noto Serif CJK SC", "Noto Serif SC", serif;
+@font-face {
+  font-family: "Source Han Serif SC Web";
+  src: url("./fonts/SourceHanSerifCN-VF.otf.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
 }
 :root[data-reading-font="source-han"] {
-  --reading-font: "Source Han Serif SC", "Source Han Serif", "思源宋体", "Noto Serif CJK SC", "Noto Serif SC", serif;
+  --reading-font: "Source Han Serif SC Web", "Source Han Serif SC", "Source Han Serif", "思源宋体", serif;
+}
+@font-face {
+  font-family: "Hanyi Shufang Local First";
+  src: local("汉仪书仿55W"), local("汉仪书仿 55W"), local("HYShuFang55W"), local("HYShuFang 55W"), url("./fonts/ZhaoyeFangSong.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+:root[data-reading-font="hanyi-shufang"] {
+  --reading-font: "Hanyi Shufang Local First", "Zhaoye FangSong", "字体管家仿宋体", "FangSong", "FangSong_GB2312", "STFangsong", "仿宋", "Noto Serif CJK SC", "Songti SC", serif;
 }
 @font-face {
   font-family: "Zhaoye FangSong";
@@ -117,12 +133,20 @@ body.book-open .topbar { min-height: 4.5rem; grid-template-rows: auto; padding-b
 .settings { position: relative; }
 .settings summary { cursor: pointer; color: var(--accent-dark); list-style: none; }
 .settings summary::-webkit-details-marker { display: none; }
-.settings-menu { position: absolute; right: 0; top: 2rem; z-index: 2; display: flex; align-items: center; gap: .35rem; padding: .6rem; border: 1px solid var(--line); border-radius: .3rem; background: var(--panel); box-shadow: 0 .8rem 2rem rgba(20, 16, 10, .14); white-space: nowrap; }
-.settings-menu span { color: var(--muted); margin: 0 .25rem; }
+.settings-menu { position: absolute; right: 0; top: 2rem; z-index: 20; display: grid; gap: .8rem; width: min(25rem, calc(100vw - 1.5rem)); padding: .9rem; border: 1px solid var(--line); border-radius: .3rem; background: var(--panel); box-shadow: 0 .8rem 2rem rgba(20, 16, 10, .14); white-space: normal; }
+.setting-group { min-width: 0; margin: 0; padding: 0; border: 0; }
+.setting-group legend { margin-bottom: .4rem; color: var(--muted); font: 700 .76rem/1.4 var(--ui-font); }
+.setting-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem; min-width: 0; }
+.font-options { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
+.font-load-status { margin: 0; color: var(--muted); font: .75rem/1.5 var(--ui-font); }
+.font-load-status:empty { display: none; }
+@media (min-width: 701px) { .settings-menu { width: min(25rem, calc(100vw - 2rem)); } }
 .settings-menu button { border: 1px solid var(--line); background: transparent; color: var(--ink); border-radius: .25rem; padding: .32rem .5rem; cursor: pointer; }
 .settings-menu button:hover { border-color: var(--accent); color: var(--accent-dark); }
+.settings-menu button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: var(--brand-ink); }
+.settings-menu button:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent); outline-offset: 2px; }
 .reading-panel h2 { font-size: clamp(1.7rem, 4vw, 2.8rem); line-height: 1.2; font-weight: 500; margin: 2rem 0 2.2rem; }
-.content { font-family: var(--reading-font); font-size: var(--reading-size, clamp(1.08rem, 1.8vw, 1.24rem)); line-height: var(--reading-leading, 2); letter-spacing: .015em; overflow-wrap: anywhere; }
+.content { font-family: var(--reading-font); font-size: var(--reading-size); line-height: var(--reading-leading); letter-spacing: .015em; overflow-wrap: anywhere; }
 .content > section.page { display: flow-root; margin: 1.4rem 0 1.8rem; padding: .75rem 0 1.2rem; border-bottom: 1px solid var(--line); }
 .content > section.page:last-child { border-bottom: 0; }
 .content .page-marker { margin: 0 0 .8rem; color: var(--muted); font: .76rem/1.4 ui-sans-serif, system-ui, sans-serif; letter-spacing: .02em; text-indent: 0; }
@@ -197,7 +221,7 @@ footer { text-align: center; border-top: 1px solid var(--line); padding: 1.5rem 
   .reading-meta { font-size: .74rem; }
   .reading-actions { gap: .45rem; }
   .settings-menu { position: fixed; left: .75rem; right: .75rem; top: 5.6rem; justify-content: center; white-space: normal; }
-  .content { line-height: 1.9; }
+  :root { --reading-leading: 1.9; }
   .reader-nav button { flex: 1; }
 }
 
@@ -322,7 +346,7 @@ body.book-open .topbar { display: none; }
 .content p, .content blockquote, .content li { transform: none; background: transparent; }
 .content .table-scroll th { background: var(--paper-deep); }
 .settings summary { min-height: 2rem; display: flex; align-items: center; font-weight: 700; }
-.settings-menu { border: 2px solid var(--ink); border-radius: 0; background: var(--panel); box-shadow: none; flex-wrap: wrap; max-width: calc(100vw - 2rem); }
+.settings-menu { border: 2px solid var(--ink); border-radius: 0; background: var(--panel); box-shadow: none; max-width: calc(100vw - 2rem); }
 .settings-menu button { border-radius: 0; min-height: 2.5rem; font-family: var(--ui-font); }
 .reader-nav { border-top: 3px solid var(--ink); }
 .progress-notice { background: var(--panel); border: 2px solid var(--accent); }
@@ -361,6 +385,8 @@ footer a { color: var(--accent-dark); text-underline-offset: .25em; }
   .mobile-reader-head .text-button, .mobile-reader-head .muted { color: var(--contrast-ink); }
   .mobile-reader-title strong { font-family: var(--ui-font); font-weight: 800; }
   .mobile-reader-head .reader-head-actions { flex-wrap: nowrap; }
+  .mobile-reader-head .mobile-font-settings > summary { color: var(--contrast-ink); font: 700 .82rem/1.5 var(--ui-font); min-height: 2.75rem; padding: .45rem .2rem; display: flex; align-items: center; }
+  .mobile-font-settings .settings-menu { top: max(4.5rem, calc(env(safe-area-inset-top) + 3.8rem)); }
   .mobile-reading-panel h2 { border-left: .35rem solid var(--accent); padding: .3rem 0 .3rem .75rem; text-align: left; font: 800 1.15rem/1.6 var(--ui-font); }
   .content .chapter-heading { border-left-width: .35rem; padding-left: .75rem; font-size: 1.18em; }
   .mobile-toc-panel { background: var(--paper); box-shadow: none; border-left: 3px solid var(--accent); }
@@ -370,15 +396,4 @@ footer a { color: var(--accent-dark); text-underline-offset: .25em; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-}
-
-/* Reading typeface controls */
-.font-options { display: inline-flex; align-items: center; gap: .35rem; flex-wrap: wrap; min-width: 0; }
-.settings-menu .font-options { flex-basis: 100%; }
-@media (min-width: 701px) { .settings-menu { width: 26rem; } }
-.settings-menu button[data-reading-font][aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: var(--brand-ink); }
-.settings-menu button:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent); outline-offset: 2px; }
-@media (max-width: 700px) {
-  .mobile-reader-head .mobile-font-settings > summary { color: var(--contrast-ink); font: 700 .82rem/1.5 var(--ui-font); min-height: 2.75rem; padding: .45rem .2rem; display: flex; align-items: center; }
-  .mobile-font-settings .settings-menu { top: max(4.5rem, calc(env(safe-area-inset-top) + 3.8rem)); }
 }
