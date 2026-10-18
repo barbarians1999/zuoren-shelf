@@ -18449,6 +18449,67 @@
           "level": 0
         }
       ]
+    },
+    {
+      "id": "ten-questions-soe",
+      "title": "十问国企——国企工人访谈录",
+      "author": "佚名",
+      "format": "文字层整理本 · 10 问",
+      "note": "依据用户提供文件中的内嵌文字层整理，按原目录分为十问；未使用 OCR。",
+      "type": "text",
+      "sectionPath": "books/ten-questions-soe/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "一、大锅饭养懒汉吗？",
+          "level": 0
+        },
+        {
+          "id": "section-002",
+          "title": "二、为什么毛时代工人的积极性很高？",
+          "level": 0
+        },
+        {
+          "id": "section-003",
+          "title": "三、国企垮掉是因为产权不明晰吗？",
+          "level": 0
+        },
+        {
+          "id": "section-004",
+          "title": "四、毛时代计划经济是僵化的吗？",
+          "level": 0
+        },
+        {
+          "id": "section-005",
+          "title": "五、毛时代的企业效率低下吗？",
+          "level": 0
+        },
+        {
+          "id": "section-006",
+          "title": "六、老工人到底有没有当家作主过？",
+          "level": 0
+        },
+        {
+          "id": "section-007",
+          "title": "七、毛时代工人不自由吗？",
+          "level": 0
+        },
+        {
+          "id": "section-008",
+          "title": "八、厂长负责制为什么不好？",
+          "level": 0
+        },
+        {
+          "id": "section-009",
+          "title": "九、过去搞民主管理是“走过场”吗？",
+          "level": 0
+        },
+        {
+          "id": "section-010",
+          "title": "十、物质刺激符合工人阶级的要求吗？",
+          "level": 0
+        }
+      ]
     }
   ]
 }
