@@ -132,12 +132,19 @@
 
   function renderToc() {
     if (!currentBook) return;
+    const numbering = [];
     const html = currentBook.type === 'scan'
       ? '<p class="toc-hint">使用下方章节按钮翻页</p>'
       : currentBook.sections.map((section, index) => {
+        const level = clamp(Number(section.level) || 0, 0, 3);
+        while (numbering.length <= level) numbering.push(0);
+        numbering.length = level + 1;
+        numbering[level]++;
+        for (let parent = 0; parent < level; parent++) numbering[parent] ||= 1;
         const chapterHeading = section.chapter && section.chapter !== currentBook.sections[index - 1]?.chapter
           ? `<h3 class="toc-group">${escapeText(section.chapter)}</h3>` : '';
-        return `${chapterHeading}<button class="toc-link ${index === current ? 'active' : ''}" data-index="${index}" data-level="${section.level || 0}" type="button">${section.chapter ? '' : `${index + 1}. `}${escapeText(section.title)}</button>`;
+        const number = numbering.slice(0, level + 1).join('.');
+        return `${chapterHeading}<button class="toc-link ${index === current ? 'active' : ''}" data-index="${index}" data-level="${level}" type="button">${number}. ${escapeText(section.title)}</button>`;
       }).join('');
     desktopToc.innerHTML = html;
     mobileToc.innerHTML = html;
