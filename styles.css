@@ -33,7 +33,7 @@
 }
 @font-face {
   font-family: "Hanyi Shufang Local First";
-  src: local("汉仪书仿55W"), local("汉仪书仿 55W"), local("HYShuFang55W"), local("HYShuFang 55W"), url("./fonts/ZhaoyeFangSong.woff") format("woff");
+  src: local("汉仪书仿55W"), local("汉仪书仿 55W"), local("HYShuFang55W"), local("HYShuFang 55W"), url("./fonts/HanyiShufang55W.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
