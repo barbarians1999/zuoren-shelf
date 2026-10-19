@@ -136,13 +136,20 @@
     const html = currentBook.type === 'scan'
       ? '<p class="toc-hint">使用下方章节按钮翻页</p>'
       : currentBook.sections.map((section, index) => {
-        const level = clamp(Number(section.level) || 0, 0, 3);
+        let level = clamp(Number(section.level) || 0, 0, 3);
+        const newChapter = section.chapter && section.chapter !== currentBook.sections[index - 1]?.chapter;
+        let chapterHeading = '';
+        if (newChapter) {
+          numbering.length = Math.min(numbering.length, 1);
+          if (!numbering.length) numbering.push(0);
+          numbering[0]++;
+          chapterHeading = `<h3 class="toc-group">${numbering[0]}. ${escapeText(section.chapter)}</h3>`;
+          level = Math.max(level, 1);
+        }
         while (numbering.length <= level) numbering.push(0);
         numbering.length = level + 1;
         numbering[level]++;
         for (let parent = 0; parent < level; parent++) numbering[parent] ||= 1;
-        const chapterHeading = section.chapter && section.chapter !== currentBook.sections[index - 1]?.chapter
-          ? `<h3 class="toc-group">${escapeText(section.chapter)}</h3>` : '';
         const number = numbering.slice(0, level + 1).join('.');
         return `${chapterHeading}<button class="toc-link ${index === current ? 'active' : ''}" data-index="${index}" data-level="${level}" type="button">${number}. ${escapeText(section.title)}</button>`;
       }).join('');
