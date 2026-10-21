@@ -258,9 +258,9 @@ footer { text-align: center; border-top: 1px solid var(--line); padding: 1.5rem 
   .mobile-reader-head .reader-head-actions { flex: 0 0 auto; gap: .35rem; }
   .mobile-reader-head .text-button { padding: .45rem .2rem; }
   .mobile-settings summary { color: var(--accent-dark); }
-  .mobile-reading-viewport { position: absolute; inset: 0; z-index: 1; display: block; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y; scrollbar-width: thin; }
+  .mobile-reading-viewport { position: absolute; inset: 0; z-index: 1; display: block; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y; scrollbar-width: thin; background: var(--paper); }
   .content .table-scroll { width: 100%; max-width: 100%; -webkit-overflow-scrolling: touch; }
-  .mobile-reading-panel { min-height: 100%; padding: max(4.8rem, calc(env(safe-area-inset-top) + 3.3rem)) 1.1rem max(2.5rem, calc(env(safe-area-inset-bottom) + 1.5rem)); }
+  .mobile-reading-panel { min-height: 100%; padding: calc(env(safe-area-inset-top) + 1.1rem) 1.1rem calc(env(safe-area-inset-bottom) + 1.25rem); background: var(--paper); }
   .mobile-reading-panel h2 { margin: 0 0 1.8rem; font-size: 1.08rem; line-height: 1.45; text-align: center; font-weight: 600; }
   #mobile-content { position: static; width: auto; height: auto; min-height: 0; overflow: visible; padding: 0; columns: auto; column-width: auto; column-gap: normal; column-fill: initial; scroll-snap-type: none; touch-action: auto; }
   #mobile-content > section { break-inside: auto; }
