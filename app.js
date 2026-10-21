@@ -82,7 +82,7 @@
     'global-monopoly-text': 'economics', 'keynes-china-crisis': 'economics',
     'political-economy-introduction': 'economics', 'new-workers-class-struggle': 'economics',
     'workers-revolutionary-philosophy-history': 'classics', 'class-struggle-in-contemporary-china': 'economics',
-    'economic-accounting-ownership': 'economics', 'monopoly-capital-introduction': 'economics',
+    'economic-accounting-ownership': 'economics',
     'ten-questions-soe': 'economics',
     'stalin-trotsky-bukharin': 'international',
     'stalin-era': 'international', 'transition-to-socialism': 'economics'
