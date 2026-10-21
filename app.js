@@ -23,6 +23,14 @@
   const desktopPrevChapter = document.querySelector('#prev-button');
   const desktopNextChapter = document.querySelector('#next-button');
   const modeQuery = window.matchMedia('(max-width: 700px)');
+  const colorQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+
+  function syncBrowserThemeColor() {
+    themeColor.content = getComputedStyle(document.documentElement).getPropertyValue('--paper').trim();
+  }
+  colorQuery.addEventListener('change', syncBrowserThemeColor);
+  syncBrowserThemeColor();
 
   let books = [];
   let activeCategory = 'all';
@@ -314,9 +322,8 @@
   }
 
   function contentFor(mode) { return mode === 'mobile' ? mobileContent : desktopContent; }
-  function scrollOwner(mode) { return mode === 'mobile' ? mobileViewport : document.scrollingElement; }
   function readingTop(mode) {
-    return mode === 'mobile' ? mobileViewport.getBoundingClientRect().top + 12
+    return mode === 'mobile' ? 12
       : document.querySelector('.topbar').getBoundingClientRect().bottom + desktopReader.querySelector('.reader-head').getBoundingClientRect().height + 12;
   }
 
@@ -338,7 +345,7 @@
 
   function capturePosition(mode = readerMode) {
     const content = contentFor(mode);
-    const viewport = scrollOwner(mode);
+    const viewport = document.scrollingElement;
     const blocks = Array.from(content.querySelectorAll(blockSelector));
     const top = readingTop(mode);
     const block = blocks.findIndex((el) => readableBlock(el) && el.getBoundingClientRect().bottom > top);
@@ -381,7 +388,7 @@
   }
 
   function restorePosition(mode, saved) {
-    const viewport = scrollOwner(mode);
+    const viewport = document.scrollingElement;
     let top = sectionStart(mode);
     if (saved && !saved.atStart) {
       const blocks = contentFor(mode).querySelectorAll(blockSelector);
@@ -395,8 +402,7 @@
         top = clamp(saved.ratio, 0, 1) * Math.max(0, viewport.scrollHeight - viewport.clientHeight);
       }
     }
-    if (mode === 'mobile') mobileViewport.scrollTo({ top, behavior: 'instant' });
-    else window.scrollTo({ top, behavior: 'instant' });
+    window.scrollTo({ top, behavior: 'instant' });
   }
 
   function sectionCacheKey(section) { return `${currentBook.id}:${section.id}`; }
@@ -624,7 +630,6 @@
   });
 
   window.addEventListener('scroll', queueProgress, { passive: true });
-  mobileViewport.addEventListener('scroll', queueProgress, { passive: true });
   // Ordinary resize/URL-bar changes never replace content or dismiss the drawer.
   window.addEventListener('resize', queueProgress, { passive: true });
   desktopContent.addEventListener('toggle', queueProgress, true);
