@@ -172,16 +172,13 @@
   function setTocOpen(open, returnFocus = true) {
     const wasOpen = mobileTocPanel.classList.contains('is-open');
     if (open && readerMode !== 'mobile') return;
-    if (open) setMobileChrome(true);
+    if (open && !wasOpen) {
+      rememberPosition();
+      persistProgress();
+    }
     mobileTocPanel.inert = !open;
     mobileViewport.inert = open;
     mobileReader.querySelector('.mobile-reader-head').inert = open;
-    if (!open && wasOpen && returnFocus && readerMode === 'mobile') {
-      setMobileChrome(true, true);
-      mobileTocToggle.focus({ preventScroll: true });
-    } else if (!open && mobileTocPanel.contains(document.activeElement)) {
-      document.activeElement.blur();
-    }
     mobileTocPanel.setAttribute('aria-hidden', String(!open));
     if (open) mobileTocPanel.setAttribute('aria-modal', 'true');
     else mobileTocPanel.removeAttribute('aria-modal');
@@ -190,11 +187,19 @@
     mobileTocToggle.setAttribute('aria-expanded', String(open));
     document.body.classList.toggle('mobile-toc-open', open);
     if (open) {
+      setMobileChrome(false);
       const active = mobileToc.querySelector('.active') || mobileTocClose;
       active.focus({ preventScroll: true });
       const rect = active.getBoundingClientRect();
-      const panelRect = mobileTocPanel.getBoundingClientRect();
-      mobileTocPanel.scrollTop += rect.top - panelRect.top - mobileTocPanel.clientHeight / 2;
+      window.scrollTo({ top: Math.max(0, window.scrollY + rect.top + rect.height / 2 - window.innerHeight / 2), behavior: 'instant' });
+    } else if (wasOpen) {
+      if (readerMode === 'mobile') restorePosition(readerMode, lastPosition);
+      if (returnFocus && readerMode === 'mobile') {
+        setMobileChrome(true, true);
+        mobileTocToggle.focus({ preventScroll: true });
+      } else if (mobileTocPanel.contains(document.activeElement)) {
+        document.activeElement.blur();
+      }
     }
   }
 
@@ -372,6 +377,7 @@
 
   function rememberPosition() {
     if (rendering || !currentBook || reader.classList.contains('is-hidden')) return;
+    if (mobileTocPanel.classList.contains('is-open')) return;
     // A breakpoint event may arrive after CSS has already hidden the old surface.
     if ((isMobileReader() ? 'mobile' : 'desktop') !== readerMode) return;
     lastPosition = capturePosition();

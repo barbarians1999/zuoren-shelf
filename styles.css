@@ -268,11 +268,12 @@ footer { text-align: center; border-top: 1px solid var(--line); padding: 1.5rem 
   .mobile-page-tools .muted { flex: 1; text-align: center; font-size: .72rem; }
   .mobile-chapter-controls { position: absolute; left: 0; right: 0; bottom: 0; z-index: 4; display: flex; gap: .7rem; padding: .55rem 1rem max(.55rem, env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(12px); transition: opacity .2s ease, transform .2s ease; }
   .mobile-chapter-controls button { flex: 1; }
-  .mobile-toc-panel { position: fixed; top: 0; right: 0; bottom: 0; z-index: 30; display: none; width: min(88vw, 25rem); max-height: none; margin: 0; padding: max(1.25rem, env(safe-area-inset-top)) 1rem max(2rem, env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; background: var(--paper); box-shadow: -1rem 0 2.5rem rgba(20, 16, 10, .2); }
+  .mobile-toc-panel { position: relative; z-index: 30; display: none; width: min(88vw, 25rem); min-height: 100svh; max-height: none; margin: 0 0 0 auto; padding: max(1.25rem, env(safe-area-inset-top)) 1rem max(2rem, env(safe-area-inset-bottom)); overflow: visible; background: var(--paper); box-shadow: -1rem 0 2.5rem rgba(20, 16, 10, .2); }
   .mobile-toc-panel.is-open { display: block; }
-  #mobile-toc-backdrop { position: fixed; inset: 0; z-index: 25; display: none; background: rgba(24, 20, 15, .42); }
+  #mobile-toc-backdrop { position: absolute; inset: 0; z-index: 25; display: none; background: rgba(24, 20, 15, .42); }
   #mobile-toc-backdrop.is-open { display: block; pointer-events: auto; }
-  body.mobile-toc-open { overflow: hidden; }
+  body.mobile-toc-open .mobile-reading-viewport,
+  body.mobile-toc-open .mobile-reader-head { display: none; }
   /* Safari retains fixed header tint after visibility:hidden; remove its renderer. */
   .mobile-reader:not(.chrome-visible) .mobile-reader-head,
   .mobile-reader:not(.chrome-visible) .mobile-page-tools,
