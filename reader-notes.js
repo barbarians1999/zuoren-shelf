@@ -2,8 +2,7 @@
   'use strict';
   const noteCache = new Map();
   const extraSources = {
-    'jintui-text': { 'section-026': false, 'section-027': true },
-    'zuopai-text': { 'section-022': false }
+    'jintui-text': { 'section-026': false, 'section-027': true }
   };
   const noteContainers = 'aside.footnote, aside.ocr-notes, details.book-notes';
   const noteHeading = /^(?:原作)?(?:注释|原注|译注|编者注)[：:]?$/;

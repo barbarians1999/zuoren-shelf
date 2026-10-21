@@ -751,117 +751,107 @@
         {
           "id": "section-006",
           "title": "目录与编者引言",
-          "level": 1
+          "level": 0
         },
         {
           "id": "section-008",
           "title": "一 在什么意义上可以说俄国革命具有国际意义？（1920年4—5月）",
-          "level": 1
+          "level": 1,
+          "chapter": "正文"
         },
         {
           "id": "section-009",
           "title": "二 布尔什维克成功的基本条件之一",
-          "level": 1
+          "level": 1,
+          "chapter": "正文"
         },
         {
           "id": "section-010",
           "title": "三 布尔什维主义历史的几个主要阶段",
-          "level": 1
+          "level": 1,
+          "chapter": "正文"
         },
         {
           "id": "section-012",
           "title": "四 布尔什维主义是在反对工人运动内部哪些敌人的斗争中成长、壮大和得到锻炼的？",
-          "level": 2
+          "level": 1,
+          "chapter": "正文"
         },
         {
           "id": "section-013",
           "title": "五 德国“左派”共产党人。领袖、政党、阶级、群众间的相互关系",
-          "level": 1
+          "level": 1,
+          "chapter": "正文"
         },
         {
           "id": "section-014",
           "title": "六 革命家应当不应当在反动工会里做工作？",
-          "level": 1
+          "level": 1,
+          "chapter": "正文"
         },
         {
           "id": "section-015",
           "title": "七 参加不参加资产阶级议会？",
-          "level": 1
+          "level": 1,
+          "chapter": "正文"
         },
         {
           "id": "section-016",
           "title": "八 不作任何妥协吗？",
-          "level": 0
+          "level": 1,
+          "chapter": "正文"
         },
         {
           "id": "section-017",
           "title": "九 英国“左派”共产主义者",
-          "level": 1
+          "level": 1,
+          "chapter": "正文"
         },
         {
           "id": "section-018",
           "title": "十 几点结论",
-          "level": 0
+          "level": 1,
+          "chapter": "正文"
+        },
+        {
+          "id": "supplement-001",
+          "title": "一 德国共产党人的分裂",
+          "level": 1,
+          "chapter": "增补"
         },
         {
           "id": "section-019",
           "title": "二 德国的共产党人和独立党人",
-          "level": 1
+          "level": 1,
+          "chapter": "增补"
         },
         {
           "id": "section-020",
-          "title": "三  意大利的屠拉梯之流",
-          "level": 0
+          "title": "三 意大利的屠拉梯之流",
+          "level": 1,
+          "chapter": "增补"
         },
         {
           "id": "section-021",
           "title": "四 由正确的前提作出的错误结论",
-          "level": 1
+          "level": 1,
+          "chapter": "增补"
         },
         {
           "id": "section-022",
           "title": "五 怀恩科普的来信",
-          "level": 1
+          "level": 1,
+          "chapter": "增补"
         },
         {
-          "id": "section-023",
-          "title": "16 指召回派和最后通牒派的活动。",
-          "level": 2
-        },
-        {
-          "id": "section-024",
-          "title": "18 指俄国第一次资产阶级民主革命期间的 1905 年十月全俄政治罢工。",
-          "level": 2
-        },
-        {
-          "id": "section-025",
-          "title": "30 指征收党员周。",
-          "level": 2
-        },
-        {
-          "id": "section-026",
-          "title": "32《共产国际》杂志（《Коммунистический Интернационал》）是共产国际",
-          "level": 2
-        },
-        {
-          "id": "section-027",
-          "title": "41 指匈牙利右派社会民主党人的叛卖活动。",
-          "level": 2
-        },
-        {
-          "id": "section-028",
-          "title": "55 指卡普叛乱。",
-          "level": 2
+          "id": "notes",
+          "title": "注释",
+          "level": 0
         },
         {
           "id": "section-029",
-          "title": "57 指 1917 年的七月事变。",
-          "level": 2
-        },
-        {
-          "id": "section-030",
-          "title": "2",
-          "level": 2
+          "title": "人名索引",
+          "level": 0
         },
         {
           "id": "section-031",
@@ -880,7 +870,14 @@
         "section-003": "section-004",
         "section-007": "section-008",
         "section-011": "section-012",
-        "section-032": "section-033"
+        "section-032": "section-033",
+        "section-023": "notes",
+        "section-024": "notes",
+        "section-025": "notes",
+        "section-026": "notes",
+        "section-027": "notes",
+        "section-028": "notes",
+        "section-030": "section-029"
       }
     },
     {
@@ -1677,89 +1674,96 @@
         {
           "id": "section-003",
           "title": "内容提要",
-          "level": 1
+          "level": 0
         },
         {
           "id": "section-004",
           "title": "原文出版者的话",
-          "level": 1
+          "level": 0
         },
         {
           "id": "section-005",
           "title": "在西伯利亚的农村中",
-          "level": 1
+          "level": 1,
+          "chapter": "第一部"
         },
         {
           "id": "section-006",
           "title": "商人柯寿烈夫",
-          "level": 1
+          "level": 1,
+          "chapter": "第一部"
         },
         {
           "id": "section-007",
           "title": "『北极星』号",
-          "level": 1
+          "level": 1,
+          "chapter": "第一部"
         },
         {
           "id": "section-008",
           "title": "在第十四海军兵团中",
-          "level": 0
-        },
-        {
-          "id": "section-009",
-          "title": "第二部",
-          "level": 1
+          "level": 1,
+          "chapter": "第一部"
         },
         {
           "id": "section-010",
           "title": "在克里米亚的地下活动",
-          "level": 0
+          "level": 1,
+          "chapter": "第二部"
         },
         {
           "id": "section-011",
           "title": "擅自作主",
-          "level": 0
-        },
-        {
-          "id": "section-012",
-          "title": "第三部",
-          "level": 1
+          "level": 1,
+          "chapter": "第二部"
         },
         {
           "id": "section-013",
           "title": "又到西伯利亚",
-          "level": 0
+          "level": 1,
+          "chapter": "第三部"
         },
         {
           "id": "section-014",
           "title": "革命的高潮",
-          "level": 0
+          "level": 1,
+          "chapter": "第三部"
         },
         {
           "id": "section-015",
           "title": "亚列山大罗夫斯克中央监狱",
-          "level": 0
+          "level": 1,
+          "chapter": "第三部"
         },
         {
           "id": "section-016",
           "title": "十四号牢房",
-          "level": 0
+          "level": 1,
+          "chapter": "第三部"
         },
         {
           "id": "section-017",
           "title": "一九一七年",
-          "level": 0
+          "level": 1,
+          "chapter": "第三部"
         },
         {
           "id": "section-018",
           "title": "走上自由的最初日子",
-          "level": 0
+          "level": 1,
+          "chapter": "第三部"
         },
         {
           "id": "section-019",
           "title": "在新的革命的暴风雨前面",
-          "level": 0
+          "level": 1,
+          "chapter": "第三部"
         }
-      ]
+      ],
+      "progressAliases": {
+        "section-009": "section-010",
+        "section-012": "section-013"
+      }
     },
     {
       "id": "bloodfire",
@@ -8314,7 +8318,7 @@
         {
           "id": "section-106",
           "title": "（五）共产党员的人格魅力与献身精神",
-          "level": 1
+          "level": 2
         },
         {
           "id": "section-107",
@@ -11014,7 +11018,7 @@
         {
           "id": "section-095",
           "title": "第一部 回归 · 一 重返上党",
-          "level": 3
+          "level": 2
         },
         {
           "id": "section-096",
@@ -11059,7 +11063,7 @@
         {
           "id": "section-105",
           "title": "第二部 组织起来 · 十 四大自由",
-          "level": 3
+          "level": 2
         },
         {
           "id": "section-106",
@@ -11329,7 +11333,7 @@
         {
           "id": "section-160",
           "title": "第六部 当今绝对正确 · 六十 捉贼",
-          "level": 3
+          "level": 2
         },
         {
           "id": "section-161",
@@ -11349,7 +11353,7 @@
         {
           "id": "section-165",
           "title": "第七部 炮打司令部 · 六十四 整顿",
-          "level": 3
+          "level": 2
         },
         {
           "id": "section-166",
@@ -11434,7 +11438,7 @@
         {
           "id": "section-183",
           "title": "第九部 千万不要忘记阶级斗争 · 八十 处理小申",
-          "level": 3
+          "level": 2
         },
         {
           "id": "section-184",
@@ -11484,7 +11488,7 @@
         {
           "id": "section-193",
           "title": "附录：周总理接见韩丁一家时的谈话纪录",
-          "level": 2
+          "level": 1
         },
         {
           "id": "section-194",
@@ -13922,37 +13926,37 @@
         {
           "id": "section-003",
           "title": "一",
-          "level": 1
+          "level": 0
         },
         {
           "id": "section-004",
           "title": "二",
-          "level": 1
+          "level": 0
         },
         {
           "id": "section-005",
           "title": "三",
-          "level": 1
+          "level": 0
         },
         {
           "id": "section-006",
           "title": "四",
-          "level": 1
+          "level": 0
         },
         {
           "id": "section-007",
           "title": "五",
-          "level": 1
+          "level": 0
         },
         {
           "id": "section-008",
           "title": "六",
-          "level": 1
+          "level": 0
         },
         {
           "id": "section-009",
           "title": "七",
-          "level": 1
+          "level": 0
         }
       ]
     },
@@ -13983,22 +13987,26 @@
         {
           "id": "section-004",
           "title": "一",
-          "level": 1
+          "level": 1,
+          "chapter": "法兰西内战"
         },
         {
           "id": "section-005",
           "title": "二",
-          "level": 1
+          "level": 1,
+          "chapter": "法兰西内战"
         },
         {
           "id": "section-006",
           "title": "三",
-          "level": 1
+          "level": 1,
+          "chapter": "法兰西内战"
         },
         {
           "id": "section-007",
           "title": "四",
-          "level": 1
+          "level": 1,
+          "chapter": "法兰西内战"
         },
         {
           "id": "section-008",

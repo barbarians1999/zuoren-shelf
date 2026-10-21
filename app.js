@@ -144,7 +144,8 @@
     const html = currentBook.type === 'scan'
       ? '<p class="toc-hint">使用下方章节按钮翻页</p>'
       : currentBook.sections.map((section, index) => {
-        let level = clamp(Number(section.level) || 0, 0, 3);
+        let level = clamp(Number(section.level) || 0, 0, 4);
+        if (section.chapter) level = Math.max(level, 1);
         const newChapter = section.chapter && section.chapter !== currentBook.sections[index - 1]?.chapter;
         let chapterHeading = '';
         if (newChapter) {
@@ -152,7 +153,6 @@
           if (!numbering.length) numbering.push(0);
           numbering[0]++;
           chapterHeading = `<h3 class="toc-group">${numbering[0]}. ${escapeText(section.chapter)}</h3>`;
-          level = Math.max(level, 1);
         }
         while (numbering.length <= level) numbering.push(0);
         numbering.length = level + 1;
