@@ -68,6 +68,7 @@
     'ludwig-feuerbach': 'classics', 'anti-duhring': 'classics', 'british-working-class': 'classics',
     'bloodfire': 'china', 'maodazhuan-text': 'china', 'mao-selected': 'china',
     'great-retreat': 'china', 'bettelheim-industrial-organization': 'china', 'obtain-authority': 'china',
+    'long-revolution': 'china',
     'wenge-history': 'china', 'republic-course': 'china', 'two-routes-course': 'china',
     'ccp-history-course-upper': 'china', 'ccp-history-course-lower': 'china',
     'history': 'international', 'bolshevik-text': 'international', 'soviet-party-history-vol1': 'international',
