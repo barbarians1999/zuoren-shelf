@@ -23,7 +23,15 @@
   function restoreMarkup(html) {
     // Decode only bare formatting tags. Never turn escaped attributes/scripts
     // from a book into active HTML.
-    return String(html).replace(/&(?:amp;)?lt;\s*(\/?)\s*(sup|sub)\s*&(?:amp;)?gt;/gi, '<$1$2>');
+    return String(html).replace(/&(?:amp;)?lt;\s*(\/?)\s*(sup|sub)\s*&(?:amp;)?gt;/gi, '<$1$2>')
+      .replace(/\$([^$<>]+)\$/g, (original, expression, offset, source) => {
+        if (source[offset - 1] === '\\' || source[offset - 1] === '$' || source[offset + original.length] === '$') return original;
+        // Recognize only OCR's Chinese under-dot emphasis, not arbitrary TeX or math.
+        const token = /\\underset\s*\{\s*\\cdot\s*\}\s*\{\s*([\u3400-\u9fff]+)\s*\}/g;
+        if (expression.replace(token, '').trim()) return original;
+        const text = Array.from(expression.matchAll(token), match => match[1]).join('');
+        return text ? `<em class="source-emphasis">${text}</em>` : original;
+      });
   }
 
   function safeHtml(html) {
