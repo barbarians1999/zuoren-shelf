@@ -61,8 +61,9 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root { color-scheme: dark; --paper: #20201e; --paper-deep: #353530; --ink: #f0ece3; --muted: #bbb7ac; --line: #626057; --accent: #f0826d; --accent-dark: #f0826d; --panel: #292927; --topbar-bg: #191917; --reading-panel-bg: #292927; --quote-color: #d3cec3; --brand-ink: #20201e; --contrast: #191917; --contrast-ink: #f0ece3; }
+  :root:not([data-theme]) { color-scheme: dark; --paper: #20201e; --paper-deep: #353530; --ink: #f0ece3; --muted: #bbb7ac; --line: #626057; --accent: #f0826d; --accent-dark: #f0826d; --panel: #292927; --topbar-bg: #191917; --reading-panel-bg: #292927; --quote-color: #d3cec3; --brand-ink: #20201e; --contrast: #191917; --contrast-ink: #f0ece3; }
 }
+:root[data-theme="dark"] { color-scheme: dark; --paper: #20201e; --paper-deep: #353530; --ink: #f0ece3; --muted: #bbb7ac; --line: #626057; --accent: #f0826d; --accent-dark: #f0826d; --panel: #292927; --topbar-bg: #191917; --reading-panel-bg: #292927; --quote-color: #d3cec3; --brand-ink: #20201e; --contrast: #191917; --contrast-ink: #f0ece3; }
 
 * { box-sizing: border-box; }
 html { background: var(--paper); }
@@ -393,7 +394,7 @@ footer a { color: var(--accent-dark); text-underline-offset: .25em; }
   .mobile-reader-title strong { font-family: var(--ui-font); font-weight: 800; }
   .mobile-reader-head .reader-head-actions { flex-wrap: nowrap; }
   .mobile-reader-head .mobile-font-settings > summary { color: var(--contrast-ink); font: 700 .82rem/1.5 var(--ui-font); min-height: 2.75rem; padding: .45rem .2rem; display: flex; align-items: center; }
-  .mobile-font-settings .settings-menu { top: max(4.5rem, calc(env(safe-area-inset-top) + 3.8rem)); }
+  .mobile-font-settings .settings-menu { top: max(4.5rem, calc(env(safe-area-inset-top) + 3.8rem)); max-height: calc(100dvh - max(4.5rem, calc(env(safe-area-inset-top) + 3.8rem)) - 1rem); overflow-y: auto; }
   .mobile-reading-panel h2 { border-left: .35rem solid var(--accent); padding: .3rem 0 .3rem .75rem; text-align: left; font: 800 1.15rem/1.6 var(--ui-font); }
   .content .chapter-heading { border-left-width: .35rem; padding-left: .75rem; font-size: 1.18em; }
   .mobile-toc-panel { background: var(--paper); box-shadow: none; border-left: 3px solid var(--accent); }

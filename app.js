@@ -48,6 +48,7 @@
   const fontPreferenceKey = 'reading-desk:font-family:v1';
   const sizePreferenceKey = 'reading-desk:font-size:v1';
   const spacingPreferenceKey = 'reading-desk:line-spacing:v1';
+  const themePreferenceKey = 'reading-desk:theme:v1';
   let fontChoiceToken = 0;
   const blockSelector = 'h1,h2,h3,h4,h5,h6,p,li,blockquote,summary,img';
   const sectionCache = new Map();
@@ -308,6 +309,19 @@
     }
   }
 
+  function applyTheme(theme, persist = false) {
+    const selected = ['system', 'light', 'dark'].includes(theme) ? theme : 'system';
+    if (selected === 'system') delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = selected;
+    setPressed('button[data-theme-choice]', selected, 'themeChoice');
+    syncBrowserThemeColor();
+    if (persist) {
+      try { localStorage.setItem(themePreferenceKey, JSON.stringify(selected)); } catch { /* The current choice still applies for this visit. */ }
+    }
+  }
+
+  applyTheme(readStored(themePreferenceKey));
+  document.querySelectorAll('button[data-theme-choice]').forEach(button => button.addEventListener('click', () => applyTheme(button.dataset.themeChoice, true)));
   applyReadingFont(readStored(fontPreferenceKey));
   applyReadingSize(readStored(sizePreferenceKey));
   applyLineSpacing(readStored(spacingPreferenceKey));

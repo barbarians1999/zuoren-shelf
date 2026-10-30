@@ -8,8 +8,9 @@
   <meta name="apple-mobile-web-app-title" content="左人书架">
   <meta name="description" content="个人在线阅读书架">
   <title>左人书架</title>
+  <script>try { const theme = JSON.parse(localStorage.getItem('reading-desk:theme:v1')); if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme; } catch {}</script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=ocr-emphasis-20261026">
+  <link rel="stylesheet" href="styles.css?v=reading-theme-20261030">
 </head>
 <body>
   <header class="topbar">
@@ -40,6 +41,7 @@
           </aside>
           <article id="desktop-reading-panel" class="reading-panel">
             <div class="reading-meta"><span id="book-title"></span><span id="book-author"></span><div class="reading-actions"><span id="reading-position"></span><details class="settings"><summary>阅读设置</summary><div class="settings-menu" role="group" aria-label="阅读排版设置">
+              <fieldset class="setting-group"><legend>外观</legend><div class="setting-options" role="group" aria-label="外观模式"><button type="button" data-theme-choice="system" aria-pressed="true">跟随系统</button><button type="button" data-theme-choice="light" aria-pressed="false">日间</button><button type="button" data-theme-choice="dark" aria-pressed="false">夜间</button></div></fieldset>
               <fieldset class="setting-group"><legend>字号</legend><div class="setting-options" role="group" aria-label="正文字号"><button type="button" data-size="small" aria-pressed="false">小</button><button type="button" data-size="medium" aria-pressed="true">中</button><button type="button" data-size="large" aria-pressed="false">大</button></div></fieldset>
               <fieldset class="setting-group"><legend>行距</legend><div class="setting-options" role="group" aria-label="正文行距"><button type="button" data-spacing="tight" aria-pressed="false">紧凑</button><button type="button" data-spacing="normal" aria-pressed="true">默认</button><button type="button" data-spacing="wide" aria-pressed="false">宽松</button></div></fieldset>
               <fieldset class="setting-group"><legend>字体</legend><div class="setting-options font-options" role="group" aria-label="正文字体"><button type="button" data-reading-font="system" aria-pressed="true">系统</button><button type="button" data-reading-font="source-han" aria-pressed="false">思源宋体</button><button type="button" data-reading-font="fangsong" aria-pressed="false">字体管家仿宋</button><button type="button" data-reading-font="hanyi-shufang" aria-pressed="false">汉仪书仿55W</button></div></fieldset>
@@ -60,6 +62,7 @@
           <button id="mobile-back-button" class="text-button" type="button">← 返回书架</button>
           <div class="mobile-reader-title"><strong id="mobile-book-title"></strong><span id="mobile-reading-position" class="muted"></span></div>
           <div class="reader-head-actions"><details class="settings mobile-font-settings"><summary class="text-button">设置</summary><div class="settings-menu" role="group" aria-label="阅读排版设置">
+            <fieldset class="setting-group"><legend>外观</legend><div class="setting-options" role="group" aria-label="外观模式"><button type="button" data-theme-choice="system" aria-pressed="true">跟随系统</button><button type="button" data-theme-choice="light" aria-pressed="false">日间</button><button type="button" data-theme-choice="dark" aria-pressed="false">夜间</button></div></fieldset>
             <fieldset class="setting-group"><legend>字号</legend><div class="setting-options" role="group" aria-label="正文字号"><button type="button" data-size="small" aria-pressed="false">小</button><button type="button" data-size="medium" aria-pressed="true">中</button><button type="button" data-size="large" aria-pressed="false">大</button></div></fieldset>
             <fieldset class="setting-group"><legend>行距</legend><div class="setting-options" role="group" aria-label="正文行距"><button type="button" data-spacing="tight" aria-pressed="false">紧凑</button><button type="button" data-spacing="normal" aria-pressed="true">默认</button><button type="button" data-spacing="wide" aria-pressed="false">宽松</button></div></fieldset>
             <fieldset class="setting-group"><legend>字体</legend><div class="setting-options font-options" role="group" aria-label="正文字体"><button type="button" data-reading-font="system" aria-pressed="true">系统</button><button type="button" data-reading-font="source-han" aria-pressed="false">思源宋体</button><button type="button" data-reading-font="fangsong" aria-pressed="false">字体管家仿宋</button><button type="button" data-reading-font="hanyi-shufang" aria-pressed="false">汉仪书仿55W</button></div></fieldset>
@@ -83,7 +86,7 @@
   </main>
   <p id="progress-notice" class="progress-notice" role="status" hidden>浏览器未允许保存阅读进度；仍可正常阅读。</p>
   <footer>友情链接：<a href="https://barbarians1999.github.io/sheke-shelf/" target="_blank" rel="noopener noreferrer">社科书架 GitHub Pages</a></footer>
-  <script src="reader-notes.js?v=ocr-emphasis-20261026" defer></script>
-  <script src="app.js?v=ocr-emphasis-20261026" defer></script>
+  <script src="reader-notes.js?v=reading-theme-20261030" defer></script>
+  <script src="app.js?v=reading-theme-20261030" defer></script>
 </body>
 </html>
