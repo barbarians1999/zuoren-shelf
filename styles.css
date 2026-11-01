@@ -200,7 +200,6 @@ body.book-open .topbar { min-height: 4.5rem; grid-template-rows: auto; padding-b
 .author-featured-list a:hover { color: var(--accent-dark); }
 .featured-year, .featured-source { color: var(--muted); font-size: .76rem; }
 .featured-source { margin-left: auto; }
-.author-source-link { display: inline-block; margin-top: .8rem; color: var(--accent-dark); font: 700 .82rem/1.5 var(--ui-font); text-underline-offset: .22em; }
 .author-view-empty { margin: .25rem 0; padding: .85rem 1rem; border-left: 3px solid var(--accent); background: var(--panel); color: var(--muted); font-size: .9rem; line-height: 1.6; }
 .scan-frame { display: flex; justify-content: center; background: #dcd7ce; padding: clamp(.35rem, 1vw, .7rem); }
 .scan-page { display: block; width: 100%; height: auto; max-width: 1100px; background: #fff; box-shadow: 0 .7rem 1.5rem rgba(20, 16, 10, .16); }

@@ -10,7 +10,6 @@
   const authorFeaturedGroup = document.querySelector('#author-featured-group');
   const authorFeaturedList = document.querySelector('#author-featured-list');
   const authorFeaturedCount = document.querySelector('#author-featured-count');
-  const authorSourceLink = document.querySelector('#author-source-link');
   const authorReferencesGroup = document.querySelector('#author-references-group');
   const authorReferences = document.querySelector('#author-references');
   const authorReferencesCount = document.querySelector('#author-references-count');
@@ -191,8 +190,6 @@
     const featuredWorks = entry.featuredWorks || [];
     authorFeaturedGroup.classList.toggle('is-hidden', featuredWorks.length === 0);
     authorFeaturedCount.textContent = `（${featuredWorks.length}）`;
-    authorSourceLink.href = entry.sourceUrl;
-    authorSourceLink.textContent = `查看${entry.name}在中文马克思主义文库的完整目录 ↗`;
     authorFeaturedList.innerHTML = featuredWorks.map((work) => {
       const local = Boolean(work.bookId && work.sectionId);
       const href = local
