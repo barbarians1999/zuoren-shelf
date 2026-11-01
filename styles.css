@@ -198,17 +198,24 @@ body.book-open .topbar { min-height: 4.5rem; grid-template-rows: auto; padding-b
 .portrait-mao { background-position-x: 100%; }
 .author-name { display: flex; align-items: flex-end; min-width: 0; padding: .55rem .65rem; font: 700 clamp(.9rem, 1.2vw, 1.12rem)/1.3 var(--title-font); }
 .author-page .shelf-tools { flex: 1 1 24rem; max-width: 42rem; }
-.author-view-head { padding: .35rem 0 1rem 1rem; border-left: .45rem solid var(--accent); border-bottom: 2px solid var(--ink); }
+.author-view-head { padding: .35rem 0 1rem; border-bottom: 2px solid var(--ink); }
+.author-profile { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.author-profile-portrait { width: 100%; max-width: 7rem; }
+.author-profile-copy { min-width: 0; }
 .author-back { display: inline-flex; align-items: center; min-height: 2.75rem; margin-bottom: .35rem; color: var(--accent-dark); font: 700 .82rem/1.4 var(--ui-font); text-underline-offset: .25em; }
 .author-view-head h2 { margin: 0; color: var(--ink); font: 700 clamp(1.6rem, 3vw, 2.3rem)/1.25 var(--title-font); }
 .author-view-head p { margin: .5rem 0 0; color: var(--muted); line-height: 1.55; }
+.author-view-head .author-bio { max-width: 48rem; color: var(--ink); line-height: 1.75; }
 .author-view-head .text-button { margin-top: .55rem; border-bottom: 1px solid var(--line); }
 .author-group { margin-top: 1.7rem; }
 .author-group > h3 { display: flex; align-items: baseline; gap: .5rem; margin: 0 0 .9rem; padding-bottom: .4rem; border-bottom: 3px solid var(--ink); color: var(--ink); font: 700 1.08rem/1.4 var(--title-font); }
 .author-group > h3 span { color: var(--muted); font-size: .82em; }
 .author-featured-list { margin: 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
 .author-featured-list li { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); align-items: baseline; gap: .4rem .75rem; padding: .7rem .25rem; border-bottom: 1px solid var(--line); font-family: var(--ui-font); }
-.author-featured-list a { color: var(--ink); font-weight: 700; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+.author-guide { color: var(--muted); font-size: .85rem; line-height: 1.6; }
+.featured-work { display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem .7rem; min-width: 0; }
+.author-featured-list a { color: var(--ink); font-family: var(--title-font); font-weight: 700; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+.work-priority { color: var(--accent-dark); font: 700 .75rem/1.5 var(--ui-font); white-space: nowrap; }
 .author-featured-list a:hover { color: var(--accent-dark); }
 .featured-year { color: var(--accent-dark); font-size: .8rem; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .author-view-empty { margin: .25rem 0; padding: .85rem 1rem; border-top: 2px solid var(--accent); background: var(--panel); color: var(--muted); font-size: .9rem; line-height: 1.6; }
@@ -427,6 +434,8 @@ footer a { color: var(--accent-dark); text-underline-offset: .25em; }
   .author-card { grid-template-columns: minmax(0, 1fr); align-content: start; gap: 0; }
   .author-name { justify-content: center; align-items: center; min-height: 2.1rem; padding: .4rem .1rem; text-align: center; white-space: nowrap; font-size: .73rem; }
   .author-view-head { padding-bottom: .75rem; }
+  .author-profile { grid-template-columns: 4.5rem minmax(0, 1fr); gap: .8rem; }
+  .author-view-head .author-bio { font-size: .88rem; line-height: 1.7; }
   .author-view-head h2 { font-size: 1.5rem; }
   .author-group { margin-top: 1.25rem; }
   .author-featured-list li { grid-template-columns: 5.4rem minmax(0, 1fr); gap: .3rem .5rem; }

@@ -4,6 +4,15 @@
   const authorIndexNav = document.querySelector('#author-index');
   const authorView = document.querySelector('#author-view');
   const authorTitle = document.querySelector('#author-title');
+  const authorBio = document.querySelector('#author-bio');
+  const authorPortrait = document.querySelector('#author-profile-portrait');
+  const authorProfiles = {
+    marx: '卡尔·马克思（1818—1883），德国思想家、政治经济学批判者和国际工人运动活动家。他与恩格斯共同发展了历史唯物主义，其著作涉及资本主义经济、阶级斗争和革命。',
+    engels: '弗里德里希·恩格斯（1820—1895），德国思想家和国际工人运动活动家。他与马克思长期合作，研究工人阶级状况、哲学和社会主义，并整理出版《资本论》后两卷。',
+    lenin: '弗拉基米尔·伊里奇·列宁（1870—1924），俄国革命者、布尔什维克党领导人。他论述了帝国主义、国家、革命与社会主义建设，并参与领导十月革命和苏维埃政权建设。',
+    stalin: '约瑟夫·维萨里奥诺维奇·斯大林（1878—1953），苏联政治领导人和马克思主义者。他的著作涉及民族问题、列宁主义、党内论争和苏联社会主义建设。',
+    mao: '毛泽东（1893—1976），中国革命者、中国共产党和中华人民共和国的主要领导人。他的著作涉及中国革命、哲学、战争、社会主义建设和阶级斗争。'
+  };
   const authorSummary = document.querySelector('#author-summary');
   const authorFeaturedList = document.querySelector('#author-featured-list');
   const authorFeaturedCount = document.querySelector('#author-featured-count');
@@ -202,7 +211,8 @@
         : work.url;
       const linkAttributes = local ? '' : ' target="_blank" rel="noopener noreferrer"';
       const year = work.year ? `<span class="featured-year">${escapeText(work.year)}</span>` : '';
-      return `<li>${year}<a href="${escapeText(href)}"${linkAttributes}>${escapeText(work.title)}</a></li>`;
+      const priority = work.recommendation ? `<span class="work-priority" title="${escapeText(work.recommendation)}">重点阅读</span>` : '';
+      return `<li>${year}<div class="featured-work"><a href="${escapeText(href)}"${linkAttributes}>${escapeText(work.title)}</a>${priority}</div></li>`;
     }).join('');
     return featuredWorks.length;
   }
@@ -228,6 +238,8 @@
 
     const references = filteredBooks(entry.referenceIds, terms);
     authorTitle.textContent = entry.name;
+    authorBio.textContent = authorProfiles[entry.id] || '';
+    authorPortrait.className = `author-portrait author-profile-portrait portrait-${entry.id}`;
     const authoredCount = (entry.featuredWorks || []).length;
     authorSummary.textContent = `本地收录 ${authoredCount} 项作品与文章，按写作或发表时间排列。`;
     authorReferencesCount.textContent = `（${references.length}）`;

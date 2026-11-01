@@ -127,20 +127,23 @@
           "year": "1844",
           "sortYear": 1844,
           "bookId": "mx-marx-cc7a0a88dd",
-          "sectionId": "section-002"
+          "sectionId": "section-002",
+          "recommendation": "讨论异化劳动和人的解放。"
         },
         {
           "title": "德意志意识形态",
           "year": "1845—1846",
           "bookId": "german-ideology",
-          "sectionId": "section-004"
+          "sectionId": "section-004",
+          "recommendation": "阐述历史唯物主义的形成。"
         },
         {
           "title": "关于费尔巴哈的提纲",
           "year": "1845",
           "sortYear": 1845,
           "bookId": "mx-marx-94143b9fa7",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "提出实践在理解和改变世界中的作用。"
         },
         {
           "title": "德意志意识形态（节选）",
@@ -195,7 +198,8 @@
           "title": "共产党宣言",
           "year": "1848",
           "bookId": "manifesto",
-          "sectionId": "section-009"
+          "sectionId": "section-009",
+          "recommendation": "概括共产主义运动的纲领。"
         },
         {
           "title": "关于自由贸易的演说",
@@ -446,7 +450,8 @@
           "year": "1859",
           "sortYear": 1859,
           "bookId": "mx-marx-90788cbf4d",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "概述社会历史与生产关系的分析方法。"
         },
         {
           "title": "国际工人协会成立宣言",
@@ -514,7 +519,8 @@
           "title": "资本论第一卷",
           "year": "1867",
           "bookId": "marx-capital-1",
-          "sectionId": "section-008"
+          "sectionId": "section-008",
+          "recommendation": "系统分析资本主义生产方式。"
         },
         {
           "title": "资本论第一卷",
@@ -555,7 +561,8 @@
           "title": "法兰西内战",
           "year": "1871",
           "bookId": "civil-war",
-          "sectionId": "section-004"
+          "sectionId": "section-004",
+          "recommendation": "分析巴黎公社及工人政权的经验。"
         },
         {
           "title": "法兰西内战",
@@ -610,7 +617,8 @@
           "title": "哥达纲领批判",
           "year": "1875",
           "bookId": "marx-gotha-critique",
-          "sectionId": "section-005"
+          "sectionId": "section-005",
+          "recommendation": "讨论过渡时期与共产主义社会。"
         },
         {
           "title": "哥达纲领批判",
@@ -824,7 +832,8 @@
           "year": "1844",
           "sortYear": 1844,
           "bookId": "british-working-class",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "考察工业资本主义下工人的生活与斗争。"
         },
         {
           "title": "英国工人阶级状况",
@@ -899,7 +908,8 @@
           "title": "共产主义原理",
           "year": "1847",
           "bookId": "engels-principles",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "以问答形式介绍共产主义的基本主张。"
         },
         {
           "title": "论波兰——1847年11月29日在伦敦举行的纪念1830年波兰起义十七周年的国际大会上的演说",
@@ -1003,7 +1013,8 @@
           "title": "共产党宣言",
           "year": "1848",
           "bookId": "manifesto",
-          "sectionId": "section-009"
+          "sectionId": "section-009",
+          "recommendation": "概括共产主义运动的纲领。"
         },
         {
           "title": "论波兰问题——1848年2月22日在布鲁塞尔举行的1846年克拉柯夫起义两周年纪念大会上的演说",
@@ -1217,7 +1228,8 @@
           "title": "反杜林论",
           "year": "1878",
           "bookId": "anti-duhring",
-          "sectionId": "section-003"
+          "sectionId": "section-003",
+          "recommendation": "论述哲学、政治经济学和社会主义。"
         },
         {
           "title": "一八七七年的欧洲工人",
@@ -1244,7 +1256,8 @@
           "title": "社会主义从空想到科学的发展",
           "year": "1880",
           "bookId": "engels-socialism",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "梳理社会主义思想的发展。"
         },
         {
           "title": "俾斯麦先生的社会主义",
@@ -1313,7 +1326,8 @@
           "title": "家庭、私有制和国家的起源",
           "year": "1884",
           "bookId": "engels-family-origin",
-          "sectionId": "section-003"
+          "sectionId": "section-003",
+          "recommendation": "讨论家庭、私有制与国家的历史形成。"
         },
         {
           "title": "家庭、私有制和国家的起源",
@@ -1333,7 +1347,8 @@
           "title": "路德维希·费尔巴哈和德国古典哲学的终结",
           "year": "1886",
           "bookId": "ludwig-feuerbach",
-          "sectionId": "section-003"
+          "sectionId": "section-003",
+          "recommendation": "阐述德国古典哲学与马克思主义哲学的关系。"
         },
         {
           "title": "恩格斯致威廉·李卜克内西",
@@ -1652,7 +1667,11 @@
         "mx-lenin-8d6402ffe4",
         "mx-lenin-60ecc45ecb",
         "mx-lenin-3467062eae",
-        "mx-lenin-64c8ebf7ed"
+        "mx-lenin-64c8ebf7ed",
+        "mx-lenin-party-struggle-1910",
+        "mx-lenin-publicist-notes-1910",
+        "mx-lenin-august-bloc-1914",
+        "mx-lenin-unity-1914"
       ],
       "referenceIds": [],
       "featuredWorks": [
@@ -1690,6 +1709,14 @@
           "sortYear": 1895,
           "bookId": "mx-lenin-8b444530ca",
           "sectionId": "section-001"
+        },
+        {
+          "title": "俄国资本主义的发展（选集节选）",
+          "year": "1895—1899",
+          "sortYear": 1895,
+          "bookId": "lenin-selected",
+          "sectionId": "section-011",
+          "recommendation": "研究俄国资本主义和国内市场的形成。"
         },
         {
           "title": "列宁向俄国工人发出的五一节呼吁",
@@ -1780,7 +1807,8 @@
           "year": "1901",
           "bookId": "howto",
           "sectionId": "part-03",
-          "sortYear": 1901
+          "sortYear": 1901,
+          "recommendation": "讨论革命组织、理论与工人运动。"
         },
         {
           "title": "我们纲领中的民族问题",
@@ -1793,7 +1821,8 @@
           "title": "进一步，退两步",
           "year": "1904",
           "bookId": "jintui-text",
-          "sectionId": "section-008"
+          "sectionId": "section-008",
+          "recommendation": "讨论党的组织原则和党内斗争。"
         },
         {
           "title": "五一节",
@@ -1813,7 +1842,8 @@
           "title": "社会民主党在民主革命中的两种策略",
           "year": "1905",
           "bookId": "lenin-two-tactics",
-          "sectionId": "section-002"
+          "sectionId": "section-002",
+          "recommendation": "讨论民主革命中的阶级关系与策略。"
         },
         {
           "title": "社会民主党在民主革命中的两种策略",
@@ -2019,11 +2049,34 @@
           "sectionId": "section-001"
         },
         {
+          "title": "唯物主义和经验批判主义（选集节选）",
+          "year": "1908",
+          "sortYear": 1908,
+          "bookId": "lenin-selected",
+          "sectionId": "section-051",
+          "recommendation": "讨论认识论和唯物主义哲学。"
+        },
+        {
           "title": "论工人政党对宗教的态度",
           "year": "1909",
           "sortYear": 1909,
           "bookId": "lenin-selected",
           "sectionId": "section-059"
+        },
+        {
+          "title": "俄国党内斗争的历史意义",
+          "year": "1910",
+          "sortYear": 1910,
+          "bookId": "mx-lenin-party-struggle-1910",
+          "sectionId": "section-002",
+          "recommendation": "分析俄国党内分歧的社会基础，并回应马尔托夫和托洛茨基。"
+        },
+        {
+          "title": "政论家札记（1910年）",
+          "year": "1910",
+          "sortYear": 1910,
+          "bookId": "mx-lenin-publicist-notes-1910",
+          "sectionId": "section-001"
         },
         {
           "title": "马克思主义的三个来源和三个组成部分",
@@ -2109,6 +2162,21 @@
           "sectionId": "section-001"
         },
         {
+          "title": "“八月”联盟的瓦解",
+          "year": "1914",
+          "sortYear": 1914,
+          "bookId": "mx-lenin-august-bloc-1914",
+          "sectionId": "section-001"
+        },
+        {
+          "title": "论高喊统一而实则破坏统一的行为",
+          "year": "1914",
+          "sortYear": 1914,
+          "bookId": "mx-lenin-unity-1914",
+          "sectionId": "section-002",
+          "recommendation": "围绕组织统一、派别与取消主义展开论争。"
+        },
+        {
           "title": "第二国际的破产",
           "year": "1915",
           "sortYear": 1915,
@@ -2119,7 +2187,8 @@
           "title": "帝国主义论——帝国主义是资本主义的最高阶段",
           "year": "1916",
           "bookId": "imperialism",
-          "sectionId": "section-006"
+          "sectionId": "section-006",
+          "recommendation": "分析垄断资本与帝国主义。"
         },
         {
           "title": "社会主义革命和民族自决权（提纲）",
@@ -2146,13 +2215,15 @@
           "title": "国家与革命",
           "year": "1917",
           "bookId": "state-and-revolution",
-          "sectionId": "section-003"
+          "sectionId": "section-003",
+          "recommendation": "论述国家、革命与无产阶级专政。"
         },
         {
           "title": "论无产阶级在这次革命中的任务（四月提纲）",
           "year": "1917",
           "bookId": "lenin-april-theses",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "提出1917年革命的策略转变。"
         },
         {
           "title": "论两个政权",
@@ -2528,7 +2599,8 @@
           "title": "共产主义运动中的“左派”幼稚病",
           "year": "1920",
           "bookId": "zuopai-text",
-          "sectionId": "section-008"
+          "sectionId": "section-008",
+          "recommendation": "讨论革命策略和工人运动中的问题。"
         },
         {
           "title": "共产主义运动中的「左派」幼稚病",
@@ -2585,6 +2657,14 @@
           "sortYear": 1921,
           "bookId": "mx-lenin-9f4ad2798b",
           "sectionId": "section-001"
+        },
+        {
+          "title": "论粮食税（选集节选）",
+          "year": "1921",
+          "sortYear": 1921,
+          "bookId": "lenin-selected",
+          "sectionId": "section-200",
+          "recommendation": "分析新经济政策和向社会主义过渡。"
         },
         {
           "title": "论战斗唯物主义的意义",
@@ -2703,7 +2783,8 @@
           "title": "无政府主义还是社会主义？",
           "year": "1906—1907",
           "bookId": "stalin-anarchism-socialism",
-          "sectionId": "section-002"
+          "sectionId": "section-002",
+          "recommendation": "讨论无政府主义与社会主义的分歧。"
         },
         {
           "title": "无政府主义还是社会主义？",
@@ -2717,7 +2798,8 @@
           "year": "1912",
           "sortYear": 1912,
           "bookId": "stalin-national-question",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "阐述民族问题和社会民主党政策。"
         },
         {
           "title": "五一万岁！",
@@ -2772,7 +2854,8 @@
           "title": "论列宁主义基础",
           "year": "1924",
           "bookId": "stalin-foundations",
-          "sectionId": "section-002"
+          "sectionId": "section-002",
+          "recommendation": "概括列宁主义的若干基本问题。"
         },
         {
           "title": "论列宁主义基础——在斯维尔德洛夫大学的讲演",
@@ -2862,7 +2945,8 @@
           "title": "马克思主义和语言学问题",
           "year": "1950",
           "bookId": "stalin-linguistics",
-          "sectionId": "section-002"
+          "sectionId": "section-002",
+          "recommendation": "讨论语言与社会发展的关系。"
         },
         {
           "title": "马克思主义与语言学问题",
@@ -2999,7 +3083,8 @@
           "title": "中国社会各阶级的分析",
           "year": "1925",
           "bookId": "mao-selected",
-          "sectionId": "section-006"
+          "sectionId": "section-006",
+          "recommendation": "分析中国革命中的阶级关系。"
         },
         {
           "title": "纪念巴黎公社的重要意义",
@@ -3012,7 +3097,8 @@
           "title": "湖南农民运动考察报告",
           "year": "1927",
           "bookId": "mao-selected",
-          "sectionId": "section-007"
+          "sectionId": "section-007",
+          "recommendation": "考察农民运动与革命。"
         },
         {
           "title": "中国的红色政权为什么能够存在？",
@@ -3047,7 +3133,8 @@
           "year": "1930",
           "sortYear": 1930,
           "bookId": "mao-selected",
-          "sectionId": "section-013"
+          "sectionId": "section-013",
+          "recommendation": "强调调查研究和从实际出发。"
         },
         {
           "title": "时局估量和红军行动问题",
@@ -3109,13 +3196,15 @@
           "title": "实践论",
           "year": "1937",
           "bookId": "mao-selected",
-          "sectionId": "section-023"
+          "sectionId": "section-023",
+          "recommendation": "论述实践与认识的关系。"
         },
         {
           "title": "矛盾论",
           "year": "1937",
           "bookId": "mao-selected",
-          "sectionId": "section-024"
+          "sectionId": "section-024",
+          "recommendation": "论述矛盾及其在事物发展中的作用。"
         },
         {
           "title": "中国共产党在抗日时期的任务",
@@ -3219,7 +3308,8 @@
           "title": "论持久战",
           "year": "1938",
           "bookId": "mao-selected",
-          "sectionId": "section-035"
+          "sectionId": "section-035",
+          "recommendation": "分析抗日战争的发展和战略。"
         },
         {
           "title": "陕甘宁边区政府第八路军后方留守处布告",
@@ -3393,7 +3483,8 @@
           "title": "新民主主义论",
           "year": "1940",
           "bookId": "mao-selected",
-          "sectionId": "section-052"
+          "sectionId": "section-052",
+          "recommendation": "阐述中国革命的性质与前途。"
         },
         {
           "title": "克服投降危险，力争时局好转",
@@ -3694,7 +3785,8 @@
           "year": "1945",
           "sortYear": 1945,
           "bookId": "mao-selected",
-          "sectionId": "section-093"
+          "sectionId": "section-093",
+          "recommendation": "提出抗战时期的政治纲领。"
         },
         {
           "title": "愚公移山",
@@ -4092,7 +4184,8 @@
           "title": "论人民民主专政",
           "year": "1949",
           "bookId": "mao-selected",
-          "sectionId": "section-166"
+          "sectionId": "section-166",
+          "recommendation": "论述新中国成立前夕的国家政权问题。"
         },
         {
           "title": "评战犯求和",
@@ -4610,7 +4703,8 @@
           "year": "1956",
           "sortYear": 1956,
           "bookId": "mao-selected",
-          "sectionId": "section-225"
+          "sectionId": "section-225",
+          "recommendation": "探讨社会主义建设中的关系和矛盾。"
         },
         {
           "title": "美帝国主义是纸老虎",
@@ -4665,7 +4759,8 @@
           "title": "关于正确处理人民内部矛盾的问题",
           "year": "1957",
           "bookId": "mao-selected",
-          "sectionId": "section-232"
+          "sectionId": "section-232",
+          "recommendation": "讨论社会主义社会的矛盾与处理方法。"
         },
         {
           "title": "在省市自治区党委书记会议上的讲话",
@@ -40964,6 +41059,166 @@
           "title": "第四章 共产党和在野各党底关系",
           "level": 0,
           "sourceUrl": "https://www.marxists.org/chinese/marx/mia-chinese-marx-184002-cwd.htm"
+        }
+      ]
+    },
+    {
+      "id": "mx-lenin-party-struggle-1910",
+      "title": "俄国党内斗争的历史意义",
+      "author": "列宁",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "中文文字阅读版。",
+      "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/19/040.htm",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/mx-lenin-party-struggle-1910/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/19/040.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "一",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/19/040.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "二",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/19/040.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "三",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/19/040.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "四",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/19/040.htm"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/19/040.htm"
+        }
+      ]
+    },
+    {
+      "id": "mx-lenin-publicist-notes-1910",
+      "title": "政论家札记（1910年）",
+      "author": "列宁",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "中文文字阅读版。",
+      "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/19/033.htm",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/mx-lenin-publicist-notes-1910/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "一 论召回主义的拥护者和辩护人的《纲领》",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/19/033.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "二 我们党内的“统一的危机”",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/19/033.htm"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/19/033.htm"
+        }
+      ]
+    },
+    {
+      "id": "mx-lenin-august-bloc-1914",
+      "title": "“八月”联盟的瓦解",
+      "author": "列宁",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "中文文字阅读版。",
+      "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/001.htm",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/mx-lenin-august-bloc-1914/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "“八月”联盟的瓦解",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/001.htm"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/001.htm"
+        }
+      ]
+    },
+    {
+      "id": "mx-lenin-unity-1914",
+      "title": "论高喊统一而实则破坏统一的行为",
+      "author": "列宁",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "中文文字阅读版。",
+      "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/045.htm",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/mx-lenin-unity-1914/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/045.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "一 论“派别性”",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/045.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "二 论分裂",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/045.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "三 论八月联盟的瓦解",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/045.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "四 一个调和派分子对“七人团”的忠告",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/045.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "五 托洛茨基的取消主义观点",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/045.htm"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/045.htm"
         }
       ]
     }

@@ -10,7 +10,7 @@
   <title>左人书架</title>
   <script>try { const theme = JSON.parse(localStorage.getItem('reading-desk:theme:v1')); if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme; } catch {}</script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=author-serif-20261101">
+  <link rel="stylesheet" href="styles.css?v=author-profile-20261101">
 </head>
 <body>
   <header class="topbar">
@@ -37,12 +37,19 @@
       <section id="author-view" class="author-view is-hidden" aria-labelledby="author-title">
         <header class="author-view-head">
           <a id="author-back" class="author-back" href="./">← 返回书架</a>
-          <h2 id="author-title"></h2>
-          <p id="author-summary"></p>
+          <div class="author-profile">
+            <span id="author-profile-portrait" class="author-portrait author-profile-portrait" aria-hidden="true"></span>
+            <div class="author-profile-copy">
+              <h2 id="author-title"></h2>
+              <p id="author-bio" class="author-bio"></p>
+              <p id="author-summary"></p>
+            </div>
+          </div>
           <button id="author-clear-filters" class="text-button is-hidden" type="button">清除搜索</button>
         </header>
         <section id="author-featured-group" class="author-group" aria-labelledby="author-featured-title">
           <h3 id="author-featured-title">作品与文章 · 按时间排列 <span id="author-featured-count"></span></h3>
+          <p class="author-guide">重点阅读依据作品的理论内容、历史作用和阅读衔接标记；未标记不代表不重要。</p>
           <ol id="author-featured-list" class="author-featured-list"></ol>
           <p id="author-featured-empty" class="author-view-empty is-hidden" role="status"></p>
         </section>
@@ -116,6 +123,6 @@
   <p id="progress-notice" class="progress-notice" role="status" hidden>浏览器未允许保存阅读进度；仍可正常阅读。</p>
   <footer>友情链接：<a href="https://barbarians1999.github.io/sheke-shelf/" target="_blank" rel="noopener noreferrer">社科书架 GitHub Pages</a></footer>
   <script src="reader-notes.js?v=imperialism-math-20261101" defer></script>
-  <script src="app.js?v=author-serif-20261101" defer></script>
+  <script src="app.js?v=author-profile-20261101" defer></script>
 </body>
 </html>
