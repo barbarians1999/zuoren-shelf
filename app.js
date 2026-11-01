@@ -1,21 +1,21 @@
 (() => {
   const shelf = document.querySelector('#shelf');
   const bookList = document.querySelector('#book-list');
+  const authorIndexNav = document.querySelector('#author-index');
   const authorView = document.querySelector('#author-view');
   const authorTitle = document.querySelector('#author-title');
   const authorSummary = document.querySelector('#author-summary');
-  const authorWorks = document.querySelector('#author-works');
-  const authorWorksCount = document.querySelector('#author-works-count');
-  const authorWorksEmpty = document.querySelector('#author-works-empty');
-  const authorFeaturedGroup = document.querySelector('#author-featured-group');
   const authorFeaturedList = document.querySelector('#author-featured-list');
   const authorFeaturedCount = document.querySelector('#author-featured-count');
+  const authorFeaturedEmpty = document.querySelector('#author-featured-empty');
   const authorReferencesGroup = document.querySelector('#author-references-group');
   const authorReferences = document.querySelector('#author-references');
   const authorReferencesCount = document.querySelector('#author-references-count');
   const authorReferencesEmpty = document.querySelector('#author-references-empty');
   const authorClearFilters = document.querySelector('#author-clear-filters');
+  const authorBack = document.querySelector('#author-back');
   const bookSearch = document.querySelector('#book-search');
+  const bookSearchLabel = document.querySelector('label[for="book-search"]');
   const shelfCount = document.querySelector('#shelf-count');
   const categoryFilters = document.querySelector('#category-filters');
   const reader = document.querySelector('#reader');
@@ -125,7 +125,6 @@
     books = data.books || [];
     authorIndex = Array.isArray(data.authorIndex) ? data.authorIndex : [];
     activeAuthor = authorIndex.find((entry) => entry.id === requestedAuthor) || null;
-    renderAuthorNavigation();
     renderCategoryFilters();
     renderShelf();
     const activeBook = readStored(activeBookKey);
@@ -141,19 +140,12 @@
     }
   }
 
-  function renderAuthorNavigation() {
-    const selected = activeAuthor?.id || 'all';
-    document.querySelectorAll('[data-author-link]').forEach((link) => {
-      if (link.dataset.authorLink === selected) link.setAttribute('aria-current', 'page');
-      else link.removeAttribute('aria-current');
-    });
-  }
-
   function renderCategoryFilters() {
+    const shelfBooks = books.filter((book) => !book.authorOnly);
     categoryFilters.innerHTML = categories.map((category) => {
       const count = category.id === 'all'
-        ? books.length
-        : books.filter((book) => window.bookCategoryById[book.id] === category.id).length;
+        ? shelfBooks.length
+        : shelfBooks.filter((book) => window.bookCategoryById[book.id] === category.id).length;
       return `<button class="category-filter" type="button" data-category="${category.id}" aria-pressed="${category.id === activeCategory}">${category.label}<span aria-hidden="true">${count}</span></button>`;
     }).join('');
     categoryFilters.querySelectorAll('[data-category]').forEach((button) => button.addEventListener('click', () => {
@@ -168,6 +160,7 @@
 
   function filteredBooks(ids, terms) {
     return books.map((book, index) => ({ book, index, saved: readProgress(book) }))
+      .filter(({ book }) => ids !== null || !book.authorOnly)
       .filter(({ book }) => ids === null || ids.includes(book.id))
       .filter(({ book }) => activeCategory === 'all' || window.bookCategoryById[book.id] === activeCategory)
       .filter(({ book }) => terms.every((term) => `${book.title} ${book.author}`.toLocaleLowerCase().includes(term)))
@@ -180,64 +173,72 @@
       const units = isScan ? `${book.pageCount} 页` : `${book.sections.length} 个阅读单元`;
       const status = isScan ? '逐页加载' : '分段加载';
       const category = categories.find((item) => item.id === window.bookCategoryById[book.id]);
-      const sourceLink = book.sourceUrl ? `<a class="book-source" href="${escapeText(book.sourceUrl)}" target="_blank" rel="noopener noreferrer">原文来源 ↗</a>` : '';
-      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><p class="book-category">${escapeText(category?.label || '书籍')}</p><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p>${sourceLink}</div><div class="book-foot"><span class="book-status" title="${escapeText(status)}">${escapeText(units)}</span><button class="open-button" type="button" data-book="${index}" aria-label="${saved ? '继续阅读' : '打开'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '打开阅读'}</button></div></article>`;
+      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><p class="book-category">${escapeText(category?.label || '书籍')}</p><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p></div><div class="book-foot"><span class="book-status" title="${escapeText(status)}">${escapeText(units)}</span><button class="open-button" type="button" data-book="${index}" aria-label="${saved ? '继续阅读' : '打开'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '打开阅读'}</button></div></article>`;
     }).join('') : '';
     target.querySelectorAll('[data-book]').forEach((button) => button.addEventListener('click', () => openReader(Number(button.dataset.book))));
   }
 
-  function renderAuthorFeaturedWorks(entry) {
-    const featuredWorks = entry.featuredWorks || [];
-    authorFeaturedGroup.classList.toggle('is-hidden', featuredWorks.length === 0);
+  function renderAuthorFeaturedWorks(entry, terms) {
+    const authorCategory = { marx: 'classics', engels: 'classics', lenin: 'classics', stalin: 'international', mao: 'china' }[entry.id];
+    const featuredWorks = (entry.featuredWorks || [])
+      .filter((work) => {
+        const inCategory = activeCategory === 'all' || authorCategory === activeCategory;
+        return inCategory && terms.every((term) => work.title.toLocaleLowerCase().includes(term));
+      })
+      .sort((a, b) => {
+        const yearA = Number(a.sortYear || String(a.year || '').match(/\d{4}/)?.[0] || Infinity);
+        const yearB = Number(b.sortYear || String(b.year || '').match(/\d{4}/)?.[0] || Infinity);
+        return yearA - yearB;
+      });
     authorFeaturedCount.textContent = `（${featuredWorks.length}）`;
+    authorFeaturedEmpty.classList.toggle('is-hidden', featuredWorks.length > 0);
+    authorFeaturedEmpty.textContent = (entry.featuredWorks || []).length
+      ? '当前搜索和分类没有匹配的作品。'
+      : '暂未收录可在线阅读的作品。';
     authorFeaturedList.innerHTML = featuredWorks.map((work) => {
       const local = Boolean(work.bookId && work.sectionId);
       const href = local
         ? `?author=${encodeURIComponent(entry.id)}&book=${encodeURIComponent(work.bookId)}&section=${encodeURIComponent(work.sectionId)}`
         : work.url;
       const linkAttributes = local ? '' : ' target="_blank" rel="noopener noreferrer"';
-      const localBook = local && books.find((book) => book.id === work.bookId);
-      const source = local ? `本地阅读 · 收录于《${localBook?.title || '本地书目'}》` : '中文马克思主义文库';
       const year = work.year ? `<span class="featured-year">${escapeText(work.year)}</span>` : '';
-      return `<li><a href="${escapeText(href)}"${linkAttributes}>${escapeText(work.title)}</a>${year}<span class="featured-source">${escapeText(source)}</span></li>`;
+      return `<li>${year}<a href="${escapeText(href)}"${linkAttributes}>${escapeText(work.title)}</a></li>`;
     }).join('');
+    return featuredWorks.length;
   }
 
   function renderShelf() {
     const terms = bookSearch.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
     const filterActive = terms.length > 0 || activeCategory !== 'all';
     const entry = activeAuthor;
+    authorIndexNav.hidden = Boolean(entry) || activeCategory !== 'all';
+    categoryFilters.hidden = Boolean(entry);
+    document.body.classList.toggle('author-page', Boolean(entry));
+    bookSearch.placeholder = entry ? '搜索作品或文章' : '书名或作者';
+    bookSearchLabel.textContent = entry ? `搜索${entry.name}的作品` : '找一本书';
     bookList.classList.toggle('is-hidden', Boolean(entry));
     authorView.classList.toggle('is-hidden', !entry);
     if (!entry) {
       const visible = filteredBooks(null, terms);
-      shelfCount.textContent = filterActive ? `找到 ${visible.length} 本` : `共 ${books.length} 本`;
+      shelfCount.textContent = filterActive ? `找到 ${visible.length} 本` : `共 ${books.filter((book) => !book.authorOnly).length} 本`;
       if (visible.length) renderBookCards(bookList, visible);
       else bookList.innerHTML = '<p class="shelf-empty">没有找到这本书，试试书名中的其他字或作者名。</p>';
       return;
     }
 
-    const works = filteredBooks(entry.workIds, terms);
     const references = filteredBooks(entry.referenceIds, terms);
     authorTitle.textContent = entry.name;
-    authorSummary.textContent = entry.workIds.length
-      ? `本书架收录 ${entry.workIds.length} 项作品。`
-      : `本地尚未收录${entry.name}本人著作全文；下方提供中马库原文入口和相关书目。`;
-    authorWorksCount.textContent = `（${works.length}）`;
+    const authoredCount = (entry.featuredWorks || []).length;
+    authorSummary.textContent = `本地收录 ${authoredCount} 项作品与文章，按写作或发表时间排列。`;
     authorReferencesCount.textContent = `（${references.length}）`;
-    renderAuthorFeaturedWorks(entry);
+    const visibleWorks = renderAuthorFeaturedWorks(entry, terms);
     authorReferencesGroup.classList.toggle('is-hidden', entry.referenceIds.length === 0);
     authorClearFilters.classList.toggle('is-hidden', !filterActive);
-    authorWorksEmpty.classList.toggle('is-hidden', works.length > 0);
-    authorWorksEmpty.textContent = entry.workIds.length === 0
-      ? `本地书架目前没有${entry.name}本人著作全文。`
-      : '当前搜索和分类没有匹配的著作。';
     authorReferencesEmpty.classList.toggle('is-hidden', entry.referenceIds.length === 0 || references.length > 0);
     authorReferencesEmpty.textContent = '当前搜索和分类没有匹配的相关书目。';
     shelfCount.textContent = filterActive
-      ? `筛选结果：${works.length} 项著作，${references.length} 项相关书目`
-      : `${entry.name}：${entry.workIds.length} 项著作，${entry.referenceIds.length} 项相关书目`;
-    renderBookCards(authorWorks, works);
+      ? `筛选结果：${visibleWorks} 项作品，${references.length} 项相关书目`
+      : `${entry.name}：${authoredCount} 项作品，${references.length} 项相关书目`;
     if (entry.referenceIds.length) renderBookCards(authorReferences, references);
   }
 
@@ -839,6 +840,7 @@
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
   bookSearch.addEventListener('input', renderShelf);
+  authorBack.addEventListener('click', () => writeStored(activeBookKey, null));
   authorClearFilters.addEventListener('click', () => {
     bookSearch.value = '';
     activeCategory = 'all';
