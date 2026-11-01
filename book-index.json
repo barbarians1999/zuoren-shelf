@@ -1,6 +1,333 @@
 {
   "title": "左人书架",
   "description": "个人移动端在线阅读书架，保留文字阅读版",
+  "authorIndex": [
+    {
+      "id": "marx",
+      "name": "马克思",
+      "sourceUrl": "https://www.marxists.org/chinese/marx/index.htm",
+      "workIds": [
+        "manifesto",
+        "german-ideology",
+        "class-struggles-france",
+        "eighteenth-brumaire",
+        "civil-war",
+        "marx-wage-price-profit",
+        "marx-capital-1",
+        "marx-gotha-critique"
+      ],
+      "referenceIds": [],
+      "featuredWorks": [
+        {
+          "title": "共产党宣言",
+          "year": "1848",
+          "bookId": "manifesto",
+          "sectionId": "section-009"
+        },
+        {
+          "title": "德意志意识形态",
+          "year": "1845—1846",
+          "bookId": "german-ideology",
+          "sectionId": "section-004"
+        },
+        {
+          "title": "1848年至1850年的法兰西阶级斗争",
+          "year": "1850",
+          "bookId": "class-struggles-france",
+          "sectionId": "section-002"
+        },
+        {
+          "title": "路易·波拿巴的雾月十八日",
+          "year": "1852",
+          "bookId": "eighteenth-brumaire",
+          "sectionId": "section-003"
+        },
+        {
+          "title": "法兰西内战",
+          "year": "1871",
+          "bookId": "civil-war",
+          "sectionId": "section-004"
+        },
+        {
+          "title": "工资、价格和利润",
+          "year": "1865",
+          "bookId": "marx-wage-price-profit",
+          "sectionId": "section-002"
+        },
+        {
+          "title": "资本论第一卷",
+          "year": "1867",
+          "bookId": "marx-capital-1",
+          "sectionId": "section-008"
+        },
+        {
+          "title": "哥达纲领批判",
+          "year": "1875",
+          "bookId": "marx-gotha-critique",
+          "sectionId": "section-005"
+        }
+      ]
+    },
+    {
+      "id": "engels",
+      "name": "恩格斯",
+      "sourceUrl": "https://www.marxists.org/chinese/engels/index.htm",
+      "workIds": [
+        "manifesto",
+        "german-ideology",
+        "natural-dialectics",
+        "ludwig-feuerbach",
+        "anti-duhring",
+        "british-working-class",
+        "engels-principles",
+        "engels-authority",
+        "engels-family-origin",
+        "engels-socialism"
+      ],
+      "referenceIds": [],
+      "featuredWorks": [
+        {
+          "title": "英国工人阶级状况",
+          "year": "1845",
+          "bookId": "british-working-class",
+          "sectionId": "section-004"
+        },
+        {
+          "title": "共产党宣言",
+          "year": "1848",
+          "bookId": "manifesto",
+          "sectionId": "section-009"
+        },
+        {
+          "title": "德意志意识形态",
+          "year": "1845—1846",
+          "bookId": "german-ideology",
+          "sectionId": "section-004"
+        },
+        {
+          "title": "共产主义原理",
+          "year": "1847",
+          "bookId": "engels-principles",
+          "sectionId": "section-001"
+        },
+        {
+          "title": "反杜林论",
+          "year": "1878",
+          "bookId": "anti-duhring",
+          "sectionId": "section-003"
+        },
+        {
+          "title": "社会主义从空想到科学的发展",
+          "year": "1880",
+          "bookId": "engels-socialism",
+          "sectionId": "section-001"
+        },
+        {
+          "title": "家庭、私有制和国家的起源",
+          "year": "1884",
+          "bookId": "engels-family-origin",
+          "sectionId": "section-003"
+        },
+        {
+          "title": "路德维希·费尔巴哈和德国古典哲学的终结",
+          "year": "1886",
+          "bookId": "ludwig-feuerbach",
+          "sectionId": "section-003"
+        },
+        {
+          "title": "论权威",
+          "year": "1872",
+          "bookId": "engels-authority",
+          "sectionId": "section-001"
+        },
+        {
+          "title": "自然辩证法",
+          "year": "1873—1883",
+          "bookId": "natural-dialectics",
+          "sectionId": "section-003"
+        }
+      ]
+    },
+    {
+      "id": "lenin",
+      "name": "列宁",
+      "sourceUrl": "https://www.marxists.org/chinese/lenin/index.htm",
+      "workIds": [
+        "howto",
+        "jintui-text",
+        "zuopai-text",
+        "imperialism",
+        "state-and-revolution",
+        "lenin-selected",
+        "lenin-three-sources",
+        "lenin-april-theses",
+        "lenin-kautsky",
+        "lenin-two-tactics"
+      ],
+      "referenceIds": [],
+      "featuredWorks": [
+        {
+          "title": "怎么办？",
+          "year": "1902",
+          "bookId": "howto",
+          "sectionId": "part-03"
+        },
+        {
+          "title": "进一步，退两步",
+          "year": "1904",
+          "bookId": "jintui-text",
+          "sectionId": "section-008"
+        },
+        {
+          "title": "社会民主党在民主革命中的两种策略",
+          "year": "1905",
+          "bookId": "lenin-two-tactics",
+          "sectionId": "section-002"
+        },
+        {
+          "title": "国家与革命",
+          "year": "1917",
+          "bookId": "state-and-revolution",
+          "sectionId": "section-003"
+        },
+        {
+          "title": "帝国主义论——帝国主义是资本主义的最高阶段",
+          "year": "1916",
+          "bookId": "imperialism",
+          "sectionId": "section-006"
+        },
+        {
+          "title": "共产主义运动中的“左派”幼稚病",
+          "year": "1920",
+          "bookId": "zuopai-text",
+          "sectionId": "section-008"
+        },
+        {
+          "title": "论无产阶级在这次革命中的任务（四月提纲）",
+          "year": "1917",
+          "bookId": "lenin-april-theses",
+          "sectionId": "section-001"
+        },
+        {
+          "title": "无产阶级革命和叛徒考茨基",
+          "year": "1918",
+          "bookId": "lenin-kautsky",
+          "sectionId": "section-002"
+        },
+        {
+          "title": "马克思主义的三个来源和三个组成部分",
+          "year": "1913",
+          "bookId": "lenin-three-sources",
+          "sectionId": "section-001"
+        }
+      ]
+    },
+    {
+      "id": "stalin",
+      "name": "斯大林",
+      "sourceUrl": "https://www.marxists.org/chinese/stalin/index.htm",
+      "workIds": [
+        "stalin-anarchism-socialism",
+        "stalin-national-question",
+        "stalin-foundations",
+        "stalin-linguistics"
+      ],
+      "referenceIds": [
+        "history",
+        "soviet-party-history-vol1",
+        "soviet-party-history-vol2",
+        "stalin-era",
+        "stalin-trotsky-bukharin"
+      ],
+      "featuredWorks": [
+        {
+          "title": "马克思主义和民族问题",
+          "year": "1913",
+          "bookId": "stalin-national-question",
+          "sectionId": "section-002"
+        },
+        {
+          "title": "无政府主义还是社会主义？",
+          "year": "1906—1907",
+          "bookId": "stalin-anarchism-socialism",
+          "sectionId": "section-002"
+        },
+        {
+          "title": "论列宁主义基础",
+          "year": "1924",
+          "bookId": "stalin-foundations",
+          "sectionId": "section-002"
+        },
+        {
+          "title": "马克思主义和语言学问题",
+          "year": "1950",
+          "bookId": "stalin-linguistics",
+          "sectionId": "section-002"
+        }
+      ]
+    },
+    {
+      "id": "mao",
+      "name": "毛泽东",
+      "sourceUrl": "https://www.marxists.org/chinese/maozedong/index.htm",
+      "workIds": [
+        "mao-selected"
+      ],
+      "referenceIds": [
+        "maodazhuan-text"
+      ],
+      "featuredWorks": [
+        {
+          "title": "中国社会各阶级的分析",
+          "year": "1925",
+          "bookId": "mao-selected",
+          "sectionId": "section-006"
+        },
+        {
+          "title": "湖南农民运动考察报告",
+          "year": "1927",
+          "bookId": "mao-selected",
+          "sectionId": "section-007"
+        },
+        {
+          "title": "实践论",
+          "year": "1937",
+          "bookId": "mao-selected",
+          "sectionId": "section-023"
+        },
+        {
+          "title": "矛盾论",
+          "year": "1937",
+          "bookId": "mao-selected",
+          "sectionId": "section-024"
+        },
+        {
+          "title": "论持久战",
+          "year": "1938",
+          "bookId": "mao-selected",
+          "sectionId": "section-035"
+        },
+        {
+          "title": "新民主主义论",
+          "year": "1940",
+          "bookId": "mao-selected",
+          "sectionId": "section-052"
+        },
+        {
+          "title": "论人民民主专政",
+          "year": "1949",
+          "bookId": "mao-selected",
+          "sectionId": "section-166"
+        },
+        {
+          "title": "关于正确处理人民内部矛盾的问题",
+          "year": "1957",
+          "bookId": "mao-selected",
+          "sectionId": "section-232"
+        }
+      ]
+    }
+  ],
   "books": [
     {
       "id": "history",
@@ -18619,6 +18946,1134 @@
           "id": "section-058",
           "title": "附录七、在斯诺最后的日子里",
           "level": 0
+        }
+      ]
+    },
+    {
+      "id": "marx-wage-price-profit",
+      "title": "工资、价格和利润",
+      "author": "马克思",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm",
+      "type": "text",
+      "sectionPath": "books/marx-wage-price-profit/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "﹝引言﹞",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "1．﹝生产和工资﹞",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "2．﹝生产、工资、利润﹞",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "3．﹝工资和通货﹞",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "4．﹝供给和需求﹞",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "5．﹝工资和价格﹞",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-007",
+          "title": "6．﹝价值和劳动﹞",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-008",
+          "title": "7．劳动力",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-009",
+          "title": "8．剩余价值的生产",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-010",
+          "title": "9．劳动的价值",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-011",
+          "title": "10．利润是按照商品的价值出卖商品获得的",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-012",
+          "title": "11．剩余价值分解成的各个部分",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-013",
+          "title": "12．利润、工资和价格的一般关系",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-014",
+          "title": "13．争取提高工资或反对降低工资的一些最重要场合",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        },
+        {
+          "id": "section-015",
+          "title": "14．资本和劳动的斗争及其结果",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1865-5.htm"
+        }
+      ]
+    },
+    {
+      "id": "marx-capital-1",
+      "title": "资本论第一卷",
+      "author": "马克思",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/marx/capital/index.htm",
+      "type": "text",
+      "sectionPath": "books/marx-capital-1/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "第一版序言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/00.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "第二版跋",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/00.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "法文版序言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/00.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "法文版跋",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/00.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "第三版序言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/00.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "英文版序言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/00.htm"
+        },
+        {
+          "id": "section-007",
+          "title": "第四版序言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/00.htm"
+        },
+        {
+          "id": "section-008",
+          "title": "第一章 商品",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/01.htm"
+        },
+        {
+          "id": "section-009",
+          "title": "第二章 交 换 过 程",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/02.htm"
+        },
+        {
+          "id": "section-010",
+          "title": "第三章 货币或商品流通",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/03.htm"
+        },
+        {
+          "id": "section-011",
+          "title": "第四章 货币转化为资本",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/04.htm"
+        },
+        {
+          "id": "section-012",
+          "title": "第五章 劳动过程和价值增殖过程",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/05.htm"
+        },
+        {
+          "id": "section-013",
+          "title": "第六章 不变资本和可变资本",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/06.htm"
+        },
+        {
+          "id": "section-014",
+          "title": "第七章 剩余价值率",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/07.htm"
+        },
+        {
+          "id": "section-015",
+          "title": "第八章 工 作 日",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/08.htm"
+        },
+        {
+          "id": "section-016",
+          "title": "第九章 剩余价值率和剩余价值量",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/09.htm"
+        },
+        {
+          "id": "section-017",
+          "title": "第十章 相对剩余价值的概念",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/10.htm"
+        },
+        {
+          "id": "section-018",
+          "title": "第十一章 协 作",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/11.htm"
+        },
+        {
+          "id": "section-019",
+          "title": "第十二章 分工和工场手工业",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/12.htm"
+        },
+        {
+          "id": "section-020",
+          "title": "第十三章 机器和大工业",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/13.htm"
+        },
+        {
+          "id": "section-021",
+          "title": "第十四章 绝对剩余价值和相对剩余价值",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/14.htm"
+        },
+        {
+          "id": "section-022",
+          "title": "第十五章 劳动力价格和剩余价值的量的变化",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/15.htm"
+        },
+        {
+          "id": "section-023",
+          "title": "第十六章 剩余价值率的各种公式",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/16.htm"
+        },
+        {
+          "id": "section-024",
+          "title": "第十七章 劳动力的价值或价格转化为工资",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/17.htm"
+        },
+        {
+          "id": "section-025",
+          "title": "第十八章 计时工资",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/18.htm"
+        },
+        {
+          "id": "section-026",
+          "title": "第十九章 计件工资",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/19.htm"
+        },
+        {
+          "id": "section-027",
+          "title": "第二十章 工资的国民差异",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/20.htm"
+        },
+        {
+          "id": "section-028",
+          "title": "第二十一章 简单再生产",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/21.htm"
+        },
+        {
+          "id": "section-029",
+          "title": "第二十二章 剩余价值转化为资本",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/22.htm"
+        },
+        {
+          "id": "section-030",
+          "title": "第二十三章 资本主义积累的一般规律",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/23.htm"
+        },
+        {
+          "id": "section-031",
+          "title": "第二十四章 所谓原始积累",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/24.htm"
+        },
+        {
+          "id": "section-032",
+          "title": "第二十五章 现代殖民理论",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/capital/25.htm"
+        }
+      ]
+    },
+    {
+      "id": "marx-gotha-critique",
+      "title": "哥达纲领批判",
+      "author": "马克思",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1875-4.htm",
+      "type": "text",
+      "sectionPath": "books/marx-gotha-critique/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "版本说明",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1875-4.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "卡·马克思“哥达纲领批判”序言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1875-4.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "给威·白拉克的信",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1875-4.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "对德国工人党纲领的几点意见",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1875-4.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "一",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1875-4.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "二",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1875-4.htm"
+        },
+        {
+          "id": "section-007",
+          "title": "三",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1875-4.htm"
+        },
+        {
+          "id": "section-008",
+          "title": "四",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1875-4.htm"
+        }
+      ]
+    },
+    {
+      "id": "engels-principles",
+      "title": "共产主义原理",
+      "author": "恩格斯",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm",
+      "type": "text",
+      "sectionPath": "books/engels-principles/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "第一个问题：什么是共产主义？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "第二个问题：什么是无产阶级？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "第三个问题：是不是说，无产者不是一向就有的？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "第四个问题：无产阶级是怎样产生的？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "第五个问题：无产者是在怎样的条件下把劳动出卖给资产者的？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "第六个问题：在工业革命前，有过什么样的劳动阶级？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-007",
+          "title": "第七个问题：无产者和奴隶有什么区别？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-008",
+          "title": "第八个问题：无产者和农奴有什么区别？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-009",
+          "title": "第九个问题：无产者和手工业者有什么区别？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-010",
+          "title": "第十个问题：无产者和工场手工业工人有什么区别？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-011",
+          "title": "第十一个问题：工业革命和社会划分为资产者与无产者首先产生了什么结果？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-012",
+          "title": "第十二个问题：工业革命进一步产生了什么结果？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-013",
+          "title": "第十三个问题：这种定期重复的商业危机会产生什么后果？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-014",
+          "title": "第十四个问题：这种新的社会制度应当是怎样的？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-015",
+          "title": "第十五个问题：这么说，过去废除私有制是不可能的？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-016",
+          "title": "第十六个问题：能不能用和平的办法废除私有制？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-017",
+          "title": "第十七个问题：能不能一下子就把私有制废除？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-018",
+          "title": "第十八个问题：这个革命的发展过程将是怎样的？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-019",
+          "title": "第十九个问题：这种革命能不能单独在一个国家发生？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-020",
+          "title": "第二十个问题：最终废除私有制将产生什么结果？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-021",
+          "title": "第二十一个问题：共产主义社会制度对家庭将产生什么影响？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-022",
+          "title": "第二十二个问题：共产主义组织将怎样对待现有的民族？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-023",
+          "title": "第二十三个问题：共产主义组织将怎样对待现有的宗教",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-024",
+          "title": "第二十四个问题：共产主义者和社会主义者有什么区别？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        },
+        {
+          "id": "section-025",
+          "title": "第二十五个问题：共产主义者怎样对待现有的其他政党？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1847a.htm"
+        }
+      ]
+    },
+    {
+      "id": "engels-authority",
+      "title": "论权威",
+      "author": "恩格斯",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1872-1873.htm",
+      "type": "text",
+      "sectionPath": "books/engels-authority/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "论权威",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1872-1873.htm"
+        }
+      ]
+    },
+    {
+      "id": "engels-family-origin",
+      "title": "家庭、私有制和国家的起源",
+      "author": "恩格斯",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm",
+      "type": "text",
+      "sectionPath": "books/engels-family-origin/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "1884年第一版序言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "1891年第四版序言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "一 史前各文化阶段",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "二 家庭",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "三 易洛魁人的氏族",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "四 希腊人的氏族",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm"
+        },
+        {
+          "id": "section-007",
+          "title": "五 雅典国家的产生",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm"
+        },
+        {
+          "id": "section-008",
+          "title": "六 罗马的氏族和国家",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm"
+        },
+        {
+          "id": "section-009",
+          "title": "七 克尔特人和德意志人的氏族",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm"
+        },
+        {
+          "id": "section-010",
+          "title": "八 德意志人国家的形成",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm"
+        },
+        {
+          "id": "section-011",
+          "title": "九 野蛮时代和文明时代",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/marxist.org-chinese-engels-1884-3.htm"
+        }
+      ]
+    },
+    {
+      "id": "lenin-three-sources",
+      "title": "马克思主义的三个来源和三个组成部分",
+      "author": "列宁",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/lenin/12.htm",
+      "type": "text",
+      "sectionPath": "books/lenin-three-sources/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/12.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "一",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/12.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "二",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/12.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "三",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/12.htm"
+        }
+      ]
+    },
+    {
+      "id": "lenin-april-theses",
+      "title": "论无产阶级在这次革命中的任务（四月提纲）",
+      "author": "列宁",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/lenin/mia-chinese-lenin-19170404-5.htm",
+      "type": "text",
+      "sectionPath": "books/lenin-april-theses/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "提纲",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/mia-chinese-lenin-19170404-5.htm"
+        }
+      ]
+    },
+    {
+      "id": "lenin-kautsky",
+      "title": "无产阶级革命和叛徒考茨基",
+      "author": "列宁",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm",
+      "type": "text",
+      "sectionPath": "books/lenin-kautsky/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "序 言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "考茨基怎样把马克思变成了庸俗的自由主义者",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "资产阶级民主和无产阶级民主",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "被剥削者同剥削者能平等吗？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "苏维埃不得变成国家组织",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "立宪会议和苏维埃共和国",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm"
+        },
+        {
+          "id": "section-007",
+          "title": "苏维埃宪法",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm"
+        },
+        {
+          "id": "section-008",
+          "title": "什么是国际主义？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm"
+        },
+        {
+          "id": "section-009",
+          "title": "在“经济分析”的幌子下为资产阶级效劳",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm"
+        },
+        {
+          "id": "section-010",
+          "title": "附 录 一 关于立宪会议的提纲",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm"
+        },
+        {
+          "id": "section-011",
+          "title": "附 录 二",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/marxist.org-chinese-lenin-1918-10.htm"
+        }
+      ]
+    },
+    {
+      "id": "stalin-anarchism-socialism",
+      "title": "无政府主义还是社会主义？",
+      "author": "斯大林",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-190606-07.htm",
+      "type": "text",
+      "sectionPath": "books/stalin-anarchism-socialism/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-190606-07.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "一 辩证方法",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-190606-07.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "二 唯物主义理论",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-190606-07.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "三 无产阶级的社会主义",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-190606-07.htm"
+        }
+      ]
+    },
+    {
+      "id": "stalin-national-question",
+      "title": "马克思主义和民族问题",
+      "author": "斯大林",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/stalin/marxist.org-chinese-stalin-1912.htm",
+      "type": "text",
+      "sectionPath": "books/stalin-national-question/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/marxist.org-chinese-stalin-1912.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "一 民族",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/marxist.org-chinese-stalin-1912.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "二 民族运动",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/marxist.org-chinese-stalin-1912.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "三 问题的提法",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/marxist.org-chinese-stalin-1912.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "四 民族文化自治",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/marxist.org-chinese-stalin-1912.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "五 崩得，它的民族主义，它的分离主义",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/marxist.org-chinese-stalin-1912.htm"
+        },
+        {
+          "id": "section-007",
+          "title": "六 高加索人，取消派代表会议",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/marxist.org-chinese-stalin-1912.htm"
+        },
+        {
+          "id": "section-008",
+          "title": "七 俄国的民族问题",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/marxist.org-chinese-stalin-1912.htm"
+        }
+      ]
+    },
+    {
+      "id": "stalin-foundations",
+      "title": "论列宁主义基础",
+      "author": "斯大林",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-192404.htm",
+      "type": "text",
+      "sectionPath": "books/stalin-foundations/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "献词",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-192404.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "一 列宁主义的历史根源",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-192404.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "二 方法",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-192404.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "三 理论",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-192404.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "四 无产阶级专政",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-192404.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "五 农民问题",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-192404.htm"
+        },
+        {
+          "id": "section-007",
+          "title": "六 民族问题",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-192404.htm"
+        },
+        {
+          "id": "section-008",
+          "title": "七 战略和策略",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-192404.htm"
+        },
+        {
+          "id": "section-009",
+          "title": "八 党",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-192404.htm"
+        },
+        {
+          "id": "section-010",
+          "title": "九 工作作风",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-192404.htm"
+        }
+      ]
+    },
+    {
+      "id": "stalin-linguistics",
+      "title": "马克思主义和语言学问题",
+      "author": "斯大林",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-1950.htm",
+      "type": "text",
+      "sectionPath": "books/stalin-linguistics/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-1950.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "论语言学中的马克思主义",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-1950.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "论语言学的几个问题",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-1950.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "答叶·克拉舍宁尼科娃同志",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-1950.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "答同志们",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/stalin/mia-chinese-stalin-1950.htm"
+        }
+      ]
+    },
+    {
+      "id": "engels-socialism",
+      "title": "社会主义从空想到科学的发展",
+      "author": "恩格斯",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/engels/1880/index.htm",
+      "type": "text",
+      "sectionPath": "books/engels-socialism/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "（一）",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/1880/01.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "（二）",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/1880/02.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "（三）",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/1880/03.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "*弗·恩格斯的小册子“社会主义从空想到科学的发展”法文版导言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/1880/04.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "“社会主义从空想到科学的发展”德文本初版序言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/1880/05.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "“社会主义从空想到科学的发展”德文第四版序言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/1880/06.htm"
+        },
+        {
+          "id": "section-007",
+          "title": "“社会主义从空想到科学的发展”英文版导言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/1880/07.htm"
+        },
+        {
+          "id": "section-008",
+          "title": "恩格斯在《社会主义从空想到科学的发展》这本小册子中 对《反杜林论》正文所作的补充和修改",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/engels/1880/08.htm"
+        }
+      ]
+    },
+    {
+      "id": "lenin-two-tactics",
+      "title": "社会民主党在民主革命中的两种策略",
+      "author": "列宁",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "来源页面及版本信息见原文来源链接。",
+      "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/index.htm",
+      "type": "text",
+      "sectionPath": "books/lenin-two-tactics/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "序 言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/00.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "1．一个迫切的政治问题",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/01.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "2．俄国社会民主工党第三次代表大会 关于临时革命政府的决议给了我们什么？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/02.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "3．什么是“革命对沙皇制度的彻底胜利”？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/03.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "4．君主制度的铲除和共和制",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/04.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "5．应当怎样“把革命推向前进”？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/05.htm"
+        },
+        {
+          "id": "section-007",
+          "title": "6．无产阶级在和不彻底的资产阶级作斗争时 被束缚住手脚的危险是从哪个方面来的？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/06.htm"
+        },
+        {
+          "id": "section-008",
+          "title": "7．“把保守派排斥于政府之外”的策略",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/07.htm"
+        },
+        {
+          "id": "section-009",
+          "title": "8．解放派和新火星派",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/08.htm"
+        },
+        {
+          "id": "section-010",
+          "title": "9．什么是在革命时期做一个持极端反对派态度的政党？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/09.htm"
+        },
+        {
+          "id": "section-011",
+          "title": "10．“革命公社”与无产阶级和农民的革命民主专政",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/10.htm"
+        },
+        {
+          "id": "section-012",
+          "title": "11．俄国社会民主工党第三次代表大会某些决议 和“代表会议”某些决议的粗略比较",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/11.htm"
+        },
+        {
+          "id": "section-013",
+          "title": "12．民主革命的规模是否会因为资产阶级退出而缩小？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/12.htm"
+        },
+        {
+          "id": "section-014",
+          "title": "13．结论。我们敢不敢胜利？",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/13.htm"
+        },
+        {
+          "id": "section-015",
+          "title": "补充说明再论解放派，再论新火星派",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/lenin/190506-07/14.htm"
         }
       ]
     }

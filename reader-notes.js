@@ -26,6 +26,16 @@
     return String(html).replace(/&(?:amp;)?lt;\s*(\/?)\s*(sup|sub)\s*&(?:amp;)?gt;/gi, '<$1$2>')
       .replace(/\$([^$<>]+)\$/g, (original, expression, offset, source) => {
         if (source[offset - 1] === '\\' || source[offset - 1] === '$' || source[offset + original.length] === '$') return original;
+        const math = expression.trim();
+        const fraction = math.match(/^\\frac\s*\{(\d+)\}\s*\{(\d+)\}$/);
+        if (fraction) return `<math aria-label="${fraction[1]}/${fraction[2]}"><mfrac><mn>${fraction[1]}</mn><mn>${fraction[2]}</mn></mfrac></math>`;
+        const superscript = math.match(/^\^\{(\d+)\}$/);
+        if (superscript) return `<sup>${superscript[1]}</sup>`;
+        if (math === '\\zeta') return 'ζ';
+        const underline = math.match(/^\\underline\s*\{\\text\s*\{([^{}]*)\}\}$/);
+        if (underline) return `<u>${underline[1].replace(/[&<>]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[char]))}</u>`;
+        const wave = math.match(/^\\uwave\s*\{\\text\s*\{([^{}]*)\}\}$/);
+        if (wave) return `<span class="math-wave">${wave[1].replace(/[&<>]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[char]))}</span>`;
         // Recognize only OCR's Chinese under-dot emphasis, not arbitrary TeX or math.
         const token = /\\underset\s*\{\s*\\cdot\s*\}\s*\{\s*([\u3400-\u9fff]+)\s*\}/g;
         if (expression.replace(token, '').trim()) return original;
@@ -40,7 +50,7 @@
     template.content.querySelectorAll('script,style,iframe,object,embed,link,form,input,button,img').forEach((node) => node.remove());
     template.content.querySelectorAll('*').forEach((node) => {
       Array.from(node.attributes).forEach((attribute) => node.removeAttribute(attribute.name));
-      if (!/^(P|BR|STRONG|B|EM|I|SPAN|BLOCKQUOTE|UL|OL|LI|SUP|SUB|HR|CODE)$/.test(node.tagName)) node.replaceWith(...node.childNodes);
+      if (!/^(P|BR|STRONG|B|EM|I|SPAN|BLOCKQUOTE|UL|OL|LI|SUP|SUB|HR|CODE|MATH|MFRAC|MN|MI|MO|MSUP|MSUB|MROW)$/.test(node.tagName)) node.replaceWith(...node.childNodes);
     });
     return template.innerHTML;
   }

@@ -1,6 +1,21 @@
 (() => {
   const shelf = document.querySelector('#shelf');
   const bookList = document.querySelector('#book-list');
+  const authorView = document.querySelector('#author-view');
+  const authorTitle = document.querySelector('#author-title');
+  const authorSummary = document.querySelector('#author-summary');
+  const authorWorks = document.querySelector('#author-works');
+  const authorWorksCount = document.querySelector('#author-works-count');
+  const authorWorksEmpty = document.querySelector('#author-works-empty');
+  const authorFeaturedGroup = document.querySelector('#author-featured-group');
+  const authorFeaturedList = document.querySelector('#author-featured-list');
+  const authorFeaturedCount = document.querySelector('#author-featured-count');
+  const authorSourceLink = document.querySelector('#author-source-link');
+  const authorReferencesGroup = document.querySelector('#author-references-group');
+  const authorReferences = document.querySelector('#author-references');
+  const authorReferencesCount = document.querySelector('#author-references-count');
+  const authorReferencesEmpty = document.querySelector('#author-references-empty');
+  const authorClearFilters = document.querySelector('#author-clear-filters');
   const bookSearch = document.querySelector('#book-search');
   const shelfCount = document.querySelector('#shelf-count');
   const categoryFilters = document.querySelector('#category-filters');
@@ -33,6 +48,12 @@
   syncBrowserThemeColor();
 
   let books = [];
+  let authorIndex = [];
+  const requestedParams = new URLSearchParams(window.location.search);
+  const requestedAuthor = requestedParams.get('author');
+  const requestedBookId = requestedParams.get('book');
+  const requestedSectionId = requestedParams.get('section');
+  let activeAuthor = null;
   let activeCategory = 'all';
   let currentBook = null;
   let current = 0;
@@ -87,7 +108,11 @@
     'economic-accounting-ownership': 'economics',
     'ten-questions-soe': 'economics',
     'stalin-trotsky-bukharin': 'international',
-    'stalin-era': 'international', 'transition-to-socialism': 'economics'
+    'stalin-era': 'international', 'transition-to-socialism': 'economics',
+    'marx-wage-price-profit': 'classics', 'marx-capital-1': 'classics', 'marx-gotha-critique': 'classics',
+    'engels-principles': 'classics', 'engels-authority': 'classics', 'engels-socialism': 'classics', 'engels-family-origin': 'classics',
+    'lenin-two-tactics': 'classics', 'lenin-three-sources': 'classics', 'lenin-april-theses': 'classics', 'lenin-kautsky': 'classics',
+    'stalin-anarchism-socialism': 'international', 'stalin-national-question': 'international', 'stalin-foundations': 'international', 'stalin-linguistics': 'international'
   });
 
   const escapeText = (value) => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -99,11 +124,30 @@
     if (!response.ok) throw new Error('books unavailable');
     const data = await response.json();
     books = data.books || [];
+    authorIndex = Array.isArray(data.authorIndex) ? data.authorIndex : [];
+    activeAuthor = authorIndex.find((entry) => entry.id === requestedAuthor) || null;
+    renderAuthorNavigation();
     renderCategoryFilters();
     renderShelf();
     const activeBook = readStored(activeBookKey);
-    const index = books.findIndex((book) => book.id === activeBook);
-    if (index !== -1) openReader(index);
+    const requestedBookIndex = books.findIndex((book) => book.id === requestedBookId);
+    const requestedBook = books[requestedBookIndex];
+    const requestedSectionExists = requestedBook?.type !== 'scan'
+      && requestedBook?.sections?.some((section) => section.id === requestedSectionId);
+    if (requestedBookIndex !== -1 && requestedSectionId && requestedSectionExists) {
+      openReader(requestedBookIndex, requestedSectionId);
+    } else if (requestedBookId === null && requestedAuthor === null) {
+      const index = books.findIndex((book) => book.id === activeBook);
+      if (index !== -1) openReader(index);
+    }
+  }
+
+  function renderAuthorNavigation() {
+    const selected = activeAuthor?.id || 'all';
+    document.querySelectorAll('[data-author-link]').forEach((link) => {
+      if (link.dataset.authorLink === selected) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
   }
 
   function renderCategoryFilters() {
@@ -123,21 +167,81 @@
   }
 
 
-  function renderShelf() {
-    const terms = bookSearch.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-    const visible = books.map((book, index) => ({ book, index, saved: readProgress(book) }))
+  function filteredBooks(ids, terms) {
+    return books.map((book, index) => ({ book, index, saved: readProgress(book) }))
+      .filter(({ book }) => ids === null || ids.includes(book.id))
       .filter(({ book }) => activeCategory === 'all' || window.bookCategoryById[book.id] === activeCategory)
       .filter(({ book }) => terms.every((term) => `${book.title} ${book.author}`.toLocaleLowerCase().includes(term)))
       .sort((a, b) => Number(Boolean(b.saved)) - Number(Boolean(a.saved)) || a.index - b.index);
-    shelfCount.textContent = terms.length || activeCategory !== 'all' ? `找到 ${visible.length} 本` : `共 ${books.length} 本`;
-    bookList.innerHTML = visible.length ? visible.map(({ book, index, saved }) => {
+  }
+
+  function renderBookCards(target, items) {
+    target.innerHTML = items.length ? items.map(({ book, index, saved }) => {
       const isScan = book.type === 'scan';
       const units = isScan ? `${book.pageCount} 页` : `${book.sections.length} 个阅读单元`;
       const status = isScan ? '逐页加载' : '分段加载';
       const category = categories.find((item) => item.id === window.bookCategoryById[book.id]);
-      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><p class="book-category">${escapeText(category?.label || '书籍')}</p><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p></div><div class="book-foot"><span class="book-status" title="${escapeText(status)}">${escapeText(units)}</span><button class="open-button" type="button" data-book="${index}" aria-label="${saved ? '继续阅读' : '打开'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '打开阅读'}</button></div></article>`;
-    }).join('') : '<p class="shelf-empty">没有找到这本书，试试书名中的其他字或作者名。</p>';
-    bookList.querySelectorAll('[data-book]').forEach((button) => button.addEventListener('click', () => openReader(Number(button.dataset.book))));
+      const sourceLink = book.sourceUrl ? `<a class="book-source" href="${escapeText(book.sourceUrl)}" target="_blank" rel="noopener noreferrer">原文来源 ↗</a>` : '';
+      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><p class="book-category">${escapeText(category?.label || '书籍')}</p><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p>${sourceLink}</div><div class="book-foot"><span class="book-status" title="${escapeText(status)}">${escapeText(units)}</span><button class="open-button" type="button" data-book="${index}" aria-label="${saved ? '继续阅读' : '打开'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '打开阅读'}</button></div></article>`;
+    }).join('') : '';
+    target.querySelectorAll('[data-book]').forEach((button) => button.addEventListener('click', () => openReader(Number(button.dataset.book))));
+  }
+
+  function renderAuthorFeaturedWorks(entry) {
+    const featuredWorks = entry.featuredWorks || [];
+    authorFeaturedGroup.classList.toggle('is-hidden', featuredWorks.length === 0);
+    authorFeaturedCount.textContent = `（${featuredWorks.length}）`;
+    authorSourceLink.href = entry.sourceUrl;
+    authorSourceLink.textContent = `查看${entry.name}在中文马克思主义文库的完整目录 ↗`;
+    authorFeaturedList.innerHTML = featuredWorks.map((work) => {
+      const local = Boolean(work.bookId && work.sectionId);
+      const href = local
+        ? `?author=${encodeURIComponent(entry.id)}&book=${encodeURIComponent(work.bookId)}&section=${encodeURIComponent(work.sectionId)}`
+        : work.url;
+      const linkAttributes = local ? '' : ' target="_blank" rel="noopener noreferrer"';
+      const localBook = local && books.find((book) => book.id === work.bookId);
+      const source = local ? `本地阅读 · 收录于《${localBook?.title || '本地书目'}》` : '中文马克思主义文库';
+      const year = work.year ? `<span class="featured-year">${escapeText(work.year)}</span>` : '';
+      return `<li><a href="${escapeText(href)}"${linkAttributes}>${escapeText(work.title)}</a>${year}<span class="featured-source">${escapeText(source)}</span></li>`;
+    }).join('');
+  }
+
+  function renderShelf() {
+    const terms = bookSearch.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+    const filterActive = terms.length > 0 || activeCategory !== 'all';
+    const entry = activeAuthor;
+    bookList.classList.toggle('is-hidden', Boolean(entry));
+    authorView.classList.toggle('is-hidden', !entry);
+    if (!entry) {
+      const visible = filteredBooks(null, terms);
+      shelfCount.textContent = filterActive ? `找到 ${visible.length} 本` : `共 ${books.length} 本`;
+      if (visible.length) renderBookCards(bookList, visible);
+      else bookList.innerHTML = '<p class="shelf-empty">没有找到这本书，试试书名中的其他字或作者名。</p>';
+      return;
+    }
+
+    const works = filteredBooks(entry.workIds, terms);
+    const references = filteredBooks(entry.referenceIds, terms);
+    authorTitle.textContent = entry.name;
+    authorSummary.textContent = entry.workIds.length
+      ? `本书架收录 ${entry.workIds.length} 项作品。`
+      : `本地尚未收录${entry.name}本人著作全文；下方提供中马库原文入口和相关书目。`;
+    authorWorksCount.textContent = `（${works.length}）`;
+    authorReferencesCount.textContent = `（${references.length}）`;
+    renderAuthorFeaturedWorks(entry);
+    authorReferencesGroup.classList.toggle('is-hidden', entry.referenceIds.length === 0);
+    authorClearFilters.classList.toggle('is-hidden', !filterActive);
+    authorWorksEmpty.classList.toggle('is-hidden', works.length > 0);
+    authorWorksEmpty.textContent = entry.workIds.length === 0
+      ? `本地书架目前没有${entry.name}本人著作全文。`
+      : '当前搜索和分类没有匹配的著作。';
+    authorReferencesEmpty.classList.toggle('is-hidden', entry.referenceIds.length === 0 || references.length > 0);
+    authorReferencesEmpty.textContent = '当前搜索和分类没有匹配的相关书目。';
+    shelfCount.textContent = filterActive
+      ? `筛选结果：${works.length} 项著作，${references.length} 项相关书目`
+      : `${entry.name}：${entry.workIds.length} 项著作，${entry.referenceIds.length} 项相关书目`;
+    renderBookCards(authorWorks, works);
+    if (entry.referenceIds.length) renderBookCards(authorReferences, references);
   }
 
   function renderToc() {
@@ -485,11 +589,32 @@
       const firstBlock = Array.from(target.querySelectorAll('h1,h2,h3,h4,p,li,blockquote'))
         .find((el) => !el.classList.contains('page-marker') && el.textContent.trim());
       const normalizeHeading = (value) => String(value).normalize('NFKC').replace(/\s+/g, '');
-      if (firstBlock && /^H[1-4]$/.test(firstBlock.tagName)
-          && normalizeHeading(firstBlock.textContent) === normalizeHeading(currentBook.sections?.[current]?.title || '')) {
+      const duplicateHeading = firstBlock && /^H[1-6]$/.test(firstBlock.tagName)
+        && normalizeHeading(firstBlock.textContent) === normalizeHeading(currentBook.sections?.[current]?.title || '');
+      if (duplicateHeading) {
         document.querySelector(mode === 'mobile' ? '#mobile-section-title' : '#section-title').classList.add('is-hidden');
         firstBlock.classList.add('chapter-heading');
       }
+      // Treat source headings as children of the reader's generated section title.
+      let previousHeadingLevel = 2;
+      target.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach((heading) => {
+        const sourceLevel = Number(heading.tagName.slice(1));
+        const level = duplicateHeading && heading === firstBlock
+          ? 2
+          : Math.max(3, Math.min(sourceLevel, previousHeadingLevel + 1));
+        if (level !== sourceLevel) {
+          const replacement = document.createElement(`h${level}`);
+          Array.from(heading.attributes).forEach(({ name, value }) => replacement.setAttribute(name, value));
+          const computed = getComputedStyle(heading);
+          replacement.style.fontSize = computed.fontSize;
+          replacement.style.marginBlockStart = computed.marginBlockStart;
+          replacement.style.marginBlockEnd = computed.marginBlockEnd;
+          replacement.style.lineHeight = computed.lineHeight;
+          replacement.append(...heading.childNodes);
+          heading.replaceWith(replacement);
+        }
+        previousHeadingLevel = level;
+      });
       const notes = target.querySelectorAll('details');
       if (Array.isArray(saved?.openNotes)) saved.openNotes.forEach((i) => {
         if (Number.isInteger(i) && notes[i]) notes[i].open = true;
@@ -541,12 +666,15 @@
     renderSection(readerMode);
   }
 
-  function openReader(bookIndex) {
+  function openReader(bookIndex, sectionId = null) {
     currentBook = books[bookIndex];
     if (!currentBook) return;
     const saved = readProgress(currentBook);
-    current = saved ? saved.index : 0;
-    lastPosition = saved?.position || { atStart: true };
+    const requestedSectionIndex = sectionId && currentBook.type !== 'scan'
+      ? currentBook.sections.findIndex((section) => section.id === sectionId)
+      : -1;
+    current = requestedSectionIndex >= 0 ? requestedSectionIndex : saved ? saved.index : 0;
+    lastPosition = requestedSectionIndex >= 0 ? { atStart: true } : saved?.position || { atStart: true };
     rendering = true;
     writeStored(activeBookKey, currentBook.id);
     shelf.classList.add('is-hidden');
@@ -565,6 +693,12 @@
     rendering = false;
     closeToc(false);
     writeStored(activeBookKey, null);
+    if (requestedBookId !== null || requestedSectionId !== null) {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('book');
+      url.searchParams.delete('section');
+      window.history.replaceState(window.history.state, '', url);
+    }
     reader.classList.add('is-hidden');
     shelf.classList.remove('is-hidden');
     document.body.classList.remove('book-open', 'mobile-reader-open', 'mobile-toc-open');
@@ -708,5 +842,13 @@
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
   bookSearch.addEventListener('input', renderShelf);
+  authorClearFilters.addEventListener('click', () => {
+    bookSearch.value = '';
+    activeCategory = 'all';
+    categoryFilters.querySelectorAll('[data-category]').forEach((filter) => {
+      filter.setAttribute('aria-pressed', String(filter.dataset.category === 'all'));
+    });
+    renderShelf();
+  });
   loadBooks().catch(() => { bookList.innerHTML = '<div class="loading-card">暂时无法打开书架，请稍后重试。</div>'; });
 })();
