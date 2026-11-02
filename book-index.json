@@ -90,7 +90,8 @@
         "mx-marx-12121882b6",
         "mx-marx-72fc4a449f",
         "mx-marx-6ada1c8b56",
-        "mx-marx-manifesto-1920"
+        "mx-marx-manifesto-1920",
+        "mx-marx-engels-league-summer-1850"
       ],
       "referenceIds": [],
       "featuredWorks": [
@@ -289,14 +290,24 @@
           "title": "1848年至1850年的法兰西阶级斗争",
           "year": "1850",
           "bookId": "class-struggles-france",
-          "sectionId": "section-002"
+          "sectionId": "section-002",
+          "recommendation": "分析1848年革命中的阶级关系和政治斗争。"
         },
         {
           "title": "中央委员会告共产主义者同盟书",
           "year": "1850",
           "sortYear": 1850,
           "bookId": "mx-marx-e4d9f1e534",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "论述工人阶级独立组织和革命中的策略。"
+        },
+        {
+          "title": "中央委员会告共产主义者同盟书（1850年夏）",
+          "year": "1850年夏",
+          "sortYear": 1850,
+          "bookId": "mx-marx-engels-league-summer-1850",
+          "sectionId": "section-001",
+          "recommendation": "记录同盟在1848年革命后重建组织和跨地区联系的实践。"
         },
         {
           "title": "1848年11月4日通过的法兰西共和国宪法",
@@ -458,7 +469,8 @@
           "year": "1864",
           "sortYear": 1864,
           "bookId": "mx-marx-a89551aea1",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "阐述国际工人协会的纲领与工人国际联合。"
         },
         {
           "title": "工资、价格和利润",
@@ -499,7 +511,8 @@
           "year": "1866",
           "sortYear": 1866,
           "bookId": "mx-marx-2282fbb4d6",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "讨论工会的日常斗争、组织作用和社会政治任务。"
         },
         {
           "title": "国际工人协会章程和条例",
@@ -823,7 +836,9 @@
         "mx-engels-7a4e965cae",
         "mx-engels-3dc9fd5d30",
         "mx-engels-c82edfe55e",
-        "mx-marx-manifesto-1920"
+        "mx-marx-manifesto-1920",
+        "mx-marx-e4d9f1e534",
+        "mx-marx-engels-league-summer-1850"
       ],
       "referenceIds": [],
       "featuredWorks": [
@@ -947,13 +962,6 @@
           "sectionId": "section-001"
         },
         {
-          "title": "六月革命（巴黎起义的经过）",
-          "year": "1847",
-          "sortYear": 1847,
-          "bookId": "mx-engels-1605a1be42",
-          "sectionId": "section-001"
-        },
-        {
           "title": "基佐的穷途末日。法国资产阶级的现状",
           "year": "1847",
           "sortYear": 1847,
@@ -1000,6 +1008,14 @@
           "year": "1847",
           "sortYear": 1847,
           "bookId": "mx-engels-1b8c49521d",
+          "sectionId": "section-001",
+          "recommendation": "展示共产主义者同盟的目标与组织制度。"
+        },
+        {
+          "title": "六月革命（巴黎起义的经过）",
+          "year": "1848",
+          "sortYear": 1848,
+          "bookId": "mx-engels-1605a1be42",
           "sectionId": "section-001"
         },
         {
@@ -1094,11 +1110,28 @@
           "sectionId": "section-001"
         },
         {
+          "title": "中央委员会告共产主义者同盟书",
+          "year": "1850",
+          "sortYear": 1850,
+          "bookId": "mx-marx-e4d9f1e534",
+          "sectionId": "section-001",
+          "recommendation": "论述工人阶级独立组织和革命中的策略。"
+        },
+        {
+          "title": "中央委员会告共产主义者同盟书（1850年夏）",
+          "year": "1850年夏",
+          "sortYear": 1850,
+          "bookId": "mx-marx-engels-league-summer-1850",
+          "sectionId": "section-001",
+          "recommendation": "记录同盟在1848年革命后重建组织和跨地区联系的实践。"
+        },
+        {
           "title": "德国的革命和反革命",
           "year": "1851",
           "sortYear": 1851,
           "bookId": "mx-engels-ac8a287d12",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "分析1848—1849年德国革命和反革命的经验。"
         },
         {
           "title": "1852年神圣同盟对法战争的可能性与展望",
@@ -1133,7 +1166,8 @@
           "year": "1871",
           "sortYear": 1871,
           "bookId": "mx-engels-06c5cb44e0",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "讨论工人阶级的独立政治行动和政党。"
         },
         {
           "title": "论权威",
@@ -1285,14 +1319,16 @@
           "year": "1881",
           "sortYear": 1881,
           "bookId": "mx-engels-2dd1f430c4",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "考察英国工联的组织和斗争。"
         },
         {
           "title": "工人政党",
           "year": "1881",
           "sortYear": 1881,
           "bookId": "mx-engels-f1a1ee727e",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "讨论英国工人阶级独立政党的必要性。"
         },
         {
           "title": "必要的和多余的社会阶级",
@@ -4854,11 +4890,12 @@
           "sectionId": "section-244"
         },
         {
-          "title": "讲话稿按此",
+          "title": "关于正确处理人民内部矛盾的问题（讲话稿）",
           "year": "1957",
           "sortYear": 1957,
           "bookId": "mx-mao-c1ee5906d8",
-          "sectionId": "section-001"
+          "sectionId": "section-001",
+          "recommendation": "为对照讲话稿与选集收录版本提供入口。"
         },
         {
           "title": "毛泽东主席同哥穆尔卡的谈话记录",
@@ -41219,6 +41256,31 @@
           "title": "注释",
           "level": 0,
           "sourceUrl": "https://www.marxists.org/chinese/lenin-cworks/25/045.htm"
+        }
+      ]
+    },
+    {
+      "id": "mx-marx-engels-league-summer-1850",
+      "title": "中央委员会告共产主义者同盟书（1850年夏）",
+      "author": "马克思、恩格斯",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "中文文字阅读版。",
+      "sourceUrl": "https://www.marxists.org/chinese/marx-engels/07/024.htm",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/mx-marx-engels-league-summer-1850/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "中央委员会告同盟书",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/07/024.htm"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/07/024.htm"
         }
       ]
     }

@@ -189,6 +189,8 @@
 
   function renderAuthorFeaturedWorks(entry, terms) {
     const authorCategory = { marx: 'classics', engels: 'classics', lenin: 'classics', stalin: 'international', mao: 'china' }[entry.id];
+    if (entry.id === 'mao') return renderMaoWorks(entry, terms);
+    document.querySelector('#author-featured-title').firstChild.nodeValue = '作品与文章 · 按时间排列 ';
     const featuredWorks = (entry.featuredWorks || [])
       .filter((work) => {
         const inCategory = activeCategory === 'all' || authorCategory === activeCategory;
@@ -217,6 +219,61 @@
     return featuredWorks.length;
   }
 
+  function renderMaoWorks(entry, terms) {
+    const selected = books.find((book) => book.id === 'mao-selected');
+    if (!selected) return 0;
+    const normalizeTitle = (title) => title.normalize('NFKC').replace(/刘易斯/g, '路易斯').replace(/[\s\p{P}\p{S}]/gu, '');
+    const bySection = new Map((entry.featuredWorks || []).filter((work) => work.bookId === selected.id).map((work) => [work.sectionId, work]));
+    const selectedTitles = new Set(selected.sections.filter((section) => section.level === 2).map((section) => normalizeTitle(section.title)));
+    const distinctEdition = (work) => /未删节|原始版本|讲话稿|异译本|译本|繁体/.test(work.title);
+    const alternateByTitle = new Map();
+    for (const work of entry.featuredWorks || []) {
+      const title = normalizeTitle(work.title);
+      if (work.bookId !== selected.id && !distinctEdition(work) && selectedTitles.has(title)) {
+        const alternatives = alternateByTitle.get(title) || [];
+        if (!alternatives.some((item) => item.bookId === work.bookId && item.sectionId === work.sectionId)) alternatives.push(work);
+        alternateByTitle.set(title, alternatives);
+      }
+    }
+    const groups = [];
+    for (const section of selected.sections) {
+      if (section.level === 0 && /^第[一二三四五六七]卷/.test(section.title)) groups.push({ title: section.title, works: [] });
+      else if (section.level === 2 && groups.length) {
+        const original = bySection.get(section.id);
+        groups[groups.length - 1].works.push({ ...original, title: section.title, bookId: selected.id, sectionId: section.id, alternate: alternateByTitle.get(normalizeTitle(section.title)) });
+      }
+    }
+    const extras = (entry.featuredWorks || []).filter((work) => {
+      if (work.bookId === selected.id) return false;
+      return distinctEdition(work) || !selectedTitles.has(normalizeTitle(work.title));
+    });
+    groups.push({ title: '选集外文章与其他版本', works: extras });
+    let count = 0;
+    const html = groups.map((group) => {
+      const works = group.works.filter((work) => terms.every((term) => work.title.toLocaleLowerCase().includes(term)));
+      if (!works.length) return '';
+      count += works.length;
+      const rows = works.map((work) => {
+        const href = `?author=mao&book=${encodeURIComponent(work.bookId)}&section=${encodeURIComponent(work.sectionId)}`;
+        const year = work.year ? `<span class="featured-year">${escapeText(work.year)}</span>` : '<span></span>';
+        const priority = work.recommendation ? `<span class="work-priority" title="${escapeText(work.recommendation)}">重点阅读</span>` : '';
+        const alternate = (work.alternate || []).map((other, index, all) => {
+          const alternateHref = `?author=mao&book=${encodeURIComponent(other.bookId)}&section=${encodeURIComponent(other.sectionId)}`;
+          const label = all.length > 1 ? `其他版本${index + 1}` : '其他版本';
+          return `<a class="alternate-edition" href="${escapeText(alternateHref)}" aria-label="${escapeText(work.title)}的${label}">${label}</a>`;
+        }).join('');
+        return `<li>${year}<div class="featured-work"><a href="${escapeText(href)}">${escapeText(work.title)}</a>${priority}${alternate}</div></li>`;
+      }).join('');
+      return `<li class="author-volume"><h4>${escapeText(group.title)}</h4></li>${rows}`;
+    }).join('');
+    document.querySelector('#author-featured-title').firstChild.nodeValue = '作品与文章 · 按选集排列 ';
+    authorFeaturedList.innerHTML = html;
+    authorFeaturedCount.textContent = `（${count}）`;
+    authorFeaturedEmpty.classList.toggle('is-hidden', count > 0);
+    authorFeaturedEmpty.textContent = '当前搜索没有匹配的作品。';
+    return count;
+  }
+
   function renderShelf() {
     const terms = bookSearch.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
     const filterActive = terms.length > 0 || activeCategory !== 'all';
@@ -241,7 +298,9 @@
     authorBio.textContent = authorProfiles[entry.id] || '';
     authorPortrait.className = `author-portrait author-profile-portrait portrait-${entry.id}`;
     const authoredCount = (entry.featuredWorks || []).length;
-    authorSummary.textContent = `本地收录 ${authoredCount} 项作品与文章，按写作或发表时间排列。`;
+    authorSummary.textContent = entry.id === 'mao'
+      ? '先按本地《毛泽东选集》的卷次和篇目排列，再列出选集外文章与其他版本。第六、七卷为静火版。'
+      : `本地收录 ${authoredCount} 项作品与文章，按写作或发表时间排列。`;
     authorReferencesCount.textContent = `（${references.length}）`;
     const visibleWorks = renderAuthorFeaturedWorks(entry, terms);
     authorReferencesGroup.classList.toggle('is-hidden', entry.referenceIds.length === 0);
@@ -250,7 +309,7 @@
     authorReferencesEmpty.textContent = '当前搜索和分类没有匹配的相关书目。';
     shelfCount.textContent = filterActive
       ? `筛选结果：${visibleWorks} 项作品，${references.length} 项相关书目`
-      : `${entry.name}：${authoredCount} 项作品，${references.length} 项相关书目`;
+      : `${entry.name}：${entry.id === 'mao' ? visibleWorks : authoredCount} 项作品，${references.length} 项相关书目`;
     if (entry.referenceIds.length) renderBookCards(authorReferences, references);
   }
 

@@ -212,10 +212,13 @@ body.book-open .topbar { min-height: 4.5rem; grid-template-rows: auto; padding-b
 .author-group > h3 span { color: var(--muted); font-size: .82em; }
 .author-featured-list { margin: 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
 .author-featured-list li { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); align-items: baseline; gap: .4rem .75rem; padding: .7rem .25rem; border-bottom: 1px solid var(--line); font-family: var(--ui-font); }
+.author-featured-list .author-volume { display: block; padding: 1.2rem .25rem .45rem; border-bottom: 2px solid var(--ink); }
+.author-volume h4 { margin: 0; color: var(--ink); font: 700 1.08rem/1.45 var(--title-font); }
 .author-guide { color: var(--muted); font-size: .85rem; line-height: 1.6; }
 .featured-work { display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem .7rem; min-width: 0; }
 .author-featured-list a { color: var(--ink); font-family: var(--title-font); font-weight: 700; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
 .work-priority { color: var(--accent-dark); font: 700 .75rem/1.5 var(--ui-font); white-space: nowrap; }
+.author-featured-list .alternate-edition { color: var(--accent-dark); font: 600 .75rem/1.5 var(--ui-font); white-space: nowrap; }
 .author-featured-list a:hover { color: var(--accent-dark); }
 .featured-year { color: var(--accent-dark); font-size: .8rem; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .author-view-empty { margin: .25rem 0; padding: .85rem 1rem; border-top: 2px solid var(--accent); background: var(--panel); color: var(--muted); font-size: .9rem; line-height: 1.6; }
