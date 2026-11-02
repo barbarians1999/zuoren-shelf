@@ -178,11 +178,7 @@
 
   function renderBookCards(target, items) {
     target.innerHTML = items.length ? items.map(({ book, index, saved }) => {
-      const isScan = book.type === 'scan';
-      const units = isScan ? `${book.pageCount} 页` : `${book.sections.length} 个阅读单元`;
-      const status = isScan ? '逐页加载' : '分段加载';
-      const category = categories.find((item) => item.id === window.bookCategoryById[book.id]);
-      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><p class="book-category">${escapeText(category?.label || '书籍')}</p><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p></div><div class="book-foot"><span class="book-status" title="${escapeText(status)}">${escapeText(units)}</span><button class="open-button" type="button" data-book="${index}" aria-label="${saved ? '继续阅读' : '打开'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '打开阅读'}</button></div></article>`;
+      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p></div><div class="book-foot"><button class="open-button" type="button" data-book="${index}" aria-label="${saved ? '继续阅读' : '开始阅读'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '开始阅读'}</button></div></article>`;
     }).join('') : '';
     target.querySelectorAll('[data-book]').forEach((button) => button.addEventListener('click', () => openReader(Number(button.dataset.book))));
   }
@@ -201,12 +197,13 @@
         const yearB = Number(b.sortYear || String(b.year || '').match(/\d{4}/)?.[0] || Infinity);
         return yearA - yearB;
       });
-    authorFeaturedCount.textContent = `（${featuredWorks.length}）`;
-    authorFeaturedEmpty.classList.toggle('is-hidden', featuredWorks.length > 0);
+    const uniqueWorks = dedupeAuthorWorks(featuredWorks);
+    authorFeaturedCount.textContent = `（${uniqueWorks.length}）`;
+    authorFeaturedEmpty.classList.toggle('is-hidden', uniqueWorks.length > 0);
     authorFeaturedEmpty.textContent = (entry.featuredWorks || []).length
       ? '当前搜索和分类没有匹配的作品。'
       : '暂未收录可在线阅读的作品。';
-    authorFeaturedList.innerHTML = featuredWorks.map((work) => {
+    authorFeaturedList.innerHTML = uniqueWorks.map((work) => {
       const local = Boolean(work.bookId && work.sectionId);
       const href = local
         ? `?author=${encodeURIComponent(entry.id)}&book=${encodeURIComponent(work.bookId)}&section=${encodeURIComponent(work.sectionId)}`
@@ -216,7 +213,17 @@
       const priority = work.recommendation ? `<span class="work-priority" title="${escapeText(work.recommendation)}">重点阅读</span>` : '';
       return `<li>${year}<div class="featured-work"><a href="${escapeText(href)}"${linkAttributes}>${escapeText(work.title)}</a>${priority}</div></li>`;
     }).join('');
-    return featuredWorks.length;
+    return uniqueWorks.length;
+  }
+
+  function dedupeAuthorWorks(works) {
+    const seen = new Set();
+    return works.filter((work) => {
+      const key = `${work.bookId || work.url}|${work.title.normalize('NFKC').replace(/[\s\p{P}\p{S}]/gu, '')}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
   }
 
   function renderMaoWorks(entry, terms) {
@@ -297,7 +304,7 @@
     authorTitle.textContent = entry.name;
     authorBio.textContent = authorProfiles[entry.id] || '';
     authorPortrait.className = `author-portrait author-profile-portrait portrait-${entry.id}`;
-    const authoredCount = (entry.featuredWorks || []).length;
+    const authoredCount = entry.id === 'mao' ? (entry.featuredWorks || []).length : dedupeAuthorWorks(entry.featuredWorks || []).length;
     authorSummary.textContent = entry.id === 'mao'
       ? '先按本地《毛泽东选集》的卷次和篇目排列，再列出选集外文章与其他版本。第六、七卷为静火版。'
       : `本地收录 ${authoredCount} 项作品与文章，按写作或发表时间排列。`;
@@ -315,6 +322,12 @@
 
   function renderToc() {
     if (!currentBook) return;
+    const tocSections = currentBook.type === 'scan' ? [] : currentBook.sections.filter((section) => !/^注释$/.test(section.title.trim()));
+    const hasToc = currentBook.type === 'scan' || tocSections.length > 1;
+    desktopTocPanel.hidden = !hasToc;
+    desktopTocToggle.hidden = !hasToc;
+    mobileTocToggle.hidden = !hasToc;
+    desktopReader.classList.toggle('toc-unneeded', !hasToc);
     const numbering = [];
     const html = currentBook.type === 'scan'
       ? '<p class="toc-hint">使用下方章节按钮翻页</p>'
