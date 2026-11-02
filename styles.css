@@ -219,7 +219,8 @@ body.book-open .shell { padding-top: 0; }
 .author-volume h4 { margin: 0; color: var(--ink); font: 700 1.08rem/1.45 var(--title-font); }
 .author-guide { color: var(--muted); font-size: .85rem; line-height: 1.6; }
 .featured-work { display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem .7rem; min-width: 0; }
-.author-featured-list a { color: var(--ink); font-family: var(--title-font); font-weight: 700; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+.author-featured-list a { color: var(--ink); font-family: var(--title-font); font-weight: 700; text-decoration: none; }
+.author-featured-list li.is-priority .featured-work > a { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
 .work-priority { color: var(--accent-dark); font: 700 .75rem/1.5 var(--ui-font); white-space: nowrap; }
 .author-featured-list .alternate-edition { color: var(--accent-dark); font: 600 .75rem/1.5 var(--ui-font); white-space: nowrap; }
 .author-featured-list a:hover { color: var(--accent-dark); }

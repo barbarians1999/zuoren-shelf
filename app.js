@@ -211,7 +211,7 @@
       const linkAttributes = local ? '' : ' target="_blank" rel="noopener noreferrer"';
       const year = work.year ? `<span class="featured-year">${escapeText(work.year)}</span>` : '';
       const priority = work.recommendation ? `<span class="work-priority" title="${escapeText(work.recommendation)}">重点阅读</span>` : '';
-      return `<li>${year}<div class="featured-work"><a href="${escapeText(href)}"${linkAttributes}>${escapeText(work.title)}</a>${priority}</div></li>`;
+      return `<li${work.recommendation ? ' class="is-priority"' : ''}>${year}<div class="featured-work"><a href="${escapeText(href)}"${linkAttributes}>${escapeText(work.title)}</a>${priority}</div></li>`;
     }).join('');
     return uniqueWorks.length;
   }
@@ -264,12 +264,13 @@
         const href = `?author=mao&book=${encodeURIComponent(work.bookId)}&section=${encodeURIComponent(work.sectionId)}`;
         const year = work.year ? `<span class="featured-year">${escapeText(work.year)}</span>` : '<span></span>';
         const priority = work.recommendation ? `<span class="work-priority" title="${escapeText(work.recommendation)}">重点阅读</span>` : '';
+        const priorityClass = work.recommendation ? ' class="is-priority"' : '';
         const alternate = (work.alternate || []).map((other, index, all) => {
           const alternateHref = `?author=mao&book=${encodeURIComponent(other.bookId)}&section=${encodeURIComponent(other.sectionId)}`;
           const label = all.length > 1 ? `其他版本${index + 1}` : '其他版本';
           return `<a class="alternate-edition" href="${escapeText(alternateHref)}" aria-label="${escapeText(work.title)}的${label}">${label}</a>`;
         }).join('');
-        return `<li>${year}<div class="featured-work"><a href="${escapeText(href)}">${escapeText(work.title)}</a>${priority}${alternate}</div></li>`;
+        return `<li${priorityClass}>${year}<div class="featured-work"><a href="${escapeText(href)}">${escapeText(work.title)}</a>${priority}${alternate}</div></li>`;
       }).join('');
       return `<li class="author-volume"><h4>${escapeText(group.title)}</h4></li>${rows}`;
     }).join('');

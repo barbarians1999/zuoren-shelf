@@ -10,7 +10,7 @@
   <title>左人书架</title>
   <script>try { const theme = JSON.parse(localStorage.getItem('reading-desk:theme:v1')); if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme; } catch {}</script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=reader-toolbar-20261102">
+  <link rel="stylesheet" href="styles.css?v=author-emphasis-20261102">
 </head>
 <body>
   <header class="topbar">
@@ -25,7 +25,7 @@
     <h1 class="visually-hidden">左人书架</h1>
     <section id="shelf" class="shelf" aria-label="书架">
       <section id="author-index" class="author-index" aria-labelledby="author-index-title" hidden>
-        <h2 id="author-index-title">经典作家</h2>
+        <h2 id="author-index-title" class="visually-hidden">经典作家</h2>
         <nav class="author-choices" aria-label="经典作家入口">
           <a class="author-card" href="?author=marx" data-author-link="marx"><span class="author-portrait portrait-marx" aria-hidden="true"></span><span class="author-name">马克思</span></a>
           <a class="author-card" href="?author=engels" data-author-link="engels"><span class="author-portrait portrait-engels" aria-hidden="true"></span><span class="author-name">恩格斯</span></a>
@@ -123,6 +123,6 @@
   <p id="progress-notice" class="progress-notice" role="status" hidden>浏览器未允许保存阅读进度；仍可正常阅读。</p>
   <footer>友情链接：<a href="https://barbarians1999.github.io/sheke-shelf/" target="_blank" rel="noopener noreferrer">社科书架 GitHub Pages</a></footer>
   <script src="reader-notes.js?v=imperialism-math-20261101" defer></script>
-  <script src="app.js?v=reader-toolbar-20261102" defer></script>
+  <script src="app.js?v=author-emphasis-20261102" defer></script>
 </body>
 </html>
