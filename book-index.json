@@ -91,7 +91,9 @@
         "mx-marx-72fc4a449f",
         "mx-marx-6ada1c8b56",
         "mx-marx-manifesto-1920",
-        "mx-marx-engels-league-summer-1850"
+        "mx-marx-engels-league-summer-1850",
+        "mx-marx-poverty-philosophy",
+        "mx-marx-jewish-question"
       ],
       "referenceIds": [],
       "featuredWorks": [
@@ -122,6 +124,14 @@
           "sortYear": 1843,
           "bookId": "mx-marx-cf2046d683",
           "sectionId": "section-001"
+        },
+        {
+          "title": "论犹太人问题",
+          "year": "1843",
+          "sortYear": 1843,
+          "bookId": "mx-marx-jewish-question",
+          "sectionId": "section-001",
+          "recommendation": "讨论政治解放、国家和市民社会。"
         },
         {
           "title": "1844年经济学哲学手稿",
@@ -194,6 +204,14 @@
           "sortYear": 1847,
           "bookId": "mx-marx-dcd9b809f6",
           "sectionId": "section-001"
+        },
+        {
+          "title": "哲学的贫困",
+          "year": "1847",
+          "sortYear": 1847,
+          "bookId": "mx-marx-poverty-philosophy",
+          "sectionId": "section-002",
+          "recommendation": "结合经济分析与工人罢工、组织和阶级斗争。"
         },
         {
           "title": "共产党宣言",
@@ -838,7 +856,8 @@
         "mx-engels-c82edfe55e",
         "mx-marx-manifesto-1920",
         "mx-marx-e4d9f1e534",
-        "mx-marx-engels-league-summer-1850"
+        "mx-marx-engels-league-summer-1850",
+        "mx-engels-housing-question"
       ],
       "referenceIds": [],
       "featuredWorks": [
@@ -1174,6 +1193,14 @@
           "year": "1872",
           "bookId": "engels-authority",
           "sectionId": "section-001"
+        },
+        {
+          "title": "论住宅问题",
+          "year": "1872",
+          "sortYear": 1872,
+          "bookId": "mx-engels-housing-question",
+          "sectionId": "section-001",
+          "recommendation": "从工人住宅问题讨论资本主义与社会改革。"
         },
         {
           "title": "自然辩证法",
@@ -2763,7 +2790,14 @@
         "mx-stalin-622f91c270",
         "mx-stalin-7e9fd45540",
         "mx-stalin-5c018217f9",
-        "mx-stalin-68f7c96ff8"
+        "mx-stalin-68f7c96ff8",
+        "stalin-october-strategy",
+        "stalin-questions-leninism",
+        "stalin-right-deviation",
+        "stalin-great-turn",
+        "stalin-land-policy",
+        "stalin-economic-problems",
+        "stalin-trotsky-leninism"
       ],
       "referenceIds": [
         "history",
@@ -2915,6 +2949,30 @@
           "sectionId": "section-002"
         },
         {
+          "title": "十月革命和俄国共产党人的策略",
+          "year": "1924",
+          "sortYear": 1924,
+          "bookId": "stalin-october-strategy",
+          "sectionId": "section-001",
+          "recommendation": "讨论十月革命、工农联盟和不断革命论。"
+        },
+        {
+          "title": "托洛茨基主义还是列宁主义？",
+          "year": "1924",
+          "sortYear": 1924,
+          "bookId": "stalin-trotsky-leninism",
+          "sectionId": "section-001",
+          "recommendation": "讨论十月革命历史、党的角色和托洛茨基主义。"
+        },
+        {
+          "title": "论列宁主义的几个问题",
+          "year": "1926",
+          "sortYear": 1926,
+          "bookId": "stalin-questions-leninism",
+          "sectionId": "section-001",
+          "recommendation": "讨论党的作用、无产阶级专政和一国社会主义。"
+        },
+        {
           "title": "在联共（布）莫斯科机关积极分子会议上关于中国大革命形势的讲话",
           "year": "1927",
           "sortYear": 1927,
@@ -2927,6 +2985,30 @@
           "sortYear": 1927,
           "bookId": "mx-stalin-6cc435a441",
           "sectionId": "section-001"
+        },
+        {
+          "title": "论联共（布）党内的右倾",
+          "year": "1929",
+          "sortYear": 1929,
+          "bookId": "stalin-right-deviation",
+          "sectionId": "section-001",
+          "recommendation": "讨论工业化、农业政策和党内路线分歧。"
+        },
+        {
+          "title": "大转变的一年",
+          "year": "1929",
+          "sortYear": 1929,
+          "bookId": "stalin-great-turn",
+          "sectionId": "section-001",
+          "recommendation": "论述1929年工业化和集体化的转变。"
+        },
+        {
+          "title": "论苏联土地政策的几个问题",
+          "year": "1929",
+          "sortYear": 1929,
+          "bookId": "stalin-land-policy",
+          "sectionId": "section-001",
+          "recommendation": "讨论土地政策、集体农庄和农村阶级关系。"
         },
         {
           "title": "斯大林和德国作家艾米尔·路德维希的谈话",
@@ -2990,6 +3072,14 @@
           "sortYear": 1950,
           "bookId": "stalin-linguistics",
           "sectionId": "section-001"
+        },
+        {
+          "title": "苏联社会主义经济问题",
+          "year": "1952",
+          "sortYear": 1952,
+          "bookId": "stalin-economic-problems",
+          "sectionId": "section-001",
+          "recommendation": "讨论社会主义经济规律、商品生产和价值规律。"
         }
       ]
     },
@@ -3102,7 +3192,9 @@
         "mx-mao-fedd7daa94",
         "mx-mao-7c9a254d22",
         "mx-mao-5a8a6ad52f",
-        "mx-mao-9a56858852"
+        "mx-mao-9a56858852",
+        "mx-mao-expanded-conference-1962",
+        "mx-mao-zhengzhou-1958"
       ],
       "referenceIds": [
         "maodazhuan-text"
@@ -4919,6 +5011,22 @@
           "sectionId": "section-263"
         },
         {
+          "title": "在郑州会议上的讲话：读苏联社会主义经济问题（1958年，武汉版）",
+          "year": "1958",
+          "sortYear": 1958,
+          "bookId": "mx-mao-zhengzhou-1958",
+          "sectionId": "section-001",
+          "recommendation": "讨论社会主义经济规律和建设实践。"
+        },
+        {
+          "title": "在扩大的中央工作会议上的讲话（1962年，武汉版）",
+          "year": "1962",
+          "sortYear": 1962,
+          "bookId": "mx-mao-expanded-conference-1962",
+          "sectionId": "section-001",
+          "recommendation": "讨论党内民主、群众路线和经济建设经验；保留武汉版作为不同版本。"
+        },
+        {
           "title": "毛泽东主席会见朝鲜党政代表团谈话记录",
           "year": "1964",
           "sortYear": 1964,
@@ -5442,6 +5550,18 @@
           "sortYear": 1975,
           "bookId": "mx-mao-fd2fbaf4a9",
           "sectionId": "section-001"
+        },
+        {
+          "title": "读苏联《政治经济学教科书》的谈话",
+          "bookId": "mao-selected",
+          "sectionId": "section-280",
+          "recommendation": "探讨社会主义政治经济学和建设实践。"
+        },
+        {
+          "title": "在七千人大会上的讲话——关于党的民主集中制",
+          "bookId": "mao-selected",
+          "sectionId": "section-292",
+          "recommendation": "讨论党内民主和社会主义建设中的经验。"
         }
       ]
     }
@@ -41281,6 +41401,486 @@
           "title": "注释",
           "level": 0,
           "sourceUrl": "https://www.marxists.org/chinese/marx-engels/07/024.htm"
+        }
+      ]
+    },
+    {
+      "id": "mx-marx-poverty-philosophy",
+      "title": "哲学的贫困",
+      "author": "马克思",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "中文文字阅读版。",
+      "sourceUrl": "https://www.marxists.org/chinese/marx-engels/04/011.htm",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/mx-marx-poverty-philosophy/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "序言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/04/012.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "第一节 使用价值和交换价值的对立",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/04/013.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "第二节 构成价值或综合价值",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/04/013.htm"
+        },
+        {
+          "id": "section-004",
+          "title": "第三节 价值比例规律的应用",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/04/013.htm"
+        },
+        {
+          "id": "section-005",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/04/014.htm"
+        },
+        {
+          "id": "section-006",
+          "title": "第一节 方法",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/04/014.htm"
+        },
+        {
+          "id": "section-007",
+          "title": "第二节 分工和机器",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/04/014.htm"
+        },
+        {
+          "id": "section-008",
+          "title": "第三节 竞争和垄断",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/04/014.htm"
+        },
+        {
+          "id": "section-009",
+          "title": "第四节 土地所有权或地租",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/04/014.htm"
+        },
+        {
+          "id": "section-010",
+          "title": "第五节 罢工和工人同盟",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/04/014.htm"
+        }
+      ]
+    },
+    {
+      "id": "mx-marx-jewish-question",
+      "title": "论犹太人问题",
+      "author": "马克思",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "中文文字阅读版。",
+      "sourceUrl": "https://www.marxists.org/chinese/marx-engels2/01/02.htm",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/mx-marx-jewish-question/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "论犹太人问题",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels2/01/02.htm"
+        }
+      ]
+    },
+    {
+      "id": "mx-engels-housing-question",
+      "title": "论住宅问题",
+      "author": "恩格斯",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "中文文字阅读版。",
+      "sourceUrl": "https://www.marxists.org/chinese/marx-engels/18/043.htm",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/mx-engels-housing-question/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "第一篇蒲鲁东怎样解决住宅问题",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/18/043.htm"
+        },
+        {
+          "id": "section-002",
+          "title": "第二篇资产阶级怎样解决住宅问题",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/18/043.htm"
+        },
+        {
+          "id": "section-003",
+          "title": "第三篇再论蒲鲁东和住宅问题",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/marx-engels/18/043.htm"
+        }
+      ]
+    },
+    {
+      "id": "mx-mao-expanded-conference-1962",
+      "title": "在扩大的中央工作会议上的讲话（1962年，武汉版）",
+      "author": "毛泽东",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "中文文字阅读版。",
+      "sourceUrl": "https://www.marxists.org/chinese/maozedong/1968/5-016.htm",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/mx-mao-expanded-conference-1962/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "在扩大的中央工作会议上的讲话（1962年，武汉版）",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/maozedong/1968/5-016.htm"
+        }
+      ]
+    },
+    {
+      "id": "mx-mao-zhengzhou-1958",
+      "title": "在郑州会议上的讲话：读苏联社会主义经济问题（1958年，武汉版）",
+      "author": "毛泽东",
+      "format": "中文马克思主义文库原文整理版",
+      "note": "中文文字阅读版。",
+      "sourceUrl": "https://www.marxists.org/chinese/maozedong/1968/4-081.htm",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/mx-mao-zhengzhou-1958/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "在郑州会议上的讲话：读苏联社会主义经济问题（1958年，武汉版）",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/maozedong/1968/4-081.htm"
+        }
+      ]
+    },
+    {
+      "id": "stalin-october-strategy",
+      "title": "十月革命和俄国共产党人的策略",
+      "author": "斯大林",
+      "format": "《斯大林选集》文字整理版",
+      "note": "依据《斯大林选集》文字来源整理，原注可点击查看。",
+      "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/56d9cc62b2bb.html",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/stalin-october-strategy/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/56d9cc62b2bb.html"
+        },
+        {
+          "id": "section-002",
+          "title": "一　十月革命的内外环境",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/56d9cc62b2bb.html"
+        },
+        {
+          "id": "section-003",
+          "title": "二　论十月革命的两个特点，或十月革命和托洛茨基的“不断”革命论",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/56d9cc62b2bb.html"
+        },
+        {
+          "id": "section-004",
+          "title": "三　关于布尔什维克在十月革命准备时期的策略的几个特点",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/56d9cc62b2bb.html"
+        },
+        {
+          "id": "section-005",
+          "title": "四　十月革命是世界革命的开端和前提",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/56d9cc62b2bb.html"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/56d9cc62b2bb.html"
+        }
+      ]
+    },
+    {
+      "id": "stalin-questions-leninism",
+      "title": "论列宁主义的几个问题",
+      "author": "斯大林",
+      "format": "《斯大林选集》文字整理版",
+      "note": "依据《斯大林选集》文字来源整理，原注可点击查看。",
+      "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/5542ab2c06ee.html",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/stalin-questions-leninism/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/5542ab2c06ee.html"
+        },
+        {
+          "id": "section-002",
+          "title": "一　列宁主义的定义",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/5542ab2c06ee.html"
+        },
+        {
+          "id": "section-003",
+          "title": "二　列宁主义的主要问题",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/5542ab2c06ee.html"
+        },
+        {
+          "id": "section-004",
+          "title": "三　关于“不断”革命问题",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/5542ab2c06ee.html"
+        },
+        {
+          "id": "section-005",
+          "title": "四　无产阶级革命和无产阶级专政",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/5542ab2c06ee.html"
+        },
+        {
+          "id": "section-006",
+          "title": "五　无产阶级专政体系中的党和工人阶级",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/5542ab2c06ee.html"
+        },
+        {
+          "id": "section-007",
+          "title": "六　关于社会主义在一个国家内胜利的问题",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/5542ab2c06ee.html"
+        },
+        {
+          "id": "section-008",
+          "title": "七　为社会主义建设的胜利而奋斗",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/5542ab2c06ee.html"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/5542ab2c06ee.html"
+        }
+      ]
+    },
+    {
+      "id": "stalin-right-deviation",
+      "title": "论联共（布）党内的右倾",
+      "author": "斯大林",
+      "format": "《斯大林选集》文字整理版",
+      "note": "依据《斯大林选集》文字来源整理，原注可点击查看。",
+      "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/916907d6d0b1.html",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/stalin-right-deviation/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/916907d6d0b1.html"
+        },
+        {
+          "id": "section-002",
+          "title": "一　一条路线还是两条路线？",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/916907d6d0b1.html"
+        },
+        {
+          "id": "section-003",
+          "title": "二　阶级变动和我们的意见分歧",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/916907d6d0b1.html"
+        },
+        {
+          "id": "section-004",
+          "title": "三　在共产国际方面的意见分歧",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/916907d6d0b1.html"
+        },
+        {
+          "id": "section-005",
+          "title": "四　在对内政策方面的意见分歧",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/916907d6d0b1.html"
+        },
+        {
+          "id": "section-006",
+          "title": "五　党的领导问题",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/916907d6d0b1.html"
+        },
+        {
+          "id": "section-007",
+          "title": "六　结论",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/916907d6d0b1.html"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/916907d6d0b1.html"
+        }
+      ]
+    },
+    {
+      "id": "stalin-great-turn",
+      "title": "大转变的一年",
+      "author": "斯大林",
+      "format": "《斯大林选集》文字整理版",
+      "note": "依据《斯大林选集》文字来源整理，原注可点击查看。",
+      "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/7c257103cee2.html",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/stalin-great-turn/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/7c257103cee2.html"
+        },
+        {
+          "id": "section-002",
+          "title": "一　在劳动生产率方面",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/7c257103cee2.html"
+        },
+        {
+          "id": "section-003",
+          "title": "二　在工业建设方面",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/7c257103cee2.html"
+        },
+        {
+          "id": "section-004",
+          "title": "三　在农业建设方面",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/7c257103cee2.html"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/7c257103cee2.html"
+        }
+      ]
+    },
+    {
+      "id": "stalin-land-policy",
+      "title": "论苏联土地政策的几个问题",
+      "author": "斯大林",
+      "format": "《斯大林选集》文字整理版",
+      "note": "依据《斯大林选集》文字来源整理，原注可点击查看。",
+      "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/b588c91709d6.html",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/stalin-land-policy/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "论苏联土地政策的几个问题",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/b588c91709d6.html"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/b588c91709d6.html"
+        }
+      ]
+    },
+    {
+      "id": "stalin-economic-problems",
+      "title": "苏联社会主义经济问题",
+      "author": "斯大林",
+      "format": "《斯大林选集》文字整理版",
+      "note": "依据《斯大林选集》文字来源整理，原注可点击查看。",
+      "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/782447af9cc8.html",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/stalin-economic-problems/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "苏联社会主义经济问题（第1部分）",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/782447af9cc8.html"
+        },
+        {
+          "id": "section-002",
+          "title": "苏联社会主义经济问题（第2部分）",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/36889b48bcff.html"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.diancangwang.cn/waiguomingzhu/dc2985f01e18/782447af9cc8.html"
+        }
+      ]
+    },
+    {
+      "id": "stalin-trotsky-leninism",
+      "title": "托洛茨基主义还是列宁主义？",
+      "author": "斯大林",
+      "format": "文字阅读版",
+      "note": "正文根据公开文字版整理，注释据《新编斯大林全集》第六卷整理。",
+      "sourceUrl": "https://m.mzfxw.com/articles/180640.html",
+      "type": "text",
+      "authorOnly": true,
+      "sectionPath": "books/stalin-trotsky-leninism/sections",
+      "sections": [
+        {
+          "id": "section-001",
+          "title": "导言",
+          "level": 0,
+          "sourceUrl": "https://m.mzfxw.com/articles/180640.html"
+        },
+        {
+          "id": "section-002",
+          "title": "一 关于十月起义的一些事实",
+          "level": 0,
+          "sourceUrl": "https://m.mzfxw.com/articles/180640.html"
+        },
+        {
+          "id": "section-003",
+          "title": "二 党和十月革命的准备",
+          "level": 0,
+          "sourceUrl": "https://m.mzfxw.com/articles/180640.html"
+        },
+        {
+          "id": "section-004",
+          "title": "三 托洛茨基主义还是列宁主义?",
+          "level": 0,
+          "sourceUrl": "https://m.mzfxw.com/articles/180640.html"
+        },
+        {
+          "id": "notes",
+          "title": "注释",
+          "level": 0,
+          "sourceUrl": "https://www.marxists.org/chinese/pdf/russian_communists/stalin/nz1-20.pdf"
         }
       ]
     }
