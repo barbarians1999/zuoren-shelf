@@ -15,7 +15,7 @@
   --contrast: #21211e;
   --contrast-ink: #f9f7f1;
   --ui-font: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
-  --title-font: "Source Han Serif SC Web", "Source Han Serif SC", "Songti SC", serif;
+  --title-font: "Shelf Title Serif", "Source Han Serif SC", "Songti SC", "STSong", "Songti TC", "Noto Serif CJK SC", serif;
   --reading-font: var(--ui-font);
   --reading-leading: 2;
   --reading-size: clamp(1.08rem, 1.8vw, 1.24rem);
@@ -31,11 +31,19 @@
 }
 .content .math-wave { text-decoration-line: underline; text-decoration-style: wavy; }
 
+/* OFL-derived static title subset; missing/new glyphs fall through to system CJK serif fonts. */
+@font-face {
+  font-family: "Shelf Title Serif";
+  src: url("./fonts/ShelfTitleSerif.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
 @font-face {
   font-family: "Source Han Serif SC Web";
   src: url("./fonts/SourceHanSerifCN-VF.otf.woff2") format("woff2");
   font-style: normal;
-  font-weight: 200 900;
+  font-weight: 250 900;
   font-display: swap;
 }
 :root[data-reading-font="source-han"] {
@@ -83,7 +91,7 @@ button { font: inherit; }
 .shell { width: min(100% - 2.2rem, 78rem); margin: 0 auto; padding: clamp(1.75rem, 4vw, 3.25rem) 0 4rem; }
 body:not(.book-open) .shell { padding-top: 1.5rem; }
 .eyebrow { margin: 0 0 .7rem; font: 700 .72rem/1.2 ui-sans-serif, system-ui, sans-serif; letter-spacing: .15em; text-transform: uppercase; color: var(--accent); }
-h1 { font-size: clamp(2.2rem, 7vw, 4.7rem); line-height: 1.03; letter-spacing: -.04em; font-weight: 500; margin: 0 0 1.1rem; }
+h1 { font-family: var(--title-font); font-size: clamp(2.2rem, 7vw, 4.7rem); line-height: 1.03; letter-spacing: -.04em; font-weight: 500; margin: 0 0 1.1rem; }
 .shelf-tools { flex: 0 1 33rem; min-width: 0; max-width: 33rem; margin-left: 0; display: flex; align-items: center; gap: .8rem; font: .85rem ui-sans-serif, system-ui, sans-serif; }
 .shelf-tools label { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .shelf-tools input { flex: 1; min-width: 0; min-height: 2.65rem; padding: .5rem .8rem; border: 1px solid var(--line); border-radius: .35rem; background: var(--panel); color: var(--ink); font: inherit; }
@@ -401,7 +409,7 @@ body.book-open .topbar { display: none; }
 .toc-link.active { background: var(--accent); color: var(--brand-ink); border-left-color: var(--accent); }
 .reading-panel { background: var(--reading-panel-bg); border: 1px solid var(--line); border-top: 4px solid var(--ink); }
 .reading-meta { font-family: var(--ui-font); gap: .6rem; border-bottom: 2px solid var(--ink); }
-#book-title { flex-basis: 100%; color: var(--ink); font-weight: 800; font-size: 1.02rem; overflow-wrap: anywhere; }
+#book-title { flex-basis: 100%; color: var(--ink); font: 700 1.02rem/1.4 var(--title-font); overflow-wrap: anywhere; }
 #book-author { flex: 1 1 9rem; }
 .reading-actions { flex-wrap: wrap; }
 .reading-panel > h2 { padding-left: 1rem; border-left: .5rem solid var(--accent); font-family: var(--title-font); font-weight: 700; line-height: 1.4; overflow-wrap: anywhere; }
@@ -461,7 +469,7 @@ footer a { color: var(--accent-dark); text-underline-offset: .25em; }
   .mobile-reader-head { min-height: 3.75rem; border-bottom: 4px solid var(--accent); background: var(--contrast); color: var(--contrast-ink); padding-inline: max(.75rem, env(safe-area-inset-left)) max(.75rem, env(safe-area-inset-right)); }
   .mobile-reader-head .text-button, .mobile-reader-head .muted { color: var(--contrast-ink); }
   .mobile-reader-head :is(button, summary):focus-visible { outline-color: var(--contrast-ink); }
-  .mobile-reader-title strong { font-family: var(--ui-font); font-weight: 800; }
+  .mobile-reader-title strong { font-family: var(--title-font); font-weight: 700; }
   .mobile-reader-head .reader-head-actions { flex-wrap: nowrap; }
   .mobile-reader-head .mobile-font-settings > summary { color: var(--contrast-ink); font: 700 .82rem/1.5 var(--ui-font); min-height: 2.75rem; padding: .45rem .2rem; display: flex; align-items: center; }
   .mobile-font-settings .settings-menu { top: max(4.5rem, calc(env(safe-area-inset-top) + 3.8rem)); max-height: calc(100dvh - max(4.5rem, calc(env(safe-area-inset-top) + 3.8rem)) - 1rem); overflow-y: auto; }
