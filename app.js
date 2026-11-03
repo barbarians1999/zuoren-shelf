@@ -45,6 +45,13 @@
   const desktopBack = document.querySelector('#back-button');
   const desktopPrevChapter = document.querySelector('#prev-button');
   const desktopNextChapter = document.querySelector('#next-button');
+  const desktopShareButton = document.querySelector('#desktop-share-button');
+  const mobileShareButton = document.querySelector('#mobile-share-button');
+  const shareStatus = document.querySelector('#share-status');
+  const shareDialog = document.querySelector('#share-dialog');
+  const shareUrlInput = document.querySelector('#share-url');
+  const shareCopyRetry = document.querySelector('#share-copy-retry');
+  const routeNotice = document.querySelector('#route-notice');
   const modeQuery = window.matchMedia('(max-width: 700px)');
   const colorQuery = window.matchMedia('(prefers-color-scheme: dark)');
   const themeColor = document.querySelector('meta[name="theme-color"]');
@@ -57,10 +64,6 @@
 
   let books = [];
   let authorIndex = [];
-  const requestedParams = new URLSearchParams(window.location.search);
-  const requestedAuthor = requestedParams.get('author');
-  const requestedBookId = requestedParams.get('book');
-  const requestedSectionId = requestedParams.get('section');
   let activeAuthor = null;
   let activeCategory = 'all';
   let currentBook = null;
@@ -72,6 +75,9 @@
   let lastPosition = null;
   let progressFrame = null;
   let progressTimer = null;
+  let currentRouteKey = null;
+  let shareStatusTimer = null;
+  const routePositionPrefix = 'reading-desk:route-position:v1:';
   const progressPrefix = 'reading-desk:progress:v1:';
   const activeBookKey = 'reading-desk:active-book:v1';
   const fontPreferenceKey = 'reading-desk:font-family:v1';
@@ -127,26 +133,203 @@
   const isMobileReader = () => modeQuery.matches;
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
+  function readerSectionEntries(book) {
+    return book.type === 'scan' ? [] : (book.sections || [])
+      .map((section, index) => ({ section, index }))
+      .filter(({ section }) => section.readerHidden !== true);
+  }
+
+  function visibleSectionIndex(book, requestedIndex) {
+    if (book.type === 'scan') return clamp(requestedIndex, 0, book.pageCount - 1);
+    const entries = readerSectionEntries(book);
+    if (!entries.length) return -1;
+    const exact = entries.find((entry) => entry.index === requestedIndex);
+    if (exact) return exact.index;
+    return entries.find((entry) => entry.index > requestedIndex)?.index
+      ?? entries.filter((entry) => entry.index < requestedIndex).at(-1)?.index
+      ?? entries[0].index;
+  }
+
+  function visibleSectionPosition(book, index) {
+    if (book.type === 'scan') return { position: index, total: book.pageCount };
+    const entries = readerSectionEntries(book);
+    const position = entries.findIndex((entry) => entry.index === index);
+    return { position: Math.max(0, position), total: entries.length };
+  }
+
+  function adjacentSectionIndex(book, index, direction) {
+    if (book.type === 'scan') return clamp(index + direction, 0, book.pageCount - 1);
+    const entries = readerSectionEntries(book);
+    if (!entries.length) return -1;
+    const position = entries.findIndex((entry) => entry.index === index);
+    return entries[clamp(position + direction, 0, entries.length - 1)]?.index ?? index;
+  }
+
+  function historyStateObject() {
+    const state = window.history.state;
+    return state && typeof state === 'object' && !Array.isArray(state) ? { ...state } : {};
+  }
+
+  function newRouteKey() {
+    return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+  }
+
+  function ensureRouteKey() {
+    const state = historyStateObject();
+    if (state.zuorenRouteKey) {
+      currentRouteKey = state.zuorenRouteKey;
+      return currentRouteKey;
+    }
+    currentRouteKey = newRouteKey();
+    window.history.replaceState({ ...state, zuorenRouteKey: currentRouteKey }, '', window.location.href);
+    return currentRouteKey;
+  }
+
+  function writeReaderLocation(historyMode = 'replace') {
+    if (!currentBook) return;
+    const url = new URL(window.location.href);
+    url.searchParams.set('book', currentBook.id);
+    const sectionId = currentBook.type === 'scan'
+      ? String(current + 1)
+      : currentBook.sections[current]?.id;
+    if (sectionId) url.searchParams.set('section', sectionId);
+    else url.searchParams.delete('section');
+    if (activeAuthor) url.searchParams.set('author', activeAuthor.id);
+    else url.searchParams.delete('author');
+    const state = historyStateObject();
+    currentRouteKey = historyMode === 'push' || !state.zuorenRouteKey
+      ? newRouteKey() : state.zuorenRouteKey;
+    const nextState = { ...state, zuorenRouteKey: currentRouteKey };
+    if (historyMode === 'push') window.history.pushState(nextState, '', url);
+    else window.history.replaceState(nextState, '', url);
+  }
+
+  function writeShelfLocation() {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('book');
+    url.searchParams.delete('section');
+    const state = historyStateObject();
+    currentRouteKey = newRouteKey();
+    window.history.replaceState({ ...state, zuorenRouteKey: currentRouteKey }, '', url);
+  }
+
+  function routePositionFor(routeKey, book, sectionId) {
+    if (!routeKey) return null;
+    try {
+      const saved = JSON.parse(sessionStorage.getItem(routePositionPrefix + routeKey));
+      if (saved?.bookId !== book.id || saved?.sectionId !== sectionId) return null;
+      return saved.position || null;
+    } catch { return null; }
+  }
+
+  function persistRoutePosition() {
+    if (!currentBook || !currentRouteKey || !lastPosition) return;
+    const sectionId = currentBook.type === 'scan' ? String(current + 1) : currentBook.sections[current]?.id;
+    try {
+      sessionStorage.setItem(routePositionPrefix + currentRouteKey, JSON.stringify({
+        bookId: currentBook.id, sectionId, position: lastPosition
+      }));
+    } catch { /* Sharing and reading still work if this tab cannot store its position. */ }
+  }
+
+  function showRouteNotice(message) {
+    routeNotice.textContent = message || '';
+    routeNotice.hidden = !message;
+  }
+
+  function clearReaderForLocationChange() {
+    if (!reader.classList.contains('is-hidden')) {
+      rememberPosition();
+      persistProgress();
+      ReaderNotes.clear();
+      ++renderToken;
+      rendering = false;
+      closeToc(false);
+      writeStored(activeBookKey, null);
+    }
+    currentBook = null;
+    reader.classList.add('is-hidden');
+    shelf.classList.remove('is-hidden');
+    document.body.classList.remove('book-open', 'mobile-reader-open', 'mobile-toc-open');
+    setMobileChrome(false);
+  }
+
+  function applyLocation({ initial = false, state = window.history.state } = {}) {
+    const params = new URLSearchParams(window.location.search);
+    const requestedAuthor = params.get('author');
+    const requestedBookId = params.get('book');
+    const requestedSectionId = params.get('section');
+    activeAuthor = authorIndex.find((entry) => entry.id === requestedAuthor) || null;
+    showRouteNotice('');
+    if (!initial && currentBook && !reader.classList.contains('is-hidden')) {
+      rememberPosition();
+      persistProgress();
+    }
+    const routeState = state && typeof state === 'object' ? state : {};
+    const nextRouteKey = routeState.zuorenRouteKey || null;
+
+    if (params.has('book')) {
+      const bookIndex = books.findIndex((book) => book.id === requestedBookId);
+      const requestedBook = books[bookIndex];
+      const sectionExists = requestedBook?.type !== 'scan'
+        && requestedBook?.sections?.some((section) => section.id === requestedSectionId);
+      if (bookIndex < 0) {
+        clearReaderForLocationChange();
+        currentRouteKey = nextRouteKey;
+        if (!currentRouteKey) ensureRouteKey();
+        renderShelf();
+        writeShelfLocation();
+        showRouteNotice('链接中的书籍标识无效，已返回书架。');
+        return;
+      }
+      if (requestedBook.type !== 'scan' && !readerSectionEntries(requestedBook).length) {
+        currentRouteKey = nextRouteKey;
+        if (!currentRouteKey) ensureRouteKey();
+        renderShelf();
+        openReader(bookIndex, requestedSectionId, { historyMode: 'none' });
+        return;
+      }
+      if (!requestedSectionId || !sectionExists) {
+        clearReaderForLocationChange();
+        currentRouteKey = nextRouteKey;
+        if (!currentRouteKey) ensureRouteKey();
+        renderShelf();
+        writeShelfLocation();
+        showRouteNotice('链接中的章节标识无效，已返回书架。');
+        return;
+      }
+      currentRouteKey = nextRouteKey;
+      if (!currentRouteKey) ensureRouteKey();
+      renderShelf();
+      const requestedSection = requestedBook.sections.find((section) => section.id === requestedSectionId);
+      const position = requestedSection?.readerHidden
+        ? null : routePositionFor(currentRouteKey, requestedBook, requestedSectionId);
+      if (requestedSection?.readerHidden) {
+        showRouteNotice(`《${requestedBook.title}》的原书目录页已隐藏，已跳到正文。`);
+      }
+      openReader(bookIndex, requestedSectionId, { historyMode: 'none', position });
+      return;
+    }
+
+    clearReaderForLocationChange();
+    currentRouteKey = nextRouteKey;
+    if (!currentRouteKey) ensureRouteKey();
+    renderShelf();
+    if (initial && !params.has('author')) {
+      const activeBook = readStored(activeBookKey);
+      const index = books.findIndex((book) => book.id === activeBook);
+      if (index !== -1) openReader(index, null, { historyMode: 'replace' });
+    }
+  }
+
   async function loadBooks() {
     const response = await fetch('book-index.json', { cache: 'no-store' });
     if (!response.ok) throw new Error('books unavailable');
     const data = await response.json();
     books = data.books || [];
     authorIndex = Array.isArray(data.authorIndex) ? data.authorIndex : [];
-    activeAuthor = authorIndex.find((entry) => entry.id === requestedAuthor) || null;
     renderCategoryFilters();
-    renderShelf();
-    const activeBook = readStored(activeBookKey);
-    const requestedBookIndex = books.findIndex((book) => book.id === requestedBookId);
-    const requestedBook = books[requestedBookIndex];
-    const requestedSectionExists = requestedBook?.type !== 'scan'
-      && requestedBook?.sections?.some((section) => section.id === requestedSectionId);
-    if (requestedBookIndex !== -1 && requestedSectionId && requestedSectionExists) {
-      openReader(requestedBookIndex, requestedSectionId);
-    } else if (requestedBookId === null && requestedAuthor === null) {
-      const index = books.findIndex((book) => book.id === activeBook);
-      if (index !== -1) openReader(index);
-    }
+    applyLocation({ initial: true });
   }
 
   function renderCategoryFilters() {
@@ -323,7 +506,8 @@
 
   function renderToc() {
     if (!currentBook) return;
-    const tocSections = currentBook.type === 'scan' ? [] : currentBook.sections.filter((section) => !/^注释$/.test(section.title.trim()));
+    const visibleSections = currentBook.type === 'scan' ? [] : readerSectionEntries(currentBook);
+    const tocSections = visibleSections.filter(({ section }) => !/^注释$/.test(section.title.trim()));
     const hasToc = currentBook.type === 'scan' || tocSections.length > 1;
     desktopTocPanel.hidden = !hasToc;
     desktopTocToggle.hidden = !hasToc;
@@ -332,10 +516,10 @@
     const numbering = [];
     const html = currentBook.type === 'scan'
       ? '<p class="toc-hint">使用下方章节按钮翻页</p>'
-      : currentBook.sections.map((section, index) => {
+      : visibleSections.map(({ section, index }, visibleIndex) => {
         let level = clamp(Number(section.level) || 0, 0, 4);
         if (section.chapter) level = Math.max(level, 1);
-        const newChapter = section.chapter && section.chapter !== currentBook.sections[index - 1]?.chapter;
+        const newChapter = section.chapter && section.chapter !== visibleSections[visibleIndex - 1]?.section.chapter;
         let chapterHeading = '';
         if (newChapter) {
           numbering.length = Math.min(numbering.length, 1);
@@ -413,24 +597,34 @@
   }
 
   function syncBookMeta() {
-    const total = currentBook.type === 'scan' ? currentBook.pageCount : currentBook.sections.length;
-    document.querySelector('#section-count').textContent = currentBook.type === 'scan' ? `${total} 页` : `${total} 个阅读单元`;
+    const total = currentBook.type === 'scan' ? currentBook.pageCount : visibleSectionPosition(currentBook, current).total;
+    document.querySelector('#section-count').textContent = currentBook.type === 'scan'
+      ? `${total} 页`
+      : total === 0 ? '0 个可读章节' : `${total} 个阅读单元`;
     document.querySelector('#book-title').textContent = currentBook.title;
     document.querySelector('#book-author').textContent = currentBook.author;
     document.querySelector('#mobile-book-title').textContent = currentBook.title;
-    document.querySelector('#mobile-reading-position').textContent = `${current + 1} / ${total}`;
-    desktopPrevChapter.disabled = current === 0;
-    desktopNextChapter.disabled = current === total - 1;
+    const { position, total: visibleTotal } = currentBook.type === 'scan'
+      ? { position: current, total }
+      : visibleSectionPosition(currentBook, current);
+    if (visibleTotal === 0) document.querySelector('#reading-position').textContent = '0 / 0';
+    document.querySelector('#mobile-reading-position').textContent = `${position + 1} / ${visibleTotal}`;
+    desktopPrevChapter.disabled = visibleTotal === 0 || position === 0;
+    desktopNextChapter.disabled = visibleTotal === 0 || position === visibleTotal - 1;
+    desktopShareButton.disabled = visibleTotal === 0;
+    mobileShareButton.disabled = visibleTotal === 0;
   }
 
   function syncSectionMeta() {
+    if (current < 0) return;
     const title = currentBook.type === 'scan' ? `第 ${current + 1} 页` : currentBook.sections[current].title;
     document.querySelector('#section-title').textContent = title;
     document.querySelector('#mobile-section-title').textContent = title;
     const bodyIncludesTitle = currentBook.type !== 'scan' && currentBook.sections[current].bodyIncludesTitle === true;
     document.querySelector('#section-title').classList.toggle('is-hidden', bodyIncludesTitle);
     document.querySelector('#mobile-section-title').classList.toggle('is-hidden', bodyIncludesTitle);
-    document.querySelector('#reading-position').textContent = `${current + 1} / ${currentBook.type === 'scan' ? currentBook.pageCount : currentBook.sections.length}`;
+    const { position, total } = visibleSectionPosition(currentBook, current);
+    document.querySelector('#reading-position').textContent = `${position + 1} / ${total}`;
     document.querySelector('#desktop-scan-summary').classList.toggle('is-hidden', currentBook.type !== 'scan');
     document.querySelector('#mobile-scan-summary').classList.toggle('is-hidden', currentBook.type !== 'scan');
   }
@@ -529,6 +723,22 @@
   }
 
   function contentFor(mode) { return mode === 'mobile' ? mobileContent : desktopContent; }
+
+  function renderEmptyBookState() {
+    ++renderToken;
+    rendering = false;
+    ReaderNotes.clear();
+    document.querySelector('#section-title').classList.add('is-hidden');
+    document.querySelector('#mobile-section-title').classList.add('is-hidden');
+    document.querySelector('#section-title').textContent = '无可读章节';
+    document.querySelector('#mobile-section-title').textContent = '无可读章节';
+    const message = '<p class="empty-book-state" role="status">本书当前没有可阅读的正文内容。你可以返回书架选择其他书籍。</p>';
+    [desktopContent, mobileContent].forEach((target) => {
+      target.innerHTML = message;
+      target.setAttribute('aria-busy', 'false');
+    });
+  }
+
   function readingTop(mode) {
     return mode === 'mobile' ? 12
       : document.querySelector('.topbar').getBoundingClientRect().bottom + desktopReader.querySelector('.reader-head').getBoundingClientRect().height + 12;
@@ -570,7 +780,8 @@
 
   function persistProgress() {
     window.clearTimeout(progressTimer);
-    if (!currentBook || !lastPosition || reader.classList.contains('is-hidden')) return;
+    if (!currentBook || current < 0 || !lastPosition || reader.classList.contains('is-hidden')) return;
+    persistRoutePosition();
     writeStored(progressPrefix + currentBook.id, {
       version: 1, source: currentBook.sectionPath || currentBook.pagePath,
       sectionId: sectionIdentity(currentBook, current), position: lastPosition
@@ -578,7 +789,7 @@
   }
 
   function rememberPosition() {
-    if (rendering || !currentBook || reader.classList.contains('is-hidden')) return;
+    if (rendering || !currentBook || current < 0 || reader.classList.contains('is-hidden')) return;
     if (mobileTocPanel.classList.contains('is-open')) return;
     // A breakpoint event may arrive after CSS has already hidden the old surface.
     if ((isMobileReader() ? 'mobile' : 'desktop') !== readerMode) return;
@@ -652,6 +863,10 @@
   }
 
   async function renderSection(mode, saved = null) {
+    if (current < 0) {
+      renderEmptyBookState();
+      return;
+    }
     const token = ++renderToken;
     rendering = true;
     const target = contentFor(mode);
@@ -667,16 +882,28 @@
       wrapTables(target);
       if (currentBook.type !== 'scan') await ReaderNotes.prepare(target, currentBook);
       if (token !== renderToken) return;
-      // Some editions already begin with the same chapter heading. Keep the
-      // source HTML intact; hide only our generated duplicate in the UI.
-      const firstBlock = Array.from(target.querySelectorAll('h1,h2,h3,h4,p,li,blockquote'))
+      // Some editions repeat the section title as their first content block.
+      // Keep the source text and its anchors; hide only the generated title.
+      let firstBlock = Array.from(target.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li,blockquote'))
         .find((el) => !el.classList.contains('page-marker') && el.textContent.trim());
-      const normalizeHeading = (value) => String(value).normalize('NFKC').replace(/\s+/g, '');
-      const duplicateHeading = firstBlock && /^H[1-6]$/.test(firstBlock.tagName)
-        && normalizeHeading(firstBlock.textContent) === normalizeHeading(currentBook.sections?.[current]?.title || '');
+      const visibleHeadingText = (element) => {
+        const copy = element.cloneNode(true);
+        copy.querySelectorAll('sup').forEach((sup) => sup.remove());
+        return copy.textContent;
+      };
+      const duplicateHeading = Boolean(firstBlock && ReaderHeadingMatcher.isDuplicateFirstTitle(
+        currentBook.sections?.[current]?.title || '', visibleHeadingText(firstBlock), firstBlock.tagName
+      ));
       if (duplicateHeading) {
         document.querySelector(mode === 'mobile' ? '#mobile-section-title' : '#section-title').classList.add('is-hidden');
-        firstBlock.classList.add('chapter-heading');
+        if (firstBlock.tagName === 'P') {
+          const heading = document.createElement('h2');
+          Array.from(firstBlock.attributes).forEach(({ name, value }) => heading.setAttribute(name, value));
+          heading.classList.add('chapter-heading');
+          heading.append(...firstBlock.childNodes);
+          firstBlock.replaceWith(heading);
+          firstBlock = heading;
+        } else firstBlock.classList.add('chapter-heading');
       }
       // Treat source headings as children of the reader's generated section title.
       let previousHeadingLevel = 2;
@@ -736,29 +963,39 @@
   }
 
   function openSection(index) {
-    if (!currentBook) return;
+    if (!currentBook || current < 0) return;
     rememberPosition();
     persistProgress();
     const total = currentBook.type === 'scan' ? currentBook.pageCount : currentBook.sections.length;
-    current = clamp(index, 0, total - 1);
+    current = currentBook.type === 'scan'
+      ? clamp(index, 0, total - 1)
+      : visibleSectionIndex(currentBook, index);
     rendering = true;
     lastPosition = { atStart: true };
+    writeReaderLocation('replace');
     persistProgress();
     renderToc();
     syncBookMeta();
     renderSection(readerMode);
   }
 
-  function openReader(bookIndex, sectionId = null) {
+  function openReader(bookIndex, sectionId = null, { historyMode = 'push', position = null } = {}) {
     currentBook = books[bookIndex];
     if (!currentBook) return;
     const saved = readProgress(currentBook);
     const requestedSectionIndex = sectionId && currentBook.type !== 'scan'
       ? currentBook.sections.findIndex((section) => section.id === sectionId)
       : -1;
-    current = requestedSectionIndex >= 0 ? requestedSectionIndex : saved ? saved.index : 0;
-    lastPosition = requestedSectionIndex >= 0 ? { atStart: true } : saved?.position || { atStart: true };
+    const requestedIndex = requestedSectionIndex >= 0 ? requestedSectionIndex : saved ? saved.index : 0;
+    current = currentBook.type === 'scan' ? requestedIndex : visibleSectionIndex(currentBook, requestedIndex);
+    const savedPosition = saved?.index === current ? saved.position : null;
+    lastPosition = position || (requestedSectionIndex >= 0 ? { atStart: true } : savedPosition || { atStart: true });
     rendering = true;
+    if (historyMode === 'none') {
+      ensureRouteKey();
+      if (sectionId && currentBook.sections[current]?.id !== sectionId) writeReaderLocation('replace');
+    }
+    else writeReaderLocation(historyMode);
     writeStored(activeBookKey, currentBook.id);
     shelf.classList.add('is-hidden');
     reader.classList.remove('is-hidden');
@@ -776,12 +1013,7 @@
     rendering = false;
     closeToc(false);
     writeStored(activeBookKey, null);
-    if (requestedBookId !== null || requestedSectionId !== null) {
-      const url = new URL(window.location.href);
-      url.searchParams.delete('book');
-      url.searchParams.delete('section');
-      window.history.replaceState(window.history.state, '', url);
-    }
+    writeShelfLocation();
     reader.classList.add('is-hidden');
     shelf.classList.remove('is-hidden');
     document.body.classList.remove('book-open', 'mobile-reader-open', 'mobile-toc-open');
@@ -791,6 +1023,49 @@
     currentBook = null;
     window.scrollTo({ top: 0, behavior: 'instant' });
     shelf.querySelector(`[data-book="${bookIndex}"]`)?.focus({ preventScroll: true });
+  }
+
+  function readerShareUrl() {
+    if (!currentBook || current < 0) return '';
+    const url = new URL(window.location.href);
+    url.searchParams.set('book', currentBook.id);
+    url.searchParams.set('section', currentBook.type === 'scan'
+      ? String(current + 1)
+      : currentBook.sections[current]?.id || '');
+    if (activeAuthor) url.searchParams.set('author', activeAuthor.id);
+    else url.searchParams.delete('author');
+    return url.href;
+  }
+
+  function announceShareStatus(message) {
+    shareStatus.textContent = message;
+    shareStatus.hidden = !message;
+    window.clearTimeout(shareStatusTimer);
+    if (message) shareStatusTimer = window.setTimeout(() => { shareStatus.hidden = true; }, 5000);
+  }
+
+  function showShareFallback(url) {
+    shareUrlInput.value = url;
+    document.querySelector('#share-dialog-help').textContent = '自动复制失败。链接已选中，可手动复制。';
+    if (!shareDialog.open) shareDialog.showModal();
+    requestAnimationFrame(() => {
+      shareUrlInput.focus();
+      shareUrlInput.select();
+    });
+    announceShareStatus('无法自动复制，请复制弹窗中已选中的链接。');
+  }
+
+  async function copyReaderLink() {
+    const url = readerShareUrl();
+    if (!url) return;
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard API unavailable');
+      await navigator.clipboard.writeText(url);
+      if (shareDialog.open) shareDialog.close();
+      announceShareStatus('阅读链接已复制。');
+    } catch {
+      showShareFallback(url);
+    }
   }
 
   document.querySelectorAll('[data-size]').forEach((button) => button.addEventListener('click', () => {
@@ -857,10 +1132,16 @@
   });
   mobileTocClose.addEventListener('click', (event) => { event.stopPropagation(); closeToc(); });
   mobileTocBackdrop.addEventListener('click', () => closeToc());
-  desktopPrevChapter.addEventListener('click', () => openSection(current - 1));
-  desktopNextChapter.addEventListener('click', () => openSection(current + 1));
+  desktopPrevChapter.addEventListener('click', () => openSection(adjacentSectionIndex(currentBook, current, -1)));
+  desktopNextChapter.addEventListener('click', () => openSection(adjacentSectionIndex(currentBook, current, 1)));
   desktopBack.addEventListener('click', closeReader);
   mobileBack.addEventListener('click', (event) => { event.stopPropagation(); closeReader(); });
+  desktopShareButton.addEventListener('click', copyReaderLink);
+  mobileShareButton.addEventListener('click', copyReaderLink);
+  shareCopyRetry.addEventListener('click', copyReaderLink);
+  window.addEventListener('popstate', (event) => {
+    if (books.length) applyLocation({ state: event.state });
+  });
 
   mobileViewport.addEventListener('click', (event) => {
     if (event.target.closest('button, details, summary, a, input, select')) return;

@@ -722,20 +722,6 @@
           "sectionId": "section-001"
         },
         {
-          "title": "繁体版《共產黨宣言》",
-          "year": "1920年译本",
-          "sortYear": 1920,
-          "bookId": "mx-marx-8b258427cf",
-          "sectionId": "section-002"
-        },
-        {
-          "title": "共产党宣言（陈望道译本）",
-          "year": "1920年译本",
-          "sortYear": 1920,
-          "bookId": "mx-marx-manifesto-1920",
-          "sectionId": "section-002"
-        },
-        {
           "title": "《共产党宣言》传入年表",
           "year": "年代未详",
           "sortYear": 9999,
@@ -1587,20 +1573,6 @@
           "sortYear": 1895,
           "bookId": "mx-engels-87aa09112f",
           "sectionId": "section-001"
-        },
-        {
-          "title": "繁体版《共產黨宣言》",
-          "year": "1920年译本",
-          "sortYear": 1920,
-          "bookId": "mx-marx-8b258427cf",
-          "sectionId": "section-002"
-        },
-        {
-          "title": "共产党宣言（陈望道译本）",
-          "year": "1920年译本",
-          "sortYear": 1920,
-          "bookId": "mx-marx-manifesto-1920",
-          "sectionId": "section-002"
         },
         {
           "title": "《共产党宣言》传入年表",
@@ -7352,7 +7324,8 @@
         {
           "id": "section-003",
           "title": "目录",
-          "level": 1
+          "level": 1,
+          "readerHidden": true
         },
         {
           "id": "section-004",
@@ -10339,7 +10312,8 @@
         {
           "id": "front",
           "title": "前言与目录",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "section-002",
@@ -11018,7 +10992,8 @@
         {
           "id": "section-001",
           "title": "目录",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "section-002",
@@ -11109,7 +11084,8 @@
         {
           "id": "section-005",
           "title": "目录",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "section-006",
@@ -11292,7 +11268,8 @@
         {
           "id": "front",
           "title": "作者与目录",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "section-002",
@@ -13358,7 +13335,8 @@
         {
           "id": "front",
           "title": "目录与说明",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "section-002",
@@ -14326,7 +14304,8 @@
         {
           "id": "front",
           "title": "目录与编者引言",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "section-002",
@@ -15195,7 +15174,8 @@
         {
           "id": "front",
           "title": "前言与目录",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "section-002",
@@ -19087,7 +19067,8 @@
         {
           "id": "section-001",
           "title": "书名页与目录",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "section-002",
@@ -19249,7 +19230,8 @@
         {
           "id": "section-001",
           "title": "目录",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "section-002",
@@ -20080,7 +20062,8 @@
         {
           "id": "section-001",
           "title": "封面与原书目录",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "section-002",
@@ -20959,7 +20942,8 @@
           "id": "section-002",
           "title": "目录",
           "level": 0,
-          "chapter": "第一卷"
+          "chapter": "第一卷",
+          "readerHidden": true
         },
         {
           "id": "section-003",
@@ -22355,7 +22339,8 @@
         {
           "id": "front",
           "title": "封面、目录与编排说明",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "route",
@@ -23659,7 +23644,8 @@
         {
           "id": "section-003",
           "title": "目录",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "section-004",

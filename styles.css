@@ -473,6 +473,16 @@ footer a { color: var(--accent-dark); text-underline-offset: .25em; }
   .mobile-reader-open footer { display: none; }
 }
 #desktop-toc-panel[hidden], #desktop-toc-toggle-button[hidden], #mobile-toc-toggle-button[hidden] { display: none !important; }
+.share-status:not([hidden]) { position: fixed; z-index: 20; inset: auto 1rem 1rem; width: fit-content; max-width: calc(100vw - 2rem); margin-inline: auto; padding: .7rem 1rem; border: 1px solid var(--ink); background: var(--panel); color: var(--ink); box-shadow: 0 4px 18px #0003; }
+.share-dialog { width: min(34rem, calc(100vw - 2rem)); padding: 1.25rem; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); }
+.share-dialog::backdrop { background: #0008; }
+.share-dialog form { display: grid; gap: .8rem; margin: 0; }
+.share-dialog h2 { margin: 0; font-size: 1.2rem; }
+.share-dialog label { font-weight: 700; }
+.share-dialog input { width: 100%; min-height: 2.75rem; padding: .5rem; border: 1px solid var(--ink); background: var(--panel); color: var(--ink); }
+.share-dialog p { margin: 0; }
+.share-dialog-actions { display: flex; justify-content: flex-end; gap: .5rem; }
+.empty-book-state { max-width: 42rem; margin: 3rem auto; padding: 1.5rem; border: 2px solid var(--ink); background: var(--panel); color: var(--ink); text-align: center; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
