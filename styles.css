@@ -230,15 +230,15 @@ body.book-open .shell { padding-top: 0; }
 footer { text-align: center; border-top: 1px solid var(--line); padding: 1.5rem 1rem 2.5rem; color: var(--muted); font: .76rem ui-sans-serif, system-ui, sans-serif; }
 
 @keyframes page-turn-next {
-  from { opacity: .72; transform: translateX(.75rem); }
+  from { opacity: .9; transform: translateX(.35rem); }
   to { opacity: 1; transform: translateX(0); }
 }
 @keyframes page-turn-prev {
-  from { opacity: .72; transform: translateX(-.75rem); }
+  from { opacity: .9; transform: translateX(-.35rem); }
   to { opacity: 1; transform: translateX(0); }
 }
-.content.page-turn-next { animation: page-turn-next .24s ease-out; }
-.content.page-turn-prev { animation: page-turn-prev .24s ease-out; }
+.content.page-turn-next { animation: page-turn-next .2s ease-out; }
+.content.page-turn-prev { animation: page-turn-prev .2s ease-out; }
 
 @media (max-width: 700px) {
   .shelf-tools { flex-basis: auto; gap: 0; }

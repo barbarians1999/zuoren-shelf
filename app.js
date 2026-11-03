@@ -862,7 +862,7 @@
     document.querySelector('#mobile-scan-summary').textContent = text;
   }
 
-  async function renderSection(mode, saved = null) {
+  async function renderSection(mode, saved = null, direction = 0) {
     if (current < 0) {
       renderEmptyBookState();
       return;
@@ -870,6 +870,7 @@
     const token = ++renderToken;
     rendering = true;
     const target = contentFor(mode);
+    target.classList.remove('page-turn-next', 'page-turn-prev');
     syncSectionMeta();
     updateScanSummary();
     ReaderNotes.clear();
@@ -930,6 +931,7 @@
         if (Number.isInteger(i) && notes[i]) notes[i].open = true;
       });
       await Promise.all(Array.from(target.querySelectorAll('img')).map((img) => img.decode().catch(() => {})));
+      if (direction) target.classList.add(direction > 0 ? 'page-turn-next' : 'page-turn-prev');
       requestAnimationFrame(() => {
         if (token !== renderToken || reader.classList.contains('is-hidden')) return;
         restorePosition(mode, saved);
@@ -966,6 +968,7 @@
     if (!currentBook || current < 0) return;
     rememberPosition();
     persistProgress();
+    const previousPosition = visibleSectionPosition(currentBook, current).position;
     const total = currentBook.type === 'scan' ? currentBook.pageCount : currentBook.sections.length;
     current = currentBook.type === 'scan'
       ? clamp(index, 0, total - 1)
@@ -976,7 +979,8 @@
     persistProgress();
     renderToc();
     syncBookMeta();
-    renderSection(readerMode);
+    const nextPosition = visibleSectionPosition(currentBook, current).position;
+    renderSection(readerMode, null, Math.sign(nextPosition - previousPosition));
   }
 
   function openReader(bookIndex, sectionId = null, { historyMode = 'push', position = null } = {}) {
