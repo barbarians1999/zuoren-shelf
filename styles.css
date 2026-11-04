@@ -15,7 +15,8 @@
   --contrast: #21211e;
   --contrast-ink: #f9f7f1;
   --ui-font: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
-  --title-font: "Shelf Title Serif", "Source Han Serif SC", "Songti SC", "STSong", "Songti TC", "Noto Serif CJK SC", serif;
+  /* Prefer iOS's bundled CJK serif in Lockdown Mode; use the bundled web subset elsewhere. */
+  --title-font: "Songti SC", "STSong", "Songti TC", "Shelf Title Serif", "Source Han Serif SC", "Noto Serif CJK SC", serif;
   --reading-font: var(--ui-font);
   --reading-leading: 2;
   --reading-size: clamp(1.08rem, 1.8vw, 1.24rem);

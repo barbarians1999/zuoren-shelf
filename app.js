@@ -415,29 +415,29 @@
     const normalizeTitle = (title) => title.normalize('NFKC').replace(/刘易斯/g, '路易斯').replace(/[\s\p{P}\p{S}]/gu, '');
     const bySection = new Map((entry.featuredWorks || []).filter((work) => work.bookId === selected.id).map((work) => [work.sectionId, work]));
     const selectedTitles = new Set(selected.sections.filter((section) => section.level === 2).map((section) => normalizeTitle(section.title)));
-    const distinctEdition = (work) => /未删节|原始版本|讲话稿|异译本|译本|繁体/.test(work.title);
-    const alternateByTitle = new Map();
-    for (const work of entry.featuredWorks || []) {
-      const title = normalizeTitle(work.title);
-      if (work.bookId !== selected.id && !distinctEdition(work) && selectedTitles.has(title)) {
-        const alternatives = alternateByTitle.get(title) || [];
-        if (!alternatives.some((item) => item.bookId === work.bookId && item.sectionId === work.sectionId)) alternatives.push(work);
-        alternateByTitle.set(title, alternatives);
+    const isOtherEditionOfSelected = (work) => {
+      if (work.bookId === selected.id) return false;
+      const title = work.title.normalize('NFKC');
+      const unabridged = /^〔未删节本〕/.test(title);
+      const suffix = /[（(](?:原始版本|原版|讲话稿|异译本|异译|繁体(?:版)?|译本|版本[一-三\d]?|修订(?:本|版)|删节(?:本|版)|手稿|原稿)[）)]$/;
+      const explicitEdition = unabridged || suffix.test(title);
+      const candidates = [title.replace(/^〔未删节本〕/, '').replace(suffix, '')];
+      if (unabridged) {
+        const baseTitle = candidates[0].split(/[—–―]/, 1)[0];
+        candidates.push(baseTitle, baseTitle.replace(/与/g, '和'));
       }
-    }
+      return candidates.some((candidate) => selectedTitles.has(normalizeTitle(candidate))) || (explicitEdition && candidates.some((candidate) => selectedTitles.has(normalizeTitle(candidate.replace(/与/g, '和')))));
+    };
     const groups = [];
     for (const section of selected.sections) {
       if (section.level === 0 && /^第[一二三四五六七]卷/.test(section.title)) groups.push({ title: section.title, works: [] });
       else if (section.level === 2 && groups.length) {
         const original = bySection.get(section.id);
-        groups[groups.length - 1].works.push({ ...original, title: section.title, bookId: selected.id, sectionId: section.id, alternate: alternateByTitle.get(normalizeTitle(section.title)) });
+        groups[groups.length - 1].works.push({ ...original, title: section.title, bookId: selected.id, sectionId: section.id });
       }
     }
-    const extras = (entry.featuredWorks || []).filter((work) => {
-      if (work.bookId === selected.id) return false;
-      return distinctEdition(work) || !selectedTitles.has(normalizeTitle(work.title));
-    });
-    groups.push({ title: '选集外文章与其他版本', works: extras });
+    const extras = (entry.featuredWorks || []).filter((work) => work.bookId !== selected.id && !isOtherEditionOfSelected(work));
+    groups.push({ title: '选集外文章', works: extras });
     let count = 0;
     const html = groups.map((group) => {
       const works = group.works.filter((work) => terms.every((term) => work.title.toLocaleLowerCase().includes(term)));
@@ -447,13 +447,8 @@
         const href = `?author=mao&book=${encodeURIComponent(work.bookId)}&section=${encodeURIComponent(work.sectionId)}`;
         const year = work.year ? `<span class="featured-year">${escapeText(work.year)}</span>` : '<span></span>';
         const priorityClass = work.recommendation ? ' class="is-priority"' : '';
-        const alternate = (work.alternate || []).map((other, index, all) => {
-          const alternateHref = `?author=mao&book=${encodeURIComponent(other.bookId)}&section=${encodeURIComponent(other.sectionId)}`;
-          const label = all.length > 1 ? `其他版本${index + 1}` : '其他版本';
-          return `<a class="alternate-edition" href="${escapeText(alternateHref)}" aria-label="${escapeText(work.title)}的${label}">${label}</a>`;
-        }).join('');
         const priority = work.recommendation ? ` aria-label="重点篇目：${escapeText(work.title)}"` : '';
-        return `<li${priorityClass}>${year}<div class="featured-work"><a href="${escapeText(href)}"${priority}>${escapeText(work.title)}</a>${alternate}</div></li>`;
+        return `<li${priorityClass}>${year}<div class="featured-work"><a href="${escapeText(href)}"${priority}>${escapeText(work.title)}</a></div></li>`;
       }).join('');
       return `<li class="author-volume"><h4>${escapeText(group.title)}</h4></li>${rows}`;
     }).join('');
