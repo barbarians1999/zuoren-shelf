@@ -11,6 +11,13 @@
   --topbar-bg: #21211e;
   --reading-panel-bg: #f9f7f1;
   --quote-color: #56534c;
+  --control-height: 2.75rem;
+  --control-gap: .5rem;
+  --control-border-width: 2px;
+  --surface-padding: .75rem;
+  --motion-fast: 140ms;
+  --motion-panel: 180ms;
+  --motion-ease: cubic-bezier(.2, .7, .25, 1);
   --brand-ink: #f9f7f1;
   --contrast: #21211e;
   --contrast-ink: #f9f7f1;
@@ -493,6 +500,100 @@ footer a { color: var(--accent-dark); text-underline-offset: .25em; }
 .share-dialog p { margin: 0; }
 .share-dialog-actions { display: flex; justify-content: flex-end; gap: .5rem; }
 .empty-book-state { max-width: 42rem; margin: 3rem auto; padding: 1.5rem; border: 2px solid var(--ink); background: var(--panel); color: var(--ink); text-align: center; }
+
+/* Shared interaction language: square controls, ink borders, paper surfaces,
+   and one brick-red focus accent. Motion only confirms a state change. */
+:is(.category-filter, .open-button, .nav-button, .text-button,
+    .settings-menu button, .footnote-close, .share-dialog-actions button) {
+  min-height: var(--control-height);
+  transition:
+    color var(--motion-fast) var(--motion-ease),
+    background-color var(--motion-fast) var(--motion-ease),
+    border-color var(--motion-fast) var(--motion-ease),
+    transform var(--motion-fast) var(--motion-ease);
+}
+
+:is(.open-button, .nav-button, .settings-menu button, .footnote-close,
+    .share-dialog-actions button) { border-width: var(--control-border-width); }
+
+.category-filter { min-height: var(--control-height); }
+.shelf-tools input { min-height: var(--control-height); }
+.text-button { min-height: var(--control-height); }
+.book-card:focus-within { outline-offset: 2px; }
+
+.settings-menu {
+  gap: var(--surface-padding);
+  padding: var(--surface-padding);
+  border-top: 4px solid var(--accent);
+  transform-origin: top right;
+}
+.settings-menu button { min-height: var(--control-height); }
+.settings[open] > .settings-menu { animation: shelf-menu-enter var(--motion-fast) var(--motion-ease) both; }
+
+.footnote-popover {
+  border: var(--control-border-width) solid var(--ink);
+  border-top: 4px solid var(--accent);
+}
+.footnote-popover:not([hidden]) { animation: shelf-surface-enter var(--motion-fast) var(--motion-ease) both; }
+.footnote-close { min-width: var(--control-height); min-height: var(--control-height); }
+
+.share-dialog {
+  max-height: min(88dvh, 42rem);
+  overflow: auto;
+  padding: 1.25rem;
+  border-top: 5px solid var(--accent);
+}
+.share-dialog[open] { animation: shelf-dialog-enter var(--motion-panel) var(--motion-ease) both; }
+.share-dialog::backdrop { background: rgb(20 16 10 / 48%); }
+.share-dialog form { gap: var(--surface-padding); }
+.share-dialog-actions { gap: var(--control-gap); }
+.share-dialog-actions button {
+  padding: .4rem .65rem;
+  border: var(--control-border-width) solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  text-decoration: none;
+}
+.share-dialog-actions #share-copy-retry { border-color: var(--accent); color: var(--accent-dark); }
+.share-dialog-actions button:hover { border-color: var(--accent); background: var(--accent); color: var(--brand-ink); }
+.share-dialog .text-button:hover,
+.settings-menu button:hover { border-color: var(--accent); }
+.share-status:not([hidden]) { animation: shelf-toast-enter var(--motion-panel) var(--motion-ease) both; }
+
+@keyframes shelf-menu-enter {
+  from { opacity: 0; transform: translateY(-.25rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes shelf-surface-enter {
+  from { opacity: 0; transform: translateY(.25rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes shelf-dialog-enter {
+  from { opacity: 0; transform: translateY(.35rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes shelf-toast-enter {
+  from { opacity: 0; transform: translateY(.35rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+  .category-filter { min-height: var(--control-height); }
+  .settings-menu { transform-origin: top center; }
+  .mobile-toc-panel.is-open { animation: shelf-surface-enter var(--motion-panel) var(--motion-ease) both; }
+  #mobile-toc-backdrop.is-open { animation: shelf-backdrop-enter var(--motion-panel) ease-out both; }
+}
+
+:is(.open-button, .nav-button, .category-filter, .settings-menu button,
+    .footnote-close, .share-dialog-actions button):active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+@keyframes shelf-backdrop-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

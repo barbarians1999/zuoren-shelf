@@ -1244,6 +1244,7 @@
     if (reader.classList.contains('is-hidden')) return;
     const tocOpen = mobileTocPanel.classList.contains('is-open');
     if (event.key === 'Escape') {
+      if (shareDialog.open) return;
       event.preventDefault();
       if (tocOpen) closeToc();
       else {
