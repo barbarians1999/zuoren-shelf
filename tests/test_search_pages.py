@@ -1,4 +1,4 @@
-"""Static discovery-page generator checks; uses a tiny isolated source tree."""
+"""Static discovery-page checks plus a full-corpus article text audit."""
 
 import json
 import sys
@@ -141,6 +141,82 @@ class SearchPageGenerationTests(unittest.TestCase):
         self.assertEqual(counts["articles"], 1)
         self.assertFalse((self.output / "texts/demo-book/part-2/index.html").exists())
         self.assertTrue(unrelated.is_dir())
+
+    def test_article_fragment_preserves_text_and_repairs_markup(self):
+        book = self.data["books"][0]
+        section = book["sections"][0]
+        source = (
+            '<h1>示例书目</h1><p>示例作者</p><p>人民出版社</p></section>'
+            '<section class="page reflow-page" id="page-6">'
+            '<div class="page-marker">第 6 页</div>'
+            '<h4>第一篇：正文入口</h4>'
+            '<p>正文段落。<a href="https://example.org/reference">原文链接</a></p>'
+            '<b><p>附加日期</p></b>'
+            '<section class="nested"><p>保留尾段。</section>'
+            '</tbody></table><table><tbody><tr><td>表格正文</td></tr>'
+            '<tbody><tr><td>第二行。</td></tr></table></p>'
+        )
+
+        fragment = search_pages.normalize_article_fragment(source)
+        page = search_pages.render_article_page(
+            base_url=self.base_url,
+            base_path="/preview-shelf/",
+            book=book,
+            section=section,
+            section_html=source,
+            readable_sections=[section],
+            position=0,
+        )
+
+        self.assertIn("人民出版社", fragment)
+        self.assertIn("示例书目", fragment)
+        self.assertIn("第一篇：正文入口", fragment)
+        self.assertEqual(search_pages.plain_text(source), search_pages.plain_text(fragment))
+        self.assertIn("正文段落。", fragment)
+        self.assertIn("保留尾段。", fragment)
+        self.assertIn("表格正文", fragment)
+        self.assertIn("第二行。", fragment)
+        self.assertIn("<p><b>附加日期</b></p>", fragment)
+        self.assertNotIn("<b><p>", fragment)
+        self.assertIn('href="https://example.org/reference"', fragment)
+        self.assertEqual(fragment.count("<section"), fragment.count("</section>"))
+        for tag in ("table", "tbody", "tr", "td"):
+            self.assertEqual(fragment.count(f"<{tag}"), fragment.count(f"</{tag}>"))
+        self.assertEqual(page.count("<h1"), 1)
+        self.assertIn("人民出版社", page)
+        self.assertIn("正文段落。", page)
+        self.assertIn('href="https://example.test/preview-shelf/?book=demo-book&amp;section=part-1"', page)
+
+    def test_all_generated_article_nonwhitespace_text_matches_source_fragments(self):
+        """HTML repair may affect whitespace boundaries, never visible text characters."""
+        data = search_pages.read_json(ROOT / "book-index.json")
+        books = {str(book["id"]): book for book in data["books"]}
+        manifest = search_pages.read_json(ROOT / search_pages.MANIFEST_NAME)
+        article_count = 0
+        opening = '<article class="content seo-content">'
+
+        for relative in manifest["files"]:
+            parts = Path(relative).parts
+            if len(parts) != 4 or parts[0] != "texts" or parts[3] != "index.html":
+                continue
+            _, book_id, section_id, _ = parts
+            book = books[book_id]
+            section = next(item for item in book["sections"] if str(item["id"]) == section_id)
+            section_path = Path(book.get("sectionPath") or "sections") / f"{section_id}.json"
+            source_html = search_pages.read_json(ROOT / section_path)["html"]
+            generated_html = (ROOT / relative).read_text(encoding="utf-8")
+            content_start = generated_html.index(opening) + len(opening)
+            content_end = generated_html.index("</article>", content_start)
+            generated_body = generated_html[content_start:content_end]
+
+            self.assertEqual(
+                "".join(search_pages.plain_text(source_html).split()),
+                "".join(search_pages.plain_text(generated_body).split()),
+                f"source text changed in {relative}",
+            )
+            article_count += 1
+
+        self.assertEqual(article_count, 5255)
 
 
 if __name__ == "__main__":

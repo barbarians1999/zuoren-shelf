@@ -205,6 +205,204 @@ def source_html_with_site_assets(fragment: str, base_path: str) -> str:
     )
 
 
+def _source_offset(source: str, line_offsets: list[int], position: tuple[int, int]) -> int:
+    line, column = position
+    return line_offsets[line - 1] + column
+
+
+class HeadingAnalyzer(HTMLParser):
+    """Collect heading tag positions without reserializing source text."""
+
+    def __init__(self, source: str) -> None:
+        super().__init__(convert_charrefs=False)
+        self.source = source
+        self.line_offsets = [0]
+        self.line_offsets.extend(index + 1 for index, char in enumerate(source) if char == "\n")
+        self.active_headings: list[dict] = []
+        self.headings: list[dict] = []
+
+    def source_position(self) -> int:
+        return _source_offset(self.source, self.line_offsets, self.getpos())
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if re.fullmatch(r"h[1-6]", tag):
+            self.active_headings.append({
+                "tag": tag,
+                "start": self.source_position(),
+                "close_start": None,
+            })
+
+    def handle_endtag(self, tag: str) -> None:
+        if re.fullmatch(r"h[1-6]", tag):
+            index = next(
+                (i for i in range(len(self.active_headings) - 1, -1, -1) if self.active_headings[i]["tag"] == tag),
+                None,
+            )
+            if index is not None:
+                heading = self.active_headings.pop(index)
+                heading["close_start"] = self.source_position()
+                self.headings.append(heading)
+
+    def close(self) -> None:
+        super().close()
+        self.headings.extend(self.active_headings)
+        self.active_headings.clear()
+
+
+def _apply_edits(source: str, edits: list[tuple[int, int, str]]) -> str:
+    for start, end, replacement in sorted(edits, key=lambda item: (item[0], item[1]), reverse=True):
+        source = source[:start] + replacement + source[end:]
+    return source
+
+
+def _normalize_heading_levels(source: str) -> str:
+    analyzer = HeadingAnalyzer(source)
+    analyzer.feed(source)
+    analyzer.close()
+    headings = sorted(
+        analyzer.headings,
+        key=lambda block: block["start"],
+    )
+    if not headings:
+        return source
+
+    edits = []
+    previous_source_level = None
+    output_level = 1
+    for heading in headings:
+        source_level = int(heading["tag"][1])
+        if previous_source_level is None:
+            output_level = 2
+        else:
+            # Keep the source's relative nesting while preventing heading jumps
+            # in the standalone article fragment.
+            change = max(-1, min(1, source_level - previous_source_level))
+            output_level = max(2, min(6, output_level + change))
+        replacement = f"h{output_level}"
+        if heading["tag"] != replacement:
+            edits.append((heading["start"] + 1, heading["start"] + 3, replacement))
+            if heading["close_start"] is not None:
+                edits.append((heading["close_start"] + 2, heading["close_start"] + 4, replacement))
+        previous_source_level = source_level
+    return _apply_edits(source, edits)
+
+
+def _normalize_inline_block_wrappers(source: str) -> str:
+    """Move legacy inline emphasis inside a single block so it stays valid HTML."""
+    pattern = re.compile(
+        r"(?is)<(?P<inline>b|i|strong|em)\b(?P<inline_attrs>[^>]*)>\s*"
+        r"<(?P<block>p|div|h[1-6])\b(?P<block_attrs>[^>]*)>"
+        r"(?P<content>.*?)</(?P=block)\s*>\s*</(?P=inline)\s*>"
+    )
+
+    def replace(match: re.Match[str]) -> str:
+        inline = match.group("inline")
+        block = match.group("block")
+        return (
+            f"<{block}{match.group('block_attrs')}>"
+            f"<{inline}{match.group('inline_attrs')}>{match.group('content')}</{inline}>"
+            f"</{block}>"
+        )
+
+    return pattern.sub(replace, source)
+
+
+class MarkupRepairer(HTMLParser):
+    """Balance fragment tags, dropping orphan closers and closing open wrappers."""
+
+    VOID_TAGS = {
+        "area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta",
+        "param", "source", "track", "wbr",
+    }
+    P_BLOCK_STARTS = {
+        "address", "article", "aside", "blockquote", "div", "dl", "fieldset", "footer",
+        "form", "h1", "h2", "h3", "h4", "h5", "h6", "header", "hgroup", "hr", "main",
+        "menu", "nav", "ol", "p", "pre", "section", "table", "ul",
+    }
+
+    def __init__(self, source: str) -> None:
+        super().__init__(convert_charrefs=False)
+        self.source = source
+        self.line_offsets = [0]
+        self.line_offsets.extend(index + 1 for index, char in enumerate(source) if char == "\n")
+        self.stack: list[str] = []
+        self.edits: list[tuple[int, int, str]] = []
+
+    def source_position(self) -> int:
+        return _source_offset(self.source, self.line_offsets, self.getpos())
+
+    def _close_from(self, index: int, position: int) -> None:
+        closing = "".join(f"</{tag}>" for tag in reversed(self.stack[index:]))
+        if closing:
+            self.edits.append((position, position, closing))
+        del self.stack[index:]
+
+    def _close_optional_before(self, tag: str, position: int) -> None:
+        candidates = []
+        if tag in self.P_BLOCK_STARTS and "p" in self.stack:
+            candidates.append(self.stack.index("p"))
+        if tag == "li" and "li" in self.stack:
+            candidates.append(len(self.stack) - 1 - self.stack[::-1].index("li"))
+        if tag in {"dt", "dd"} and any(item in {"dt", "dd"} for item in self.stack):
+            candidates.append(max(i for i, item in enumerate(self.stack) if item in {"dt", "dd"}))
+        if tag in {"td", "th"} and any(item in {"td", "th"} for item in self.stack):
+            candidates.append(max(i for i, item in enumerate(self.stack) if item in {"td", "th"}))
+        if tag == "tr":
+            if any(item in {"td", "th"} for item in self.stack):
+                candidates.append(max(i for i, item in enumerate(self.stack) if item in {"td", "th"}))
+            if "tr" in self.stack:
+                candidates.append(max(i for i, item in enumerate(self.stack) if item == "tr"))
+        if tag in {"thead", "tbody", "tfoot"}:
+            for candidate in ({"td", "th"}, {"tr"}):
+                if any(item in candidate for item in self.stack):
+                    candidates.append(max(i for i, item in enumerate(self.stack) if item in candidate))
+            if any(item in {"thead", "tbody", "tfoot"} for item in self.stack):
+                candidates.append(max(i for i, item in enumerate(self.stack) if item in {"thead", "tbody", "tfoot"}))
+        if tag == "option" and "option" in self.stack:
+            candidates.append(max(i for i, item in enumerate(self.stack) if item == "option"))
+        if candidates:
+            self._close_from(min(candidates), position)
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        position = self.source_position()
+        self._close_optional_before(tag, position)
+        if tag not in self.VOID_TAGS:
+            self.stack.append(tag)
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        return
+
+    def handle_endtag(self, tag: str) -> None:
+        start = self.source_position()
+        close = self.source.find(">", start)
+        end = close + 1 if close >= 0 else len(self.source)
+        if tag in self.VOID_TAGS:
+            self.edits.append((start, end, ""))
+            return
+        if tag not in self.stack:
+            self.edits.append((start, end, ""))
+            return
+        index = len(self.stack) - 1 - self.stack[::-1].index(tag)
+        if index + 1 < len(self.stack):
+            self._close_from(index + 1, start)
+        self.stack.pop(index)
+
+    def close(self) -> None:
+        super().close()
+        if self.stack:
+            self.edits.append((len(self.source), len(self.source), "".join(f"</{tag}>" for tag in reversed(self.stack))))
+
+
+def normalize_article_fragment(fragment: str) -> str:
+    """Repair article HTML structure and heading levels without changing its text."""
+    fragment = _normalize_heading_levels(fragment)
+    fragment = _normalize_inline_block_wrappers(fragment)
+    repairer = MarkupRepairer(fragment)
+    repairer.feed(fragment)
+    repairer.close()
+    return _apply_edits(fragment, repairer.edits)
+
+
 def reader_url(base_url: str, book_id: str, section_id: str | None = None) -> str:
     query = f"?book={quote(book_id, safe='-._~')}"
     if section_id is not None:
@@ -269,7 +467,8 @@ def render_article_page(
     title = str(section["title"])
     book_title = str(book["title"])
     author = str(book.get("author", ""))
-    text_excerpt = excerpt(section_html, 120)
+    content_fragment = normalize_article_fragment(section_html)
+    text_excerpt = excerpt(content_fragment, 120)
     descriptor = f"《{book_title}》—{title}。"
     description = f"{descriptor}作者/编者：{author}。左人书架中文阅读版。{text_excerpt}"
     canonical = article_url(base_url, book["id"], section["id"])
@@ -288,7 +487,7 @@ def render_article_page(
         if following
         else ""
     )
-    content = source_html_with_site_assets(section_html, base_path)
+    content = source_html_with_site_assets(content_fragment, base_path)
     return f"""{GENERATED_MARKER}
 {page_head(page_title, description, canonical, base_path, "article")}
 <body class="seo-page">
