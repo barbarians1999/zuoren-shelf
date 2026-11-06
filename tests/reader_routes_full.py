@@ -22,6 +22,9 @@ INTENTIONALLY_HIDDEN_AUTHOR_DUPLICATES = {
     "mx-mao-dfb3f59735",
     "mx-mao-68029f79ad",
     "mx-mao-53b9a678c4",
+    "mx-mao-193435e9d2",
+    "mx-mao-c1ee5906d8",
+    "mx-mao-ec47576830",
 }
 
 
@@ -108,7 +111,7 @@ def main():
                 args=["--no-sandbox", "--disable-cache"],
             )
 
-            # Exercise every ordinary shelf card and capture the actual copied URL.
+            # Exercise every ordinary shelf-card link and capture the actual copied URL.
             context = browser.new_context(viewport={"width": 1365, "height": 900})
             context.grant_permissions(["clipboard-read", "clipboard-write"], origin=origin)
             page = context.new_page()

@@ -55,6 +55,14 @@
   const modeQuery = window.matchMedia('(max-width: 700px)');
   const colorQuery = window.matchMedia('(prefers-color-scheme: dark)');
   const themeColor = document.querySelector('meta[name="theme-color"]');
+  const metaDescription = document.querySelector('meta[name="description"]');
+  const openGraphTitle = document.querySelector('meta[property="og:title"]');
+  const openGraphDescription = document.querySelector('meta[property="og:description"]');
+  const openGraphUrl = document.querySelector('meta[property="og:url"]');
+  const canonicalLink = document.querySelector('link[rel="canonical"]');
+  const homeTitle = document.title;
+  const homeDescription = metaDescription?.content || '';
+  const homeCanonical = canonicalLink?.href || window.location.href;
 
   function syncBrowserThemeColor() {
     themeColor.content = getComputedStyle(document.documentElement).getPropertyValue('--paper').trim();
@@ -132,6 +140,54 @@
   const escapeText = (value) => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
   const isMobileReader = () => modeQuery.matches;
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+  function siteBaseUrl() {
+    const url = new URL('.', window.location.href);
+    url.search = '';
+    url.hash = '';
+    return url;
+  }
+
+  function seoBookUrl(book) {
+    return new URL(`books/${encodeURIComponent(book.id)}/`, siteBaseUrl()).href;
+  }
+
+  function seoArticleUrl(book, section) {
+    return new URL(`texts/${encodeURIComponent(book.id)}/${encodeURIComponent(section.id)}/`, siteBaseUrl()).href;
+  }
+
+  function seoAuthorUrl(author) {
+    return new URL(`authors/${encodeURIComponent(author.id)}/`, siteBaseUrl()).href;
+  }
+
+  function syncRouteMetadata() {
+    let title = homeTitle;
+    let description = homeDescription;
+    let canonical = homeCanonical;
+    if (currentBook) {
+      const section = currentBook.type === 'scan' ? null : currentBook.sections[current];
+      const sectionTitle = section?.title || (currentBook.type === 'scan' ? `第 ${current + 1} 页` : '在线阅读');
+      title = `${sectionTitle}｜${currentBook.title}｜左人书架`;
+      description = `在线阅读《${currentBook.title}》${sectionTitle}。作者/编者：${currentBook.author}。左人书架提供中文阅读版和可分享的章节链接。`;
+      canonical = section ? seoArticleUrl(currentBook, section) : seoBookUrl(currentBook);
+    } else if (activeAuthor) {
+      const count = (activeAuthor.featuredWorks || []).length;
+      title = `${activeAuthor.name}作品与文章｜左人书架`;
+      description = `左人书架收录${activeAuthor.name}的中文著作与文章，列出 ${count} 项作品入口和对应在线阅读链接。`;
+      canonical = seoAuthorUrl(activeAuthor);
+    }
+    document.title = title;
+    if (metaDescription) metaDescription.content = description;
+    if (openGraphTitle) openGraphTitle.content = title;
+    if (openGraphDescription) openGraphDescription.content = description;
+    if (openGraphUrl) openGraphUrl.content = canonical;
+    if (canonicalLink) canonicalLink.href = canonical;
+  }
+
+  function shouldInterceptLink(event) {
+    return event.button === 0 && !event.defaultPrevented
+      && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
+  }
 
   function readerSectionEntries(book) {
     return book.type === 'scan' ? [] : (book.sections || [])
@@ -361,9 +417,28 @@
 
   function renderBookCards(target, items) {
     target.innerHTML = items.length ? items.map(({ book, index, saved }) => {
-      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p></div><div class="book-foot"><button class="open-button" type="button" data-book="${index}" aria-label="${saved ? '继续阅读' : '开始阅读'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '开始阅读'}</button></div></article>`;
+      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p></div><div class="book-foot"><a class="open-button" href="${escapeText(seoBookUrl(book))}" data-book="${index}" aria-label="${saved ? '继续阅读' : '开始阅读'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '开始阅读'}</a></div></article>`;
     }).join('') : '';
-    target.querySelectorAll('[data-book]').forEach((button) => button.addEventListener('click', () => openReader(Number(button.dataset.book))));
+    target.querySelectorAll('[data-book]').forEach((link) => link.addEventListener('click', (event) => {
+      if (!shouldInterceptLink(event)) return;
+      event.preventDefault();
+      openReader(Number(link.dataset.book));
+    }));
+  }
+
+  function authorWorkLink(work, label, attributes = '') {
+    const bookIndex = books.findIndex((book) => book.id === work.bookId);
+    const book = books[bookIndex];
+    const section = book?.sections?.find((item) => item.id === work.sectionId && item.readerHidden !== true);
+    if (book && section) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('author', activeAuthor.id);
+      url.searchParams.set('book', book.id);
+      url.searchParams.set('section', section.id);
+      return `<a href="${escapeText(`${url.pathname}${url.search}`)}"${attributes}>${escapeText(label)}</a>`;
+    }
+    if (work.url) return `<a href="${escapeText(work.url)}" target="_blank" rel="noopener noreferrer"${attributes}>${escapeText(label)}</a>`;
+    return `<span>${escapeText(label)}</span>`;
   }
 
   function renderAuthorFeaturedWorks(entry, terms) {
@@ -387,14 +462,9 @@
       ? '当前搜索和分类没有匹配的作品。'
       : '暂未收录可在线阅读的作品。';
     authorFeaturedList.innerHTML = uniqueWorks.map((work) => {
-      const local = Boolean(work.bookId && work.sectionId);
-      const href = local
-        ? `?author=${encodeURIComponent(entry.id)}&book=${encodeURIComponent(work.bookId)}&section=${encodeURIComponent(work.sectionId)}`
-        : work.url;
-      const linkAttributes = local ? '' : ' target="_blank" rel="noopener noreferrer"';
       const year = work.year ? `<span class="featured-year">${escapeText(work.year)}</span>` : '';
       const priority = work.recommendation ? ` aria-label="重点篇目：${escapeText(work.title)}"` : '';
-      return `<li${work.recommendation ? ' class="is-priority"' : ''}>${year}<div class="featured-work"><a href="${escapeText(href)}"${linkAttributes}${priority}>${escapeText(work.title)}</a></div></li>`;
+      return `<li${work.recommendation ? ' class="is-priority"' : ''}>${year}<div class="featured-work">${authorWorkLink(work, work.title, priority)}</div></li>`;
     }).join('');
     return uniqueWorks.length;
   }
@@ -444,11 +514,10 @@
       if (!works.length) return '';
       count += works.length;
       const rows = works.map((work) => {
-        const href = `?author=mao&book=${encodeURIComponent(work.bookId)}&section=${encodeURIComponent(work.sectionId)}`;
         const year = work.year ? `<span class="featured-year">${escapeText(work.year)}</span>` : '<span></span>';
         const priorityClass = work.recommendation ? ' class="is-priority"' : '';
         const priority = work.recommendation ? ` aria-label="重点篇目：${escapeText(work.title)}"` : '';
-        return `<li${priorityClass}>${year}<div class="featured-work"><a href="${escapeText(href)}"${priority}>${escapeText(work.title)}</a></div></li>`;
+        return `<li${priorityClass}>${year}<div class="featured-work">${authorWorkLink(work, work.title, priority)}</div></li>`;
       }).join('');
       return `<li class="author-volume"><h4>${escapeText(group.title)}</h4></li>${rows}`;
     }).join('');
@@ -476,6 +545,7 @@
       shelfCount.textContent = filterActive ? `找到 ${visible.length} 本` : `共 ${books.filter((book) => !book.authorOnly).length} 本`;
       if (visible.length) renderBookCards(bookList, visible);
       else bookList.innerHTML = '<p class="shelf-empty">没有找到这本书，试试书名中的其他字或作者名。</p>';
+      syncRouteMetadata();
       return;
     }
 
@@ -497,6 +567,7 @@
       ? `筛选结果：${visibleWorks} 项作品，${references.length} 项相关书目`
       : `${entry.name}：${entry.id === 'mao' ? visibleWorks : authoredCount} 项作品，${references.length} 项相关书目`;
     if (entry.referenceIds.length) renderBookCards(authorReferences, references);
+    syncRouteMetadata();
   }
 
   function renderToc() {
@@ -527,13 +598,16 @@
         numbering[level]++;
         for (let parent = 0; parent < level; parent++) numbering[parent] ||= 1;
         const number = numbering.slice(0, level + 1).join('.');
-        return `${chapterHeading}<button class="toc-link ${index === current ? 'active' : ''}" data-index="${index}" data-level="${level}" type="button">${number}. ${escapeText(section.title)}</button>`;
+        const currentAttribute = index === current ? ' aria-current="page"' : '';
+        return `${chapterHeading}<a class="toc-link ${index === current ? 'active' : ''}" href="${escapeText(seoArticleUrl(currentBook, section))}" data-index="${index}" data-level="${level}"${currentAttribute}>${number}. ${escapeText(section.title)}</a>`;
       }).join('');
     desktopToc.innerHTML = html;
     mobileToc.innerHTML = html;
-    [desktopToc, mobileToc].forEach((nav) => nav.querySelectorAll('.toc-link').forEach((button) => button.addEventListener('click', () => {
+    [desktopToc, mobileToc].forEach((nav) => nav.querySelectorAll('.toc-link').forEach((link) => link.addEventListener('click', (event) => {
+      if (!shouldInterceptLink(event)) return;
+      event.preventDefault();
       closeToc(false);
-      openSection(Number(button.dataset.index));
+      openSection(Number(link.dataset.index));
     })));
   }
 
@@ -971,6 +1045,7 @@
     rendering = true;
     lastPosition = { atStart: true };
     writeReaderLocation('replace');
+    syncRouteMetadata();
     persistProgress();
     renderToc();
     syncBookMeta();
@@ -995,6 +1070,7 @@
       if (sectionId && currentBook.sections[current]?.id !== sectionId) writeReaderLocation('replace');
     }
     else writeReaderLocation(historyMode);
+    syncRouteMetadata();
     writeStored(activeBookKey, currentBook.id);
     shelf.classList.add('is-hidden');
     reader.classList.remove('is-hidden');
@@ -1017,9 +1093,10 @@
     shelf.classList.remove('is-hidden');
     document.body.classList.remove('book-open', 'mobile-reader-open', 'mobile-toc-open');
     setMobileChrome(false);
-    renderShelf();
     const bookIndex = books.indexOf(currentBook);
     currentBook = null;
+    renderShelf();
+    syncRouteMetadata();
     window.scrollTo({ top: 0, behavior: 'instant' });
     shelf.querySelector(`[data-book="${bookIndex}"]`)?.focus({ preventScroll: true });
   }
@@ -1178,7 +1255,7 @@
       }
     }
     if (event.key === 'Tab' && tocOpen) {
-      const focusable = Array.from(mobileTocPanel.querySelectorAll('button:not([disabled])'));
+      const focusable = Array.from(mobileTocPanel.querySelectorAll('button:not([disabled]), a[href]'));
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
       if (event.shiftKey && (document.activeElement === first || !mobileTocPanel.contains(document.activeElement))) {

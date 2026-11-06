@@ -114,6 +114,7 @@ body.book-open .shell { padding-top: 0; }
 .book-card .book-foot { display: flex; align-items: center; justify-content: flex-end; gap: .8rem; margin-top: 1.1rem; }
 .book-status { font: .72rem ui-sans-serif, system-ui, sans-serif; color: var(--muted); }
 .open-button, .nav-button { border: 1px solid var(--accent); color: var(--accent-dark); background: transparent; border-radius: .25rem; padding: .55rem .75rem; cursor: pointer; min-height: 2.55rem; }
+.open-button { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
 .open-button:hover, .nav-button:hover, .text-button:hover { background: color-mix(in srgb, var(--accent) 9%, transparent); }
 .open-button:focus-visible, .nav-button:focus-visible, .text-button:focus-visible, .toc-link:focus-visible { outline: 3px solid rgba(156, 62, 44, .35); outline-offset: 2px; }
 .primary { background: var(--accent); color: #fffaf0; }
@@ -131,7 +132,7 @@ body.book-open .shell { padding-top: 0; }
 .toc-panel { position: sticky; top: 6rem; align-self: start; max-height: calc(100vh - 8rem); overflow: auto; padding-right: .5rem; }
 .toc-head { display: flex; align-items: center; justify-content: space-between; }
 .toc-head .eyebrow { margin-bottom: .7rem; }
-.toc-link { display: block; border: 0; border-left: 2px solid transparent; background: transparent; text-align: left; width: 100%; color: var(--muted); padding: .55rem .7rem; cursor: pointer; line-height: 1.4; }
+.toc-link { display: block; border: 0; border-left: 2px solid transparent; background: transparent; text-align: left; width: 100%; color: var(--muted); padding: .55rem .7rem; cursor: pointer; line-height: 1.4; text-decoration: none; }
 .toc-link[data-level="0"] { color: var(--ink); font-weight: 700; margin-top: .35rem; }
 .toc-link[data-level="1"] { padding-left: 1.55rem; }
 .toc-link[data-level="2"] { padding-left: 2.35rem; }

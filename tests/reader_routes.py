@@ -127,6 +127,8 @@ def run():
 
             context, page = new_page(browser, clipboard=True, origin=origin)
             page.goto(origin + "/?author=marx", wait_until="networkidle")
+            assert page.locator('link[rel="canonical"]').get_attribute("href") == f"{origin}/authors/marx/"
+            assert "马克思" in page.title()
             page.locator("#author-featured-list .featured-work a").filter(has_text="资本论第一卷").first.click()
             page.wait_for_function("new URL(location.href).searchParams.get('book') === 'marx-capital-1'")
             assert_reader(page, "资本论第一卷")
@@ -153,6 +155,11 @@ def run():
                 assert_reader(page, title)
                 assert f"book={book_id}" in page.url and f"section={section_id}" in page.url, page.url
                 assert page.locator("#section-title").inner_text() == section_title
+                expected_canonical = f"{origin}/texts/{book_id}/{section_id}/"
+                assert page.locator('link[rel="canonical"]').get_attribute("href") == expected_canonical
+                assert section_title in page.title() and "左人书架" in page.title()
+                assert section_title in page.locator('meta[name="description"]').get_attribute("content")
+                assert page.locator("#book-list .open-button").first.get_attribute("href").startswith(f"{origin}/books/")
                 page.locator("#desktop-share-button").click()
                 copied_url = page.evaluate("navigator.clipboard.readText()")
                 assert copied_url == page.url
@@ -178,6 +185,8 @@ def run():
             assert not page.locator("#section-title").is_visible()
             assert page.locator("#desktop-content h2.chapter-heading").first.inner_text() == title
             assert page.locator("#desktop-content > p").first.inner_text().startswith("一、俄国农奴制度")
+            toc_target = page.locator("#desktop-toc .toc-link").filter(has_text="二、俄国民粹主义")
+            assert toc_target.get_attribute("href") == f"{origin}/texts/history/section-008/"
             page.evaluate("window.scrollTo(0, 450)")
             page.wait_for_timeout(450)
             position_keys = page.evaluate("Object.keys(sessionStorage).filter(k => k.startsWith('reading-desk:route-position:v1:'))")
@@ -186,7 +195,7 @@ def run():
             page.reload(wait_until="networkidle")
             assert_reader(page, "联共（布）党史简明教程")
             assert page.evaluate("window.scrollY") > 0
-            page.locator("#desktop-toc button").filter(has_text="二、俄国民粹主义").click()
+            page.locator("#desktop-toc .toc-link").filter(has_text="二、俄国民粹主义").click()
             assert page.locator("#section-title").inner_text().startswith("二、俄国民粹主义")
             assert "section=section-008" in page.url
             print("direct URL, refresh, session-only position, chapter query update, duplicate-title rendering: PASS")
@@ -204,7 +213,7 @@ def run():
             context, page = new_page(browser, clipboard=True, origin=origin)
             page.goto(origin + "/?author=mao&book=mao-selected&section=section-023", wait_until="networkidle")
             assert_reader(page, "毛泽东选集（一至七卷）")
-            page.locator("#desktop-toc button").filter(has_text="矛盾论").click()
+            page.locator("#desktop-toc .toc-link").filter(has_text="矛盾论").click()
             assert "section=section-024" in page.url
             page.locator("#desktop-share-button").click()
             assert page.evaluate("navigator.clipboard.readText()") == page.url
@@ -375,6 +384,7 @@ def run():
             copied = page.evaluate("navigator.clipboard.readText()")
             assert urlsplit(copied).path.startswith("/shelf/")
             assert "section=section-007" in copied
+            assert urlsplit(page.locator('link[rel="canonical"]').get_attribute("href")).path == "/shelf/texts/history/section-007/"
             print("subpath deployment URL preservation: PASS")
             context.close()
 
@@ -385,8 +395,8 @@ def run():
                 route.continue_()
             page.route("**/sections/section-007.json", slow_section)
             page.goto(origin + "/?book=history&section=section-007", wait_until="domcontentloaded")
-            page.wait_for_selector("#desktop-toc button[data-index='7']")
-            page.locator("#desktop-toc button[data-index='7']").click()
+            page.wait_for_selector("#desktop-toc .toc-link[data-index='7']")
+            page.locator("#desktop-toc .toc-link[data-index='7']").click()
             page.wait_for_function("document.querySelector('#section-title').textContent.startsWith('二、俄国民粹主义')")
             page.wait_for_timeout(650)
             assert page.locator("#section-title").inner_text().startswith("二、俄国民粹主义")
@@ -396,7 +406,7 @@ def run():
             context, page = new_page(browser)
             page.route("**/sections/section-007.json", slow_section)
             page.goto(origin + "/?book=history&section=section-007", wait_until="domcontentloaded")
-            page.wait_for_selector("#desktop-toc button[data-index='7']")
+            page.wait_for_selector("#desktop-toc .toc-link[data-index='7']")
             page.locator("#back-button").click()
             page.locator("#book-search").fill("毛泽东选集")
             page.locator("#book-list .open-button").first.click()
@@ -446,7 +456,7 @@ def run():
             else:
                 assert "已复制" in page.locator("#share-status").inner_text()
             page.locator("#mobile-toc-toggle-button").click()
-            page.locator("#mobile-toc button").filter(has_text="二、俄国民粹主义").click()
+            page.locator("#mobile-toc .toc-link").filter(has_text="二、俄国民粹主义").click()
             assert page.locator("#mobile-section-title").inner_text().startswith("二、俄国民粹主义")
             print("mobile deduplication, share controls, and TOC navigation: PASS")
             context.close()
