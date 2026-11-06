@@ -377,8 +377,8 @@ button, input, summary { -webkit-tap-highlight-color: transparent; }
 .book-grid { gap: 1rem; }
 .loading-card, .shelf-empty { border: 2px solid var(--ink); border-radius: 0; background: var(--panel); }
 .book-card { position: relative; border: 1px solid var(--ink); border-radius: 0; padding: 1.2rem; min-height: 11.5rem; background: var(--panel); box-shadow: none; transition: border-color .14s ease; }
-.book-card:hover { border-color: var(--accent); box-shadow: none; transform: none; }
 .book-card.ready { border-top: 1px solid var(--ink); padding-top: 1.2rem; }
+.book-card:hover { border-color: var(--accent); box-shadow: none; transform: none; }
 .book-face { min-width: 0; }
 .book-card .book-category { display: none; }
 .book-card h2 { color: var(--ink); font: 700 clamp(1.25rem, 1.7vw, 1.65rem)/1.35 var(--title-font); margin: 0 0 .75rem; overflow-wrap: anywhere; }
