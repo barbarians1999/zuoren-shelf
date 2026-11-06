@@ -199,10 +199,7 @@
       if (note) {
         sup.replaceWith(button(sup.textContent, note));
         (note.nodes || []).forEach((node) => consumed.add(node));
-      } else if (key(sup.textContent) && external.failed) {
-        sup.replaceWith(button(sup.textContent, { html: '<p>注释暂时无法加载，请重开本节重试。</p>' }));
-      } else if (key(sup.textContent)) sup.remove();
-      else sup.replaceWith(...sup.childNodes);
+      } else if (!key(sup.textContent)) sup.replaceWith(...sup.childNodes);
     });
     const walker = document.createTreeWalker(target, NodeFilter.SHOW_TEXT);
     const textNodes = [];
