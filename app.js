@@ -961,9 +961,28 @@
         copy.querySelectorAll('sup').forEach((sup) => sup.remove());
         return copy.textContent;
       };
+      const sectionTitle = currentBook.sections?.[current]?.title || '';
       const duplicateHeading = Boolean(firstBlock && ReaderHeadingMatcher.isDuplicateFirstTitle(
-        currentBook.sections?.[current]?.title || '', visibleHeadingText(firstBlock), firstBlock.tagName
+        sectionTitle, visibleHeadingText(firstBlock), firstBlock.tagName
       ));
+      let duplicateHeadingSegments = [];
+      if (!duplicateHeading && firstBlock && /^H[1-6]$/.test(firstBlock.tagName)) {
+        const firstPage = firstBlock.closest('.page');
+        const sourceBlocks = Array.from(target.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li,blockquote'));
+        const firstIndex = sourceBlocks.indexOf(firstBlock);
+        const segments = [firstBlock];
+        const texts = [visibleHeadingText(firstBlock)];
+        for (const next of sourceBlocks.slice(firstIndex + 1)) {
+          if (!/^H[1-6]$/.test(next.tagName) || (firstPage && next.closest('.page') !== firstPage) || segments.length >= 4) break;
+          if ([...segments, next].some((heading) => heading.querySelector('a,button,details,input,select,textarea,[tabindex]'))) break;
+          segments.push(next);
+          texts.push(visibleHeadingText(next));
+          if (ReaderHeadingMatcher.isDuplicateHeadingSequence(sectionTitle, texts, firstBlock.tagName)) {
+            duplicateHeadingSegments = segments.slice();
+            break;
+          }
+        }
+      }
       if (duplicateHeading) {
         document.querySelector(mode === 'mobile' ? '#mobile-section-title' : '#section-title').classList.add('is-hidden');
         if (firstBlock.tagName === 'P') {
@@ -975,6 +994,10 @@
           firstBlock = heading;
         } else firstBlock.classList.add('chapter-heading');
       }
+      if (duplicateHeadingSegments.length) duplicateHeadingSegments.forEach((heading) => {
+        heading.classList.add('duplicate-chapter-title-segment');
+        heading.setAttribute('aria-hidden', 'true');
+      });
       // Treat source headings as children of the reader's generated section title.
       let previousHeadingLevel = 2;
       target.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach((heading) => {

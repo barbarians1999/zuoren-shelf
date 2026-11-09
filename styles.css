@@ -22,8 +22,8 @@
   --contrast: #21211e;
   --contrast-ink: #f9f7f1;
   --ui-font: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
-  /* Prefer iOS's bundled CJK serif in Lockdown Mode; use the bundled web subset elsewhere. */
-  --title-font: "Songti SC", "STSong", "Songti TC", "Shelf Title Serif", "Source Han Serif SC", "Noto Serif CJK SC", serif;
+  /* Use bundled Source Han Serif first; system serif fallbacks remain for browsers that block web fonts. */
+  --title-font: "Source Han Serif SC Web", "Shelf Title Serif", "Songti SC", "STSong", "Songti TC", "Source Han Serif SC", "Noto Serif CJK SC", serif;
   --reading-font: var(--ui-font);
   --reading-leading: 2;
   --reading-size: clamp(1.08rem, 1.8vw, 1.24rem);
@@ -97,6 +97,8 @@ button { font: inherit; }
 .category-filter:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 38%, transparent); outline-offset: 2px; }
 .category-filter span { font-size: .68rem; opacity: .78; }
 .shell { width: min(100% - 2.2rem, 78rem); margin: 0 auto; padding: clamp(1.75rem, 4vw, 3.25rem) 0 4rem; }
+/* Keep the bookshelf light; load the full Source Han font when a book reader is open. */
+body:not(.book-open) { --title-font: "Shelf Title Serif", "Songti SC", "STSong", "Songti TC", "Source Han Serif SC", "Noto Serif CJK SC", serif; }
 body:not(.book-open) .shell { padding-top: 1.5rem; }
 .eyebrow { margin: 0 0 .7rem; font: 700 .72rem/1.2 ui-sans-serif, system-ui, sans-serif; letter-spacing: .15em; text-transform: uppercase; color: var(--accent); }
 h1 { font-family: var(--title-font); font-size: clamp(2.2rem, 7vw, 4.7rem); line-height: 1.03; letter-spacing: -.04em; font-weight: 500; margin: 0 0 1.1rem; }
@@ -421,9 +423,10 @@ body.book-open .topbar { display: none; }
 #book-title { flex-basis: 100%; color: var(--ink); font: 700 1.02rem/1.4 var(--title-font); overflow-wrap: anywhere; }
 #book-author { flex: 1 1 9rem; }
 .reading-actions { flex-wrap: wrap; }
-.reading-panel > h2 { padding-left: 1rem; border-left: .5rem solid var(--accent); font-family: var(--title-font); font-weight: 700; line-height: 1.4; overflow-wrap: anywhere; }
-.content :is(h1, h2, h3, h4) { font-family: var(--title-font); font-weight: 700; }
+.reading-panel > h2 { padding-left: 1rem; border-left: .5rem solid var(--accent); font-family: var(--title-font); font-weight: 700; font-synthesis: none; line-height: 1.4; overflow-wrap: anywhere; }
+.content :is(h1, h2, h3, h4) { font-family: var(--title-font); font-weight: 700; font-synthesis: none; }
 .content .chapter-heading { margin: 0 0 1.6rem; border-left: .5rem solid var(--accent); padding: .25rem 0 .25rem 1rem; font-size: 1.55em; line-height: 1.45; }
+.content .duplicate-chapter-title-segment { visibility: hidden; height: 0; margin: 0 !important; padding-block: 0 !important; border: 0 !important; overflow: hidden; font-size: 0 !important; line-height: 0 !important; }
 .content p, .content blockquote, .content li { transform: none; background: transparent; }
 .content .table-scroll th { background: var(--paper-deep); }
 .settings summary { min-height: 2rem; display: flex; align-items: center; font-weight: 700; }
@@ -482,7 +485,7 @@ footer a { color: var(--accent-dark); text-underline-offset: .25em; }
   .mobile-reader-head .reader-head-actions { flex-wrap: nowrap; }
   .mobile-reader-head .mobile-font-settings > summary { color: var(--contrast-ink); font: 700 .82rem/1.5 var(--ui-font); min-height: 2.75rem; padding: .45rem .2rem; display: flex; align-items: center; }
   .mobile-font-settings .settings-menu { top: max(4.5rem, calc(env(safe-area-inset-top) + 3.8rem)); max-height: calc(100dvh - max(4.5rem, calc(env(safe-area-inset-top) + 3.8rem)) - 1rem); overflow-y: auto; }
-  .mobile-reading-panel h2 { border-left: .35rem solid var(--accent); padding: .3rem 0 .3rem .75rem; text-align: left; font: 700 1.15rem/1.6 var(--title-font); }
+  .mobile-reading-panel h2 { border-left: .35rem solid var(--accent); padding: .3rem 0 .3rem .75rem; text-align: left; font: 700 1.15rem/1.6 var(--title-font); font-synthesis: none; }
   .content .chapter-heading { border-left-width: .35rem; padding-left: .75rem; font-size: 1.18em; }
   .mobile-toc-panel { background: var(--paper); box-shadow: none; border-left: 3px solid var(--accent); }
   .mobile-toc-panel .toc-head { margin-bottom: .75rem; }

@@ -43,5 +43,10 @@
     return Boolean(section.text && section.text === body.text);
   }
 
-  return { isDuplicateFirstTitle };
+  function isDuplicateHeadingSequence(sectionTitle, headingTexts, tagName) {
+    if (!Array.isArray(headingTexts) || headingTexts.length < 2 || headingTexts.some((text) => !String(text).trim())) return false;
+    return isDuplicateFirstTitle(sectionTitle, headingTexts.map(String).join(''), tagName);
+  }
+
+  return { isDuplicateFirstTitle, isDuplicateHeadingSequence };
 });
