@@ -271,7 +271,7 @@ class SearchPageGenerationTests(unittest.TestCase):
             )
             article_count += 1
 
-        self.assertEqual(article_count, 5255)
+        self.assertEqual(article_count, 5271)
 
 
 if __name__ == "__main__":

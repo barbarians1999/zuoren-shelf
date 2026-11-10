@@ -19058,6 +19058,124 @@
       ]
     },
     {
+      "id": "socialist-political-economy-shanghai-1976",
+      "title": "社会主义政治经济学（1976年上海版）",
+      "author": "上海《社会主义政治经济学》编写小组",
+      "format": "本地PDF文字层转Markdown阅读版",
+      "note": "1976年9月未定稿第二版讨论稿，上下册合编。保留五篇十五章、原注及图表；文字层整理稿，未经逐字校勘。原稿未配对注号与疑误保留，详见版本与校核说明。",
+      "type": "text",
+      "sectionPath": "books/socialist-political-economy-shanghai-1976/sections",
+      "source": {
+        "filename": "社会主义政治经济学 (全一册).pdf",
+        "sha256": "1e9e6841182c08bcfd8bef87d30c2d982d46386d1c6b229c1c5b23169bbd8310",
+        "editionStatement": "1976年9月，上海，未定稿第二版讨论稿，上下册合编。",
+        "conversion": "文字层转Markdown，保留原注和图表，按章加载。未经逐字校勘。"
+      },
+      "sections": [
+        {
+          "id": "front-matter",
+          "title": "封面与原目录",
+          "level": 0,
+          "readerHidden": true
+        },
+        {
+          "id": "preface",
+          "title": "序言",
+          "level": 0
+        },
+        {
+          "id": "chapter-01",
+          "title": "第一章 社会主义公有制",
+          "level": 0,
+          "chapter": "第一篇 社会主义所有制和生产中的相互关系"
+        },
+        {
+          "id": "chapter-02",
+          "title": "第二章 社会主义生产中的相互关系",
+          "level": 0,
+          "chapter": "第一篇 社会主义所有制和生产中的相互关系"
+        },
+        {
+          "id": "chapter-03",
+          "title": "第三章 社会主义生产的性质和目的",
+          "level": 0,
+          "chapter": "第二篇 社会主义的生产过程"
+        },
+        {
+          "id": "chapter-04",
+          "title": "第四章 社会主义经济中社会劳动的分配",
+          "level": 0,
+          "chapter": "第二篇 社会主义的生产过程"
+        },
+        {
+          "id": "chapter-05",
+          "title": "第五章 社会主义农业和工业",
+          "level": 0,
+          "chapter": "第二篇 社会主义的生产过程"
+        },
+        {
+          "id": "chapter-06",
+          "title": "第六章 社会主义制度下的节约",
+          "level": 0,
+          "chapter": "第二篇 社会主义的生产过程"
+        },
+        {
+          "id": "chapter-07",
+          "title": "第七章 社会主义经济核算制",
+          "level": 0,
+          "chapter": "第二篇 社会主义的生产过程"
+        },
+        {
+          "id": "chapter-08",
+          "title": "第八章 社会主义社会的商品交换",
+          "level": 0,
+          "chapter": "第三篇 社会主义的流通过程"
+        },
+        {
+          "id": "chapter-09",
+          "title": "第九章 社会主义社会的货币和货币流通",
+          "level": 0,
+          "chapter": "第三篇 社会主义的流通过程"
+        },
+        {
+          "id": "chapter-10",
+          "title": "第十章 社会主义社会的分配",
+          "level": 0,
+          "chapter": "第四篇 社会主义社会的分配和再生产"
+        },
+        {
+          "id": "chapter-11",
+          "title": "第十一章 社会主义积累和扩大再生产",
+          "level": 0,
+          "chapter": "第四篇 社会主义社会的分配和再生产"
+        },
+        {
+          "id": "chapter-12",
+          "title": "第十二章 社会主义再生产中的资金运动",
+          "level": 0,
+          "chapter": "第四篇 社会主义社会的分配和再生产"
+        },
+        {
+          "id": "chapter-13",
+          "title": "第十三章 社会主义生产关系和阶级关系",
+          "level": 0,
+          "chapter": "第五篇 结论"
+        },
+        {
+          "id": "chapter-14",
+          "title": "第十四章 无产阶级专政下的继续革命",
+          "level": 0,
+          "chapter": "第五篇 结论"
+        },
+        {
+          "id": "chapter-15",
+          "title": "第十五章 共产主义是社会主义发展的必然趋势",
+          "level": 0,
+          "chapter": "第五篇 结论"
+        }
+      ]
+    },
+    {
       "id": "economic-accounting-ownership",
       "title": "经济核算与所有制形式",
       "author": "夏尔·贝特兰等",
