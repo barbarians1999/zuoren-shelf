@@ -142,6 +142,61 @@ class SearchPageGenerationTests(unittest.TestCase):
         self.assertFalse((self.output / "texts/demo-book/part-2/index.html").exists())
         self.assertTrue(unrelated.is_dir())
 
+    def test_explicit_author_work_group_keeps_recommendation_and_all_version_pages(self):
+        self.data["authorIndex"][0]["featuredWorks"] = [
+            {
+                "title": "《同一作品》",
+                "bookId": "hidden-author-duplicate",
+                "sectionId": "hidden-entry",
+                "year": "1901",
+                "sortYear": 1901,
+                "dedupeGroup": "demo-work",
+            },
+            {
+                "title": "同一作品",
+                "bookId": "demo-book",
+                "sectionId": "part-1",
+                "year": "1901",
+                "sortYear": 1901,
+                "recommendation": "优先版本",
+                "dedupeGroup": "demo-work",
+            },
+        ]
+        self._write_index()
+
+        visible = search_pages.visible_author_works(
+            self.data["authorIndex"][0],
+            {book["id"]: book for book in self.data["books"]},
+        )
+        self.assertEqual(len(visible), 1)
+        self.assertEqual(visible[0]["bookId"], "demo-book")
+        self.assertEqual(visible[0]["sectionId"], "part-1")
+        self.assertEqual(visible[0]["recommendation"], "优先版本")
+
+        counts = search_pages.build(self.source, self.output, self.base_url)
+        self.assertEqual(counts["authors"], 1)
+        author_page = (self.output / "authors/writer/index.html").read_text(encoding="utf-8")
+        self.assertIn("本地收录 1 篇", author_page)
+        self.assertEqual(author_page.count("同一作品"), 1)
+        self.assertIn("texts/demo-book/part-1/", author_page)
+        self.assertNotIn("texts/hidden-author-duplicate/hidden-entry/", author_page)
+
+        # The alternate edition is omitted from the author list, not removed
+        # from the generated search pages or its original direct route.
+        self.assertTrue((self.output / "books/hidden-author-duplicate/index.html").exists())
+        self.assertTrue((self.output / "texts/hidden-author-duplicate/hidden-entry/index.html").exists())
+
+    def test_same_title_without_explicit_group_keeps_distinct_author_works(self):
+        works = [
+            {"title": "同名书信", "bookId": "letter-one", "sectionId": "date-one", "year": "1876"},
+            {"title": "同名书信", "bookId": "letter-two", "sectionId": "date-two", "year": "1876"},
+        ]
+        visible = search_pages.visible_author_works(
+            {"id": "writer", "featuredWorks": works},
+            {},
+        )
+        self.assertEqual([work["bookId"] for work in visible], ["letter-one", "letter-two"])
+
     def test_article_fragment_preserves_text_and_repairs_markup(self):
         book = self.data["books"][0]
         section = book["sections"][0]

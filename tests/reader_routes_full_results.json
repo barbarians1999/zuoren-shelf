@@ -3,8 +3,8 @@
     "catalogBooks": 480,
     "sectionIdsAndBodyFilesChecked": 5481,
     "homeCardsClicked": 75,
-    "renderedAuthorOnlyLinks": 393,
-    "intentionallyHiddenAuthorOnlyDuplicates": 12,
+    "renderedAuthorOnlyLinks": 392,
+    "intentionallyHiddenAuthorOnlyDuplicates": 13,
     "directRouteCopyNewContextRefreshPassed": 480,
     "failed": 0,
     "skipped": 0
@@ -3185,12 +3185,12 @@
     {
       "bookId": "mx-lenin-eda649f794",
       "title": "《怎么办？》",
-      "source": "rendered-author-page-link",
-      "sourceUrl": "/?author=lenin&book=mx-lenin-eda649f794&section=section-002",
-      "canonicalUrl": "/?author=lenin&book=mx-lenin-eda649f794&section=section-002",
-      "sectionId": "section-002",
-      "sectionTitle": "一 教条主义和“批评自由”",
-      "bodyResource": "/books/mx-lenin-eda649f794/sections/section-002.json",
+      "source": "intentionally-hidden-author-duplicate",
+      "sourceUrl": "/?book=mx-lenin-eda649f794&section=section-001",
+      "canonicalUrl": "/?book=mx-lenin-eda649f794&section=section-001",
+      "sectionId": "section-001",
+      "sectionTitle": "序 言",
+      "bodyResource": "/books/mx-lenin-eda649f794/sections/section-001.json",
       "copy": "pass",
       "newContextDirect": "pass",
       "refresh": "pass"
@@ -6254,6 +6254,11 @@
   "failures": [],
   "skips": [],
   "intentional_source_exclusions": [
+    {
+      "bookId": "mx-lenin-eda649f794",
+      "title": "《怎么办？》",
+      "reason": "Author page intentionally hides this duplicate edition/article link; direct route is still tested below."
+    },
     {
       "bookId": "mx-mao-193435e9d2",
       "title": "〔未删节本〕新民主主义的宪政——二月二十日在延安各界宪政促进会成立大会的演讲",

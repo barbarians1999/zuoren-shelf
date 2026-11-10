@@ -157,14 +157,21 @@ def visible_author_works(author: dict, books_by_id: dict[str, dict]) -> list[dic
         ]
         return selected_works + extras
 
-    seen: set[str] = set()
+    positions: dict[str, int] = {}
     visible = []
     for work in sorted(featured, key=_year_sort_key):
-        key = f"{work.get('bookId') or work.get('url')}|{normalized_work_title(work.get('title', ''))}"
-        if key in seen:
-            continue
-        seen.add(key)
-        visible.append(work)
+        group = str(work.get("dedupeGroup", "")).strip()
+        key = (
+            f"group:{group}"
+            if group
+            else f"{work.get('bookId') or work.get('url')}|{normalized_work_title(work.get('title', ''))}"
+        )
+        existing_index = positions.get(key)
+        if existing_index is None:
+            positions[key] = len(visible)
+            visible.append(work)
+        elif work.get("recommendation") and not visible[existing_index].get("recommendation"):
+            visible[existing_index] = work
     return visible
 
 
@@ -700,6 +707,19 @@ def build(repo_root: Path, output_root: Path, base_url: str) -> dict[str, int]:
             sections = {str(section.get("id")): section for section in book.get("sections", [])}
             section = sections.get(str(work.get("sectionId", "")))
             if section and section.get("readerHidden") is not True:
+                discoverable_book_ids.add(book_id)
+    # An explicit dedupeGroup chooses one author-page entry, but keep every
+    # book in that group discoverable so its existing static URLs still build.
+    for author in authors:
+        visible_groups = {
+            str(work.get("dedupeGroup", "")).strip()
+            for work in author_works.get(str(author["id"]), [])
+            if str(work.get("dedupeGroup", "")).strip()
+        }
+        for work in author.get("featuredWorks", []):
+            group = str(work.get("dedupeGroup", "")).strip() if isinstance(work, dict) else ""
+            book_id = str(work.get("bookId", "")) if isinstance(work, dict) else ""
+            if group in visible_groups and book_id in all_books_by_id:
                 discoverable_book_ids.add(book_id)
     books = [book for book in all_books if str(book["id"]) in discoverable_book_ids]
     previous_files = manifest_paths(output_root)

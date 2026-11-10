@@ -1835,7 +1835,8 @@
           "year": "1901",
           "sortYear": 1901,
           "bookId": "mx-lenin-eda649f794",
-          "sectionId": "section-002"
+          "sectionId": "section-002",
+          "dedupeGroup": "lenin-howto-1901"
         },
         {
           "title": "怎么办？",
@@ -1843,7 +1844,8 @@
           "bookId": "howto",
           "sectionId": "part-03",
           "sortYear": 1901,
-          "recommendation": "讨论革命组织、理论与工人运动。"
+          "recommendation": "讨论革命组织、理论与工人运动。",
+          "dedupeGroup": "lenin-howto-1901"
         },
         {
           "title": "我们纲领中的民族问题",

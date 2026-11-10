@@ -445,10 +445,21 @@
     const authorCategory = { marx: 'classics', engels: 'classics', lenin: 'classics', stalin: 'international', mao: 'china' }[entry.id];
     if (entry.id === 'mao') return renderMaoWorks(entry, terms);
     document.querySelector('#author-featured-title').firstChild.nodeValue = '作品与文章 · 按时间排列 ';
-    const featuredWorks = (entry.featuredWorks || [])
+    const allFeaturedWorks = entry.featuredWorks || [];
+    const groupTitles = new Map();
+    allFeaturedWorks.forEach((work) => {
+      const group = typeof work.dedupeGroup === 'string' ? work.dedupeGroup.trim() : '';
+      if (!group) return;
+      const titles = groupTitles.get(group) || [];
+      titles.push(work.title);
+      groupTitles.set(group, titles);
+    });
+    const featuredWorks = allFeaturedWorks
       .filter((work) => {
         const inCategory = activeCategory === 'all' || authorCategory === activeCategory;
-        return inCategory && terms.every((term) => work.title.toLocaleLowerCase().includes(term));
+        const group = typeof work.dedupeGroup === 'string' ? work.dedupeGroup.trim() : '';
+        const searchableTitles = group ? groupTitles.get(group) || [work.title] : [work.title];
+        return inCategory && terms.every((term) => searchableTitles.some((title) => title.toLocaleLowerCase().includes(term)));
       })
       .sort((a, b) => {
         const yearA = Number(a.sortYear || String(a.year || '').match(/\d{4}/)?.[0] || Infinity);
@@ -470,13 +481,22 @@
   }
 
   function dedupeAuthorWorks(works) {
-    const seen = new Set();
-    return works.filter((work) => {
-      const key = `${work.bookId || work.url}|${work.title.normalize('NFKC').replace(/[\s\p{P}\p{S}]/gu, '')}`;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
+    const positions = new Map();
+    const visible = [];
+    works.forEach((work) => {
+      const group = typeof work.dedupeGroup === 'string' ? work.dedupeGroup.trim() : '';
+      const key = group
+        ? `group:${group}`
+        : `${work.bookId || work.url}|${work.title.normalize('NFKC').replace(/[\s\p{P}\p{S}]/gu, '')}`;
+      const existingIndex = positions.get(key);
+      if (existingIndex === undefined) {
+        positions.set(key, visible.length);
+        visible.push(work);
+      } else if (work.recommendation && !visible[existingIndex].recommendation) {
+        visible[existingIndex] = work;
+      }
     });
+    return visible;
   }
 
   function renderMaoWorks(entry, terms) {

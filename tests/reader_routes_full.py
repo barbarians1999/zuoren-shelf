@@ -15,6 +15,7 @@ REPORT_PATH = ROOT / "tests" / "reader_routes_full_results.json"
 INTENTIONALLY_HIDDEN_AUTHOR_DUPLICATES = {
     "mx-marx-8b258427cf",
     "mx-marx-manifesto-1920",
+    "mx-lenin-eda649f794",
     "mx-mao-2879fb351d",
     "mx-mao-293230863b",
     "mx-mao-7b164441c7",
