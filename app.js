@@ -735,7 +735,7 @@
   function applyReadingFont(font, persist = false) {
     const legacyFont = font === 'song' ? 'source-han' : font;
     const allowed = ['system', 'source-han', 'fangsong', 'hanyi-shufang'];
-    const selected = allowed.includes(legacyFont) ? legacyFont : 'system';
+    const selected = allowed.includes(legacyFont) ? legacyFont : 'hanyi-shufang';
     document.documentElement.dataset.readingFont = selected;
     document.querySelectorAll('button[data-reading-font]').forEach((button) => {
       button.setAttribute('aria-pressed', String(button.dataset.readingFont === selected));
