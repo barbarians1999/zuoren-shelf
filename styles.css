@@ -600,3 +600,43 @@ footer a { color: var(--accent-dark); text-underline-offset: .25em; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Desktop author entrances: portrait above name; keep the mobile layout. */
+@media (min-width: 701px) {
+  .author-index {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.375rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--ink) 35%, var(--paper));
+  }
+  .author-choices {
+    max-width: 51.25rem;
+    margin-inline: auto;
+    gap: .75rem;
+  }
+  .author-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .6875rem;
+    padding: .5rem .3125rem .5625rem;
+    border: 0;
+    background: transparent;
+    transition: background-color var(--motion-fast) var(--motion-ease);
+  }
+  .author-card > .author-portrait {
+    width: 5rem;
+    flex: 0 0 auto;
+  }
+  .author-card > .author-name {
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .author-card:hover {
+    background: color-mix(in srgb, var(--ink) 4%, var(--paper));
+  }
+}
