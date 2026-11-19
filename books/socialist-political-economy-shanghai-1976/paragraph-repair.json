@@ -1,0 +1,3958 @@
+{
+  "version": 1,
+  "source_pdf_sha256": "1e9e6841182c08bcfd8bef87d30c2d982d46386d1c6b229c1c5b23169bbd8310",
+  "base_commit": "fa41bfa4d12090d5bb2c8e78b700337b83006634",
+  "markdown_body_sha256": "89620d2d1262ab2c549e93b77e71722694b038c9cb841a065361a074ef198a23",
+  "cross_page_joins": [
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 25,
+      "to_pdf_page": 26,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "本的关系。千百年来，世世代代的劳动人民做牛做马，过着吃不饱、穿不暖的悲惨生活，根",
+      "continuation_head": "源就是因为生产资料掌握在剥削阶级手里。马克思指出：“一个除自己的劳动力外没有任何"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 26,
+      "to_pdf_page": 27,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "主义新生事物一样，有一个在斗争中建立、在斗争中发展的长过程。那末，它是怎样在斗争",
+      "continuation_head": "中建立和发展的呢？"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 27,
+      "to_pdf_page": 28,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "部门的大工业先后收归国有，建立了社会主义全民所有制。这是马克思主义关于“剥夺剥夺",
+      "continuation_head": "者”理论的光辉实践。"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 29,
+      "to_pdf_page": 30,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "我国无产阶级专政条件下的国家资本主义经济的初级形式，在工业中有加工、订货、统购、",
+      "continuation_head": "包销；在商业中有代购、代销等形式。国家资本主义经济的高级形式是公私合营。这种高级"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 30,
+      "to_pdf_page": 31,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "反映到党内，就是以毛主席为代表的无产阶级革命路线同刘少奇为头子的修正主义路线之间",
+      "continuation_head": "的斗争。刘少奇一伙在全国解放前夕，竭力制造资产阶级“剥削有功”的反革命舆论，叫嚷"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 31,
+      "to_pdf_page": 32,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "则就要犯绝大的错误。个体农业经济的社会主义改造只能通过合作化的道路来实现。恩格斯",
+      "continuation_head": "在批判德国和法国机会主义者的土地纲领时，第一次提出马克思主义关于通过合作社对个体"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 32,
+      "to_pdf_page": 33,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "毛主席在痛斥刘少奇一伙的“没有大量农业机器就不可能",
+      "continuation_head": "实现集体化”的谬论时，科学地阐明了农业合作化和农业机械化的关系，农业的社会改革和"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 33,
+      "to_pdf_page": 34,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "集体劳动的习惯，发展生产，起了积极的作用。但是，互助组并没有触动生产资料私有制。",
+      "continuation_head": "互助组规模狭小，又实行分散经营，不利于因地种植和实行比较合理的分工分业，不能有效"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 34,
+      "to_pdf_page": 35,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "出出来了。高级社社小力薄，不利于兴办大规模的农田水利基本建设；高级社社小，积累的",
+      "continuation_head": "资金少，买不起大型机械化农具，即使买得起，由于土地少，也不能充分发挥它的作用。这"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 35,
+      "to_pdf_page": 36,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "。两种社会主义公有制代替了私有制，这是我国生产资料所有制方面一个翻天覆地的革命变",
+      "continuation_head": "化。它表明，我国无产阶级和劳动人民已经基本上挣脱了私有制的锁链，我国社会主义的经"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 36,
+      "to_pdf_page": 37,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "有制和集体所有制这样两种形式，是同我国目前生产力的发展水平相适应的。全民所有制同",
+      "continuation_head": "集体所有制相比，是一种公有化程度较高的社会主义所有制形式。它的生产资料不是属于社"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 37,
+      "to_pdf_page": 38,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "是集体所有的。全国的粮食和各种经济作物百分之九十以上是集体经济生产的。除了农业方",
+      "continuation_head": "面的集体所有制以外，在工业和商业方面也有少量的集体所有制经济存在。社会主义劳动群"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 39,
+      "to_pdf_page": 40,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "零售总额百分之零点二的个体商贩。此外，在农村中还有相当数量的集市贸易，这是建立在",
+      "continuation_head": "个体所有制基础上的一种商品流通。我国工、农、商业中部分私有制的存在，说明表现为私"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 40,
+      "to_pdf_page": 41,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "是肥源丰富，可以弄到工业废水、废渣作肥料，或者只要出几个劳动力，就能搞到工厂、里",
+      "continuation_head": "弄的人粪。二是运输方便，靠近市区的生产队，无论运垃圾、送蔬菜、踏泔脚，用工比远郊"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 41,
+      "to_pdf_page": 42,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "换的关系，工农业产品价格之间的“剪刀差”虽然比旧社会有很大的缩小，但还难以完全取",
+      "continuation_head": "消，因此，在社会主义所有制范围内，资产阶级法权的存在，不仅表现在各个集体所有制经"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 42,
+      "to_pdf_page": 43,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "明，社会主义全民所有制和将来的共产主义全民所有制有所不同，它还保留着某些旧社会的",
+      "continuation_head": "传统或痕迹，保留着反映这些传统或痕迹的资产阶级法权。"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 43,
+      "to_pdf_page": 44,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "主义公有制则必然要废除私人对企业的领导权，而由整个社会来领导，用以满足社会全体成",
+      "continuation_head": "员的需要。社会主义公有制是全社会的劳动群众或一部分劳动群众共同占有生产资料的一种"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 44,
+      "to_pdf_page": 45,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，但是企业的领导权实际上已落到资产阶级手里，所有制实际上也不同程度地蜕化变质了。",
+      "continuation_head": "所以，任何社会主义企业，都有领导权名义上和实际上掌握在哪一个阶级手里的问题。毛主"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 45,
+      "to_pdf_page": 46,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "营活动中，如果不是坚持无产阶级政治挂帅，而是搞什么“利润挂帅”，那就是在根本上离",
+      "continuation_head": "开了社会主义的方向，改变了社会主义生产的目的，而滑到资本主义邪路上去了，发展下去"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 46,
+      "to_pdf_page": 47,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "一长”，被“一长”当作单纯的劳动力在生产过程中使用，就丧失了根本的权利，最终必然",
+      "continuation_head": "受到资产阶级“一长”的剥削和压迫。恩格斯指出：“个人管理工业的必然后果就是私有制"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 47,
+      "to_pdf_page": 48,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "地主、资本家的生产资料虽然被剥夺了，在政治上被打倒",
+      "continuation_head": "了，但决不意味着这些剥削阶级就被消灭了，这些人还在，这个阶级还在。埋藏在联共（布"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 48,
+      "to_pdf_page": 49,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "资产阶级法权表现在哪些方面呢？首先，在苏联的工业、农业、商业中都还存在着部分私有",
+      "continuation_head": "制。"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 49,
+      "to_pdf_page": 50,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "以后，全民所有制经济和集体所有制经济虽然在苏联国民经济各个部门已占优势，但是在工",
+      "continuation_head": "业、农业和商业部门，都还存在着部分私有制。在农业中，全民所有制占的比重还很小，而"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 50,
+      "to_pdf_page": 51,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "、勃列日涅夫叛徒集团篡夺苏联党政大权以前，在苏联，不但老的资产阶级仍然存在，而且",
+      "continuation_head": "新的资产阶级已经一批又一批地产生。当资产阶级在经济上的力量发展到一定程度时，它的"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 51,
+      "to_pdf_page": 52,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "金利用情况”规定为计划和考核企业、建设单位的重要指标。一九六一年，在苏修二十二大",
+      "continuation_head": "上，又进一步提出“应当提高利润和赢利的意义”，把它作为党的“纲领性要求”。一九六"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 52,
+      "to_pdf_page": 53,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "“利别尔曼建议”一出笼，一九六二年十月，苏修国家计",
+      "continuation_head": "划委员会国民经济计划局就决定在乌克兰和列宁格勒进行试验。莫斯科市国民经济委员会的"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 53,
+      "to_pdf_page": 54,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的经济基础就是垄断。”①资本主义国家的垄断资本，是在自由竞争过程中，经过长时期的",
+      "continuation_head": "大鱼吃小鱼，资本集中和资本积聚的产物。社会主义国家如果出现资本主义全面复辟，由于"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 54,
+      "to_pdf_page": 55,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "全民所有制蜕变为官僚垄断资产阶级所有制的同时，也改变了社会主义集体所有制的性质。",
+      "continuation_head": "“集体农庄”的名称虽然未变，但是，它的实质同全民所有制企业一样，也已改变了。"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 55,
+      "to_pdf_page": 56,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的统治，一面鼓吹要通过“扩展商品货币关系”，彻底实行“个人物质刺激”原则，使“国",
+      "continuation_head": "家和集体农庄建立在这样的经济关系的基础上”；另一面又进行不断“调整”和“改组”，"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 56,
+      "to_pdf_page": 57,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "百万人的17.7%，1965年，这个比例上升到20%（二千五百万人），西伯利亚则",
+      "continuation_head": "高达26%。"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 57,
+      "to_pdf_page": 58,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "据苏修报刊透露，在实行勃列日涅夫的“新经济体制”以后，苏联",
+      "continuation_head": "国营企业中车工的月计件工资，低的五十至六十卢布，中等的七十至八十卢布。而那些经理"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 58,
+      "to_pdf_page": 59,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "此外，农庄主席及其“智囊团”还利用“奖金”、“补贴”等名目进行剥削。乌克兰日米尔",
+      "continuation_head": "州农庄的主席，仅以所谓“行政管理费”的名目，就掠夺农庄全部劳动报酬基金的15%到"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 59,
+      "to_pdf_page": 60,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "篡夺的可能性，因此，那种认为社会主义公有制一旦建立就一劳永逸地把谁胜谁负的问题彻",
+      "continuation_head": "底解决了的观点，是极其错误的，是同社会主义所有制的客观实际不相符合的。实际上，社"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 60,
+      "to_pdf_page": 61,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "行的按劳分配，通行的也还是商品交换的原则，即一定量的劳动同一定量的劳动相交换。这",
+      "continuation_head": "种资产阶级法权的存在，是夏洛克式的人物产生的重要根源。总之，社会主义全民所有制方"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 61,
+      "to_pdf_page": 62,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "力量的工人阶级来说，当然是不能容忍的。他们在建立全民所有制以后，没有停止，要求继",
+      "continuation_head": "续革命，不喜欢资产阶级法权压他们，要求在无产阶级专政下对资产阶级法权加以限制。毛"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 63,
+      "to_pdf_page": 64,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "在现阶段农村人民公社的三级集体所有制中，公社一级和",
+      "continuation_head": "大队一级的集体所有制是部分的，生产队一级的集体所有制是基本的。生产队是人民公社的"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 64,
+      "to_pdf_page": 65,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，不同类型的农业机械，可以分别由生产队、生产大队和公社所有，在不同的范围内充分发",
+      "continuation_head": "挥它们的作用。又如，各种林、牧、副、渔和工业等多种经营，可以按照它们规模的大小和"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 66,
+      "to_pdf_page": 67,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "型和中型的农机具等基本生产资料和其他集体财产，都将归大队所有，由大队统一支配；生",
+      "continuation_head": "产大队范围内的全部劳动力，也将由大队统一调配使用。农村人民公社中，公社和大队两级"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 67,
+      "to_pdf_page": 68,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "随着农业机械化的日益发展，现在已可以看到，它同生产",
+      "continuation_head": "队基本所有制必将发生新的矛盾。从上海市郊区各县粮、棉、油、猪、菜等五种农副业生产"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 68,
+      "to_pdf_page": 69,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "生产合作社时期就存在了。在农业生产合作社发展为农村人民公社以后，有了公社和大队的",
+      "continuation_head": "统一领导，为解决这些矛盾提供了有利条件。有些矛盾，如在全公社、全大队范围内安排电"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 70,
+      "to_pdf_page": 71,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "第二，大队内部各生产队之间集体分配水平的差距已大体",
+      "continuation_head": "靠拢。事物发展的不平衡是绝对的，同一大队各生产队之间在经济发展水平上总会有参差不"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 71,
+      "to_pdf_page": 72,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "“改造小农，改造他们的整个心理和习惯，是需要经过几代的事情。”①毛主席教导我们：",
+      "continuation_head": "如果“稍微放松了对于农民的政治工作，资本主义倾向就会泛滥起来。”①。如果广大社员"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 72,
+      "to_pdf_page": 73,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，生产大队集体经济能够进一步得到巩固和发展。现在，我国各地农村人民公社绝大多数还",
+      "continuation_head": "是实行“三级所有、队为基础”的制度，但很多地方的贫下中农，正在为从生产队基本所有"
+    },
+    {
+      "section": "chapter-01",
+      "from_pdf_page": 73,
+      "to_pdf_page": 74,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "。随着社会主义革命的深入和公社一级经济的发展壮大，农村人民公社也将发生根本变化，",
+      "continuation_head": "即由社会主义集体所有制过渡到社会主义全民所有制。可以预料，人民公社将是我国由集体"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 75,
+      "to_pdf_page": 76,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "会主义公有制的建立，人们在生产中的相互关系发生了哪些变化，解决了哪些问题，还有哪",
+      "continuation_head": "些问题没有解决。为此，需要简要地回顾一下社会生产中相互关系演变的历史。"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 76,
+      "to_pdf_page": 77,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "“经济关系的无声的强制保证资本家对工人的统治。”③正是因为资本家占有着全部生产资",
+      "continuation_head": "料，逼得工人只能出卖自己的劳动力来谋求生存。在劳动力自由买卖的平等假象掩盖下，形"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 77,
+      "to_pdf_page": 78,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "他们之间的革命同志关系，有一个建立和发展的过程，并不是一下子就完善的。特别是在资",
+      "continuation_head": "产阶级法权的基础上，还会产生新的资产阶级、党内资产阶级，他们必然要破坏和腐蚀社会"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 78,
+      "to_pdf_page": 79,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "系的。马克思指出：资产阶级“不能单纯依靠经济关系的力量，还要依靠国家政权的帮助才",
+      "continuation_head": "能确保自己榨取足够多的剩余劳动的权利”①。十五世纪末叶至十九世纪上半叶英国发生的"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 79,
+      "to_pdf_page": 80,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "表现得更加明显。社会主义的相互关系，既由社会主义公有制决定，又必须在社会主义上层",
+      "continuation_head": "建筑的巨大反作用下形成和发展。如果认为随着社会主义公有制的建立，社会主义的相互关"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 80,
+      "to_pdf_page": 81,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "正主义路线影响，对群众耍“三风”、“五气”②，以不平等态度对待群众，不到车间小组",
+      "continuation_head": "搞三同，拜老师学一门至几门手艺，把自己同群众的关系搞成了“猫鼠”关系，同工人阶级"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 81,
+      "to_pdf_page": 82,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "平授意炮制的《关于科技工作的几个问题》（简称《汇报提纲》），是一个在上层建筑领域",
+      "continuation_head": "实行资产阶级专政的黑纲领，它反对知识分子和工人农民划等号，竭力扩大脑力劳动和体力"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 82,
+      "to_pdf_page": 83,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的最巨大的变化。摆脱了剥削的劳动者，为了社会的共同利益相互结合起来，运用公有的生",
+      "continuation_head": "产资料，分工协作地进行社会化的大生产。就这一方面来看，无论是同工业和农业两大物质"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 83,
+      "to_pdf_page": 84,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "企业中劳动者之间的相互关系来看，主要有三个方面，即：领导和群众之间的相互关系，管",
+      "continuation_head": "理人员，技术人员（脑力劳动者）和直接生产者（体力劳动者）之间的相互关系，以及工人"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 84,
+      "to_pdf_page": 85,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，没有根本的利害冲突。他们共同管理社会主义企业，为了一个共同的革命目标而劳动和工",
+      "continuation_head": "作。"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 85,
+      "to_pdf_page": 86,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，充实了企业的技术队伍。因此，在社会主义条件下，工农劳动人民同广大知识分子的根本",
+      "continuation_head": "利益基本上是一致的。"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 86,
+      "to_pdf_page": 87,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "和群众之间，管理人员、技术人员和工人、农民之间的关系，是在根本利益一致基础上日益",
+      "continuation_head": "发展着的同志关系，但是，这决不是说他们之间是没有矛盾的，更不是说他们之间会出现“"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 87,
+      "to_pdf_page": 88,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "加体力劳动不多；脑力劳动者和体力劳动者在生活富裕程度和文化技术水平方面一般地说还",
+      "continuation_head": "有差距，等等。这种差别，是企业内部相互关系方面资产阶级法权严重存在的一个重要标志"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 88,
+      "to_pdf_page": 89,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "社会主义的是，由此而形成社会主义相互关系的矛盾运动。这个矛盾运动，也就是相互关系",
+      "continuation_head": "方面生长着的共产主义因素和严重存在着的资产阶级法权彼此斗争的过程；反映到阶级关系"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 90,
+      "to_pdf_page": 91,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "唯一的经济基础的时候，“全国各个阶级的相互关系都在起变化”②。地主阶级和官僚资产",
+      "continuation_head": "阶级早已被打倒了，他们的生产资料也早已被剥夺了，他们在社会生产中已处于被统治和被"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 91,
+      "to_pdf_page": 92,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "从赫鲁晓夫、勃列日涅夫到刘少奇、林彪、邓小平一类修",
+      "continuation_head": "正主义者，都散布一种论调，说是当社会主义公有制成为国家唯一的经济基础以后，一切剥"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 92,
+      "to_pdf_page": 93,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "在资产阶级法权这块土壤上不断地从一部分工人、农民、国家机关工作人员和党员中产生，",
+      "continuation_head": "以致在执政的共产党内产生资产阶级，产生走资本主义道路的当权派。"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 93,
+      "to_pdf_page": 94,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "关系中。正如毛主席指出的那样：“民主革命后，工人、贫下中农没有停止，他们要革命。",
+      "continuation_head": "而一部分党员却不想前进了，有些人后退了，反对革命了。为什么呢？作了大官了，要保护"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 94,
+      "to_pdf_page": 95,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "产阶级先锋队中产生的吗？新的资产阶级在劳动人民中产生，有一个过程。在这个过程中，",
+      "continuation_head": "广大劳动人民同正在产生的新的资产阶级分子的关系，就是阶级关系。要理解和认识这种关"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 96,
+      "to_pdf_page": 97,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "在旧中国，这一方面的史实真是成千成万。仅以南洋兄弟烟草公司",
+      "continuation_head": "为例，这个公司的资本家和工人的相互关系是这样建立起来的资本家除了依靠经理、厂长、"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 97,
+      "to_pdf_page": 98,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "整，对于巩固和完善社会主义所有制和社会主义分配关系，从而推动整个社会生产的发展，",
+      "continuation_head": "都具有很大的意义。"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 98,
+      "to_pdf_page": 99,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "充分调动各经济部门的力量，有利于充分利用和挖掘经济潜力，推动整个社会生产力的迅猛",
+      "continuation_head": "发展。我国社会主义建设中的无数事例证明，不解决相互关系问题，要大跃进是不可能的。"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 99,
+      "to_pdf_page": 100,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "权，进行了不懈的斗争。列宁盛赞工人首创的“共产主义星期六义务劳动”，并以一个普通",
+      "continuation_head": "劳动者的姿态，参加“共产主义星期六义务劳动”，为限制相互关系方面的资产阶级法权作"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 100,
+      "to_pdf_page": 101,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "说法，都是资产阶级法权思想的表现。资产阶级法权思想，是资产阶级法权在观念形态上的",
+      "continuation_head": "反映，是为维护资产阶级法权服务的。因此，破除资产阶级法权思想，也是对资产阶级法权"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 102,
+      "to_pdf_page": 103,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "况不了解，现在跟班全明了。过去问题有得拖，现在立刻解决好。过去只作大报告，现在车",
+      "continuation_head": "间把心交。过去叫她小官僚，现在当作姊妹淘。”从这里可以看出，干部参加了集体生产劳"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 103,
+      "to_pdf_page": 104,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "或集中营”；不服从调动的命令，就“将作为逃兵受到处分”。托洛茨基甚至还公然鼓吹要",
+      "continuation_head": "对工人实行“强迫劳动”。我国无产阶级文化大革命前，由于修正主义路线的干扰，不少企"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 104,
+      "to_pdf_page": 105,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "这是社会主义规章制度区别于资本主义规章制度的最根本",
+      "continuation_head": "的特点。如果制订制度的指导思想是“群众落后论”，着眼点是用制度来压制工人，那末，"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 105,
+      "to_pdf_page": 106,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "检查制度，“秒表滴答，心跳一百”，工人们对这项制度痛恨极了。文化大革命中，广大工",
+      "continuation_head": "人奋起冲击了不合理的规章制度。在斗、批、改的过程中，在批判修正主义路线、总结经验"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 106,
+      "to_pdf_page": 107,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "危害，开展了群众性的“一专多能”活动，大大超出了岗位责任制所规定的范围。全厂八百",
+      "continuation_head": "多工人中，已有百分之五十五的工人除掌握本工种技术外，还会两三种其他工种的技术。操"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 107,
+      "to_pdf_page": 108,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，因而资本主义相互关系复辟的可能性也是存在的。如果党和国家以及企业的领导权被走资",
+      "continuation_head": "本主义道路的当权派所篡夺，推行了修正主义路线，社会主义相互关系方面的资产阶级法权"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 108,
+      "to_pdf_page": 109,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "行修正主义的“一长制”。按照他们的“一长制”，厂长是企业的全权领导者，工人只有服",
+      "continuation_head": "从厂长命令的义务，根本无权过问企业怎样管理的问题。赫鲁晓夫公开宣称在企业管理方面"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 109,
+      "to_pdf_page": 110,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "嚷要“在一切经济领域中大力发展商品货币关系”，并且打着“改革”的旗号，拼命扩大货",
+      "continuation_head": "币交换的活动范围和价格的刺激作用，使资本主义的金钱关系、买卖关系和竞争关系泛滥，"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 110,
+      "to_pdf_page": 111,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "资本出钱养大的一样。过剩的工人人口不受人口实际增长的限制，为不断变化的资本增殖需",
+      "continuation_head": "要创造出随时可供剥削的人身材料。”①苏联的所谓“劳动力流动”，就是资本主义社会的"
+    },
+    {
+      "section": "chapter-02",
+      "from_pdf_page": 111,
+      "to_pdf_page": 112,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "。他命令工长监视工人：“盯住他们，扼他们的喉咙”；谁要不听话就“扣掉一半奖金”，",
+      "continuation_head": "“用卢布打他们”。正如这个剧本中大企业的经理供认的，“不应该肤浅地解释‘外来人’"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 115,
+      "to_pdf_page": 116,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "人生产，劳动和产品也直接表现为私人劳动和私人产品。当这些私人产品不是为生产者本人",
+      "continuation_head": "的消费而生产，而是为交换而生产的时候，产品就转化为商品。商品和生产商品的劳动，一"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 116,
+      "to_pdf_page": 117,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "它们所生产的产品，特别是由国家计划直接规定其产量的那些同国计民生关系重大的产品，",
+      "continuation_head": "一开始就表明它们是对社会有用的。这样，产品和生产这些产品的劳动已开始不同程度地具"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 117,
+      "to_pdf_page": 118,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，社会主义公有制代替了私有制，但是还存在着两种社会主义公有制，即全民所有制和集体",
+      "continuation_head": "所有制。这就是说，生产资料还有不同的所有者，人们在生产资料占有关系上的资产阶级法"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 118,
+      "to_pdf_page": 119,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的时侯，如果取消了国营企业在生产、经营上的相对独立性那就不利于它们各自独立地向社",
+      "continuation_head": "会负责，不利于更好地调动它们在生产、经营上的责任心和积极性，从而也就不利于社会生"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 119,
+      "to_pdf_page": 120,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的全部生产资料已经归整个社会所有。国际共产主义运动的实践证明，在社会主义社会的一",
+      "continuation_head": "个相当长的时期内，还不能可做到全部生产资料归整个社会所有，而且社会主义全民所有制"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 120,
+      "to_pdf_page": 121,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "是所有制变更了。”②在所有制变更了的条件下，商品不再当作资本的产品来交换，而是当",
+      "continuation_head": "作国家和集体的产品来进行交换了。它的特点是：第一，它主要体现工农两大劳动阶级之间"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 121,
+      "to_pdf_page": 122,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "有的则低于价值，这样就会进一步使不同商品的生产者耗费等量劳动而获得不等量的收入。",
+      "continuation_head": "以上这些情况表明，只要产品作为商品，社会生产采取商品生产的形式，那末，商品生产所"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 122,
+      "to_pdf_page": 123,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "向个人发财致富和资本主义因素的产生”，“不可能变为资本主义生产”。他们这样说，无",
+      "continuation_head": "非是为了麻痹和欺骗苏联人民，从而放手地扩大商品货币关系，掩盖资本主义全面复辟的事"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 124,
+      "to_pdf_page": 125,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的监督下劳动，劳动产品属于资本家所有。这就是说，资本主义制度下的劳动是雇佣劳动，",
+      "continuation_head": "是奴役劳动，是为剥削者做苦工。"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 125,
+      "to_pdf_page": 126,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "阶级和劳动人民已经基本上挣脱了私有制的锁链，摆脱了剥削，但是劳动还没有在全体劳动",
+      "continuation_head": "者中间成为生活的第一需要，劳动者的一部分劳动还是为自己和他的家庭进行的。劳动性质"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 126,
+      "to_pdf_page": 127,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "价值形成过程叫做价值增殖过桯。价值增殖过程这个范畴，反映了资本和雇佣劳动之间的统",
+      "continuation_head": "治和被统治、剥削和被剥削的关系。"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 127,
+      "to_pdf_page": 128,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "需的那些生活资料的价值。其余的部分，即剩余价值那一部分，不但被资本家无偿占有，而",
+      "continuation_head": "且又反过来成为加强对工人剥削的手段。在社会主义制度下，生产者的一部分劳动所创造的"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 128,
+      "to_pdf_page": 129,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "主义生产中最本质的关系。马克思指出：“资本的目的不是满足需要，而是生产利润”①；",
+      "continuation_head": "“资本及其自行增殖，表现为生产的起点和终点，表现为生产的动动机和目的”①。"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 130,
+      "to_pdf_page": 131,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "全，国内外反动派和剥削阶级就会卷土重来，那时，无产阶级和劳动人民就谈不上改善物质",
+      "continuation_head": "文化生活，就不免要吃二遍苦，受二茬罪。"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 132,
+      "to_pdf_page": 133,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "益的。但是利润毕竟是同价值相联系的范畴。当各类产品的价值转化为计划价格时，计划价",
+      "continuation_head": "格常常和价值相背离，而且，不同产品的计划价格同价值背离的情况又往往不一样。因此，"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 133,
+      "to_pdf_page": 134,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "命歪曲社会主义生产的目的，大肆宣扬什么“一切为了人，为了人的幸福”。现代修正主义",
+      "continuation_head": "者如此起劲地用资产阶级的福利主义偷换社会主义生产目的，就是为了用吃得好、穿得好、"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 135,
+      "to_pdf_page": 136,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "引起，但是，生产力的一定发展，又是由一定的生产关系推动的。特别是生产力的大发展，",
+      "continuation_head": "总是在生产关系的大变革以后，这是不可否认的历史事实。"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 136,
+      "to_pdf_page": 137,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "白猫、黑猫’啊，不管是帝国主义还是马克思主义。”①邓小平授意炮制的《论全党全国各",
+      "continuation_head": "项工作的总纲》，大肆兜售“三项指示为纲”的修正主义纲领，鼓吹“唯生产力论”和“阶"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 137,
+      "to_pdf_page": 138,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "“无产阶级及其政党在过渡时期整个英勇顽强斗争的内",
+      "continuation_head": "容”，是解决“先进的社会主义生产关系和相对落后的生产力之间的矛盾”，今后主要任务"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 138,
+      "to_pdf_page": 139,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "应的那部分生产关系；而调整或变革生产关系，也就是增强和发展生产关系中的共产主义因",
+      "continuation_head": "素，限制生产关系中的资产阶级法权，因而也就是调整或变革阶级关系，即经过一系列步骤"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 139,
+      "to_pdf_page": 140,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "他们在社会主义革命和建设中当家作主的积极性，才能促进生产力的更大发展。这已为国际",
+      "continuation_head": "共产主义运动的历史所证明，也为我国二十多年来社会主义革命和社会主义建设的历史所证"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 140,
+      "to_pdf_page": 141,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "4年三年的生产总和，还抵不上1960年一年的水平，生产的大好形势遭到了严重破坏，",
+      "continuation_head": "出现了第二次低潮。无产阶级文化大苹命中，工人群众从修正主义路线的压制下又冲杀了出"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 141,
+      "to_pdf_page": 142,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "妄图达到否定无产阶级政治统帅经济的反动目的。这种论调是“阶级斗争熄灭论”的基础，",
+      "continuation_head": "是为资产阶级政治效劳的一种谬论。我们要同这种论调划清界限，坚定不移地贯彻执行毛主"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 142,
+      "to_pdf_page": 143,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "会，生产什么，生产多少，生产怎样布局，都要服从这一规律的要求。社会主义国家在制订",
+      "continuation_head": "计划时，就是根据社会主义基本经济规律的要求，来安排生产的品种、数量和生产的布局，"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 143,
+      "to_pdf_page": 144,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "总之，社会主义基本经济规律体现着社会主义生产、交换、",
+      "continuation_head": "分配和消费之间最本质的联系，决定着社会主义经济发展的根本方向。正确地认识和运用社"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 144,
+      "to_pdf_page": 145,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "所以，社会主义生产的高速度发展不仅是一种愿望，而且",
+      "continuation_head": "是社会主义生产关系建立以后的一种必然趋势，是社会主义制度优越性的一种表现。"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 146,
+      "to_pdf_page": 147,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "育和保健事业以及支援世界革命的规模就会相应扩大，劳动群众的消费水平也会逐步提高，",
+      "continuation_head": "永远不会有资本主义条件下那种生产过剩的经济危机。"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 147,
+      "to_pdf_page": 148,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "且在这条基本路线指引下，又为我党制定了“鼓足干劲，力争上游，多快好省地建设社会主",
+      "continuation_head": "义”的总路线。建设社会主义的总路线是以阶级斗争为纲，充分发挥人的主观能动性，充分"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 148,
+      "to_pdf_page": 149,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "动群众创造历史的真理。毛主席极其概括地指出：“人民，只有人民，才是创造世界历史的",
+      "continuation_head": "动力。”①“往往是下级水平高于上级，群众高于领导，领导不及普通劳动者，因为他们脱"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 149,
+      "to_pdf_page": 150,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "理和调整人们在生产中的相互关系，充分调动广大人民群众建设社会主义的积极性。这是多",
+      "continuation_head": "快好省地建设社会主义的首要条件。"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 152,
+      "to_pdf_page": 153,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "油”，元钉称为“洋钉”，机织布称为“洋布”，销售日用工业品的商店称做“洋货店”。",
+      "continuation_head": "中华人民共和国成立以来，我们独立自主、自力更生地发展了社会主义国民经济。我国农业"
+    },
+    {
+      "section": "chapter-03",
+      "from_pdf_page": 153,
+      "to_pdf_page": 154,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "资本主义社会，即使就资本主义生产发展速度比较快的十",
+      "continuation_head": "九世纪后半期来说，也从来没有达到过象社会主义生产发展的这种高速度；在进入垄断资本"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 159,
+      "to_pdf_page": 160,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "划按比倒地进行的，似乎没有任何矛盾。有的教科书还说，在社会主义公有制条件下，决不",
+      "continuation_head": "会出现社会劳动分配的“自发性和自流性”的现象。在这些教科书的作者们看来，在社会主"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 160,
+      "to_pdf_page": 161,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，但是还会出现社会劳动的实际投放同客观要求的比例关系不相符合，以致有些商品供不应",
+      "continuation_head": "求，购买者千方百计，东奔西走，还不能买到，另一些商品则供过于求，形成积压，甚至不"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 161,
+      "to_pdf_page": 162,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "预见到：“在托拉斯中，自由竞争转为垄断，而资本主义社会的无计划生产向行将到来的社",
+      "continuation_head": "会主义社会的计划生产投降。”①随着垄断组织发展，也出现了某些计划调节的趋向。列宁"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 162,
+      "to_pdf_page": 163,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "就是“社会主义经济”，资本帝国主义经济则是“有组织的资本主义”和“有计划的资本主",
+      "continuation_head": "义”的经济，从而否定无产阶级为推翻垄断资本主义制度而进行的社会主义革命。其实，这"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 163,
+      "to_pdf_page": 164,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的计划，因而必然乞灵于利润挂帅（即借助价值规律）来调节经济生活，这就在本质上同资",
+      "continuation_head": "本帝国主义经济一样了。为了争夺利润和奖金，苏联官僚垄断资产阶级各个集团之间展开了"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 164,
+      "to_pdf_page": 165,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "阶级的一切发言权，进一步强化对广大群众的剥削。”美国一九七四年十月出版的《红色文",
+      "continuation_head": "件》第七期发表了《资本主义是怎样在苏联复辟的》长篇论文，指出：“今日的苏联经济的"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 165,
+      "to_pdf_page": 166,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "识了的本性来对待这种生产力的时候，社会的生产无政府状态就让位于按照全社会和每个成",
+      "continuation_head": "员的需要对生产进行的社会的有计划的调节。”①"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 166,
+      "to_pdf_page": 167,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "指出：“人类的发展有了几十万年，在中国这个地方，直到现在方才取得了按照计划发展自",
+      "continuation_head": "己的经济和文化的条件。自从取得了这个条件，我国的面目就将一年一年地起变化。每一个"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 167,
+      "to_pdf_page": 168,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "农业和工业之间的比例在国民经济中占有极其重要的地",
+      "continuation_head": "位。农业生产和工业生产是互为条件的。工业部门的职工需要农业提供粮食和各种副食品，"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 168,
+      "to_pdf_page": 169,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "决定的地位，要处理好农业内部的关系，任何时候都必须首先抓好粮食生产。但是，粮食生",
+      "continuation_head": "产是不能孤立地发展的。在农业生产中，农业、林业、畜牧业之间存在着密切的相互依赖的"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 169,
+      "to_pdf_page": 170,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，客观上存在着相互依存、相互促进的关系。粮食生产的发展是发展多种经营的前提条件，",
+      "continuation_head": "多种经营的发展又能在肥料、资金等方面促进粮食生产的进一步发展。以粮为纲、全面发展"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 170,
+      "to_pdf_page": 171,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "料工业。俗话说：“巧妇难为无米之炊。”加工工业如果得不到充足的原料供应，设备就不",
+      "continuation_head": "能得到充分的利用。因此，对于立足于独立自主、自力更生的社会主义国家来说，发展原料"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 171,
+      "to_pdf_page": 172,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "合，其罪恶目的就在于破坏社会主义国民经济，为他们阴谋发动反革命政变服务。我们只有",
+      "continuation_head": "按照毛主席关于经济建设和国防建设的关系的理论，在加速经济建设的基础上来发展国防建"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 172,
+      "to_pdf_page": 173,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "落后于工业生产的发展，工农业生产所需要的生产资料不能及时运到，产品不能及时运出，",
+      "continuation_head": "那就会极大地妨碍工农业生产的发展。"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 174,
+      "to_pdf_page": 175,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "地位以后，才开始有可能象对物的生产进行有计划的调节那样，也对人的生产进行有计划的",
+      "continuation_head": "调节。恩格斯说：“如果说共产主义社会在将来某个时候不得不象已经对物的生产进行调整"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 175,
+      "to_pdf_page": 176,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "业，不论是开工厂、办农场筑铁路等等，都只服从于追逐最大限度利润的需要，不可能有通",
+      "continuation_head": "盘的考虑和安排。资本主义社会自发形成的生产力布局，包含着许多不合理的因素：工业生"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 176,
+      "to_pdf_page": 177,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "可以大大减少远途运输上所耗费的人力和物力，保证多快好省地发展社会主义生产。当然，",
+      "continuation_head": "工业应接近原料产地和销售地区的原则，并不是绝对的。在其他有利因素足以抵销远距离运"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 177,
+      "to_pdf_page": 178,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "就要有计划、有步骤地加强边疆和少数民族地区的工业建设，促使各民族在经济和文化发展",
+      "continuation_head": "水平上的差距逐步缩小。"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 178,
+      "to_pdf_page": 179,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "原来那种不合理的状况，需要大力发展内地工业，要把绝大部分新工厂建在内地，沿海的原",
+      "continuation_head": "有工业基地要通过迁厂、包建、支援人力、物力等各种途径支援内地工业的发展，使全国工"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 179,
+      "to_pdf_page": 180,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "”，是旧中国遗留下来的不合理的生产力布局的一个沉重包袱。我国铁路运载量的相当大一",
+      "continuation_head": "部分，就是被耗费在这上头的。解放以来，特别是无产阶级文化大革命以来，粉碎了刘少奇"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 180,
+      "to_pdf_page": 181,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "现在人们的面前，发展到具有充分的意义。同时，社会主义社会还存在着未克服的遗物，例",
+      "continuation_head": "如价值规律在按一定比例分配社会劳动过程中还有影响。要懂得社会主义生产过程中社会劳"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 181,
+      "to_pdf_page": 182,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "地上下波动，有时高于生产价格，有时又低于生产价格。商品价格的这种自发波动，支配着",
+      "continuation_head": "人们盲目地扩大或缩小生产。当价格高于生产价格时，利润大于平均利润，资本家眼见有大"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 182,
+      "to_pdf_page": 183,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "下，价值规律作用的一个重要表现是计划价格。社会主义条件下的商品价格，不是在自由市",
+      "continuation_head": "场上随着供求关系变化而自发地涨跌的，而是由国家计划规定的。从这一方面来看，计划价"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 183,
+      "to_pdf_page": 184,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "产的粮、棉、油等重要农产品的播种面积和交售任务，都是由国家计划规定的。其他很多农",
+      "continuation_head": "副产品的生产，国家虽然不直接下达计划任务，但也通过商业部门同社、队签订采购合同的"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 185,
+      "to_pdf_page": 186,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "魂又是利润挂帅，即让价值规律全面调节社会生产。邓小平在他授意炮制的所谓加快工业发",
+      "continuation_head": "展的《条例》中，就是在否定社会主义生产目的的前提下，大谈其“必须加强国家的统一计"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 186,
+      "to_pdf_page": 187,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，又由于商品制度的存在，价值规律仍然存在，还要在分配社会劳动过程中发生一定影响，",
+      "continuation_head": "因而又不同于共产主义社会。马克思曾经指出：“只有当社会生活过程即物质生产过程的形"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 188,
+      "to_pdf_page": 189,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "公社党委的路线斗争觉悟有了很大的提高，他们在蔬菜种植方面：（1）不断批判资本主义",
+      "continuation_head": "自发倾向，正确处理“线”和“钱”的矛盾：（2）正确处理生产季节性和上市均衡性的矛"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 189,
+      "to_pdf_page": 190,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "律在分配社会劳动的运动过程中发生的矛盾，就必然表现为无产阶级和资产阶级、社会主义",
+      "continuation_head": "道路和资本主义道路、马克思主义路线和修正主义路线之间的斗争。苏修叛徒集团说什么："
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 190,
+      "to_pdf_page": 191,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "阶级、两条路线的激烈斗争。经济领域的马克思主义路线和修正主义路线的斗争，都要在制",
+      "continuation_head": "订计划的过程中反映出来：是政治挂帅还是利润挂帅，是农、轻、重还是重、轻、农，是大"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 191,
+      "to_pdf_page": 192,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "主义的计划工作除了受到党内外资产阶级的破坏和干扰以外，人们对于客观规律也有一个认",
+      "continuation_head": "识过程。国民经济中错综复杂的比例关系，要一下子统统认识清楚，那是难以办到的。但是"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 192,
+      "to_pdf_page": 193,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "重的比例失调，造成人力、物力、财力的巨大浪费；而在以公有制为基础的社会主义社会，",
+      "continuation_head": "可以通过人们的自觉活动，通过觉和国家的计划调节，不断地克服不平衡，建立相对的平衡"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 194,
+      "to_pdf_page": 195,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "民生活的需要都得到更好的满足。刘少奇、邓小平一伙对抗毛主席的无产阶级革命路线，有",
+      "continuation_head": "时提出什么“短线平衡”等等名目，大搞削高就低的消极平衡；有时又不顾原材料的缺口，"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 195,
+      "to_pdf_page": 196,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "劳动力平衡、物资平衡和资金平衡。由于人是生产力中最重要的因素，在上述三种平衡中，",
+      "continuation_head": "首先必需安排好劳动力的平衡。而在安排劳动力的平衡中，根据农业是国民经济的基础的原"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 196,
+      "to_pdf_page": 197,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "反对分散主义，而听任各个地方各自为政，那就不可能有统一的国民经济计划。但是，社会",
+      "continuation_head": "主义的集中领导是建立在广泛的民主基础上的。中央的集中领导同发挥地方积极性是互为条"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 197,
+      "to_pdf_page": 198,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "个积极性好得多”，“在中央的统一计划下，让地方办更多的事”。③但是，党内资产阶级",
+      "continuation_head": "一贯反对毛主席的这条革命路线，一贯在经济管理体制上大搞“条条专政”。无产阶级文化"
+    },
+    {
+      "section": "chapter-04",
+      "from_pdf_page": 199,
+      "to_pdf_page": 200,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "根据地胡思乱想，不可以超越客观情况所许可的条件去计划自己的行动，不要勉强地去做那",
+      "continuation_head": "些实在做不到的事情。”①经过努力本来可以做到的事情，认为做不到，不去办，叫右倾保"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 205,
+      "to_pdf_page": 206,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "如果没有从事物质生活资料生产的劳动，其他一切劳动或活动都是谈不上的。马克思指出：",
+      "continuation_head": "“一切劳动首先而且最初是以占有和生产食物为目的的”。①农业劳动正是从事生活资料生"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 206,
+      "to_pdf_page": 207,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "供其他必要生活资料的农业劳动上，那末，只剩下一亿劳动力可以干别的事。再假设，农业",
+      "continuation_head": "劳动生产率提高了，在同样的四亿劳动力中只需要一亿劳动力从事农业生产，那末，就可以"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 207,
+      "to_pdf_page": 208,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "业这个基础呢？不！资本的发展不仅以本国的农业为基础，在一定条件下，也以外国的农业",
+      "continuation_head": "为基础。有些资本主义国家就是通过对外贸易，特别是通过剥削和掠夺殖民地、半殖民地国"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 208,
+      "to_pdf_page": 209,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "业是基础这个客观规律。社会主义经济又是独立自主、自力更生的经济，它的发展必须建立",
+      "continuation_head": "在本国农业发展的基础上，这样，农业在整个国民经济发展中的作用就更加突出了。"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 209,
+      "to_pdf_page": 210,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "社会主义农业也是向工业和其他部门提供劳动力的主要源",
+      "continuation_head": "泉。工业、交通运输业和商业的发展，需要增加劳动力。这部分劳动力，除了依靠本部门努"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 210,
+      "to_pdf_page": 211,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "足农民个人和集体自给需要的产品，另一部分是为满足全社会非农业劳动者需要而提供的商",
+      "continuation_head": "品。农业产品中的商品量越大，即农产品的商品率越高，农业为工业和国民经济其他部门所"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 211,
+      "to_pdf_page": 212,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，影响社会主义建设的步伐，从而也同样影响工农联盟的巩固。所以反映在农产品两个部分",
+      "continuation_head": "的比例问题上，就有一个正确处理国家、集体和农民个人三者之间的关系问题。"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 212,
+      "to_pdf_page": 213,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，重工业有了市场，有了资金，它就会更快地发展”④。后来，毛主席又接连提出了工业和",
+      "continuation_head": "农业同时并举，按照农、轻、重的次序安排国民经济等一系列光辉思想，并且把“以农业为"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 213,
+      "to_pdf_page": 214,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "农业是基础的规律，就要把发展农业放在首要地位，尽快地提高农业劳动生产率。在农业机",
+      "continuation_head": "械化程度不高、生产力水平较低的社会主义国家，尤其要把发展农业放在极其重要的地位。"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 215,
+      "to_pdf_page": 216,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "上海市上海县从1956年起，经过八年时间，重点解决了排灌机械",
+      "continuation_head": "化；又经过了三年时间，基本上实现了脱粒、农副产品加工和饲料加工机械化；再经过四年"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 216,
+      "to_pdf_page": 217,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "鼓吹的“中国人多地少不用机械化”，“山区不可能机械化”，“精耕细作不能机械化”等",
+      "continuation_head": "反对农业技术改造的谬论，毛主席关于农业机械化的一系列指示进一步深入人心，各有关部"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 217,
+      "to_pdf_page": 218,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "面坡”，“山高石多，出门就爬坡，地无三亩平，年年灾难多”的生产条件极差的穷山区。",
+      "continuation_head": "整个大寨大队总共只有八十三户人家，四百五十多口人，但他们在1971～1974 年"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 218,
+      "to_pdf_page": 219,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "1961年前后，刘少奇、邓小平一伙配合苏修猖狂反华，趁国内连续",
+      "continuation_head": "三年发生严重自然灾害之际，刮起了一股复辟资本主义的妖风。有人说：“在这种困难的时"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 220,
+      "to_pdf_page": 221,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "县粮食亩产达到一千五百五十四斤，比1971年增加二百七十二斤，皮棉亩产一百四十一",
+      "continuation_head": "斤，油菜籽亩产二百八十三斤，生猪饲养量七十九万头（平均每亩一点三七头），都比19"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 221,
+      "to_pdf_page": 222,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "在农业学大寨运动中，全国大寨式的县、社、队越来越多，",
+      "continuation_head": "低产变高产、高产更高产的地区大量涌现。一九七五年，我国已有了三百多个学大寨的先进"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 222,
+      "to_pdf_page": 223,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "成布，磨粉工人把小麦磨成面粉，都只是改变了物体的形态，丝毫也没有增加物体的数量。",
+      "continuation_head": "由此他们得出一个错误结论，只有农业部门的人才是“生产阶级”，而工业部门的人则是“"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 223,
+      "to_pdf_page": 224,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "工业生产的一个重要特征，就是它不仅生产消费品，而且",
+      "continuation_head": "生产机械性的劳动资料这种特殊的使用价值。正是这个特征决定了工业在国民经济中处于主"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 224,
+      "to_pdf_page": 225,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的工业。它们能够在以现代化技术改造农业、轻工业和国民经济其他部门的过程中，发挥决",
+      "continuation_head": "定性作用。"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 225,
+      "to_pdf_page": 226,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "：为工人阶级生产全部生活资料（包括为此所需的生产资料）的那部分，完成整个社会的必",
+      "continuation_head": "要劳动；工人阶级所有其余部分所完成的劳动，可以看作剩余劳动。”①马克思接着又指出"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 226,
+      "to_pdf_page": 227,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "来就是同农业劳动自然地结合在一起的。当这种家庭工业劳动从农业中分离出来成为手工业",
+      "continuation_head": "又发展成为现代轻工业以后，它便成为协助农业发挥基础作用的一种工业了。所以马克思指"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 228,
+      "to_pdf_page": 229,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的不合理布局；与此同时，工人阶级的队伍将随同发展壮大起来，以利于加强工人阶级在全",
+      "continuation_head": "国的普遍领导。社会主义工业化的发展，可以充分发挥工业的主导作用，用先进技术装备农"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 229,
+      "to_pdf_page": 230,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "自守”。邓小平的这条道路，就是清末洋务派李鸿章、张之洞之流和国民党反动派的充当帝",
+      "continuation_head": "国主义的洋奴买办的道路。在当代世界上，经济落后的国家，如果依靠帝国主义或社会帝国"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 230,
+      "to_pdf_page": 231,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "主、自力更生地实现社会主义工业化，当然要重点发展重工业。这样，才能多快好省地建设",
+      "continuation_head": "社会主义，保障国家经济独立和国防巩固，有力地同帝、修、反进行斗争。列宁指出：“不"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 231,
+      "to_pdf_page": 232,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "消费品，积累更多的资金，提供更广阔的市场。这里存在一个对重工业是真想还是假想，想",
+      "continuation_head": "得厉害还是不厉害的问题。如果是真想，想得厉害，就要坚定不移地确立以农业为基础的思"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 232,
+      "to_pdf_page": 233,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "化有了迅速的进展。过去没有的新的工业部门现在有了。过去自己不会设计和制造的许多重",
+      "continuation_head": "要的工业产品，现在能独立设计、制造了。由于新的工业部门的建立和技术力量的增强，设"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 233,
+      "to_pdf_page": 234,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "面实现农业、工业、国防和科学技术的现代化，是我国人民的一项宏伟任务，只有始终坚持",
+      "continuation_head": "以阶级斗争为纲，同资产阶级特别是党内资产阶级不断地进行斗争，批判修正主义路线，才"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 234,
+      "to_pdf_page": 235,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "的战斗口号，坚持无产阶级政治挂帅，刻苦学习毛主席的《实践论》和《矛盾论》，用马克",
+      "continuation_head": "思主义、列宁主义、毛泽东思想武装自己的头脑，高举“鞍钢宪法”的旗帜，同天斗，同地"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 235,
+      "to_pdf_page": 236,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "型单位。这个矿用老眼光来看，早就应该报废了，但是，这个矿的工人却不是这样想的。他",
+      "continuation_head": "们艰苦奋斗，探索出了进一步开采这个煤矿的新途径，使这个百年老矿恢复了青春，从19"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 236,
+      "to_pdf_page": 237,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "增长66.8%和 86，9%，钢材的品种、规格猛增到一万千八百多种，还发展了大批",
+      "continuation_head": "高、精、尖的新型金属材料。"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 237,
+      "to_pdf_page": 238,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "是直接的结合，这是未来共产主义社会中工农业直接结合的雏型。但是，社会主义工业和农",
+      "continuation_head": "业的生产还有私人性的传统或痕迹，工农业的结合仍然是在商品制度下的结合，还要通过货"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 238,
+      "to_pdf_page": 239,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "生产”②。一旦工农业之间的劳动交换采取商品交换形式，工农业的结合便成为以货币为媒",
+      "continuation_head": "介的间接的结合 ①。"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 240,
+      "to_pdf_page": 241,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "制度下实现的，这就不能排除工农业结合过程中一系列的矛盾和斗争。下面我们就来分析社",
+      "continuation_head": "会主义工农业在不同范围内结合的二重性。"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 241,
+      "to_pdf_page": 242,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "社队工业，使农业直接同工业结合起来。其次，日益发展壮大的人民公社集体经济，为发展",
+      "continuation_head": "社队工业提供了必要的劳动力、资金、原料和市场。第三，人民公社集体经济是社会主义国"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 243,
+      "to_pdf_page": 244,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "。随着社队工业的发展，广大社会主义农村，工厂星罗棋布，工农业直接结合，这就会为城",
+      "continuation_head": "乡分离和城乡差别的逐渐缩小创造条件。"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 244,
+      "to_pdf_page": 245,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "统一计划”。他们妄图以“整顿”为名，对社队工业大砍大杀。这也就从反面告诉我们，社",
+      "continuation_head": "队工业的发展好得很。"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 246,
+      "to_pdf_page": 247,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，每当国家强调国民经济发展速度的时候，每当指出我国的经济建设是以重工业为中心的时",
+      "continuation_head": "候，就有一些同志把客观规律忘掉了，口头上说的是农、轻、重，实际上却在搞重、轻、农"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 247,
+      "to_pdf_page": 248,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "合过程中，工业品和农业品价格上的“剪刀差”，是资本主义商品制度遗留下来的。它反映",
+      "continuation_head": "的是一种不等价的交换关系。在社会主义基本经济规律的作用下，这种“剪刀差”是会不断"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 248,
+      "to_pdf_page": 249,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "在社会主义工业和农业的结合过程中，无产阶级同资产阶",
+      "continuation_head": "级的斗争是很尖锐的。在社会主义社会，工农业结合要利用货币交换关系；而货币交换关系"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 249,
+      "to_pdf_page": 250,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "一个农村人口占全国人口百分之八十以上的国家，农业的状况如何，农民的情况如何，对于",
+      "continuation_head": "我国的经济发展和政权的巩固关系极大。农业问题和农民问题，从来就是我国革命和建设的"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 250,
+      "to_pdf_page": 251,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "”，叫“要卡农民的脖子”，妄图重新造成工农之间的尖锐对立，破坏工农联盟。他们还诬",
+      "continuation_head": "蔑知识青年上山下乡是“变相劳改”，反对大学生“社来社去”，煽动农民“吃光分光”。"
+    },
+    {
+      "section": "chapter-05",
+      "from_pdf_page": 251,
+      "to_pdf_page": 252,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "础上建立起一个新的称霸世界的帝国。这样做的结果现在已经很明显了：工业和农业已同资",
+      "continuation_head": "本主义社会一样重新出现了尖锐的对立。工业和农业的分离，使城乡对立也日益加剧，使包"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 253,
+      "to_pdf_page": 254,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "因此，节省时间以及在各个生产部门中有计划地分配劳动时间，就成了以集体生产为基础的",
+      "continuation_head": "首要的经济规律。这甚至是极其高级的规律。”①"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 256,
+      "to_pdf_page": 257,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "盾的。社会主义社会虽然建立了生产资料公有制，克服了建立在资本主义私有制基础上的盲",
+      "continuation_head": "目竞争所造成的社会财富的惊人浪费，但是，由于社会主义公有制企业实行的是商品制度，"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 257,
+      "to_pdf_page": 258,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "进一步节约单位产品的劳动耗费。厉行节约，可以用同样的人力、物力生产出更多的产品，",
+      "continuation_head": "为增加生产创造条件。因此，增产和节约本来是相辅相成、相互促进的。但是，如果片面地"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 258,
+      "to_pdf_page": 259,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "键，是要充分发动群众来改革不合理的产品设计，改革烦琐的工序和工艺，降低不合理的物",
+      "continuation_head": "资消耗，合理选用原材料，提高物资的综合利用程度，变废为宝等等，这样就可以在保证提"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 259,
+      "to_pdf_page": 260,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "社会主义劳动时间节约的经济规律，要求不断提高劳动生",
+      "continuation_head": "产率 ①。在社会主义生产发展的过程中，劳动者不断地创造新的更高的劳动生产率，就是"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 260,
+      "to_pdf_page": 261,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "在社会主义制度下，劳动者从工资雇佣奴隶开始变为生产",
+      "continuation_head": "的主人。不断地提高劳动熟练程度，开始成为劳动者发挥社会主义积极性的一种自觉活动。"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 261,
+      "to_pdf_page": 262,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "有阻力的。这种阻力主要来自党内资产阶级。赫鲁晓夫、勃列日涅夫和刘少奇、林彪、邓小",
+      "continuation_head": "平这些修正主义路线的头子，在劳动生产率的问题上总是大肆马克思主义，贩卖“阶级斗争"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 263,
+      "to_pdf_page": 264,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "去制瓶工人的“三件宝”：第一件是一根铁棒。一头伸进通红的熔炉，一头握在工人的手中",
+      "continuation_head": "来回捻转。每个工人每天要挑料六、七千次，许多工人的手腕扭伤了筋，不得不开刀治疗。"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 264,
+      "to_pdf_page": 265,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "扩大了九倍，每人的班产量提高十倍，挡车工劳动力可节约90%。这一切，正如工人同志",
+      "continuation_head": "所说：“革新没有顶，潜力无止境。大干加巧干，面貌日日新。”"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 265,
+      "to_pdf_page": 266,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "主义的一系列指示，是对刘少奇、林彪、邓小平推行的卖国投降路线的锐利批判，为我国技",
+      "continuation_head": "术革新指明了方向，极大地鼓舞了我国工人阶级、劳动人民和科学技术人员的积极性和创造"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 266,
+      "to_pdf_page": 267,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "使用单位的“三结合”等多种多样的形式。这些不同类型的“三结合”，是社会主义的新生",
+      "continuation_head": "事物，是人们在技术革新运动中建立起来的新型相互关系的生动体现。在技术革新运动中坚"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 267,
+      "to_pdf_page": 268,
+      "first_line_x": 50.28,
+      "font_size": 11.04,
+      "previous_tail": "，具有强大的生命力。恩格斯早就说过：“科学的发生和发展一开始就是由生产决定的”。",
+      "continuation_head": "①从生产实际出发搞出来的简易的土办法，是符合生产技术发展从低级到高级、从量变到质"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 268,
+      "to_pdf_page": 269,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "这种协作，在不同的生产关系下具有不同的社会性质和范",
+      "continuation_head": "围。"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 269,
+      "to_pdf_page": 270,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "产品的某一部分的人类劳动的生产率提高，就必须使这部分的生产专业化，使它成为一种制",
+      "continuation_head": "造大量产品因而可以（而且需要）使用机器等等的特种生产。”①企业之间组织起来的通常"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 270,
+      "to_pdf_page": 271,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "零九个月的时间，就使六个生产厂，四个辅助厂，以及为这十个厂服务的海上卸油码头、污",
+      "continuation_head": "水排放隧道、金山铁路支线、黄浦江大桥、生活区和商业、学校、医院等，神话般地从昔日"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 271,
+      "to_pdf_page": 272,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的发展过程，不能不是社会主义同资本主义的斗争过程。这是公有制同私有制的斗争在协作",
+      "continuation_head": "关系上的反映。"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 272,
+      "to_pdf_page": 273,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "首创精神，竞争也就是排斥竞赛，而代之以金融上的欺诈、专横和对社会上层分子的阿谀逢",
+      "continuation_head": "迎。”①这也就是说，资本主义竞争表现了资本主义生产的弱肉强食规律，它的原则是先进"
+    },
+    {
+      "section": "chapter-06",
+      "from_pdf_page": 274,
+      "to_pdf_page": 275,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "然反映到社会主义竞赛中来所以，在社会主义竞赛中坚持无产阶级政治挂帅是非常重要的，",
+      "continuation_head": "否则就会给社会主义革命和社会主义建设带来严重的后果 ①。党内的资产阶级代表人物总"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 281,
+      "to_pdf_page": 282,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，是和资本主义制度下的经济核算不同的，但是这种核算仍然同商品货币联系在一起，同旧",
+      "continuation_head": "社会又没有多少差别。苏修叛徒集团正是利用经济核算同旧社会没有多少差别的一面，大搞"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 282,
+      "to_pdf_page": 283,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "取更高的利润，从1950年以来，不顾工人和居民的健康和生命，采用了汞催化剂工艺。",
+      "continuation_head": "结果，使大量含有甲基汞的毒水、废渣排入水俣湾，使海水严重污染，鱼类大量中毒。水俣"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 283,
+      "to_pdf_page": 284,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的社会主义公有制，能够在整个国民经济范围内进行，这就使得人力、物力和财力有可能在",
+      "continuation_head": "全社会范围内得到充分合理的利用，从而更好地实现节约，更多地、更好地满足国家和人民"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 285,
+      "to_pdf_page": 286,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "是价值核算的指标。社会主义企业只有既在实物形态上不超过各种原材料和辅助材料的消耗",
+      "continuation_head": "定额，不低于各种主要设备的利用系数，为国家节约各种有用的物质财富，又在价值形态上"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 286,
+      "to_pdf_page": 287,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "不下达具体的品种、规格。这就会使得国营企业完成使用价值核算指标和价值核算指标的情",
+      "continuation_head": "况参差不齐，甚至很不一致，往往出现企业按照使用价值核算指标已经实现，但是按照价值"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 287,
+      "to_pdf_page": 288,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "规定了大类品种，而没有规定具体品种，并假定这些具体品种的价格也没有调整过。但是，",
+      "continuation_head": "由于各个具体品种之间的价格同价值的背离情况不同，有些价格高于价值，有些价格低于价"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 288,
+      "to_pdf_page": 289,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "帅”的支配下，企业必然违背社会主义生产目的，不顾社会劳动的合理利用，不把国计民生",
+      "continuation_head": "的需要放在第一位，而把追求产值和利润放在第位。这样，就必然冲击国家计划，造成社会"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 289,
+      "to_pdf_page": 290,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "。因为同样一辆三十二吃载重车的全套零配件，如果装配成整车（把兄弟厂制造的协作件产",
+      "continuation_head": "值计算在内），产值就要比按一件一件零配件计算大十多倍。所以，当着有些同志提出要把"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 290,
+      "to_pdf_page": 291,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "有人认为，多完成一些产值和利润，也是对社会主义国家",
+      "continuation_head": "作出的贡献，并没有揣进个人的腰包，怎么能够算错？这种看法是不对的。一个社会主义企"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 292,
+      "to_pdf_page": 293,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "始实行企业化，逐步改行经济核算制。全国解放以后，政务院立即颁发有关条例，对国营企",
+      "continuation_head": "业逐步清产核资，全面推行了经济核算制的管理。"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 293,
+      "to_pdf_page": 294,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "国家根据整个国民经济计划，拨给各个企业一定的资金，",
+      "continuation_head": "下达各项计划指标；各个企业根据国家的计划要求，妥善地运用资金，合理地组织生产，全"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 294,
+      "to_pdf_page": 295,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "划经济“简单”、“呆板”，不如资本主义经济那样“灵活”，“多样”；要社会主义企业",
+      "continuation_head": "“认真向资本家学习”，“接受资产阶级的遗产”；要党和政府不要“千预经济”，要给企"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 295,
+      "to_pdf_page": 296,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "由于社会主义企业之间存在着大量的经济联系，又由于在",
+      "continuation_head": "这种联系中各自都要进行经济核算，所以有时会发生企业之间经济利益上的矛盾。社会主义"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 296,
+      "to_pdf_page": 297,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "革命以前的八年（1958～1965年）增长了近四倍，其中异型管材增长了近十倍，有",
+      "continuation_head": "力地支援了国家建设，支援了兄弟单位的生产发展。"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 297,
+      "to_pdf_page": 298,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "务组织生产，按照国家规定的价格出售产品，用销售产品的收入来抵偿支出，并按照国家规",
+      "continuation_head": "定上缴赢利，为国家提供积累。"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 299,
+      "to_pdf_page": 300,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "职工工资以及成品销售过程中各项费用的资金。原材料在一次生产周期完成后就改变了自己",
+      "continuation_head": "的形态，它的价值也就全部转移到新产品当中去。流动资金在它的连续不断的循环中，每周"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 300,
+      "to_pdf_page": 301,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "消耗，合理选用新的更经济的原材料，开展原材料的综合利用，变废为宝，合理套裁，改进",
+      "continuation_head": "配方，釆用新工艺等，以降低单位产品的原材料耗费。"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 301,
+      "to_pdf_page": 302,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "根到底还是建筑在各个企业、各个部门的赢利基础上的。所以，暂时亏本的企业，应当努力",
+      "continuation_head": "改善经营，降低成本，力争减少亏损，转亏为盈，积极为国家提供积累。"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 303,
+      "to_pdf_page": 304,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的数目”，“扩大企业在解决生产活动间题中的经营主动性和独立自主性”（1965年苏",
+      "continuation_head": "修关于工业管理和经济刺激的决议）。企业的产品生产计划，仅有两项指标：一、销售产品"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 304,
+      "to_pdf_page": 305,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "义基本经济规律，目的是为了多快好省地发展社会主义生产，以便提供更多的使用价值来满",
+      "continuation_head": "足国家和人民不断增长的需要。价值的实现，劳动时间的节约，为国家提供积累，都是服从"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 305,
+      "to_pdf_page": 306,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "无利可图的产品（尽管这些产品对国民经济是十分需要的）的途径来增加利润。”苏修《经",
+      "continuation_head": "济报》供认：萨拉托夫搪瓷制品厂原计划在1970年生产十四万七千个容积为一点五至五"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 306,
+      "to_pdf_page": 307,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "工人，自己确定工资标准，这就可以同资本主义企业一样“节省生产费用”，通过加强对工",
+      "continuation_head": "人的剥削来实现价值增殖的目的。"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 307,
+      "to_pdf_page": 308,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "比重占 10%时，赢利率为30%，但采用新技术生产的产品比重占50%时，羸利率却",
+      "continuation_head": "降低为8~10%。这样，各企业为了追求高利润和高奖金，当然不愿意购买和使用新技术"
+    },
+    {
+      "section": "chapter-07",
+      "from_pdf_page": 308,
+      "to_pdf_page": 309,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "苏修的“完全经济核算制”，促使大大小小的官僚垄断资",
+      "continuation_head": "产阶级分子放肆地扩大和强化资产阶级法权，侵占苏联人民的劳动果实。他们还利用奖金等"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 314,
+      "to_pdf_page": 315,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "制经济内部的交换关系。它包括社会主义国营企业之间的商品交换，以及社会主义国营商业",
+      "continuation_head": "同职工之间的商品交换。"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 315,
+      "to_pdf_page": 316,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "社会主义社会的三种类型的交换，反映了社会主义劳动产",
+      "continuation_head": "品从商品向将来共产主义直接社会产品的转化过程。资本主义社会是商品生产和商品交换发"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 316,
+      "to_pdf_page": 317,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "型的交换，虽然其交换形式和交换性质有所不同，但是，所有这些交换都是劳动的交换。国",
+      "continuation_head": "营企业和集体经济之间交换各自的产品，就是工人和农民之间交换各自的劳动。同样，国营"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 317,
+      "to_pdf_page": 318,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "现为这样一个公式：商品（W）——货币（G）——商品（W）。“这一循环的最终目的是",
+      "continuation_head": "消费，是满足需要，总之，是使用价值。”①在资本主义商品生产的条件下，整个交换过程"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 318,
+      "to_pdf_page": 319,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "发展的规律，能够在全国范围调节商品生产和交换；而价值规律的作用范围则已经受到很大",
+      "continuation_head": "限制，一般说来，不会出现象个体所有制条件下那样的两极分化。此外，所满足的需要也不"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 319,
+      "to_pdf_page": 320,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的价值额，也不是劳动力转化为商品而给资本带来的剩余价值，而是劳动者作为社会主人为",
+      "continuation_head": "社会创造的新价值——社会纯收入。这个新价值仍然是为了满足劳动者的需要，是为了进一"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 320,
+      "to_pdf_page": 321,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "换过程中出现的利润挂帅、投机倒把等类现象，实际上在实现着W—G—W向G—W—G′",
+      "continuation_head": "的转化过程，使后者具有独立的意义。一旦完成这个转化，劳动力就重新沦为商品，货币就"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 321,
+      "to_pdf_page": 322,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "要比小生产者所耗费的少得多，然而商品的交换只能按照同一社会必要劳动量作为尺度来进",
+      "continuation_head": "行，这就必然要产生收入上的不平等；产生大鱼吃小鱼、小鱼吃虾米这样的两极分化。十分"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 322,
+      "to_pdf_page": 323,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "间，这对落后企业起鞭策前进的作用，但又会给不同生产条件的单位带来不同等的收入。又",
+      "continuation_head": "如，在农副产品的收购中，目前国家还实行“奖售和超购加价”的办法，这一办法也会给不"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 323,
+      "to_pdf_page": 324,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "产阶级法权，是不可避免的。无产阶级专政的社会主义国家，根据无产阶级的利益，还要利",
+      "continuation_head": "用它来为社会主义建设服务。但是，商品交换中的资产阶级法权，也是产生资本主义和资产"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 324,
+      "to_pdf_page": 325,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "除。他们中一些资本主义思想严重的人，就会利用商品交换中的资产阶级法权，在集市贸易",
+      "continuation_head": "上兴风作浪，或者利用商品交换中的供求矛盾，搞长途贩运、投机倒把等资本主义活动。"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 325,
+      "to_pdf_page": 326,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "因此，社会主义社会的商品交换，无论从它的形式和实质",
+      "continuation_head": "来看，都是产生资本主义和资产阶级的土壤，跟旧社会没有多少差别，必须在无产阶级专政"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 326,
+      "to_pdf_page": 327,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "。毛主席早在一九四二年就指出：“发展经济，保障供给，是我们的经济工作和财政工作的",
+      "continuation_head": "总方针。”①只有工农业生产发展了，才能有充足的生产资料满足生产的进一步发展和基本"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 327,
+      "to_pdf_page": 328,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "间的交换，是农业和工业的桥梁，是生产和消费的纽带，是联系社会主义全民所有制经济和",
+      "continuation_head": "集体所有制经济、城市和乡村的中间环节。这种交换的作用是为了促进工农业生产的发展，"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 328,
+      "to_pdf_page": 329,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "义事业迅速发展的需要，是经常发生的现象。这种生产资料的生产和需要之间的矛盾必然表",
+      "continuation_head": "现为中央和地方、国民经济各部门、各地区以及各个国营企业之间的矛盾。在社会主义条件"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 329,
+      "to_pdf_page": 330,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "搞社会主义的积极性全都扼杀死了。这是以加强中央统一计划领导为名，而行资产阶级专政",
+      "continuation_head": "之实。毛主席关于“在中央的统一计划下，让地方办更多的事”①的教导，就是对“条条专"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 330,
+      "to_pdf_page": 331,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "、清仑挖潜和调剂余缺等方面，都出现了生动活泼的局面；在物资调剂工作中，打破行业、",
+      "continuation_head": "企业界限，讲路线、顾大局，发扬风格，互相支援的事例，层出不穷。邓小平攻击物资管理"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 331,
+      "to_pdf_page": 332,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "已需要的自给性生产。在农业机械化水平还不高，农业生产容易受自然条件影响的情况下，",
+      "continuation_head": "我国农产品的商品率还比较低。例如，一九七四年农民提供的商品粮只占粮食总产量的百分"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 332,
+      "to_pdf_page": 333,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "照社会主义原则，密切相互之间的协作关系。商业部门要加强调查研究，反映需要情况，积",
+      "continuation_head": "极协助工业部门发展生产，扩大品种，提高质量，充分发挥自己的能动作用。工业部门则要"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 333,
+      "to_pdf_page": 334,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "拚命扩大资产阶级法权，把为发展社会主义生产和为改善人民生活服务的社会主义商业，变",
+      "continuation_head": "成了以追逐利润为最高目的的资本主义商业。"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 335,
+      "to_pdf_page": 336,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "无产阶级对资产阶级法权进行限制，资产阶级必然要反对",
+      "continuation_head": "这一限制。党内资产阶级刘少奇、林彪、邓小平一伙竭力推行“贸易自由”的修正主义路线"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 336,
+      "to_pdf_page": 337,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "加以限制。特别要限制交换中价值规律的自发作用，打击交换中的自发资本主义倾向，打击",
+      "continuation_head": "利用商品交换搞资本主义活动和破坏社会主义经济的行为。"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 338,
+      "to_pdf_page": 339,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "但是，多数的消费品是在市场上敞开供应，听任消费者自",
+      "continuation_head": "由选购的。由于亿万消费者的需要千差万别，在不同时期又千变万化，而且，生产情况也在"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 340,
+      "to_pdf_page": 341,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "？依据价值规律的要求，社会主义经济中的价格仍然是价值的货币形式，商品价格要以它的",
+      "continuation_head": "价值为基础。也就是说，在制定商品价格的时候，仍然需要参照它的价值。如果否认了这一"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 341,
+      "to_pdf_page": 342,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "（m）。这样，作为价格基础的商品价值，就可以根据部门平均生产成本，加上按社会平均",
+      "continuation_head": "工资赢利率确定的赢利，间接地推算出来 ①。"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 342,
+      "to_pdf_page": 343,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "资金在各部门之间的投放是有计划的，不能自由转移。社会主义社会并不存在形成平均利润",
+      "continuation_head": "的客观条件。所以，按照社会平均资金赢利率来形成社会主义价格，在理论上是错误的。"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 343,
+      "to_pdf_page": 344,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "能有任何背离。这是因为，价格并不是价值的简单的货币表现。价格的制订还要服从于党在",
+      "continuation_head": "一定时期的政治和经济任务，体现党的路线、方针和政策，并适当地考虑市场的供求情况。"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 344,
+      "to_pdf_page": 345,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "发纸币，弄得物价一天数涨，生产凋敝，民不聊生。中华人民共和国的诞生，结束了旧中国",
+      "continuation_head": "物价狂涨的历史。建国初期，党和国家就采取了一系列稳定物价的措施，同资本主义势力进"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 345,
+      "to_pdf_page": 346,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "工农业产品的交换比价问题，是物价政策中的重要问题。",
+      "continuation_head": "它关系着国民收入在工农业之间的再分配，关系着市场物价的稳定，关系着城乡物资交流和"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 347,
+      "to_pdf_page": 348,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "农业产品之间的交换是否是等价交换，不仅要了解工农业产品价格的变化趋势，还必须了解",
+      "continuation_head": "工农业产品价值的变化趋势。从价格变化来看，工农业产品的剪刀差是逐步缩小的。但是，"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 348,
+      "to_pdf_page": 349,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "是毛主席为我党制定的一项重要的社会主义价格政策。贯彻执行工业品的薄利多销政策，要",
+      "continuation_head": "求产品的价格，随着工业劳动生产率的提高和产品成本的下降，而有计划地下降。工业品价"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 349,
+      "to_pdf_page": 350,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "以生产资料的社会主义公有制为基础，受社会主义基本经济规律的支配，必须从各个方面为",
+      "continuation_head": "保证满足国家和人民的需要服务。这就是说，社会主义国家的对外贸易必须有利于国内社会"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 350,
+      "to_pdf_page": 351,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "外销”，这不是社会主义国家的对外贸易，甚至也不是一个独立自主的国家的对外贸易，而",
+      "continuation_head": "是一种官僚买办、卖国投降的对外贸易。刘少奇、林彪、邓小平实行的，就是这样一条卖国"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 351,
+      "to_pdf_page": 352,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "不能恢复我国的工业、使俄国成为工业国的；这里的工业保护指的只是对外贸易垄断制，决",
+      "continuation_head": "不是什么关税政策。”①斯大林也强调指出：“取消对外贸易垄断制”，“就是使我国由独"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 352,
+      "to_pdf_page": 353,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "国对外贸易的半殖民地性质，使我国的对外贸易成为由无产阶级专政国家统制的、独立自主",
+      "continuation_head": "的对外贸易。"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 353,
+      "to_pdf_page": 354,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "成一个阶梯，它的计量单位是世界劳动的平均单位。”①这就是说，每一个国家都有一个平",
+      "continuation_head": "均的劳动强度，在这个强度下，生产某种商品的社会必要劳动时间和它的价值量，是一定的"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 354,
+      "to_pdf_page": 355,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "中，参加交换的一方是资本主义国家，因而，社会主义国家对它们的出口商品的花色、品种",
+      "continuation_head": "以及包装等等，要适当考虑到这些国家的民族特点和风俗习惯，但是，决不能违背社会主义"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 355,
+      "to_pdf_page": 356,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "坚持还是反对独立自主、自力更生的方针，历来是社会主",
+      "continuation_head": "义建设中两条路线斗争的焦点。在苏联实行社会主义工业化初期，托洛茨基曾提出一个所谓"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 356,
+      "to_pdf_page": 357,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的问题。世界历史和现实状况充分证明，一个国家政治上不独立，当然不可能建设独立的经",
+      "continuation_head": "济，而没有独立的经济，政治上的独立也是不可能的，或者是不巩固的。如果把经济建设的"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 357,
+      "to_pdf_page": 358,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "“引进外国技术装备”上，为了“引进”，同外国资本家“订长期合同，用煤炭偿付”。这",
+      "continuation_head": "样，我国不就成为帝国主义国家的投资场所了吗？这种借外债的办法，等于接受帝国主义国"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 358,
+      "to_pdf_page": 359,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "社会主义国家在坚持独立自主、自力更生方针的基础上将",
+      "continuation_head": "积极地同兄弟国家和友好国家进行经济合作，相互援助；共同促进各自国家的经济发展；同"
+    },
+    {
+      "section": "chapter-08",
+      "from_pdf_page": 359,
+      "to_pdf_page": 360,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "贸易完成的贸易额越大，对国内生产的破坏也就越大，帮助外国资本家吸国内工人农民的血",
+      "continuation_head": "也就越多，丧权辱国的事情也就越多。这是半殖民地半封建的旧中国对外贸易的老路，中国"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 361,
+      "to_pdf_page": 362,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "：“只要理解了货币的根源在于商品本身，货币分析上的主要困难就克服了。”②我们要说",
+      "continuation_head": "明货币的本质，就必须把货币同商品交换联系起来分析。从历史上看，货币不过是在长期的"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 362,
+      "to_pdf_page": 363,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "社会主义社会实行计划经济。社会主义国家在对国民经济",
+      "continuation_head": "进行计划领导的时候，不论生产指标的规定、物资的调拨或社会总产品的分配，都必须利用"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 363,
+      "to_pdf_page": 364,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "在社会主义社会，货币也有支付手段的职能。社会主义企",
+      "continuation_head": "业利用货币的这一职能，向国家上缴税金、利润，对职工发放工资，对人民公社社员支付劳"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 364,
+      "to_pdf_page": 365,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "强对劳动人民的剥削，并利用货币作为对外经济侵略和扩张的手段，实行资本输出，攫取高",
+      "continuation_head": "额利润。在社会主义社会，货币主要是被控制在无产阶级专政的国家手中，用来计量和核算"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 365,
+      "to_pdf_page": 366,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的当权派沃兹涅先斯基就鼓吹说：在社会主义经济中，货币不可能成为剥削的工具，不会变",
+      "continuation_head": "成资本 ①。今天，在资本主义已经全面复辟、货币已成为剥削手段的苏联，这种谬论更被"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 366,
+      "to_pdf_page": 367,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "本主义社会，有的人是百万富翁，有的人却一贫如洗，甚至债台高筑。资本家就是靠他所占",
+      "continuation_head": "有的货币来开设工厂、雇佣工人、榨取工人的剩余价值的；投机倒把分子和高利贷者也是凭"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 367,
+      "to_pdf_page": 368,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的产生是从积累货币开始的。在封建社会的末期，在价值规律自发作用的支配下，小生产者",
+      "continuation_head": "在激烈的竞争中发生两极分化：多数人贫困破产，变成一无所有的“自由”劳动者，只好靠"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 368,
+      "to_pdf_page": 369,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "勾结，采取各种手段，利用货币来开设地下工厂或组织地下包工队，进行雇工剥削。另外，",
+      "continuation_head": "有的人还会把自己占有的货币贮存起来，用于放高利贷，进行高利贷剥削。正如马克思所指"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 369,
+      "to_pdf_page": 370,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "而，“货币既表现为致富欲望的对象，同样又表现为致富欲望的源泉”④。只要社会上还存",
+      "continuation_head": "在着货币，追求货币、搞个人发家致富的剥削阶级思想就会有市场。《红楼梦》的《好了歌"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 370,
+      "to_pdf_page": 371,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "比尔曼的说教，卢布是利，荣誉是名，而良心则驱使人去争名夺利，这就是“卢布和良心”",
+      "continuation_head": "的经济学的精髓。"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 372,
+      "to_pdf_page": 373,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "为城乡资本主义势力提供更多的可乘之机。所以，组织好货币流通，加强货币流通的目的性",
+      "continuation_head": "和计划性，是社会主义经济发展的客观要求，也是无产阶级专政国家在经济领域限制资产阶"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 374,
+      "to_pdf_page": 375,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "第二、商业部门从国家银行领取货币，向农村集体经济单",
+      "continuation_head": "位釆购农副产品；集体经济单位将出售农副产品的一部分货币收入，向国营企业购买化肥、"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 375,
+      "to_pdf_page": 376,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "现购买力的货币就会转向集市贸易市场；城乡资本主义势力就可能乘机兴风作浪，利用货币",
+      "continuation_head": "交换，进行投机倒把，高价贩卖，甚至开设地下工厂，挖社会主义墙脚，破坏社会主义统一"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 377,
+      "to_pdf_page": 378,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "货币流通为对象说的。但是，这个原理对于纸币流通，也同样适用，因为纸币无非是金属货",
+      "continuation_head": "币的代表或它的价值符号。"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 378,
+      "to_pdf_page": 379,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "换金银，但从本质上看，它也不是抽象的价值概念 ①，同时，它也不是直接代表商品的价",
+      "continuation_head": "值 ①，而只能是金或银的符号。"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 379,
+      "to_pdf_page": 380,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "纸币则不同，它只能是金的符号，代表一定的金量，否则，它就不能起价值尺度的作用。",
+      "continuation_head": "这种“价格的上涨不过是流通过程强制价值符号去等于它们代替流通的金量而产生的反应。"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 380,
+      "to_pdf_page": 381,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "随着中华人民共和国的成立，我国政府取消了帝国主义的一切金融特权，不准任何外国银行",
+      "continuation_head": "在我国发行货币，禁止一切外国货币在我国市场上流通和买卖；同时，没收了国民党政权的"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 381,
+      "to_pdf_page": 382,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "先在华北解放区发行人民币，并按照一定的比价陆续收回各个解放区发行的纸币。人民币作",
+      "continuation_head": "为新中国的货币，就这样开始执行它的历史任务了。"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 382,
+      "to_pdf_page": 383,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "战后三十多年来，西方各资本主义国家在国内大闹通货膨胀物价飞",
+      "continuation_head": "涨的同时，不断在金融市场上爆发抛售美元、抢购黄金的浪潮358美元价格暴跌，按美元"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 383,
+      "to_pdf_page": 384,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的对抗性矛盾，使我们能够有计划地组织社会生产、流通和分配，并依据货币流通规律的客",
+      "continuation_head": "观要求，有计划地投放和回笼货币，使货币流通同商品流通的需要基本上相适应。"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 384,
+      "to_pdf_page": 385,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "流通服务所需要的货币必要量也就越多。这样，货币流通量就不致超过需要量，不会出现物",
+      "continuation_head": "价上涨、货币贬值现象。建国以来，我国已初步建成一个独立自主的工业体系，我国人民坚"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 385,
+      "to_pdf_page": 386,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "：要“巩固财政收支的平衡和物价的稳定”①；“国家银行发行纸币，基本上应该根据国民",
+      "continuation_head": "经济发展的需要”①。如果国家财政收支不平衡，势必造成增发纸币的后果；纸币的发行一"
+    },
+    {
+      "section": "chapter-09",
+      "from_pdf_page": 386,
+      "to_pdf_page": 387,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "农业、轻工业和重工业比例关系的安排可能不适当，地区、季节之间商品安排和货币投放也",
+      "continuation_head": "可能不平衡。所有这些，都会影响部分货币购买力不能实现，从而影响币值的稳定。特别是"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 393,
+      "to_pdf_page": 394,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "通常按一年为单位计算）由物质资料生产部门的劳动者生产出来的生产资料和消费资料的总",
+      "continuation_head": "和，叫做社会总产品；从社会总产品中扣除用来补偿已经消耗掉的生产资料以后剩下的那部"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 394,
+      "to_pdf_page": 395,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "会产品的分配是由什么决定的呢？任何一个社会的产品分配关系，都不能由人们随意选择，",
+      "continuation_head": "而是由一定的所有制和人们在生产中的相互关系所决定的。有什么样的生产资料所有制和人"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 395,
+      "to_pdf_page": 396,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "行分配。因此，谈分配问题不能离开所有制和人们在生产中的相互关系；离开所有制和人们",
+      "continuation_head": "在生产中的相互关系谈论分配问题，是背离马克思主义的。"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 396,
+      "to_pdf_page": 397,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "时，要看到分配在社会生产中并非是纯粹被动的消极因素。分配由生产所决定，又反作用于",
+      "continuation_head": "生产，反作用于人们在生产中的相互关系，反作用于所有制。在社会主义社会，正确处理分"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 397,
+      "to_pdf_page": 398,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "制，国民收入的初次分配，也是以生产队为基础，在公社、大队和生产队三级集体经济中分",
+      "continuation_head": "别进行的。某些实行以生产大队为基本核算单位的公社，国民收入的初次分配，则以大队为"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 398,
+      "to_pdf_page": 399,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "及工人和农民的原始收入。但是，分配还不能到此为止。国民收入在经过初次分配以后，还",
+      "continuation_head": "得进行再分配，以形成第二次收入 ①。为什么还要进行再分配？这是因为，社会主义社会"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 399,
+      "to_pdf_page": 400,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "会主义国家把通过预算收入集中起来的货币资金，再通过预算支出，转变成为非生产部门及",
+      "continuation_head": "其工作者的收入，并被用来满足整个社会集体福利事业日益发展的需要。（二）服务性行业"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 401,
+      "to_pdf_page": 402,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "位的生产者身上扣除的一切，又会直接或间接地用来为处于社会成员地位的这个生产者谋福",
+      "continuation_head": "利。”①这是跟旧社会的产品和国民收入的分配根本不同的。社会产品和国民收入要“有折"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 403,
+      "to_pdf_page": 404,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "了“按能力计报酬”这一分配原则本身体现的仍然是资产阶级法权，并且科学地预见到在共",
+      "continuation_head": "产主义社会中，个人消费品的分配将实行“按需分配”的原则，但当时尚未提到需要有一个"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 404,
+      "to_pdf_page": 405,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "由以下的条件决定着的：第一，生产力的发展水平还不很高，社会产品还没有极大的丰富，",
+      "continuation_head": "还不具备实行按需分配的物质条件。第二，旧的社会分工还没有消灭，还存在着工农之间、"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 405,
+      "to_pdf_page": 406,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "“各尽所能，按劳分配”的原则，是在生产资料社会主义",
+      "continuation_head": "公有制的基础上确立起来的。这一原则要求每一个有劳动能力的社会成员，应该尽自己的能"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 406,
+      "to_pdf_page": 407,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "下，家庭也就将作为一个消费单位在长时期内存在，劳动力的生产和再生产费用的一部分，",
+      "continuation_head": "仍然要由家庭中那些具有劳动能力的人来负担。这就表明，按劳分配仍然没有跳出资产阶级"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 407,
+      "to_pdf_page": 408,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "劳动者以一种形式给予社会的劳动量，又以另一种形式领回来。所以，按劳分配通行的仍然",
+      "continuation_head": "是调节商品交换的那个原则，即一种形式的一定量的劳动可以和另一种形式的同量劳动相交"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 408,
+      "to_pdf_page": 409,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "家与革命》中就深刻地阐明了实行按劳分配体现的是资产阶级法权的观点。但是在列宁逝世",
+      "continuation_head": "以后，特别是从三十年代开始，苏联理论界在按劳分配问题上出现了逐渐背离马克思列宁主"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 409,
+      "to_pdf_page": 410,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "毛主席总结了国际共产主义运动的历史经验，一直坚持在",
+      "continuation_head": "我国无产阶级专政下对资产阶级法权加以限制。但是，资产阶级法权是党内外资产阶级的命"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 410,
+      "to_pdf_page": 411,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "工资，是我国现阶段社会主义全民所有制经济中进行个人",
+      "continuation_head": "消费品分配的基本形式。"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 411,
+      "to_pdf_page": 412,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "加了职工的工资。目前我国职工的工资水平一般虽然不高，但是就业面扩大了，工资总额增",
+      "continuation_head": "加了，物价长期稳定，集体福利不断增加，因而职工的实际生活水平逐步提高。旧中国那种"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 412,
+      "to_pdf_page": 413,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "不利于开展技术革新、生产协作、培养工人的一专多能，等等，因而不利于生产的发展。因",
+      "continuation_head": "此，广大职工在大跃进形势的鼓舞下，对这一部分资产阶级法权进行了冲击，终于在这一年"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 413,
+      "to_pdf_page": 414,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "这样，复杂劳动和简单劳动之间，熟练劳动和非熟练劳动之间，在",
+      "continuation_head": "工资收入上就有比较大的差距，它明显地体现着资产阶级法权八级工资制在我国从1950"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 414,
+      "to_pdf_page": 415,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "作得比以前不是坏些而是好些，为了同一目的，也不能取消鼓励成绩优良的工作特别是组织",
+      "continuation_head": "工作的奖金制度。”①这里，列宁讲的是在资产阶级专家中实行奖金制度。关于在工人中实"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 415,
+      "to_pdf_page": 416,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "农业生产，改善人民生活，增强国防力量，以保卫新生的无产阶级政权，作为一种暂时的让",
+      "continuation_head": "步，列宁才提出在一定限度内实行奖励制度。但是列宁强调指出：“起决定作用的是工人阶"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 417,
+      "to_pdf_page": 418,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "劳动消耗的尺度，同时又是分配个人消费品的尺度。一个社员从生产队里分得收入的多少，",
+      "continuation_head": "除了决定于所做工分的多少以外，还取决于每个工分的金额（工分值）。每个工分的金额，"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 419,
+      "to_pdf_page": 420,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "、涣散和小资产阶级的利己主义，这是战胜万恶的资本主义遗留给工农的习惯。当这种胜利",
+      "continuation_head": "巩固起来时，而且只有那时，新的社会纪律，即社会主义纪律才会建立起来；只有那时，退"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 420,
+      "to_pdf_page": 421,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "是无产阶级战士的优秀代表。他们那种不为名，不为利，不怕苦，不怕死，一心为革命，一",
+      "continuation_head": "心为人民，对革命无限忠诚，为人民鞠躬尽瘁的精神，永远放射着共产主义的光芒，永远鼓"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 421,
+      "to_pdf_page": 422,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "正主义者总是用物质刺激来磨灭劳动人民的共产主义精神。勃列日涅夫之流竭力鼓吹“物质",
+      "continuation_head": "刺激”，宣扬“更大的劳动数量，更好的劳动质量，即更熟练、更紧张、更重要或更负责的"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 422,
+      "to_pdf_page": 423,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "一考虑的是个人报酬，没有一个人，不管是企业家或公务人员，会为任何其他理由而做任何",
+      "continuation_head": "事情。”（《就业、利息和货币通论》）另一个资产阶级经济学家李特尔也说：“不管理想"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 423,
+      "to_pdf_page": 424,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "治工作，不断地向广大群众灌输社会主义和共产主义思想，批判资本主义倾向，批判资产阶",
+      "continuation_head": "级法权思想，帮助广大群众牢牢树立共产主义劳动态度，才能把群众的社会主义积极性充分"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 424,
+      "to_pdf_page": 425,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "社会制度的宣传，同对于新民主主义的行动纲领的实践区别开来”②。“应该扩大共产主义",
+      "continuation_head": "思想的宣传，加紧马克思列宁主义的学习，没有这种宣传和学习，不但不能引导中国革命到"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 426,
+      "to_pdf_page": 427,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "中等工人工资水平的政策。1917年11月规定，人民委员每月最高工资不得超过五百卢",
+      "continuation_head": "布。这同当时熟练工人平均月工资四百至五百卢布大体相当。1919 年初规定，人民委"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 427,
+      "to_pdf_page": 428,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "毛主席一贯主张，在社会主义革命和社会主义建设时期，绝不要实行对少数人的高薪制度。",
+      "continuation_head": "应当合理地逐步缩小而不应当扩大党、国家、企业、人民公社的工作人员同人民群众之间的"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 428,
+      "to_pdf_page": 429,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "主义公有制经济的瓦解，也是同少数人在分配方面通过某种合法及大量非法的途径占有越来",
+      "continuation_head": "越多的商品和货币联系在一起的。今天，以勃列日涅夫为总代表的苏联官僚垄断资产阶级分"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 429,
+      "to_pdf_page": 430,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "剥削的表现。列宁指出：“通常所说的阶级究竟是什么呢？这就是说，允许社会上一部分人",
+      "continuation_head": "占有另一部分人的劳动。”①在今天的苏联，分配制度的实质就是官僚垄断资产阶级占有广"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 430,
+      "to_pdf_page": 431,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "黎公社的分配原则，逐步缩小党、国家、企业、人民公社的工作人员同人民群众之间个人收",
+      "continuation_head": "入的差距，并防止一切工作人员利用职权享受任何特权。这对于他们密切联系群众，抵制资"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 431,
+      "to_pdf_page": 432,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "第三，工农之间的分配关系。工农联盟是无产阶级专政的",
+      "continuation_head": "基础，在我国，农民又占全部人口的多数，因此正确地处理好工农之间的分配关系，十分重"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 432,
+      "to_pdf_page": 433,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "农社员的生产积极性。因此，在确定社、队工业中务工社员的收入水平时，应该使它大体上",
+      "continuation_head": "同各该公社或大队的务农社员的收入水平接近。"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 434,
+      "to_pdf_page": 435,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "则。不肯改悔的走资派邓小平不读书、不看报、不懂马列，居然也妄谈起共产主义的分配来",
+      "continuation_head": "了。他说什么：“到了共产主义什么工作最重要？管娃娃最重要，保育员的待遇要比大学教"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 435,
+      "to_pdf_page": 436,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "无产阶级文化大革命、批林批孔运动和反击右倾翻案风的",
+      "continuation_head": "斗争，是极其深刻的上层建筑领域的社会主义革命。在这些波澜壮阔的革命群众运动中，涌"
+    },
+    {
+      "section": "chapter-10",
+      "from_pdf_page": 436,
+      "to_pdf_page": 437,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "“分配方式本质上毕竟要取决于可分配的产品的数量，而",
+      "continuation_head": "这个数量当然随着生产和社会组织的进步而改变，从而分配方式也应当改变。”①这就是说"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 445,
+      "to_pdf_page": 446,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "本家无偿占有的剩余价值，现在用来代表新创造的价值中归社会和集体支配的那部分社会纯",
+      "continuation_head": "收入。"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 446,
+      "to_pdf_page": 447,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "模的扩大再生产规定了一个相对的界限。如果在这个界限内，不去充分利用可以利用的物资",
+      "continuation_head": "和潜力去计划和安排扩大再生产，那末，本来可以实现的国民经济发展的速度就得不到实现"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 447,
+      "to_pdf_page": 448,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "在扩大再生产过程中，第一部类的增长通常要比第二部类",
+      "continuation_head": "的增长快，存在着生产资料生产较快增长（或叫做生产资料生产优先增长）的客观规律。"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 448,
+      "to_pdf_page": 449,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "量减少；因而，所减少的活劳动要大于所增加的过去劳动。”①马克思的这段话，实际上已",
+      "continuation_head": "经说明了生产资料生产较快增长的必然性， 因为随着技术进步，劳动生产率提高，生产每"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 449,
+      "to_pdf_page": 450,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "c 和生产资料生产的较快增长虽然都涉及两大部类的关系，但说的却不是一件事。前者说",
+      "continuation_head": "明要扩大再生产，就必须在补偿简单再生产所消耗的生产资料以后，还要有多余的生产资料"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 450,
+      "to_pdf_page": 451,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "产比消费资料生产增长较快这样的问题。 把Ⅰ(v + m) > Ⅱc 同生产资料生",
+      "continuation_head": "产的较快增长混为一谈，在理论上是错误的，在实践上则是有害的。因为，如果认为，Ⅰ("
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 451,
+      "to_pdf_page": 452,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "生产资料生产较快增长这一规律在社会主义社会发生作",
+      "continuation_head": "用，有它自己的特点。在资本主义社会，资本家只是为了剥削工人，为了在激烈竞争中战胜"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 452,
+      "to_pdf_page": 453,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "消费品，而是用在第一部类内部，例如：煤炭企业把煤炭供应给钢铁企业，后者把钢铁供应",
+      "continuation_head": "给机械制造业，而机械制造业又把机器供应给煤炭企业和钢铁企业，如此等等。在第一部类"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 453,
+      "to_pdf_page": 454,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "额利润和追求世界霸权，军火工业恶性膨胀，第一部类所提供的大量生产资料，不是用来生",
+      "continuation_head": "产生活消费品，而是用来生产军火。军火生产本身，如大炮坦克等的生产，不提供生产资料"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 454,
+      "to_pdf_page": 455,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "民用煤、民用电等，但它主要是提供生产资料。因此，安排好农、轻、重之间的比例关系既",
+      "continuation_head": "能照顾到极为复杂的不同生产部门之间的比例关系，又能基本上反映社会生产两大部类比例"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 455,
+      "to_pdf_page": 456,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "轻工业。”①毛主席的这个教导，正确地反映了生产资料生产的较快增长，同消费资料生产",
+      "continuation_head": "的相应发展这两个方面必须相互结合的客观要求，为国民经济计划的综合平衡，规定了最基"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 456,
+      "to_pdf_page": 457,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "本的积累，是资本家用来进一步剥削无产阶级的手段。资本主义积累和广大劳动人民消费之",
+      "continuation_head": "间的矛盾，具有对抗性。在社会主义社会，积累是社会主义国家和集体用来进行社会主义建"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 457,
+      "to_pdf_page": 458,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "为了进一步探讨积累和消费比例关系的规律性，先来具体",
+      "continuation_head": "分析一下消费基金和积累基金的最低、最高界限是什么。在正常情况下，国民收入用于消费"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 458,
+      "to_pdf_page": 459,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "主观来决定呢？也不可以。分配要由生产来决定；国民收入怎样分配为积累基金和消费基金",
+      "continuation_head": "两大部分，归根到底，要受社会生产两大部类比例关系的制约。这是因为，积累基金的主要"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 459,
+      "to_pdf_page": 460,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，我们可以用一个现成的筒单数学公式，来机械地给积累和消费规定一个百分比。因为就物",
+      "continuation_head": "质条件所提供的客观可能性来说，是有伸缩余地的，有一部分产品，可用作消费资料，也可"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 460,
+      "to_pdf_page": 461,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "和反动的小资产阶级社会主义者杜林之流，主张在未来的新社会中，分光国民收入，不留积",
+      "continuation_head": "累，让劳动者获得所谓“不折不扣的劳动所得”，或“全部劳动所得”，妄图用资产阶级的"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 461,
+      "to_pdf_page": 462,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "积累是扩大再生产的源泉，但积累基金怎样用法，对于扩",
+      "continuation_head": "大再生产的效果是大不一样的。积累基金按照用途可分为扩大再生产基金、非生产性基本建"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 462,
+      "to_pdf_page": 463,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "象的发生。此外，如自然灾害的袭击，各部门之间的意外脱节以及国际关系的突然变化，等",
+      "continuation_head": "等，都有可能造成国民经济发展的不平衡。为了克服这些难于避免的不平衡，为了备战、备"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 463,
+      "to_pdf_page": 464,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "一些生产部门不仅在一年间不断地或者多次地取走劳动力和生产资料，而且也提供生活资料",
+      "continuation_head": "和生产资料。在社会公有的生产的基础上，必须确定前者按什么规模进行，才不致有损于后"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 464,
+      "to_pdf_page": 465,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "过程，是资本家发财致富，同时又不断产生人口相对过剩，使亿万劳动人民贫困化的过程。",
+      "continuation_head": "所以，伴随资本积累而来的扩大再生产，不仅是社会产品的扩大再生产，而且也是资本主义"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 465,
+      "to_pdf_page": 466,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "资本主义积累的结果必然是：在一极是资产阶级私人财富",
+      "continuation_head": "的巨大积累，在另一极则是无产阶级和劳动人民贫困的积累。正如马克思所揭示的那样：“"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 466,
+      "to_pdf_page": 467,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "到足够的钱，来使他们的家庭维持一种过得去的生活水平；有30%甚至不能得到一种贫困",
+      "continuation_head": "水平的收入。"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 467,
+      "to_pdf_page": 468,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "来的社会财富和日益提高的社会生产力，属于无产阶级和广大劳动人民所有，用来为他们的",
+      "continuation_head": "利益服务。这就是说，社会主义积累过程也是社会主义生产关系扩大再生产的过程。"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 468,
+      "to_pdf_page": 469,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "可以组织起来，向一切可以发挥自己力量的地方和部门进军，向生产的深度和广度进军，替",
+      "continuation_head": "自己创造日益增多的福利事业。”①我国农业合作化和农业机械化的经验表明，多余出来的"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 469,
+      "to_pdf_page": 470,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "一万八千多元，增加到二十七万三千七百多元。薛家厍生产队因实现农业机械化，提高了劳",
+      "continuation_head": "动生产率，不仅没有带来人口过剩，却为向生产的深度和广度进军创造了有利条件，使19"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 470,
+      "to_pdf_page": 471,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "是一个逐步缩小以至最后消灭脑力劳动和体力劳动的本质差别，全面解放劳动者的过程。在",
+      "continuation_head": "资本主义积累过程中，“工人阶级的一部分从事过度劳动迫使它的另一部分无事可做，反过"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 471,
+      "to_pdf_page": 472,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "累的财富越多，社会生产发展的规模和能力越大，劳动者的物质生活和文化生活水平将日益",
+      "continuation_head": "提高，社会主义生产关系中的共产主义因素将随之逐步积累起来，为过渡到共产主义社会创"
+    },
+    {
+      "section": "chapter-11",
+      "from_pdf_page": 473,
+      "to_pdf_page": 474,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "相应改善了。几亿人民早已从旧中国饥寒交迫的困境中解放出来，现在不仅普遍有工作做，",
+      "continuation_head": "有书读，丰衣足食，而且当家作主，革命斗志昂扬，为实现对资产阶级全面专政而奋战在三"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 475,
+      "to_pdf_page": 476,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的资金运动，贯穿在生产、交换、分配和消费等各个方面。关于生产和交换过程中的资金运",
+      "continuation_head": "动，在本书第七章《社会主义经济核算制》和第九章《社会主义社会的货币和货币流通》中"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 476,
+      "to_pdf_page": 477,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "环第一阶段的企业的资金，如果运行畅通无阻，货币能够顺利购买到所需的生产资料，货币",
+      "continuation_head": "资金能转换为生产资金，那末，同它相联系的另一企业的资金，必然是顺利地处在循环的第"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 477,
+      "to_pdf_page": 478,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "物质形态要素相互结合，经过劳动者的劳动，转移了所耗费的生产资料的价值，又创造了新",
+      "continuation_head": "价值。劳动者创造的这个新价值，分成两个部分：一是用于劳动者个人消费，即支付劳动报"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 478,
+      "to_pdf_page": 479,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "这种不同的运动特点，是由非生产性基金流通和企业资金循环两者的不同性质和它们在社会",
+      "continuation_head": "主义扩大再生产中的不同作用所决定的。"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 479,
+      "to_pdf_page": 480,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "资本循环的这种混乱状态，往往同周期性经济危机一起发生，给资本主义社会生产力带来极",
+      "continuation_head": "大的破坏。社会主义资金在它的循环过程中，也会经常出现一些矛盾，但是这种矛盾，一般"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 480,
+      "to_pdf_page": 481,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "劳动时间的社会主义企业，成本耗费大，收入少，它的资金循环处于不利地位。为着改变这",
+      "continuation_head": "种不利地位，企业可以有两种选择：一种是通过革新技术、增产节约、降低成本等办法，使"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 481,
+      "to_pdf_page": 482,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "下，选择后一条道路的企业领导人，即使他本人并没有从这种活动中攫取一部分货币装进自",
+      "continuation_head": "己的口袋，但是，他的活动本质上是资产阶级的活动，他本人也就变成或者正在变成为党内"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 482,
+      "to_pdf_page": 483,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "需要为根本目的。但是，如果社会主义经济的领导权被党内资产阶级篡夺，修正主义路线占",
+      "continuation_head": "了统治地位，那末，社会主义资金循环就会转化为资本循环，成为“只是谋取利润的无休止"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 484,
+      "to_pdf_page": 485,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "产生了一个社会主义企业必须对它的资金在三种形态之间进行合理分配的问题。这种分配，",
+      "continuation_head": "是通过社会主义企业财务来进行的。"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 485,
+      "to_pdf_page": 486,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "产资金所占的比重；同时，要在可能范围内把虽然属于生产过程，但并不处在现实生产运动",
+      "continuation_head": "中的那一部分用于原材料储备的生产资金，压缩到能够保证企业生产正常运转的限度，以相"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 486,
+      "to_pdf_page": 487,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "需要有临时补充货币资金的情况。这就决定了社会主义国家有必要通过银行信贷的渠道，来",
+      "continuation_head": "动员社会上暂时不用的那部分货币资金，在有借有还的条件下，有计划地加以再分配，用来"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 487,
+      "to_pdf_page": 488,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "关系，是工人阶级同广大劳动农民和手工业劳动者之间，在经济上友好合作、相互支援的关",
+      "continuation_head": "系。集体经济把它的暂时不用的货币资金存入国家银行，支援社会主义建设；同时，国家银"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 488,
+      "to_pdf_page": 489,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "少奇、邓小平为了利用信贷去改变企业的经营方向，曾经公开叫嚷：只有赚钱的企业，银行",
+      "continuation_head": "才准贷款，不赚钱的企业，“银行不贷款”，“一定要卡死，不要怕工人打扁担”。在这个"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 491,
+      "to_pdf_page": 492,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "社会主义国家银行作为结算中心，统一组织国民经济各部",
+      "continuation_head": "门、各企业和各单位之间的转账结算。国家银行通过转账结算，监督计划外的非法套购等资"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 492,
+      "to_pdf_page": 493,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "的纯收入，在两种公有制的企业中，所采取的形式是不完全相同的。对集体企业采取税收这",
+      "continuation_head": "种形式，集中它们的纯收入的一部分用于社会主义建设。对国营企业除采取税收这种形式以"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 493,
+      "to_pdf_page": 494,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "日子。据不完全统计，截止1970年，苏修所久的内债已高达三百一十六亿卢布。向西方",
+      "continuation_head": "国家乞讨的外债，自勃列日涅夫上台的1964年以来，也已逾二百亿美元。资本主义国家"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 494,
+      "to_pdf_page": 495,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "费用高出美国约30%；用于战略防御计划的费用比美国的多七倍。在苏修的国民收入中，",
+      "continuation_head": "将近有20%用于军事开支。"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 496,
+      "to_pdf_page": 497,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "分配，是分别通过企业财务、银行信贷和国家预算进行的。企业财务、银行信贷和国家预算",
+      "continuation_head": "构成了社会主义资金分配的完整体系。这个资金分配体系，以企业财务为基础，以银行信贷"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 497,
+      "to_pdf_page": 498,
+      "first_line_x": 71.64,
+      "font_size": 9.0,
+      "previous_tail": "完成以后，社会主义财政继续通过对资金的分配和再分配，保证国民经济的不断发展和社会",
+      "continuation_head": "主义经济基础的日益巩固壮大，促进政治战线、经济战线和思想战线上的社会主义革命继续"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 498,
+      "to_pdf_page": 499,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "政困难的，未有经济不发展而可以使财政充裕的。”①毛主席的指示，科学地揭示了财政和",
+      "continuation_head": "经济的辩证关系，是社会主义财政工作的根本指导思想。"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 499,
+      "to_pdf_page": 500,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "社会主义财政建立在公有制的基础上，把企业财务、银行",
+      "continuation_head": "信贷和国家预算紧密地联系在一起，从而形成一个比任何一种建立在私有制基础上的国家财"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 500,
+      "to_pdf_page": 501,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "革命路线和方针、政策的贯彻执行广大工农群众是社会主义经济的主人，是社会财富的直接",
+      "continuation_head": "创造者，他们最痛恨资本主义和修正主义，最痛恨违反党的路线方针和政策，以及扩大资产"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 501,
+      "to_pdf_page": 502,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "家利用信贷形式支持生产的需要。当信贷资金来源不足时，就依靠预算拨款来解决。同时，",
+      "continuation_head": "信贷积极组织存款，合理发放贷款，尽可能缩小信贷收支差额，则可以减少预算增拨信贷资"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 502,
+      "to_pdf_page": 503,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "能按时收回，那就只有增加没有物资保证的货币投放，从而引起信贷收支的不平衡。因此，",
+      "continuation_head": "银行发放贷款，第一，必须按计划贷放，不属于信贷计划范围的预算开支坚决不贷；第二，"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 503,
+      "to_pdf_page": 504,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "上，积极挖掘潜力，安排好基本建设投资。如果只单纯考虑基本建设投资的需要，以致不适",
+      "continuation_head": "当地挤掉了一部分应该增拨的流动资金，那就会妨碍正常的生产周转和商品流通，导致物资"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 504,
+      "to_pdf_page": 505,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "到预算本身的收支平衡。只有以上三个方面全部做到了，才能说是实现了预算资金和信贷资",
+      "continuation_head": "金的统一平衡。"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 505,
+      "to_pdf_page": 506,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "旦发生，如果不及时加以纠正，不平衡就会进一步发展，以致破坏扩大再生产的顺利进行，",
+      "continuation_head": "给资本主义非法活动以可乘之机，为党内资产阶级搞资本主义复辟开辟道路。为了保证国民"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 506,
+      "to_pdf_page": 507,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "到统一平衡，例如预算支出大于收入，发生了赤字，银行信贷发生了超过生产发展正常需要",
+      "continuation_head": "的货币投放，在这种情况下，一部分资金没有相应的物资保证，就会使预算和信贷分配的资"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 507,
+      "to_pdf_page": 508,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "目的相适应。如果说，预算和信贷资金的分配同它所能支配的物资在总量上是一致的，但是",
+      "continuation_head": "在物资构成上并不一致，那末，就会出现以下的一些情况：当着在资金分配方面，预算和信"
+    },
+    {
+      "section": "chapter-12",
+      "from_pdf_page": 508,
+      "to_pdf_page": 509,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "范围内的总量和构成上的平衡以外，还要考虑各地区的平衡。各地区的资金和物资平衡是全",
+      "continuation_head": "国范围资金和物资平衡的组成部分，各地区的资金和物资平衡实现了，全国范围预算和信贷"
+    },
+    {
+      "section": "chapter-13",
+      "from_pdf_page": 515,
+      "to_pdf_page": 516,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，而是一定的、社会的、属于一定历史社会形态的生产关系，它体现在一个物上，并赋予这",
+      "continuation_head": "个物以特有的社会性质。”“资本是一台永久的吸取剩余劳动的抽水机”①。经过层层解剖"
+    },
+    {
+      "section": "chapter-13",
+      "from_pdf_page": 516,
+      "to_pdf_page": 517,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "会主义生产关系和生产力的矛盾，把社会主义生产关系物化，则是为了掩盖社会主义社会的",
+      "continuation_head": "阶级、阶级矛盾和阶级斗争，以便复辟资本主义制度。这种罪恶阴谋，在斯大林逝世以后，"
+    },
+    {
+      "section": "chapter-13",
+      "from_pdf_page": 517,
+      "to_pdf_page": 518,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "系了。但是，在社会主义生产关系中，“共产主义在经济上还不可能是完全成熟的，还不能",
+      "continuation_head": "完全摆脱资本主义的传统或痕迹”①。这种资本主义的传统或痕迹，集中表现为资产阶级法"
+    },
+    {
+      "section": "chapter-13",
+      "from_pdf_page": 518,
+      "to_pdf_page": 519,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "产是为了满足国家和人民的需要的直接社会性生产，但是，它又仍然是商品生产。所谓商品",
+      "continuation_head": "生产，就是价值生产。在社会主义生产过程中，这种价值的生产，同满足社会主义国家和人"
+    },
+    {
+      "section": "chapter-13",
+      "from_pdf_page": 519,
+      "to_pdf_page": 520,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "些人就会利用供求矛盾的扩大，把自己掌握的某些供不应",
+      "continuation_head": "求的商品当作筹码，取得一定的社会权力，迫使别人服从自己的某些要求，把国家和集体经"
+    },
+    {
+      "section": "chapter-13",
+      "from_pdf_page": 520,
+      "to_pdf_page": 521,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "义道路的当权派，就是在追逐利润的过程中形成的。走资派贯彻利润挂帅的修正主义路线，",
+      "continuation_head": "维护和代表的是腐朽的资本主义生产关系。党内资产阶级在它的形成过程中，一面孵化着新"
+    },
+    {
+      "section": "chapter-13",
+      "from_pdf_page": 521,
+      "to_pdf_page": 522,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "党内资产阶级，这是一个总概念。我们说，党内资产阶级",
+      "continuation_head": "是在生产和交换中形成的，这是说，社会主义社会一个阶级的形成，最根本的原因，必须从"
+    },
+    {
+      "section": "chapter-13",
+      "from_pdf_page": 522,
+      "to_pdf_page": 523,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "会主义生产关系的再生产过程中，一方面会不断分泌出资本主义和资产阶级，我们要从这一",
+      "continuation_head": "点上树立起长期作战的思想；但是另一方面也必然会不断壮大着共产主义和无产阶级，我们"
+    },
+    {
+      "section": "chapter-13",
+      "from_pdf_page": 523,
+      "to_pdf_page": 524,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "险。毛主席的这个重要指示，为无产阶级专政下的继续革命进一步指明了方向，鼓舞和指导",
+      "continuation_head": "着无产阶级和广大劳动人民为巩固无产阶级专政，防止资本主义复辟，建设社会主义和实行"
+    },
+    {
+      "section": "chapter-14",
+      "from_pdf_page": 525,
+      "to_pdf_page": 526,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，表达了无产阶级专政发生、发展和消亡的全过程，包括了无产阶级专政的全部任务和实际",
+      "continuation_head": "内容。列宁也指出：“从资本主义过渡到共产主义，当然不能不产生非常丰富和繁杂的政治"
+    },
+    {
+      "section": "chapter-14",
+      "from_pdf_page": 526,
+      "to_pdf_page": 527,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "十九世纪五十年代，马克思就提出了“社会主义就是宣布",
+      "continuation_head": "不断革命，就是无产阶级的阶级专政”①的光辉思想，把无产阶级专政和不断革命联系了起"
+    },
+    {
+      "section": "chapter-14",
+      "from_pdf_page": 527,
+      "to_pdf_page": 528,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "级斗争，各派政治力量之间的阶级斗争，无产阶级和资产阶级之间在意识形态方面的阶级斗",
+      "continuation_head": "争，还是长时期的，曲折的，有时甚至是很激烈的。”①毛主席又作出了资产阶级就在共产"
+    },
+    {
+      "section": "chapter-14",
+      "from_pdf_page": 528,
+      "to_pdf_page": 529,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "级斗争的客观规律，是坚持对资产阶级全面专政的唯一正确的路线。社会主义时期两条路线",
+      "continuation_head": "斗争的焦点，就是坚持还是反对无产阶级专政。毛主席制定的党的基本路线，是光芒万丈的"
+    },
+    {
+      "section": "chapter-14",
+      "from_pdf_page": 529,
+      "to_pdf_page": 530,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "固无产阶级专政，这是毛主席对于当代所作的具有世界历史意义的伟大贡献，同时，为国际",
+      "continuation_head": "共产主义运动反修防修，巩固无产阶级专政，防止资本主义复辟，建设社会主义，提供了新"
+    },
+    {
+      "section": "chapter-14",
+      "from_pdf_page": 530,
+      "to_pdf_page": 531,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "就不再是必要的了”，代替无产阶级专政的国家是“全民国家”。这种谬论根本否定了马克",
+      "continuation_head": "思主义关于整个社会主义历史阶段始终存在着阶级、阶级矛盾和阶级斗争，关于国家总是阶"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 535,
+      "to_pdf_page": 536,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "传统或痕迹逐步消亡的过程。从社会发展的一般规律来看，社会主义社会是共产主义社会的",
+      "continuation_head": "必要准备，共产主义社会是社会主义社会发展的必然趋势。在社会主义社会，人心、党心、"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 536,
+      "to_pdf_page": 537,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "阶级和阶级差别的社会，是全体人民具有高度的共产主义思想觉悟和道德品质的社会，是全",
+      "continuation_head": "体人民具有高度劳动积极性和自觉性的社会，是具有极其丰富的社会产品的社会，是实行“"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 537,
+      "to_pdf_page": 538,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，不彻底铲除资产阶级得以存在和产生的土壤，资本主义就有复辟的危险。在这种条件下，",
+      "continuation_head": "当然谈不上转变到共产主义社会。"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 538,
+      "to_pdf_page": 539,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "公社农民以农为主（包括林、牧、副、渔），也要兼学军",
+      "continuation_head": "事、政治、文化。在有条件的时候，也要由集体办些小工厂，也要批判资产阶级。"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 539,
+      "to_pdf_page": 540,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "所有制的残余还没有完全消失的时候，农民还不可避免地保留着原来小生产者的某些固有的",
+      "continuation_head": "特点和习惯势力。在这种情况下，不可避免地存在着资本主义自发倾向，存在着产生新富农"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 540,
+      "to_pdf_page": 541,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "料的共产主义全民所有制为基础的。那时，商品货币关系不再存在了，社会主义的直接社会",
+      "continuation_head": "生产将要转化为共产主义的直接社会生产；从而，计算社会产品所包含的劳动量也将直接以"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 541,
+      "to_pdf_page": 542,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "和传统恶习也还要长期存在，并且必然要侵袭到劳动人民的队伍中来，侵袭到政治生活和党",
+      "continuation_head": "的生活中来。在思想文化战线上，无产阶级必须坚持对资产阶级的全面专政，必须同资产阶"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 542,
+      "to_pdf_page": 543,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "，能不能取得社会主义革命和社会主义建设的最后胜利？这是当代的一个重大的马克思主义",
+      "continuation_head": "理论问题。"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 545,
+      "to_pdf_page": 546,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "系中的资产阶级法权的分析，我们可以看到，无产阶级和资产阶级之间的限制和反限制的斗",
+      "continuation_head": "争，主要集中在这样一些问题上：要不要把一切经济部门和企业的领导权掌握在真正的马克"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 546,
+      "to_pdf_page": 547,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "义社会实现的时候才会止息。所以，从社会主义社会到共产主义社会的过渡，是一个长期的",
+      "continuation_head": "阶级斗争过程，是一场极其深刻的社会革命。现代修正主义者散布关于社会主义社会转变到"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 547,
+      "to_pdf_page": 548,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "在苏修二十二大声称：“在二十年之内（指一九六〇年到一九八〇年——引者）我们将基本",
+      "continuation_head": "上建成共产主义社会。”一九六四年，赫鲁晓夫垮台了。勃列日涅夫继承了赫鲁晓夫的“土"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 548,
+      "to_pdf_page": 549,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "义问题上也散布了不少谬论，他们一会儿说共产主义要“拿‘产’字作旗帜”，要“大家发",
+      "continuation_head": "财”；一会儿说共产主义就是“公产主义”，二千多年前孔老二讲的“大道之行也，天下为"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 549,
+      "to_pdf_page": 550,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "大矛盾：被压迫民族同帝国主义、社会帝国主义的矛盾；资本主义、帝国主义和社会帝国主",
+      "continuation_head": "义国家内部无产阶级同资产阶级的矛盾；帝国主义国家同社会帝国主义国家之间、帝国主义"
+    },
+    {
+      "section": "chapter-15",
+      "from_pdf_page": 550,
+      "to_pdf_page": 551,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "永远不可抵抗的规律”①；“资产阶级的灭亡和无产阶级的胜利是同样不可避免的。”②马",
+      "continuation_head": "克思主义诞生只有一百多年，旧世界就已经被打得落花流水。一个没有帝国主义、没有资本"
+    },
+    {
+      "section": "preface",
+      "from_pdf_page": 11,
+      "to_pdf_page": 12,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "践，进一步发展了马克思主义的社会主义政治经济学，为在无产阶级专政下坚持阶级斗争、",
+      "continuation_head": "防止资本主义复辟指出了方向。列宁逝世以后，斯大林继承了列宁的事业，领导苏联人民实"
+    },
+    {
+      "section": "preface",
+      "from_pdf_page": 12,
+      "to_pdf_page": 13,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "落了。它鼓吹官僚垄断，利润挂帅，物质刺激，专家治厂，宣扬剥削有理，压迫有理，已成",
+      "continuation_head": "为社会帝国主义的经济学，连一丝一毫的科学价值也没有了。"
+    },
+    {
+      "section": "preface",
+      "from_pdf_page": 14,
+      "to_pdf_page": 15,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "命的伟大理论。这个伟大理论，打破了长期以来政治经济学领域的唯心论和形而上学观点，",
+      "continuation_head": "给了形形色色的修正主义观点以沉重的打击，使社会主义政治经济学焕发出革命的青春，把"
+    },
+    {
+      "section": "preface",
+      "from_pdf_page": 15,
+      "to_pdf_page": 16,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "阶级形成、发展和灭亡的过程，阐明无产阶级专政下阶级斗争的规律和特点，帮助干部从资",
+      "continuation_head": "产阶级影响、修正主义影响下解放出来，从民主革命进行社会主义革命。"
+    },
+    {
+      "section": "preface",
+      "from_pdf_page": 16,
+      "to_pdf_page": 17,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "在何种条件下资本主义的传统或痕迹将要泛滥起来淹没共产主义因素。我们要继续努力学习",
+      "continuation_head": "马克思主义，向着真正掌握唯物论和辩证法的方向努力。"
+    },
+    {
+      "section": "preface",
+      "from_pdf_page": 17,
+      "to_pdf_page": 18,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "宁主义的作风。”②用毛主席的这个对我们党内的那种理论脱离实际的作风的批评，来批评",
+      "continuation_head": "本书，是最恰切不过的了。用毛主席倡导的树立理论和实际统一的马克思列宁主义的作风，"
+    },
+    {
+      "section": "preface",
+      "from_pdf_page": 18,
+      "to_pdf_page": 19,
+      "first_line_x": 49.68,
+      "font_size": 11.04,
+      "previous_tail": "我们前进。我们深信，在我国亿万工农兵努力学习和掌握马克思主义、列宁主义、毛泽东思",
+      "continuation_head": "想的今天，在如此生动丰富的中国革命和世界革命环境中，经过集体的努力，是完全可以编"
+    }
+  ],
+  "math_page_splits": [
+    {
+      "pdf_page": 376,
+      "paragraphs_before": 1,
+      "paragraphs_after": 2,
+      "starts": [
+        "交换，进行投机倒把，高价贩卖，甚至开设地下工厂，挖社会主",
+        "市场上的现金流通和非现金结算，既有区别，又有联系。不论是"
+      ]
+    },
+    {
+      "pdf_page": 443,
+      "paragraphs_before": 1,
+      "paragraphs_after": 9,
+      "starts": [
+        "第一部类一年内所生产的生产资料的价值是：\nⅠ(c + v",
+        "第二部类一年内所生产的消费资料的价值是：\nⅡ(c + v",
+        "社会再生产要能够继续进行，既然必须使生产中消耗掉的东西从",
+        "首先，第一部类产品在第一部类内部各个部门之间进行交换。例",
+        "其次，第二部类产品在第二部类内部各个部门之间进行交换。例",
+        "最后，第一、第二两部类的产品在两大部类之间进行交换。例如",
+        "通过以上三种交换，社会生产两大部类之间的关系可能出现以下",
+        "第一种情况，生产资料的生产不多不少，刚好用来补偿已经消耗",
+        "例如："
+      ]
+    },
+    {
+      "pdf_page": 444,
+      "paragraphs_before": 1,
+      "paragraphs_after": 7,
+      "starts": [
+        "Ⅰ(4000c + 1000v + 1000m) = 6",
+        "这里，两大部类的关系用公式来表示，就是：\nⅠ(c + v",
+        "这个公式表明，等式左端代表第一部类能够提供多少生产资料，",
+        "这里， 等式左端表示第一部类除了满足本身需要以外，还有多",
+        "第二种情况，社会生产的生产资料的总产值，除了供第一部类和",
+        "例如：\nⅠ(4000c + 1000v + 1000m)",
+        "这里，两大部类的关系用公式来表示，就是：\nⅠ(c + v"
+      ]
+    },
+    {
+      "pdf_page": 445,
+      "paragraphs_before": 1,
+      "paragraphs_after": 4,
+      "starts": [
+        "Ⅰ(v + m) > Ⅱc",
+        "这个公式表明，已经有了多余的生产资料，可以把它们使用到追",
+        "马克思关于把社会产品按实物形式和按价值形式所作的两重划分",
+        "但是，社会主义再生产和资本主义再生产有着不同的性质和特点"
+      ]
+    },
+    {
+      "pdf_page": 446,
+      "paragraphs_before": 1,
+      "paragraphs_after": 5,
+      "starts": [
+        "收入。",
+        "社会主义再生产和资本主义再生产遵循不同的规律发展。",
+        "资本主义再生产要遇到资本主义私人占有同生产社会性的对抗性",
+        "社会主义再生产，受社会主义基本经济规律和国民经济有计划按",
+        "依据马克思的再生产原理，简单再生产是扩大再生产的起点和组"
+      ]
+    },
+    {
+      "pdf_page": 451,
+      "paragraphs_before": 1,
+      "paragraphs_after": 3,
+      "starts": [
+        "产的较快增长混为一谈，在理论上是错误的，在实践上则是有害",
+        "列宁对生产资料生产增长较快这一规律的意义，作过极其深刻的",
+        "生产资料生产较快增长这一规律在社会主义社会发生作"
+      ]
+    },
+    {
+      "pdf_page": 465,
+      "paragraphs_before": 1,
+      "paragraphs_after": 2,
+      "starts": [
+        "所以，伴随资本积累而来的扩大再生产，不仅是社会产品的扩大",
+        "在资本主义社会，人口相对过剩是不可避免的，因为随着资本积"
+      ]
+    }
+  ],
+  "ordinary_hard_breaks_removed": 152,
+  "hard_breaks_converted_to_paragraph_boundaries": 25,
+  "total_hard_breaks_removed": 177,
+  "unmatched_indented_lines": [],
+  "section_body_sha256": {
+    "chapter-01": "dceaf4f8b268098a1963e1ce29de9df4391da9353172c9d3638004078a52bde6",
+    "chapter-02": "00f54e0bd272e7524d497b6ec0f6c548981c80988d655f84c44b6b33a43c1b02",
+    "chapter-03": "5be7af64a92908dc0ebc5bb52b8b67a173b648984fc40e7b4a661570c5f5b4c3",
+    "chapter-04": "65579ce689844655533082e2c0b2a10f8002e2f8ee1c0268ddba629ec4e361e0",
+    "chapter-05": "b4e2f6bd1760957c1f67624f204c85b856ccf6dc4b48b5ca3e29c9dd2a1462a9",
+    "chapter-06": "35aa9caa98767296f0a24f4403752b78932e90203bec3f01f0d235172731c702",
+    "chapter-07": "2c48da542c89b28c0802caf4042f1010579f84754e35ebfdd293ff81e13acdb6",
+    "chapter-08": "37eac77409303aa1630d7af015d7de1c5654a89b6ae8031feb2c848bd6a513f7",
+    "chapter-09": "0f2e132ea213330984415f2c04b3af363cde3ef57a8e6195afdb660a323d5234",
+    "chapter-10": "f5b5c01874e7e347f6a3b19cb2ab4626aa4a207ac3280246d9772003652ad8d7",
+    "chapter-11": "f27b6bb3dc0a09345afdcc15be0cc710887525ce5f2e85bfaf067c4a1cc5ede8",
+    "chapter-12": "c659356a9dc7b395dad79107fa2554a5bd884423abae2b67a5ee4b22f0ec8419",
+    "chapter-13": "3233ba415ff520397e174b86a48a0c6dc3e157e694db53fa24fa9c3f80776fb9",
+    "chapter-14": "ae930f1adc7c8a8c28db76d09c27080dbc5c895d14115408f2f79fc118dd179c",
+    "chapter-15": "b72691dc4425d9c0a5da69a9bea6d1629e522a5edd98d8244e1f885cef317b39",
+    "preface": "31f43858360f454122d6aea9dda3e65bc84e74a55ceef61502437910dab3ced8"
+  },
+  "protected_checks": {
+    "body_characters_unchanged": true,
+    "headings_unchanged": true,
+    "original_notes_unchanged": true,
+    "superscripts_and_links_unchanged": true,
+    "images_lists_tables_unchanged": true,
+    "all_existing_page_ids_preserved": true,
+    "markdown_body_characters_unchanged": true,
+    "markdown_note_definitions_unchanged": true,
+    "all_551_markdown_page_comments_preserved": true
+  }
+}

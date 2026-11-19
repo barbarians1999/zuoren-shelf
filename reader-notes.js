@@ -185,6 +185,16 @@
     const consumed = new Set();
     const lookup = (marker, reference) => {
       const noteKey = key(marker);
+      // Reflowed paragraphs can cross printed pages in this edition.
+      // Use its authored page-scoped IDs; never guess an unresolved marker.
+      if (book.id === 'socialist-political-economy-shanghai-1976' && reference.matches?.('sup')) {
+        const href = reference.querySelector('a[href^="#"]')?.getAttribute('href');
+        if (!href) return null;
+        const id = href.slice(1);
+        const exact = local.filter((note) => note.nodes.some((node) =>
+          node.id === id || node.getAttribute('data-note-group') === id));
+        return exact.find((note) => note.key === noteKey) || exact[0] || null;
+      }
       const scope = reference.parentElement.closest('section.page') || target;
       const nearby = local.filter((note) => note.key === noteKey && note.scope === scope);
       if (nearby.length) return nearby.find((note) => reference.compareDocumentPosition(note.nodes[0]) & Node.DOCUMENT_POSITION_FOLLOWING) || nearby[0];

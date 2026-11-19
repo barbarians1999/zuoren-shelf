@@ -40,20 +40,32 @@ class SocialistEconomicsTests(unittest.TestCase):
         self.assertEqual(readable[0]['id'],'preface')
         self.assertEqual(len({s.get('chapter') for s in readable[1:]}),5)
 
-    def test_footnotes_are_page_scoped_and_only_known_anomalies_remain(self):
+    def test_footnotes_keep_source_ids_and_only_known_anomalies_remain(self):
         unmatched=[];visible_notes=0;references=0;all_ids=[]
-        for s in self.sections:
-            tree=html.fragment_fromstring(s['html'],create_parent='article')
+        for section in self.sections:
+            tree=html.fragment_fromstring(section['html'],create_parent='article')
             all_ids.extend(tree.xpath('//*[@id]/@id'))
-            for page in tree.xpath('.//section[contains(concat(" ",normalize-space(@class)," ")," page ")]'):
-                notes=page.xpath('.//aside[contains(@class,"footnote")]')
-                visible_notes+=sum('hidden' not in n.attrib for n in notes)
-                markers={re.match(r'\s*([①-⑳])',n.text_content()).group(1) for n in notes}
-                for sup in page.xpath('.//sup'):
-                    text=sup.text_content();references+=1
-                    if text not in markers:unmatched.append((page.get('id'),text))
-            for img in tree.xpath('.//img'):
-                self.assertTrue((ROOT/img.get('src')).is_file())
+            notes=tree.xpath('.//aside[contains(@class,"footnote")]')
+            visible_notes+=sum('hidden' not in note.attrib for note in notes)
+            by_id={note.get('id'):note for note in notes if note.get('id')}
+            for note_id,note in by_id.items():
+                source_page=int(re.match(r'p(\d+)-note',note_id).group(1))
+                parent=note.getparent()
+                owner=parent.get('data-source-pdf-page') or parent.get('id','').removeprefix('pdf-page-')
+                self.assertEqual(source_page,int(owner))
+            for sup in tree.xpath('.//sup'):
+                references+=1
+                links=sup.xpath('./a/@href')
+                if links:
+                    self.assertEqual(len(links),1)
+                    note=by_id.get(links[0].removeprefix('#'))
+                    self.assertIsNotNone(note,links[0])
+                    printed_markers=re.match(r'\s*([①-⑳]+)',note.text_content()).group(1)
+                    self.assertIn(sup.text_content(),printed_markers)
+                else:
+                    unmatched.append(('pdf-page-'+sup.get('data-source-pdf-page',''),sup.text_content()))
+            for image in tree.xpath('.//img'):
+                self.assertTrue((ROOT/image.get('src')).is_file())
             self.assertFalse(tree.xpath('.//script|.//iframe|.//*[@onload]|.//*[@onclick]'))
         self.assertEqual(visible_notes,357)
         self.assertEqual(references,362)

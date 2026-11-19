@@ -24,3 +24,12 @@
 原PDF SHA-256：1e9e6841182c08bcfd8bef87d30c2d982d46386d1c6b229c1c5b23169bbd8310。
 
 公开扫描镜像与用户本地原稿字节完全一致：[1976年9月扫描镜像](https://www.bannedthought.net/China/MaoEra/PoliticalEconomy/PoliticalEconomyOfSocialism-Shanghai-1976-9-Chinese-OCR-sm.pdf)。本地原稿未作修改。
+
+## 2026年11月19日段落整理
+
+- 对照同一SHA-256的原PDF版面，恢复426处跨页续段；以原页缩进和段首位置为依据，不按句号或语意猜测合并。
+- 九个数学内容流页清理152处普通正文硬换行，并恢复25处原稿中可确认的段落边界；公式自身的独立换行保留。
+- 网页章节、整书Markdown和16个静态阅读／检索页同步整理。网页原有PDF页码ID保留在续接处，Markdown保留全部551个原页标记与357条原注定义。
+- 跨页段落内的脚注仍使用原页注释ID；本书的弹窗按该ID查找，避免同号脚注串页。PDF第425、517页的两处未配对注号原样保留。
+- 忽略换行空白后的正文字符与整理前一致；标题、原注、编号、公式字串、图表及其他书的正文未改。本次不是逐字校勘，不代表原稿疑点已经消除。
+- 逐处位置与校核记录见[段落整理记录](paragraph-repair.json)。复核脚本为`scripts/reflow_socialist_economics.py`，不重新运行旧转换器覆盖现稿。

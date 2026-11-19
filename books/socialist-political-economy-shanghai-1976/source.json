@@ -15,7 +15,7 @@
   "footnote_records": 357,
   "footnote_markers": 360,
   "quality": "文字层整理稿，未经逐字校勘；原稿疑误、重号及未配对注号保留。",
-  "markdown_sha256": "bbe4dc78ce6b90b2053d61b59eeb44c61ff777d35f6caf7cce82861d32dbc598",
+  "markdown_sha256": "4287ff66f6f376484cf1f5f440298fd35d2d6891da7d31c792f665e8e6550ca9",
   "source_anomalies": [
     {
       "pdf_page": 425,
@@ -647,5 +647,26 @@
       550,
       551
     ]
+  },
+  "paragraphRepair": {
+    "version": 1,
+    "date": "2026-11-19",
+    "crossPageJoins": 426,
+    "mathPages": [
+      376,
+      443,
+      444,
+      445,
+      446,
+      449,
+      450,
+      451,
+      465
+    ],
+    "ordinaryHardBreaksRemoved": 152,
+    "hardBreaksConvertedToParagraphBoundaries": 25,
+    "newParagraphBoundaries": 25,
+    "auditFile": "paragraph-repair.json",
+    "bodyTextUnchanged": true
   }
 }
