@@ -110,6 +110,8 @@
     'state-and-revolution': 'classics', 'manifesto': 'classics', 'german-ideology': 'classics',
     'class-struggles-france': 'classics', 'eighteenth-brumaire': 'classics', 'civil-war': 'classics',
     'ludwig-feuerbach': 'classics', 'anti-duhring': 'classics', 'british-working-class': 'classics',
+    'branch-secretary-work-experience': 'china',
+    'party-branch-fortress': 'china',
     'bloodfire': 'china', 'maodazhuan-text': 'china', 'mao-selected': 'china',
     'great-retreat': 'china', 'bettelheim-industrial-organization': 'china', 'obtain-authority': 'china',
     'long-revolution': 'china',
