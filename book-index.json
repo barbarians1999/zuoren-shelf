@@ -42008,7 +42008,8 @@
         {
           "id": "front-matter",
           "title": "怎样当好支部书记——基层党组织的工作经验",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "chapter-01",
@@ -42100,7 +42101,8 @@
         {
           "id": "front-matter",
           "title": "怎样发挥党支部的战斗堡垒作用",
-          "level": 0
+          "level": 0,
+          "readerHidden": true
         },
         {
           "id": "chapter-01",
