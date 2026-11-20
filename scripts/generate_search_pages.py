@@ -421,6 +421,16 @@ def book_url(base_url: str, book_id: str) -> str:
     return base_url + "books/" + safe_segment(book_id, "book ID") + "/"
 
 
+def book_landing_url(base_url: str, book: dict) -> str:
+    if book.get("hideLandingPage"):
+        first_section = next(
+            (section for section in book.get("sections", []) if section.get("readerHidden") is not True),
+            None,
+        )
+        return reader_url(base_url, str(book["id"]), str(first_section["id"]) if first_section else None)
+    return book_url(base_url, str(book["id"]))
+
+
 def article_url(base_url: str, book_id: str, section_id: str) -> str:
     return (
         base_url
@@ -479,7 +489,8 @@ def render_article_page(
     descriptor = f"《{book_title}》—{title}。"
     description = f"{descriptor}作者/编者：{author}。左人书架中文阅读版。{text_excerpt}"
     canonical = article_url(base_url, book["id"], section["id"])
-    parent = book_url(base_url, book["id"])
+    parent = book_landing_url(base_url, book)
+    parent_label = f"在左人书架阅读《{book_title}》" if book.get("hideLandingPage") else f"查看《{book_title}》目录"
     read = reader_url(base_url, book["id"], section["id"])
     page_title = f"{title}｜{book_title}｜左人书架"
     previous = readable_sections[position - 1] if position > 0 else None
@@ -508,7 +519,7 @@ def render_article_page(
     </header>
     <article class="content seo-content">{content}</article>
     <nav class="seo-pagination" aria-label="相邻篇目">{prev_link}{next_link}</nav>
-    <p class="seo-back"><a href="{escape(parent)}">查看《{escape(book_title)}》目录</a> · <a href="{escape(base_url)}catalog/">返回书目与文章目录</a></p>
+    <p class="seo-back"><a href="{escape(parent)}">{escape(parent_label)}</a> · <a href="{escape(base_url)}catalog/">返回书目与文章目录</a></p>
   </main>
 </body>
 </html>
@@ -629,7 +640,7 @@ def render_catalog_page(base_url: str, base_path: str, books: list[dict], author
         author = f'<span class="seo-catalog-author">{escape(book.get("author", ""))}</span>'
         detail = f'<span class="seo-catalog-count">{count} 篇</span>'
         book_items.append(
-            f'<li><a href="{escape(book_url(base_url, book["id"]))}">{escape(book["title"])}</a>{author}{detail}</li>'
+            f'<li><a href="{escape(book_landing_url(base_url, book))}">{escape(book["title"])}</a>{author}{detail}</li>'
         )
     author_items = "\n".join(
         f'<li><a href="{escape(author_url(base_url, author["id"]))}">{escape(author["name"])}作品与文章</a></li>'
@@ -769,21 +780,22 @@ def build(repo_root: Path, output_root: Path, base_url: str) -> dict[str, int]:
             article_urls[(book_id, section_id)] = article_url(base_url, book_id, section_id)
         sections_by_book[book_id] = entries
 
-        book_path = f"books/{safe_segment(book_id, 'book ID')}/index.html"
-        write_generated(
-            output_root,
-            book_path,
-            render_book_page(
-                base_url=base_url,
-                base_path=base_path,
-                book=book,
-                sections=entries,
-                section_content=html_by_section,
-            ),
-            previous_files,
-            current_files,
-        )
-        urls.append(book_url(base_url, book_id))
+        if not book.get("hideLandingPage"):
+            book_path = f"books/{safe_segment(book_id, 'book ID')}/index.html"
+            write_generated(
+                output_root,
+                book_path,
+                render_book_page(
+                    base_url=base_url,
+                    base_path=base_path,
+                    book=book,
+                    sections=entries,
+                    section_content=html_by_section,
+                ),
+                previous_files,
+                current_files,
+            )
+            urls.append(book_url(base_url, book_id))
 
         for position, section in enumerate(entries):
             section_id = section["id"]

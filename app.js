@@ -152,6 +152,13 @@
   }
 
   function seoBookUrl(book) {
+    if (book.hideLandingPage) {
+      const firstSection = book.sections?.find((section) => section.readerHidden !== true);
+      const url = siteBaseUrl();
+      url.searchParams.set('book', book.id);
+      if (firstSection) url.searchParams.set('section', firstSection.id);
+      return url.href;
+    }
     return new URL(`books/${encodeURIComponent(book.id)}/`, siteBaseUrl()).href;
   }
 
