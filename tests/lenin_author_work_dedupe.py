@@ -105,29 +105,21 @@ def main():
                 assert route_params(page.url).get("book") == book_id
                 print(f"direct reader route retained: PASS — {book_id}/{section_id}")
 
-            static_author = open("authors/lenin/index.html", encoding="utf-8").read()
-            assert static_author.count(">怎么办？</a>") == 1
-            static_count = re.search(r"本地收录 (\d+) 篇", static_author)
-            assert static_count and int(static_count.group(1)) == count
-            assert "texts/howto/part-03/" in static_author
-            assert "texts/mx-lenin-eda649f794/section-002/" not in static_author
             book_index = json.loads(Path("book-index.json").read_text(encoding="utf-8"))
             books = {book["id"]: book for book in book_index["books"]}
+            authors = {author["id"]: author for author in book_index["authorIndex"]}
             for book_id in ("howto", "mx-lenin-eda649f794"):
                 book = books[book_id]
-                assert Path(f"books/{book_id}/index.html").is_file()
                 for section in book["sections"]:
                     section_id = section["id"]
                     assert Path(f"{book['sectionPath']}/{section_id}.json").is_file()
-                    assert Path(f"texts/{book_id}/{section_id}/index.html").is_file()
 
             for author_id, preserved_ids in [
                 ("marx", {"mx-marx-72fc4a449f", "mx-marx-6ada1c8b56", "mx-marx-f11d3f0ca7", "mx-marx-42c236acf6"}),
                 ("engels", {"mx-engels-1e0fdedec5", "mx-engels-7a4e965cae"}),
             ]:
-                static_author_page = Path(f"authors/{author_id}/index.html").read_text(encoding="utf-8")
-                for book_id in preserved_ids:
-                    assert f"texts/{book_id}/" in static_author_page, (author_id, book_id)
+                visible_ids = {work.get("bookId") for work in authors[author_id]["featuredWorks"]}
+                assert preserved_ids <= visible_ids, (author_id, preserved_ids - visible_ids)
 
             for book_id, source_suffix, date in [
                 ("mx-marx-72fc4a449f", "letter-18760504.htm", "1876年5月4日"),
@@ -142,8 +134,8 @@ def main():
                 if date:
                     assert date in body, (book_id, date)
 
-            print("static Lenin author page is consolidated; both editions retain SEO pages: PASS")
-            print("all howto/MIA sections and separate letter/edition search routes remain: PASS")
+            print("Lenin SPA author entry is consolidated; both editions retain internal reader routes: PASS")
+            print("all howto/MIA sections and separate letter/edition reader routes remain: PASS")
 
             browser.close()
 

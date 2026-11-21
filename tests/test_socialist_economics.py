@@ -82,13 +82,10 @@ class SocialistEconomicsTests(unittest.TestCase):
         self.assertNotIn('\ufffd',chapter11)
         self.assertIn('①324',re.sub(r'\s+', '', next(s for s in self.sections if s['id']=='chapter-13')['html']))
 
-    def test_search_pages_and_category_are_present(self):
-        self.assertTrue((BOOK/'index.html').is_file())
+    def test_reader_catalog_and_category_are_present(self):
+        self.assertEqual(self.book['id'], BOOK_ID)
         for s in self.book['sections']:
-            if not s.get('readerHidden'):
-                self.assertTrue((ROOT/'texts'/BOOK_ID/s['id']/'index.html').is_file())
-        self.assertIn(BOOK_ID,(ROOT/'catalog/index.html').read_text())
-        self.assertIn(BOOK_ID,(ROOT/'sitemap.xml').read_text())
+            self.assertTrue((BOOK/'sections'/f'{s["id"]}.json').is_file())
         self.assertIn(f"'{BOOK_ID}': 'economics'",(ROOT/'app.js').read_text())
 
 

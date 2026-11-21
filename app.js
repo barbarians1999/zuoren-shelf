@@ -151,23 +151,25 @@
     return url;
   }
 
-  function seoBookUrl(book) {
-    if (book.hideLandingPage) {
-      const firstSection = book.sections?.find((section) => section.readerHidden !== true);
-      const url = siteBaseUrl();
-      url.searchParams.set('book', book.id);
-      if (firstSection) url.searchParams.set('section', firstSection.id);
-      return url.href;
-    }
-    return new URL(`books/${encodeURIComponent(book.id)}/`, siteBaseUrl()).href;
+  function bookReaderUrl(book) {
+    const firstSection = book.sections?.find((section) => section.readerHidden !== true);
+    const url = siteBaseUrl();
+    url.searchParams.set('book', book.id);
+    if (firstSection) url.searchParams.set('section', firstSection.id);
+    return url.href;
   }
 
-  function seoArticleUrl(book, section) {
-    return new URL(`texts/${encodeURIComponent(book.id)}/${encodeURIComponent(section.id)}/`, siteBaseUrl()).href;
+  function sectionReaderUrl(book, section) {
+    const url = siteBaseUrl();
+    url.searchParams.set('book', book.id);
+    url.searchParams.set('section', section.id);
+    return url.href;
   }
 
-  function seoAuthorUrl(author) {
-    return new URL(`authors/${encodeURIComponent(author.id)}/`, siteBaseUrl()).href;
+  function authorReaderUrl(author) {
+    const url = siteBaseUrl();
+    url.searchParams.set('author', author.id);
+    return url.href;
   }
 
   function syncRouteMetadata() {
@@ -179,12 +181,12 @@
       const sectionTitle = section?.title || (currentBook.type === 'scan' ? `第 ${current + 1} 页` : '在线阅读');
       title = `${sectionTitle}｜${currentBook.title}｜左人书架`;
       description = `在线阅读《${currentBook.title}》${sectionTitle}。作者/编者：${currentBook.author}。左人书架提供中文阅读版和可分享的章节链接。`;
-      canonical = section ? seoArticleUrl(currentBook, section) : seoBookUrl(currentBook);
+      canonical = section ? sectionReaderUrl(currentBook, section) : bookReaderUrl(currentBook);
     } else if (activeAuthor) {
       const count = (activeAuthor.featuredWorks || []).length;
       title = `${activeAuthor.name}作品与文章｜左人书架`;
       description = `左人书架收录${activeAuthor.name}的中文著作与文章，列出 ${count} 项作品入口和对应在线阅读链接。`;
-      canonical = seoAuthorUrl(activeAuthor);
+      canonical = authorReaderUrl(activeAuthor);
     }
     document.title = title;
     if (metaDescription) metaDescription.content = description;
@@ -427,7 +429,7 @@
 
   function renderBookCards(target, items) {
     target.innerHTML = items.length ? items.map(({ book, index, saved }) => {
-      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p></div><div class="book-foot"><a class="open-button" href="${escapeText(seoBookUrl(book))}" data-book="${index}" aria-label="${saved ? '继续阅读' : '开始阅读'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '开始阅读'}</a></div></article>`;
+      return `<article class="book-card ${saved ? 'ready' : ''}"><div class="book-face"><h2>${escapeText(book.title)}</h2><p class="book-byline">${escapeText(book.author)}</p></div><div class="book-foot"><a class="open-button" href="${escapeText(bookReaderUrl(book))}" data-book="${index}" aria-label="${saved ? '继续阅读' : '开始阅读'}《${escapeText(book.title)}》">${saved ? '继续阅读' : '开始阅读'}</a></div></article>`;
     }).join('') : '';
     target.querySelectorAll('[data-book]').forEach((link) => link.addEventListener('click', (event) => {
       if (!shouldInterceptLink(event)) return;
@@ -629,7 +631,7 @@
         for (let parent = 0; parent < level; parent++) numbering[parent] ||= 1;
         const number = numbering.slice(0, level + 1).join('.');
         const currentAttribute = index === current ? ' aria-current="page"' : '';
-        return `${chapterHeading}<a class="toc-link ${index === current ? 'active' : ''}" href="${escapeText(seoArticleUrl(currentBook, section))}" data-index="${index}" data-level="${level}"${currentAttribute}>${number}. ${escapeText(section.title)}</a>`;
+        return `${chapterHeading}<a class="toc-link ${index === current ? 'active' : ''}" href="${escapeText(sectionReaderUrl(currentBook, section))}" data-index="${index}" data-level="${level}"${currentAttribute}>${number}. ${escapeText(section.title)}</a>`;
       }).join('');
     desktopToc.innerHTML = html;
     mobileToc.innerHTML = html;

@@ -28,10 +28,5 @@ class RouteFormatTests(unittest.TestCase):
         self.assertNotIn("革命原</p>", markup)
         self.assertIn("特别是提出了关于国际共产主义运动总路线的问题", markup)
         self.assertGreater(markup.count("<p>"), 300)
-    def test_static_reader_matches(self):
-        markup = json.loads((ROOT / "books/route-dispute/sections/route.json").read_text())["html"]
-        page = (ROOT / "texts/route-dispute/route/index.html").read_text()
-        article = re.search(r'<article[^>]*>(.*?)</article>', page, re.S).group(1)
-        self.assertEqual(text(markup), text(article))
 if __name__ == "__main__":
     unittest.main()

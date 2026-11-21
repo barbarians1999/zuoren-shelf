@@ -55,12 +55,4 @@ class ParagraphTests(unittest.TestCase):
         self.assertIn('生活，根<!-- PDF第26页；原页码：12 -->源',text)
         self.assertIn('阶级斗争、<!-- PDF第12页；原页码：2 -->防止',text)
 
-    def test_static_reading_pages_have_the_same_body(self):
-        for section,expected in self.audit['section_body_sha256'].items():
-            path=ROOT/'texts/socialist-political-economy-shanghai-1976'/section/'index.html'
-            tree=html.fromstring(path.read_text())
-            body=''.join(tree.xpath('//article[contains(@class,"seo-content")]//section[contains(@class,"page")]/p//text()'))
-            digest=hashlib.sha256(re.sub(r'\s+','',body).encode()).hexdigest()
-            self.assertEqual(digest,expected,section)
-
 if __name__=='__main__':unittest.main()

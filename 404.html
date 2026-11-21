@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>正在打开阅读器｜左人书架</title>
+  <style>
+    body { margin: 0; padding: 3rem 1.25rem; background: #f4f1e9; color: #211f1b; font: 1rem/1.7 system-ui, sans-serif; }
+    main { max-width: 42rem; margin: 12vh auto; }
+    h1 { font: 700 1.6rem/1.35 Georgia, serif; }
+    a { color: #b52d24; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>正在打开阅读器</h1>
+    <p id="message">此阅读链接已转到书架内的阅读器。</p>
+    <p><a href="/zuoren-shelf/" id="home">返回左人书架</a></p>
+  </main>
+  <script>
+    (() => {
+      const path = location.pathname.split('/').filter(Boolean);
+      const base = path[0] === 'zuoren-shelf' ? '/zuoren-shelf/' : '/';
+      if (path[0] === 'zuoren-shelf') path.shift();
+      const route = path[0];
+      const query = new URLSearchParams();
+
+      if (route === 'texts' && path[1] && path[2]) {
+        query.set('book', path[1]);
+        query.set('section', path[2]);
+      } else if (route === 'books' && path[1]) {
+        document.querySelector('#message').textContent = '正在打开这本书……';
+        fetch(`${base}book-index.json`, { cache: 'no-store' })
+          .then((response) => {
+            if (!response.ok) throw new Error('book index unavailable');
+            return response.json();
+          })
+          .then((index) => {
+            const book = index.books.find((item) => item.id === path[1]);
+            if (!book) throw new Error('book not found');
+            query.set('book', book.id);
+            const section = book.sections?.find((item) => item.readerHidden !== true);
+            if (section) query.set('section', section.id);
+            location.replace(`${base}?${query.toString()}`);
+          })
+          .catch(() => {
+            document.querySelector('#message').textContent = '没有找到这本书。';
+            document.querySelector('#home').href = base;
+          });
+        return;
+      } else if (route === 'authors' && path[1]) {
+        query.set('author', path[1]);
+      } else if (route === 'catalog') {
+        location.replace(base);
+        return;
+      } else {
+        document.querySelector('#message').textContent = '没有找到这个页面。';
+        document.querySelector('#home').href = base;
+        return;
+      }
+
+      location.replace(`${base}?${query.toString()}`);
+    })();
+  </script>
+</body>
+</html>

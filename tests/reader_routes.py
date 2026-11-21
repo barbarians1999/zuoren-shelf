@@ -127,7 +127,7 @@ def run():
 
             context, page = new_page(browser, clipboard=True, origin=origin)
             page.goto(origin + "/?author=marx", wait_until="networkidle")
-            assert page.locator('link[rel="canonical"]').get_attribute("href") == f"{origin}/authors/marx/"
+            assert page.locator('link[rel="canonical"]').get_attribute("href") == f"{origin}/?author=marx"
             assert "马克思" in page.title()
             page.locator("#author-featured-list .featured-work a").filter(has_text="资本论第一卷").first.click()
             page.wait_for_function("new URL(location.href).searchParams.get('book') === 'marx-capital-1'")
@@ -155,11 +155,11 @@ def run():
                 assert_reader(page, title)
                 assert f"book={book_id}" in page.url and f"section={section_id}" in page.url, page.url
                 assert page.locator("#section-title").inner_text() == section_title
-                expected_canonical = f"{origin}/texts/{book_id}/{section_id}/"
+                expected_canonical = f"{origin}/?book={book_id}&section={section_id}"
                 assert page.locator('link[rel="canonical"]').get_attribute("href") == expected_canonical
                 assert section_title in page.title() and "左人书架" in page.title()
                 assert section_title in page.locator('meta[name="description"]').get_attribute("content")
-                assert page.locator("#book-list .open-button").first.get_attribute("href").startswith(f"{origin}/books/")
+                assert page.locator("#book-list .open-button").first.get_attribute("href").startswith(f"{origin}/?book=")
                 page.locator("#desktop-share-button").click()
                 copied_url = page.evaluate("navigator.clipboard.readText()")
                 assert copied_url == page.url
@@ -186,7 +186,7 @@ def run():
             assert page.locator("#desktop-content h2.chapter-heading").first.inner_text() == title
             assert page.locator("#desktop-content > p").first.inner_text().startswith("一、俄国农奴制度")
             toc_target = page.locator("#desktop-toc .toc-link").filter(has_text="二、俄国民粹主义")
-            assert toc_target.get_attribute("href") == f"{origin}/texts/history/section-008/"
+            assert toc_target.get_attribute("href") == f"{origin}/?book=history&section=section-008"
             page.evaluate("window.scrollTo(0, 450)")
             page.wait_for_timeout(450)
             position_keys = page.evaluate("Object.keys(sessionStorage).filter(k => k.startsWith('reading-desk:route-position:v1:'))")
@@ -384,7 +384,9 @@ def run():
             copied = page.evaluate("navigator.clipboard.readText()")
             assert urlsplit(copied).path.startswith("/shelf/")
             assert "section=section-007" in copied
-            assert urlsplit(page.locator('link[rel="canonical"]').get_attribute("href")).path == "/shelf/texts/history/section-007/"
+            canonical = urlsplit(page.locator('link[rel="canonical"]').get_attribute("href"))
+            assert canonical.path == "/shelf/"
+            assert canonical.query == "book=history&section=section-007"
             print("subpath deployment URL preservation: PASS")
             context.close()
 
