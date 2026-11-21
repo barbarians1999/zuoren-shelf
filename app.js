@@ -542,7 +542,10 @@
     groups.push({ title: '选集外文章', works: extras });
     let count = 0;
     const html = groups.map((group) => {
-      const works = group.works.filter((work) => terms.every((term) => work.title.toLocaleLowerCase().includes(term)));
+      const works = group.works.filter((work) => {
+        const titles = [work.title, ...(work.searchAliases || [])];
+        return terms.every((term) => titles.some((title) => title.toLocaleLowerCase().includes(term)));
+      });
       if (!works.length) return '';
       count += works.length;
       const rows = works.map((work) => {
