@@ -463,14 +463,14 @@
       const group = typeof work.dedupeGroup === 'string' ? work.dedupeGroup.trim() : '';
       if (!group) return;
       const titles = groupTitles.get(group) || [];
-      titles.push(work.title);
+      titles.push(work.title, ...(work.searchAliases || []));
       groupTitles.set(group, titles);
     });
     const featuredWorks = allFeaturedWorks
       .filter((work) => {
         const inCategory = activeCategory === 'all' || authorCategory === activeCategory;
         const group = typeof work.dedupeGroup === 'string' ? work.dedupeGroup.trim() : '';
-        const searchableTitles = group ? groupTitles.get(group) || [work.title] : [work.title];
+        const searchableTitles = group ? groupTitles.get(group) : [work.title, ...(work.searchAliases || [])];
         return inCategory && terms.every((term) => searchableTitles.some((title) => title.toLocaleLowerCase().includes(term)));
       })
       .sort((a, b) => {

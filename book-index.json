@@ -1612,7 +1612,6 @@
         "mx-lenin-66aadf20e0",
         "mx-lenin-9fb3dcaeb9",
         "mx-lenin-d6166eb666",
-        "mx-lenin-eda649f794",
         "mx-lenin-62ebd29e8c",
         "mx-lenin-c1e8c787f1",
         "mx-lenin-cd02351a57",
@@ -1831,21 +1830,13 @@
           "sectionId": "section-001"
         },
         {
-          "title": "《怎么办？》",
-          "year": "1901",
-          "sortYear": 1901,
-          "bookId": "mx-lenin-eda649f794",
-          "sectionId": "section-002",
-          "dedupeGroup": "lenin-howto-1901"
-        },
-        {
           "title": "怎么办？",
           "year": "1901",
           "bookId": "howto",
           "sectionId": "part-03",
           "sortYear": 1901,
           "recommendation": "讨论革命组织、理论与工人运动。",
-          "dedupeGroup": "lenin-howto-1901"
+          "searchAliases": ["《怎么办？》"]
         },
         {
           "title": "我们纲领中的民族问题",
