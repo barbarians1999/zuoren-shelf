@@ -640,3 +640,17 @@ footer a { color: var(--accent-dark); text-underline-offset: .25em; }
     background: color-mix(in srgb, var(--ink) 4%, var(--paper));
   }
 }
+
+.migration-notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .35rem .5rem;
+  padding: .75rem clamp(1.1rem, 5vw, 5rem);
+  background: var(--panel);
+  color: var(--ink);
+  border-bottom: 3px solid var(--accent);
+  font: .92rem/1.6 var(--ui-font);
+}
+.migration-notice strong { color: var(--accent-dark); }
+.migration-notice a { color: var(--accent-dark); font-weight: 700; text-underline-offset: .2em; overflow-wrap: anywhere; }
